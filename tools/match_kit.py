@@ -59,7 +59,9 @@ def compile_batch(items, tag, verbose=True):
         script += [
             'cp "$D/%s.c" .' % key,
             ('if /opt/ee/bin/ee-gcc -O2 -mips3 -G%d -c %s.c -o %s 2>%s.err; then '
-             'cp %s "$D/%s"; else echo "FAIL %s"; fi') % (g, key, obj, key, obj, obj, key),
+             'cp %s "$D/%s"; else echo "FAIL %s"; fi; '
+             'if [ -f %s.err ]; then cp %s.err "$D/"; fi') % (
+                 g, key, obj, key, obj, obj, key, key, key),
         ]
     script += ['echo COMPILE_DONE', 'exit 0']
     sh = os.path.join(ROOT, "build", "_wsl_match_%s.sh" % tag)

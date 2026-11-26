@@ -872,7 +872,8 @@ def run_batch(args, batch_no, index, addrs):
         e = f["entry"]
         key_hit = f.get("hit")
         if key_hit:
-            attempts, cand, _ = key_hit
+            attempts = key_hit[0]
+            cand = key_hit[1]
             try:
                 src_rel = "src/functions/%08x.c" % e["addr_i"]
                 src_abs = os.path.join(ROOT, src_rel)

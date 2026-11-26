@@ -31,7 +31,9 @@ def load_units():
     if os.path.exists(p):
         with open(p, encoding="utf-8") as f:
             data = json.load(f)
-        return [(u["name"], int(u["start"], 16), int(u["end"], 16)) for u in data["units"]]
+        def _i(x):
+            return int(x, 16) if isinstance(x, str) else int(x)
+        return [(u["name"], _i(u["start"]), _i(u["end"])) for u in data["units"]]
     t = os.path.join(ROOT, "config", "tu_g.json")
     if os.path.exists(t):
         with open(t, encoding="utf-8") as f:
