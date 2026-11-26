@@ -41,7 +41,8 @@ def group_of(e):
 def main():
     q = json.load(open(QUEUE, encoding="utf-8"))
     ov = json.load(open(OVERRIDES, encoding="utf-8"))
-    excluded = {int(str(f["addr"]), 16) for f in ov.get("functions", [])}
+    excluded = {int(str(f["addr"]), 16) for f in ov.get("functions", [])
+                if f.get("status") == "matched"}
     entries = [e for e in q["entries"] if e["addr_i"] not in excluded]
     rows = []
     for e in entries:

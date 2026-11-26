@@ -54,11 +54,11 @@ int FUN_0010b858(char *p0, int a1, char *dst, OUT *out)
     else
         FUN_0010be90(D_00258928);
 
-    if (out != 0) {        out->f04 = total;
-        out->f00 = D_1B76300[0x7E84 / 4];
-        out->f30 = (int)(start + cur);
+    if (out != 0) {        out->f00 = D_1B76300[0x7E84 / 4];
+        out->f04 = total;
         out->f28 = (int)start;
         out->f08 = D_1B76300[0x7E8C / 4];
+        out->f30 = (int)(start + cur);
         out->f0C = *(BIG28 *)((char *)D_1B76300 + 0x7E90);
         out->f2C = cur;
         out->f34 = total - cur;
