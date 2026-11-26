@@ -1,0 +1,13 @@
+# original game data — never commit
+baserom/
+# build outputs
+build/
+asm/
+objdump/
+*.o
+# downloaded toolchain archives
+toolchain/dl/*.tar.xz
+toolchain/dl/*.tar.gz
+toolchain/dl/*.exe
+# local scratch
+*.log
