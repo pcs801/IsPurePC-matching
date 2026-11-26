@@ -8,7 +8,7 @@ struct P {
     int f108;
     int f10C;
     unsigned char pad2[0x9];
-    signed char f119;
+    unsigned char f119;
     unsigned char pad3[0x2];
     short f11C;
     short f11E;
@@ -20,7 +20,6 @@ struct P {
     int f164;
     int f168;
 };
-
 extern struct P D_1B75484[10];
 extern int D_1B74238;
 extern int D_1B7423C[];
@@ -43,6 +42,7 @@ int FUN_00100fc8(int a0, int a1, int a2, int a3)
             break;
         }
     }
+
     ref = (int *)((char *)D_1B7423C + a0 * 0x208);
     {
         struct P *p = D_1B75484 + slot;
