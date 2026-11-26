@@ -191,7 +191,7 @@ def translate(body):
         reads.append((idx, reg))
         if reg == "zero":
             return const(0)
-        if reg in ("ra", "sp", "fp", "gp", "at", "k0", "k1"):
+        if reg in ("ra", "sp", "fp", "gp", "k0", "k1"):
             raise Unsupported("reads $%s" % reg)
         if reg not in regs:
             raise Unsupported("reads uninitialised $%s" % reg)
@@ -269,6 +269,9 @@ def translate(body):
                   "and": "and", "or": "or", "xor": "xor", "nor": "nor",
                   "slt": "lt", "sltu": "ltu", "move": "add"}[mn]
             uses64 |= mn.startswith("d")
+            if op == "ltu" and as_int(a) == 0:
+                put(dst, ("bin", "ne", b, const(0)), idx)  # x != 0
+                continue
             put(dst, mk(op, a, b), idx)
             continue
         if mn in ("slti", "sltiu"):
@@ -303,6 +306,7 @@ def translate(body):
                 a = get(strip_reg(o[1]), idx)
                 b = get(strip_reg(o[2]), idx)
                 put(dst, mk("mul", a, b), idx)
+                pending_mul = (a, b)
             else:
                 pending_mul = (get(strip_reg(o[0]), idx), get(strip_reg(o[1]), idx))
             continue
@@ -362,6 +366,10 @@ def translate(body):
         later_read = any(i > last_v0 and reg == "v0" for i, reg in reads)
         if not later_read:
             ret = regs.get("v0")
+    if ret is not None and ret[0] == "bin" and ret[1] == "sar":
+        inner, sh = ret[2], as_int(ret[3])
+        if inner[0] == "bin" and inner[1] == "shl" and as_int(inner[3]) == sh == 32:
+            ret = ("ext32", inner[2])  # lwu + dsll32/dsra32 == sign-extend 32->64
     params = collect_params(stores, regs, ret)
     return {"stores": stores, "ret": ret, "params": params, "uses64": uses64}
 
@@ -373,6 +381,8 @@ def build_addr(base, off, sym, idx, get):
         a = GP_BASE + off
         return ("sym", a, "D_%08X" % a)
     b = get(base, idx)
+    if b[0] == "sym_hi" and sym is not None and b[1] == sym[1] and not off:
+        return ("sym", sym[1], sym[2])
     node = b
     if off:
         node = mk("add", node, const(off))
@@ -419,19 +429,28 @@ def split_addr(node):
     off = 0
     syms = []
     others = []
+    his = []
     for t in terms:
         if t[0] == "const":
             off += t[1]
         elif t[0] == "sym":
             syms.append(t)
-        elif t[0] == "param":
-            others.append(t)
-        elif t[0] == "load":
-            others.append(t)
-        elif t[0] == "bin":
+        elif t[0] == "sym_hi":
+            his.append(t)
+        elif t[0] in ("param", "load", "bin"):
             others.append(t)
         else:
             raise Unsupported("address term %r" % (t,))
+    if his:
+        # lui %hi(S) + ... + %lo(S) folds back into one symbol base
+        merged = []
+        for h in his:
+            m = next((s for s in syms if s[1] == h[1]), None)
+            if m is None:
+                raise Unsupported("unpaired %hi")
+            syms.remove(m)
+            merged.append(m)
+        syms = merged[:1]
     if len(syms) > 1:
         raise Unsupported("two symbol bases")
     if syms and others and any(o[0] == "load" for o in others):
@@ -458,23 +477,33 @@ def param_roles(info):
         roles.setdefault(i, {"direct": set(), "ptr": set()})
         roles[i][role].add(w)
 
-    def walk_access(addr, w):
-        s = split_addr(addr)
-        for o in s["index"]:
-            if o[0] == "param":
-                note(o[1], "direct", w)
-            elif o[0] == "load":
-                inner = split_addr(o[2])
-                pi = next((x[1] for x in inner["index"] if x[0] == "param"), None)
-                if pi is not None and inner["sym"] is None:
-                    note(pi, "ptr", w)
-                else:
-                    walk_access(o[2], w)
+    def walk(node, depth=0):
+        if not isinstance(node, tuple) or depth > 8:
+            return
+        k = node[0]
+        if k == "load":
+            w = node[1][0]
+            s = split_addr(node[2])
+            for o in s["index"]:
+                if o[0] == "param":
+                    note(o[1], "direct", w)
+                elif o[0] == "load":
+                    inner = split_addr(o[2])
+                    pi = next((x[1] for x in inner["index"] if x[0] == "param"), None)
+                    if pi is not None and inner["sym"] is None:
+                        note(pi, "ptr", w)
+                    else:
+                        walk(o[2], depth + 1)
+            return
+        if k in ("bin", "sel", "ext32"):
+            for x in node[1:]:
+                walk(x, depth + 1)
 
     for st in info["stores"]:
-        walk_access(st["addr"], st["ty"][0])
-    if info["ret"] is not None and info["ret"][0] == "load":
-        walk_access(info["ret"][2], info["ret"][1][0])
+        walk(st["addr"])
+        walk(st["val"])
+    if info["ret"] is not None:
+        walk(info["ret"])
     return roles
 
 
@@ -503,11 +532,20 @@ def render_expr(node, ctx, mode="natural"):
         op, a, b = node[1], node[2], node[3]
         A = render_expr(a, ctx, mode)
         B = render_expr(b, ctx, mode)
+        if op in ("shl", "shr", "sar"):
+            bv = as_int(b)
+            if bv is not None and bv >= 32:
+                if op == "shl":
+                    return "((long long)%s << %s)" % (A, B)
+                if op == "sar":
+                    return "((long long)%s >> %s)" % (A, B)
+                return "((unsigned long long)%s >> %s)" % (A, B)
         c = {
             "add": "%s + %s", "sub": "%s - %s", "and": "%s & %s", "or": "%s | %s",
             "xor": "%s ^ %s", "mul": "%s * %s", "div": "%s / %s", "mod": "%s %% %s",
             "lt": "%s < %s", "ltu": "(unsigned)%s < (unsigned)%s",
             "lti": "%s < %s", "ltiu": "(unsigned)%s < (unsigned)%s",
+            "ne": "%s != %s",
             "shl": "%s << %s", "shr": "(unsigned)%s >> %s", "sar": "%s >> %s",
         }[op]
         return "(" + (c % (A, B)) + ")"
@@ -517,6 +555,8 @@ def render_expr(node, ctx, mode="natural"):
         test = "%s != 0" % cond_s if how == "nz" else "%s == 0" % cond_s
         return "((%s) ? %s : %s)" % (test, render_expr(a, ctx, mode),
                                      render_expr(old, ctx, mode))
+    if k == "ext32":
+        return "((long long)(int)(%s))" % render_expr(node[1], ctx, mode)
     if k == "sym_hi":
         raise Unsupported("unresolved %hi")
     raise Unsupported("expr %r" % (k,))
@@ -575,6 +615,15 @@ def emit_mem(addr, ty, ctx, mode, load, val=None):
                     for o in rest:
                         body += " + (%s)" % render_expr(o, ctx, mode)
                     expr = "*(%s*)(%s)" % (T, body)
+            elif inner["off"] > 0x10000 and not inner["index"]:
+                name = "D_%08X" % inner["off"]
+                add_extern(ctx, name, "extern int %s;" % name)
+                body = "(char*)(%s)" % name
+                if off:
+                    body += " + %d" % off
+                for o in rest:
+                    body += " + (%s)" % render_expr(o, ctx, mode)
+                expr = "*(%s*)(%s)" % (T, body)
             else:
                 pi = next((x[1] for x in inner["index"] if x[0] == "param"), None)
                 if pi is None:
@@ -800,7 +849,10 @@ def run_batch(args, batch_no, index, addrs):
     for rec in recs:
         e = index[rec["addr"]]
         body = BYFN.get(e["addr_i"], [])
-        cands, why = generate(e, body)
+        try:
+            cands, why = generate(e, body)
+        except Exception as exc:  # a generator bug must not abort the batch
+            cands, why = [], "generator error: %s" % exc
         if not cands:
             rec2 = C.complete(args.owner, e["addr"], "UNSUPPORTED", 0,
                               note=why, source="")

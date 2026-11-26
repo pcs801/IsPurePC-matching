@@ -170,6 +170,8 @@ def classify(addr, size, name, body, cls, gs):
         elif mn in ("jalx",):
             calls += 1
     branches = sum(1 for mn in mns if mn in BRANCH_OPS)
+    returns = sum(1 for (_a, _w, mn, ops) in body
+                  if mn == "jr" and ops.replace(" ", "") == "$ra")
     fpu = any(mn in FPU_OPS or ("." in mn and not mn.startswith("."))
               for mn in mns)
     syscall = any(mn in SYSCALL_OPS for mn in mns)
@@ -184,6 +186,8 @@ def classify(addr, size, name, body, cls, gs):
     flags = []
     if not leaf:
         flags.append("calls")
+    if returns > 1:
+        flags.append("multi-return")
     if not straight:
         flags.append("branch")
     if fpu:
@@ -203,6 +207,8 @@ def classify(addr, size, name, body, cls, gs):
         tier, reason = "hard", "no disassembly"
     elif not leaf:
         tier, reason = "hard", "has calls/tail-jumps"
+    elif returns > 1:
+        tier, reason = "hard", "multiple return points"
     elif fpu or syscall:
         tier, reason = "hard", "fpu/syscall"
     elif unsupported:

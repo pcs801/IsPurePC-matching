@@ -31,9 +31,7 @@ def load_units():
     if os.path.exists(p):
         with open(p, encoding="utf-8") as f:
             data = json.load(f)
-        def _i(x):
-            return int(x, 16) if isinstance(x, str) else int(x)
-        return [(u["name"], _i(u["start"]), _i(u["end"])) for u in data["units"]]
+        return data["units"]
     t = os.path.join(ROOT, "config", "tu_g.json")
     if os.path.exists(t):
         with open(t, encoding="utf-8") as f:
@@ -55,21 +53,30 @@ def expand(ranges, maxspan):
                 out.append(("%s_%02d" % (name, i), s, min(b, s + maxspan)))
     return out
 
-def assign(syms, ranges):
-    """Map each symbol to a unit name."""
+def assign(syms, units):
+    """Map each symbol to a unit name.
+
+    units is a list of dicts from config/units.json. When `addrs` is present it
+    is authoritative (no range overlap); otherwise fall back to [start, end).
+    """
+    by_addr = {}
+    for u in units:
+        for a in u.get("addrs") or []:
+            by_addr[a] = u["name"]
+    if by_addr:
+        return [by_addr.get(s["addr"], "game/g0/%08x" % (s["addr"] // BUCKET * BUCKET)) for s in syms]
+    import bisect
+    ranges = sorted((int(u["start"], 16) if isinstance(u["start"], str) else int(u["start"]),
+                     int(u["end"], 16) if isinstance(u["end"], str) else int(u["end"]),
+                     u["name"]) for u in units)
+    starts = [r[0] for r in ranges]
     out = []
     for s in syms:
-        if ranges:
-            hit = None
-            for name, a, b in ranges:
-                if a <= s["addr"] < b:
-                    hit = name
-                    break
-            if hit is None:
-                hit = "game/g0/%08x" % (s["addr"] // BUCKET * BUCKET)
-        else:
-            hit = "text/%08x" % (s["addr"] // BUCKET * BUCKET)
-        out.append(hit)
+        i = bisect.bisect_right(starts, s["addr"]) - 1
+        hit = None
+        if i >= 0 and ranges[i][0] <= s["addr"] < ranges[i][1]:
+            hit = ranges[i][2]
+        out.append(hit or ("game/g0/%08x" % (s["addr"] // BUCKET * BUCKET)))
     return out
 
 def pct(a, b):
@@ -78,7 +85,7 @@ def pct(a, b):
 def main():
     syms = load_symbols()
     matched = load_matched()
-    names = assign(syms, expand(load_units() or [], MAXSPAN))
+    names = assign(syms, load_units() or [])
 
     total_code = sum(s["size"] for s in syms)
     matched_code = sum(s["size"] for s in syms if s["addr"] in matched)
