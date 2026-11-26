@@ -149,6 +149,9 @@ def core_size(body, size):
     for i, (_a, _w, mn, ops) in enumerate(body):
         if mn == "jr" and ops.replace(" ", "") == "$ra":
             last = i
+        elif mn == "j" and not ops.strip().startswith("$"):
+            # tail call: 'j FUN_xxx' + delay slot also ends the function body
+            last = i
     if last < 0:
         return size, 0
     end = (last + 2) * 4

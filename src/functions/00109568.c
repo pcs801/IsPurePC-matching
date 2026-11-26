@@ -11,8 +11,8 @@ void FUN_00109568(void)
 {
     int buf[28];
     int i;
-    char *prev = 0;
     char *cur;
+    char *prev = 0;
     int off = 0;
     int s4;
     int j;
@@ -38,5 +38,13 @@ void FUN_00109568(void)
         FUN_001dc850(0, 0);
         cur = prev + 0x46000;
         off += 7;
+    }
+    for (j = 0; j < 0x70; j++) {
+        int n = 0x280;
+        signed char *p = prev + j * 0xA00 + 3;
+        do {
+            *p = -128;
+            p += 4;
+        } while (--n >= 0);
     }
 }
