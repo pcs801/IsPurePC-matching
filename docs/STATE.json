@@ -2,8 +2,8 @@
  "schema": 1,
  "project": "IsPurePC-Matching",
  "source": "SLPM-66570 (PS2, 2006, Regista / Takara Tomy)",
- "phase": "M2-automation",
- "updated": "2026-11-26T13:48:00+08:00",
+ "phase": "M2.2-batch",
+ "updated": "2026-11-26T19:40:00+08:00",
  "decision": {
   "track": "matching-decompilation-only",
   "legacyProject": "E:/ONE PIECE/S/IsPurePC (paused, assets only)",
@@ -37,7 +37,14 @@
   "buildConfig": "config/build_config.json",
   "tuG": "config/tu_g.json",
   "rebuiltImage": "build/splat/SLPM_665.70.rebuilt",
-  "overrides": "config/overrides.json"
+  "overrides": "config/overrides.json",
+  "triage": "tools/triage.py",
+  "queue": "build/queue.json",
+  "claims": "tools/claims.py",
+  "claimsLedger": "build/claims.json",
+  "matchKit": "tools/match_kit.py",
+  "autoMatch": "tools/auto_match.py",
+  "batchResults": "build/m2-2-results.json"
  },
  "gates": {
   "spike": {
@@ -58,14 +65,24 @@
    "status": "passed",
    "result": "5 local-class functions (104 bytes) compiled from C, byte-verified and spliced into .text; full image sha256 unchanged",
    "verified_by": "make check"
+  },
+  "m2_2_batch": {
+   "status": "passed",
+   "result": "50 easy functions run unattended (5 batches, make progress after each): 40 MATCH (80%), avg 1.72 attempts (1.25 for matches); 45 matched overrides / 656 bytes from C; full image sha256 unchanged",
+   "verified_by": "make check + python tools/build.py overrides",
+   "report": "docs/m2-2-batch.md"
   }
  },
- "next_action": "M2.2: triage queue (tools/triage.py + build/queue.json + claims), then match_kit + ledger automation",
+ "next_action": "M2.3: medium tier (padding policy first) + generator hardening (64-bit idioms, movn/movz, array indexing, statement-order search); wire match_kit to objdiff-cli; support parallel claim workers",
  "notes": [
   "configure.py: 6 needs_G8 ranges covering 557404 bytes; everything else -G0",
   "build.py check end-to-end takes 2-3 min (splat ~40s, WSL asm ~60s)",
   "honest scope: only .text is truly rebuilt; data segments are splat-split bytes pasted back",
   "build.py overrides: matched C overrides are verified byte-exact (relocation-aware) before splicing; a mismatch fails make check",
-  "objdiff-cli still not wired (needs a symbolized target); the per-function override verifier prints word-level compiled-vs-baserom diffs instead"
+  "objdiff-cli still not wired (needs a symbolized target); the per-function override verifier prints word-level compiled-vs-baserom diffs instead",
+  "M2.2 queue: 3966 functions -> easy 139 / medium 195 / hard 3632; 157 medium + 1398 hard carry trailing alignment padding that C cannot reproduce under the current size==core gate",
+  "M2.2 sample: systematic 50 of 139 easy functions across 8..56B; 40 matched, 10 missed (64-bit idioms 2, address/scheduling/regalloc 4, array indexing 2, movn/movz 2)",
+  "claims.py is a local rac4-inspired claim/lease ledger (build/claims.json + O_EXCL lock); 50 claims, 0 retries",
+  "match_kit.py compiles a batch of candidates in one WSL call and byte-compares relocation-aware; auto_match.py turns splat asm into ordinary C variants (no asm/.word/volatile)"
  ]
 }

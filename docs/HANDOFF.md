@@ -2,22 +2,24 @@
 
 ## 当前进度
 
-- 阶段：**M2.1 完成**（per-function override）
-- 上一次更新：2026-11-26 13:48
-- 验收：`make check` 一条命令 → **SHA-256 = `e0d0b77b555fd876c6fdd933b486292da45e77677b44bc04eec67836de481147` = 原版**（其中 5 个函数 / 104 字节已改由 C 提供）
-- 下一步：**M2.2 triage 队列**（`tools/triage.py` + `build/queue.json` + 认领）→ match_kit → ledger 自动化
+- 阶段：**M2.2 完成**（triage 队列 + 50 函数无人值守批次）
+- 上一次更新：2026-11-26 19:40
+- 验收：`make check` → **SHA-256 = `e0d0b77b555fd876c6fdd933b486292da45e77677b44bc04eec67836de481147` = 原版**（其中 **45 个函数 / 656 字节**已改由 C 提供）
+- M2.2 批次：50 个 easy 函数 → **40 MATCH（80%）**，平均尝试 **1.72** 次（命中 1.25），详见 `docs/m2-2-batch.md`
+- 下一步：**M2.3** medium 档（先定 padding 策略）+ 生成器补 64 位/movn/movz + match_kit 接 objdiff
 
 ---
 
 ## 你的任务（一句话）
 
-M1 已收口，M2.1 已完成：`build.py` 支持 per-function override，5 个 local 函数已走通「写 C → 编译 → 重定位 → 逐字节比对 → 覆盖 .text」，`make check` 仍 SHA 一致。下一步是 M2.2 triage 队列。
+M1/M2.1 已收口，M2.2 已完成：`triage.py`（3,966 函数分档）+ `claims.py`（原子认领/租约）+ `match_kit.py`（批量编译 + 重定位感知比对）+ `auto_match.py`（汇编→C 候选）跑通 50 个 easy 函数，40 命中，`make check` 仍 SHA 一致。下一步是 M2.3 medium 档。
 
 ---
 
 ## 1. 先读
 
-1. `docs/build.md` — **一条命令构建与验收**（本轮新增）
+0. `docs/m2-2-batch.md` — **M2.2 批次报告**（分档/认领/生成器/50 函数结果/诚实边界）
+1. `docs/build.md` — **一条命令构建与验收**
 2. `docs/m1-image.md` — reloc resolver 规则、段拼接、双验证、诚实边界
 3. `docs/splat-setup.md` — splat 的 4 个坑
 4. `docs/g-distribution.md` — per-TU `-G` 普查
@@ -71,11 +73,11 @@ objdiff: toolchain/dl/objdiff-cli.exe
 
 ## 6. M2 清单
 
-1. `tools/triage.py`：按 size/叶函数/FPU/gp 给函数分难度队列
-2. 队列文件 `build/queue.json` + 认领（参考 rac4 的 `claims.py` 思路）
-3. `tools/match_kit.py`：编译 + objdiff + 结果归档一条命令
-4. `progress/ledger.tsv` 自动追加
-5. 无人值守跑通 50 个函数
+1. ✅ `tools/triage.py`：size/叶函数/分支/FPU/padding/gp → easy 139 / medium 195 / hard 3,632
+2. ✅ `build/queue.json` + `tools/claims.py`（原子认领 + 租约，本地版 rac4 思路）
+3. 🟡 `tools/match_kit.py`：批量编译 + 重定位感知逐字节比对已可用；objdiff-cli 还没接
+4. ✅ `auto_match.py` 命中时自动追加 `progress/ledger.tsv`（证据卡仍待做）
+5. ✅ 无人值守跑通 50 个 easy 函数 → 40 MATCH
 
 ## 7. 判据（M2）
 

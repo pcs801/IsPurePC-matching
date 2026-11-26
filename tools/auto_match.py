@@ -525,6 +525,7 @@ def render_expr(node, ctx, mode="natural"):
     if k == "param":
         return ctx["params"][node[1]]
     if k == "sym":
+        add_extern(ctx, node[2], "extern char %s[];" % node[2])
         return "(char*)%s" % node[2]
     if k == "load":
         return emit_mem(node[2], node[1], ctx, mode, load=True)
@@ -638,7 +639,8 @@ def emit_mem(addr, ty, ctx, mode, load, val=None):
         elif base_param is not None:
             pn = ctx["params"][base_param[1]]
             decl = ctx["decls"].get(base_param[1], "")
-            if mode == "natural" and "**" not in decl and not rest and off % w == 0:
+            if mode == "natural" and "*" in decl and "**" not in decl and not rest \
+                    and off % w == 0:
                 expr = "%s[%d]" % (pn, off // w)
             else:
                 body = "(char*)%s" % pn
