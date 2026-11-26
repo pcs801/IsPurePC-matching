@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Upload build/report.json to ByteMatch (per-project token, no GitHub Actions).
+"""Upload build/report.json to ByteMatch.
 
-Config precedence:
-  1. environment: BYTEMATCH_TOKEN / BYTEMATCH_OWNER / BYTEMATCH_REPO / BYTEMATCH_VERSION
-  2. config/upload.local.json  (gitignored)
-
-Cloudflare in front of bytematch.dev rejects urllib's default signature (HTTP 403, error 1010),
-so this shells out to curl with a browser User-Agent.
+- gzip-compresses the body (function-level units make the JSON multi-MB; the
+  instance rejects large raw bodies with HTTP 413, and the API accepts
+  Content-Encoding: gzip).
+- Cloudflare rejects urllib's signature (403/1010), so it shells out to curl
+  with a browser User-Agent.
+- Config precedence: environment, then config/upload.local.json.
 """
-import json, os, subprocess, sys
+import gzip, json, os, subprocess, sys, tempfile
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
 
@@ -31,6 +31,10 @@ def main():
         print("no token: set env or config/upload.local.json", file=sys.stderr)
         return 2
     path = os.path.join(root, "build", "report.json")
+    raw = open(path, "rb").read()
+    body = gzip.compress(raw, 6)
+    tmp = os.path.join(root, "build", "report.json.gz")
+    open(tmp, "wb").write(body)
     try:
         commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root).decode().strip()
     except Exception:
@@ -41,11 +45,13 @@ def main():
         ["curl", "-sS", "-X", "POST",
          "-H", "Authorization: Bearer " + token,
          "-H", "Content-Type: application/json",
+         "-H", "Content-Encoding: gzip",
          "-A", UA,
-         "--data-binary", "@" + path,
+         "--data-binary", "@" + tmp,
          url, "-w", "\nHTTP=%{http_code}\n"],
-        cwd=root, env=env, capture_output=True, text=True, timeout=90,
+        cwd=root, env=env, capture_output=True, text=True, timeout=180,
     )
+    print("raw %d bytes -> gz %d bytes" % (len(raw), len(body)))
     sys.stdout.write(res.stdout)
     sys.stderr.write(res.stderr)
     return 0 if "HTTP=201" in res.stdout or "HTTP=200" in res.stdout else 1

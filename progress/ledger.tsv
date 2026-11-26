@@ -504,3 +504,14 @@ addr	name	size	result	flags	assembler	attempts	note
 0x001C0E40	FUN_001c0e40	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	30	M2.6 pipeline: 32 bytes; g=0
 0x001C0E40	FUN_001c0e40	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	30	M2.6 pipeline: 32 bytes; g=0
 0x001C1BF0	FUN_001c1bf0	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	30	M2.6 pipeline: 32 bytes; g=0
+0x00206158	FUN_00206158	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 32 bytes; g=0
+0x00117760	FUN_00117760	40	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 40 bytes; g=8
+0x00123940	FUN_00123940	40	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 40 bytes; g=8
+0x001241D0	FUN_001241d0	40	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 40 bytes; g=8
+0x0012D478	FUN_0012d478	40	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 40 bytes; g=8
+0x001AF7A8	FUN_001af7a8	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 40 bytes; g=0
+0x001CD158	FUN_001cd158	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 40 bytes; g=0
+0x001E02D8	FUN_001e02d8	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 40 bytes; g=0
+0x001E4068	FUN_001e4068	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 40 bytes; g=0
+0x00107728	FUN_00107728	48	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 48 bytes; g=8
+0x001BBDC0	FUN_001bbdc0	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 pipeline: 48 bytes; g=0

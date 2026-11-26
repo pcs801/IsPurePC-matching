@@ -35,7 +35,7 @@ SANDBOX = os.path.join(ROOT, "build", "sandbox")
 KNOWN_HARD = os.path.join(ROOT, "build", "m26-known-hard.json")
 STALL = os.path.join(ROOT, "docs", "m2-6-stall.md")
 OVERRIDES = os.path.join(ROOT, "config", "overrides.json")
-MAX_ATTEMPTS = 30
+MAX_ATTEMPTS = 60
 
 
 def load_queue():
@@ -389,6 +389,43 @@ def cmd_verify(args):
     return 0
 
 
+def cmd_check_one(args):
+    """Fast single-function check: compile one candidate, match_kit verify (~1-2s)."""
+    addr_i = int(str(args.addr), 16)
+    index = {e["addr_i"]: e for e in load_queue()["entries"]}
+    e = index.get(addr_i)
+    if not e:
+        print("unknown addr", args.addr)
+        return 1
+    src_abs = os.path.join(ROOT, "src", "functions", "%08x.c" % addr_i)
+    if not os.path.exists(src_abs):
+        print("MISS no source:", src_abs)
+        return 1
+    code = open(src_abs, encoding="utf-8", errors="replace").read()
+    problems = LM.sanitize_candidate(code, addr_i)
+    if problems:
+        print("MISS rejected:", ", ".join(problems))
+        return 1
+    items = [{"key": "one", "src": code, "g": int((e.get("g") or ["0"])[0])}]
+    objs = MK.compile_batch(items, "check_%x" % addr_i, verbose=False)
+    obj = objs.get("one")
+    if not obj:
+        print("MISS compile failed")
+        return 1
+    r = LM.verify(obj, e)
+    if r.get("ok"):
+        print("MATCH")
+        return 0
+    print("MISS", r.get("summary"))
+    if r.get("diffs"):
+        first = r["diffs"][0]
+        if isinstance(first, tuple) and len(first) >= 3:
+            print("first diff at word %s: got %s want %s" % (first[0], first[1], first[2]))
+        else:
+            print("first diff:", first)
+    return 1
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -400,6 +437,9 @@ def main(argv=None):
     v = sub.add_parser("verify")
     v.add_argument("--batch", type=int, default=0)
     v.set_defaults(func=cmd_verify)
+    c = sub.add_parser("check-one")
+    c.add_argument("--addr", required=True)
+    c.set_defaults(func=cmd_check_one)
     s = sub.add_parser("status")
     s.set_defaults(func=lambda a: print(json.dumps(load_state(), ensure_ascii=False, indent=1)))
     args = ap.parse_args(argv)

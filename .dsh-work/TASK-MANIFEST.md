@@ -117,3 +117,28 @@
 
 清理报告：删除本任务临时脚本 build/_m25_unal.py 与新增 pyc；移入回收 0 个；保留交付物 10 项、关键证据 5 项、中间产物 1 类（build/candidates）。
 
+| 2026-11-26T16:47:08.347Z | E:/ONE PIECE/S/IsPurePC-matching/src/functions/001bbdc0.c | 函数匹配候选源（5 个叶函数拼合 48 字节） | 交付物 | m26b2-001bbdc0: 0x001BBDC0 字节匹配 | 保留 |
+| 2026-11-26T16:47:08.347Z | E:/ONE PIECE/S/IsPurePC-matching/build/sandbox/001bbdc0/result.json | 匹配结果记录 | 交付物 | 同上 | 保留 |
+| 2026-11-26T16:52:30.000Z | E:/ONE PIECE/S/IsPurePC-matching/src/functions/001241d0.c | 函数匹配候选源（40 字节叶函数） | 交付物 | m26b2-001241d0: 0x001241D0 字节匹配（MATCH） | 保留 |
+| 2026-11-26T16:52:30.000Z | E:/ONE PIECE/S/IsPurePC-matching/build/sandbox/001241d0/result.json | 匹配结果记录（attempts=1, g=8） | 交付物 | 同上 | 保留 |
+
+## 任务：PS2 MIPS 函数匹配 0x0012B628（worker m26b2-0012b628）
+
+- 时间：01:18
+- 交付物（保留）：E:\\ONE PIECE\\S\\IsPurePC-matching\\src\\functions\\0012b628.c（候选源码）
+- 交付物（保留）：E:\\ONE PIECE\\S\\IsPurePC-matching\\build\\sandbox\\0012b628\\result.json（结果）
+- 临时文件（已删除）：build/candidates/*.o/*.c/*.err、build/_dbg_s.sh、build/_dbg_v.sh、build/_dbg_cmp.py、build/_dbg_words.py、build/candidates/dbg12b628/
+- 类别：交付物 + 临时文件；处置：临时已删除，交付物保留
+| 01:18 | E:/ONE PIECE/S/IsPurePC-matching/src/functions/001d2af8.c | 0x001D2AF8 函数匹配改写（extern 全局赋值） | 交付物 | m26b3-001d2af8 单函数字节匹配 | 保留 |
+| 01:18 | E:/ONE PIECE/S/IsPurePC-matching/build/sandbox/001d2af8/result.json | 匹配结果记录 | 交付物 | 同上 | 保留 |
+
+| 01:36 | E:/ONE PIECE/S/IsPurePC-matching/src/functions/00179db8.c | 0x00179DB8 函数匹配候选源码（extern 全局字节读写，最接近的合法形式） | 交付物 | m26b3-00179db8 单函数字节匹配；结果 MISS | 保留 |
+| 01:36 | E:/ONE PIECE/S/IsPurePC-matching/build/sandbox/00179db8/result.json | 匹配结果记录（MISS，attempts=2，g=-8，含第一处差异与 dbr 证据） | 交付物 | 同上 | 保留 |
+| 01:36 | E:/ONE PIECE/S/IsPurePC-matching/build/candidates/（exp1/exp2/exp3/dump/dbr/check_179db8） | 本次 30+ 个 C 变体的编译中间产物（WSL ee-gcc 对象与 .err） | 中间产物 | 同上 | 保留（build/ 为生成目录且与并发 worker 共用同名目录，未删除） |
+
+## 任务：PS2 MIPS 函数匹配 0x00179DB8（worker m26b3-00179db8）
+
+- 时间：01:36
+- 结论：MISS。编译仅 16/20 字节，sb 被 dbr 填入 jr 延迟槽（lui,lbu,jr,sb），而原始为 lui,lbu,sb,jr,nop。
+- 证据：同一份 C 用 `-fno-delayed-branch` 编译得到与原始完全一致的 20 字节 3c0200aa 90438d9b a3838243 03e00008 00000000；受门禁固定的 -O2 下，30+ 种纯 C 形式（数组/指针/临时变量/结构体/位域/union/__builtin_memcpy/显式 return 等）都会被填槽，唯一能阻止填槽的是 volatile 限定目的对象（也是 20 字节全等），而 volatile 被规则禁止。
+- 交付物（保留）：上面两行；临时编译产物保留在 build/candidates（未删，避免误删并发 worker 同名目录）。
