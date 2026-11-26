@@ -68,6 +68,56 @@
 
 3,743 个，先易后难，批 80，三个保险不变。
 
+
+
+---
+
+## 修订二（2026-11-26 23:50）：按当前 harness 适配，不照抄 Claude Code
+
+### 事实
+
+- 当前环境只有 **opencode-go / deepseek-v4.1-flash** 一个模型（`list_subagent_models` 实测）。
+- 没有 Claude、没有 tier 升级、没有 Codex。
+- DSH 独有能力：**run_code 程序化批量调用工具**（一个程序内循环编译/判定/记账）、subagent、AgentTeams、schedule。
+
+### 结论
+
+不能照抄“一函数一 Claude Code 会话”的形态。适配为：
+
+```
+run_code 程序（主流水线，确定性）
+  1. 读队列，取 20 个函数
+  2. 生成证据卡（反汇编 + config/types.json + 同形态源码 + ABI）
+  3. 一次 subagent 调用，要求它输出 20 个 C（JSON）
+  4. 批量编译（一次 WSL 调用）
+  5. match_kit 批量判定
+  6. 失败者生成“指令级 diff”卡，进入下一轮（最多 3 轮）
+  7. 记账 + make progress
+```
+
+- 批次：**20 个/批**（不是 80；flash 模型单次输出上限更低）
+- 每批一个 subagent，不是每函数一个
+- subagent 用同一个模型（没有更强可选），靠“证据卡质量 + 多轮 diff”提升，不靠换模型
+- 确定性工作（编译/判定/diff/记账）全部在 run_code 里批量做，不消耗 LLM
+
+### 证据卡内容（每函数）
+
+1. 反汇编全文 + 原始字节
+2. `config/types.json` 中相关结构体（按字段偏移匹配）
+3. `src/functions/` 中同形态已匹配源码 3 个
+4. 上一轮的具体指令差异（如 `sll` vs `sra`，`v0` vs `a0`）
+5. 允许的 `-G`
+
+### 与 Claude Code 版的差异
+
+| 项 | Claude Code 版 | 本适配 |
+|---|---|---|
+| 模型 | Claude Opus/Sonnet/Haiku 分层 | 单一 DeepSeek V4.1 Flash |
+| 粒度 | 一函数一会话 | **一批 20 函数一次调用** |
+| 确定性工作 | agent 自己跑命令 | **run_code 批量做** |
+| 升级路径 | 换模型（tier） | 无；只能改证据卡/多轮 |
+| 成本 | 每函数 0.3–0.8M | 目标每函数 ≤0.2M（批量摊薄） |
+
 ## 产出
 
 - `tools/worker_match.py`：一函数一沙箱，证据卡 → LLM → 编译 → 匹配 → 重试

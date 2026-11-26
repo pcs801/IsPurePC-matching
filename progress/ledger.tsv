@@ -478,3 +478,7 @@ addr	name	size	result	flags	assembler	attempts	note
 0x001CA4C8	FUN_001ca4c8	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 48 bytes; g=0
 0x001125C8	FUN_001125c8	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 56 bytes; g=0
 0x001738E0	FUN_001738e0	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 56 bytes; g=0
+0x00173918	FUN_00173918	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 56 bytes; g=0
+0x00173AB0	FUN_00173ab0	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 56 bytes; g=0
+0x0019C8F0	FUN_0019c8f0	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 56 bytes; g=0
+0x0010F138	FUN_0010f138	40	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: core 36/40

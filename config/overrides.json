@@ -559,6 +559,24 @@
       "note": "M2.6 worker: 56 bytes; g=0"
     },
     {
+      "addr": "0x00173918",
+      "size": 56,
+      "name": "FUN_00173918",
+      "source": "src/functions/00173918.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 56 bytes; g=0"
+    },
+    {
+      "addr": "0x00173AB0",
+      "size": 56,
+      "name": "FUN_00173ab0",
+      "source": "src/functions/00173ab0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 56 bytes; g=0"
+    },
+    {
       "addr": "0x00177BC8",
       "size": 8,
       "name": "FUN_00177bc8",
@@ -665,6 +683,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x0019C8F0",
+      "size": 56,
+      "name": "FUN_0019c8f0",
+      "source": "src/functions/0019c8f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 56 bytes; g=0"
     },
     {
       "addr": "0x001A6838",
