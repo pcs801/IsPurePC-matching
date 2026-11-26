@@ -1,14 +1,17 @@
-# 任务产出清单
+# TASK-MANIFEST (m26b9-tu-00107d88)
 
-## m26b8-tu-001064d8（PS2 MIPS TU 字节匹配 worker，TU tu/001064d8，工作目录 E:/ONE PIECE/S/IsPurePC-matching）
+任务：TU tu/00107d88 三个 PS2 MIPS 函数字节级匹配（工作区 E:/ONE PIECE/S/IsPurePC-matching）
 
-| 时间 | 文件绝对路径 | 来源与用途 | 类别 | 最终处置 |
-| --- | --- | --- | --- | --- |
-| 03:50 | E:\ONE PIECE\S\IsPurePC-matching\src\functions\00106668.c | 本任务候选源码 FUN_00106668（未匹配，332/332 字节、17 字差异） | 中间产物 | 保留（候选） |
-| 04:15 | E:\ONE PIECE\S\IsPurePC-matching\src\functions\00107508.c | 本任务已命中源码 FUN_00107508 | 交付物 | 保留 |
-| 04:15 | E:\ONE PIECE\S\IsPurePC-matching\src\functions\001075b0.c | 本任务已命中源码 FUN_001075B0 | 交付物 | 保留 |
-| 04:28 | E:\ONE PIECE\S\IsPurePC-matching\build\m26-tu\tu_001064d8\matched.md | TU 已命中源码累积（00107508/001075B0） | 交付物 | 保留 |
-| 04:28 | E:\ONE PIECE\S\IsPurePC-matching\build\m26-tu\tu_001064d8\result.json | TU 结果汇总 | 交付物 | 保留 |
-| 03:50 | E:\ONE PIECE\S\IsPurePC-matching\build\m26-tu\tu_001064d8\disdiff.py | 反汇编差异对照脚本 | 临时文件 | 移入回收 |
-| 04:00 | E:\ONE PIECE\S\IsPurePC-matching\build\m26-tu\tu_001064d8\try.py | 多变体批量编译判定脚本 | 临时文件 | 移入回收 |
-| 04:00 | E:\ONE PIECE\S\IsPurePC-matching\build\m26-tu\tu_001064d8\v.json、v1.json | 变体输入缓存 | 临时文件 | 移入回收 |
+| 时间 | 文件 | 来源/用途 | 类别 | 处置 |
+|---|---|---|---|---|
+| 05:10 | build/_m26_dis.py | 自建并排反汇编对比脚本 | 临时文件 | 保留（供后续 worker 复用） |
+| 05:10 | build/_m26_orig.py | 自建 baserom 原始函数反汇编 | 临时文件 | 保留 |
+| 05:10 | tools/_m26_shape.py | 自建规范化结构差异工具 | 临时文件 | 保留 |
+| 05:10 | tools/_m26_try.py | 自建批量候选编译比对工具 | 临时文件 | 保留 |
+| 05:10 | build/_m26_spec.json | 批量试验输入（临时） | 临时文件 | 保留 |
+| 05:10 | build/candidates/try*/、check_*/ | 编译产物缓存 | 中间产物 | 保留 |
+| 05:10 | src/functions/00107f30.c | 最终源码（MATCH） | 交付物 | 保留 |
+| 05:10 | src/functions/001080a0.c | 最佳候选（MISS，34 差异） | 交付物 | 保留 |
+| 05:10 | src/functions/001081f8.c | 最佳候选（MISS，138 差异） | 交付物 | 保留 |
+| 05:10 | build/m26-tu/tu_00107d88/matched.md | 已命中源码累积 | 交付物 | 保留 |
+| 05:10 | build/m26-tu/tu_00107d88/result.json | TU 结果 | 交付物 | 保留 |

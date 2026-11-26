@@ -22,9 +22,9 @@ void FUN_001080a0(void)
         return;
     do {
         diff = D_456540[i] - prev;
-        do {
-            if (diff < (j + 1) * 256) { sub = diff % 256; over = 0; }
-            else { sub = 256; over = 1; }
+        for (;;) {
+            if (((j + 1) << 8) <= diff) { sub = 256; over = 1; }
+            else { sub = diff % 256; over = 0; }
             r.x = j * 4;
             r.y = 0;
             r.w = 4;
@@ -35,7 +35,8 @@ void FUN_001080a0(void)
             col[3] = 0x80;
             FUN_001a09a0(&r, col, 0x1F);
             j++;
-        } while (over);
+            if (!over) break;
+        }
         prev = D_456540[i];
         i++;
     } while (i < D_00270AA8);

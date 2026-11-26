@@ -1,4 +1,4 @@
-// FUNCTION: SLPM 0x001093D0  size 408
+// FUNCTION: SLPM 0x001093D0  size 408  (best effort: 17/101 words differ)
 extern char D_002585A0[];
 
 extern void FUN_001fbb84(void *p, int v, int n);
@@ -43,21 +43,21 @@ int FUN_001093d0(int id, void *data, int width, int height, int flag) {
     FUN_001fbb84(&hdr, 0, 16);
     FUN_001fbb84(&img, 0, 0x30);
     hdr.magic[0] = 'T';
+    hdr.count = 1;
+    img.headerSize = 0x30;
     hdr.magic[1] = 'I';
     hdr.magic[2] = 'M';
     hdr.magic[3] = '2';
     hdr.version = 4;
-    hdr.format = 0;
-    hdr.count = 1;
     img.totalSize = width * height * 4 + 0x30;
-    img.clutSize = 0;
     img.imageSize = width * height * 4;
-    img.headerSize = 0x30;
+    img.imageFormat = 1;
+    img.depth = 3;
+    hdr.format = 0;
+    img.clutSize = 0;
     img.clutColors = 0;
     img.imageType = 0;
-    img.imageFormat = 1;
     img.zero12 = 0;
-    img.depth = 3;
     img.width = width;
     img.height = height;
     img.tex0 = 0;
@@ -65,12 +65,12 @@ int FUN_001093d0(int id, void *data, int width, int height, int flag) {
     img.regs0 = 0;
     img.regs1 = 0;
     FUN_001fc2a8(path, D_002585A0, id);
-    if (flag != 0) {
+    if (flag == 0) {
+        fd = FUN_0020ac78(path, 0x602);
+    } else {
         fd = FUN_0020ac78(path, 0xA02);
         if (fd < 0)
             return 0;
-    } else {
-        fd = FUN_0020ac78(path, 0x602);
     }
     FUN_0020b530(fd, &hdr, 0x10);
     FUN_0020b530(fd, &img, 0x30);

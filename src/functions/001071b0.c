@@ -6,12 +6,17 @@ extern void FUN_001b7da8(int, int);
 
 int FUN_001071b0(int idx)
 {
-    unsigned char *base = D_281580 + idx * 0x4E280;
+    unsigned char *p = D_281580 + idx * 0x4E280;
     int chunk[10];
     int i, j, n, per, sum, total, avg, dev, lvl, val;
     short *smp;
 
-    if (base[3] == 0 || FUN_001b7090(*(int *)(base + 4)) != 3) {
+    if (p[3] == 0) {
+        D_456480[0] = D_270C40;
+        D_456480[2] = 0;
+        return 0;
+    }
+    if (FUN_001b7090(*(int *)(p + 4)) != 3) {
         D_456480[0] = D_270C40;
         D_456480[2] = 0;
         return 0;
@@ -19,24 +24,20 @@ int FUN_001071b0(int idx)
     if (D_456480[0] >= D_270C40)
         return D_456480[1];
     sum = 0;
-    n = *(int *)(*(int *)(base + 4) + 0x34);
-    smp = *(short **)(*(int *)(base + 4) + 0x2C);
+    n = *(int *)(*(int *)(p + 4) + 0x34);
+    smp = *(short **)(*(int *)(p + 4) + 0x2C);
     for (i = n; i > 0; i--) {
-        int v = *smp++;
-        if (v < 0)
-            v = -v;
-        sum += v;
+        short v = *smp++;
+        sum += v < 0 ? -v : v;
     }
-    per = *(int *)(*(int *)(base + 4) + 0x34) / 10;
-    smp = *(short **)(*(int *)(base + 4) + 0x2C);
+    per = *(int *)(*(int *)(D_281580 + idx * 0x4E280 + 4) + 0x34) / 10;
     total = 0;
     for (i = 0; i < 10; i++) {
         chunk[i] = 0;
         if (per > 0) {
             for (j = per; j != 0; j--) {
-                int v = *smp++;
-                if (v < 0)
-                    v = -v;
+                short v = *smp++;
+                v = v < 0 ? -v : v;
                 if (chunk[i] < v)
                     chunk[i] = v;
             }
@@ -46,11 +47,11 @@ int FUN_001071b0(int idx)
     avg = total / 10;
     dev = 0;
     for (i = 0; i < 10; i++) {
-        int d = chunk[i] - avg;
-        dev += d < 0 ? -d : d;
+        int d = chunk[i];
+        dev += d > avg ? d - avg : avg - d;
     }
     dev /= 10;
-    n = sum / *(int *)(*(int *)(base + 4) + 0x34);
+    n = sum / *(int *)(*(int *)(D_281580 + idx * 0x4E280 + 4) + 0x34);
     lvl = 0;
     if (n >= 1000)
         lvl = n < 5000 ? 2 : 1;
