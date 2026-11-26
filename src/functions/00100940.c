@@ -17,7 +17,7 @@ extern int D_00270C18;
 extern char D_0026FC50[];
 
 struct P {
-    char *f0;
+    int f0;
     signed char f4;
     signed char f5;
     char f6;
@@ -40,8 +40,7 @@ int FUN_00100940(struct S *self)
     char buf[0x100];
     struct P *p = self->p;
     int prev = 0;
-    char *n = p->f0;
-    int r;
+    int n = p->f0;
 
     if (p->f4 == 1) {
         prev = self->phase;
@@ -52,17 +51,17 @@ int FUN_00100940(struct S *self)
         if (D_1B74230[0] != 0)
             return 0;
         D_1B74230[0] = 1;
-        FUN_001fc2a8(buf, D_0026FC50, (int)(n + 8), (char *)p + 6);
-        FUN_0010b290((char *)D_1B76300, (int)(n + 0x108), buf);
+        FUN_001fc2a8(buf, D_0026FC50, n + 8, (char *)p + 6);
+        FUN_0010b290((char *)D_1B76300, n + 0x108, buf);
         p->f164 = p->f160;
         self->phase = 1;
     case 1:
         do {
-            r = FUN_0010b6a8((char *)D_1B76300);
-            FUN_001fbad4(p->f164, *(int *)((char *)D_1B76300 + 0x7EB4),
-                         *(int *)((char *)D_1B76300 + 0x7EB8));
-            p->f164 += *(int *)((char *)D_1B76300 + 0x7EB8);
-            if (r == 1) {
+            prev = FUN_0010b6a8((char *)D_1B76300);
+            FUN_001fbad4(p->f164, D_1B76300[0x7EB4 / 4],
+                         D_1B76300[0x7EB8 / 4]);
+            p->f164 += D_1B76300[0x7EB8 / 4];
+            if (prev == 1) {
                 FUN_0010baa8((char *)D_1B76300);
                 p->f168 = p->f164 - p->f160;
                 D_1B74230[0] = 0;
@@ -84,8 +83,8 @@ int FUN_00100940(struct S *self)
     case 3: {
         int *st = D_1B9F908;
         int chunk = 0x800;
-        while ((r = FUN_0019c6f8(st[0], chunk)) != -1) {
-            st[0] = st[0] + (chunk - r);
+        while ((prev = FUN_0019c6f8(st[0], chunk)) != -1) {
+            st[0] = st[0] + (chunk - prev);
             if (!(*(unsigned int *)0x10000000 < (unsigned int)D_00270C18))
                 return 0;
         }

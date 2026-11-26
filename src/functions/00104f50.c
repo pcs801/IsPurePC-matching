@@ -27,7 +27,7 @@ int FUN_00104f50(int idx, int count, int reg)
     }
     v = reg & 0xFFF;
     if (count > 0) {
-        p = (int *)(*(int *)(D_B1EC00 + 4) + idx * 4);
+        p = (int *)(idx * 4 + *(int *)(D_B1EC00 + 4));
         for (i = count; i != 0; i--) {
             v += *p;
             p = (int *)((char *)p + 0x14);
