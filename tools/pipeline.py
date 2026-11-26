@@ -1,0 +1,410 @@
+#!/usr/bin/env python3
+"""pipeline.py - M2.6 revision-3: deterministic prepare/verify only.
+
+prepare  build sandbox + evidence card per function, register todo overrides,
+         write build/m26-batch-N/card.json (the subagent prompt payload).
+verify   batch-compile the candidates the subagents wrote, match_kit byte check,
+         promote hits to matched, produce instruction diffs, write bookkeeping.
+
+No model or CLI invocation here: C is written by one DSH subagent per function.
+
+Usage
+  python tools/pipeline.py prepare --batch 1 --limit 20
+  python tools/pipeline.py verify  --batch 1
+  python tools/pipeline.py status
+"""
+import argparse
+import json
+import os
+import re
+import sys
+import time
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+import claims as C          # noqa: E402
+import match_kit as MK      # noqa: E402
+import triage               # noqa: E402
+import llm_match as LM      # noqa: E402
+
+QUEUE = os.path.join(ROOT, "build", "m26-queue.json")
+STATE = os.path.join(ROOT, "build", "m26-pipeline-state.json")
+TYPES = os.path.join(ROOT, "config", "types.json")
+SRC_DIR = os.path.join(ROOT, "src", "functions")
+SANDBOX = os.path.join(ROOT, "build", "sandbox")
+KNOWN_HARD = os.path.join(ROOT, "build", "m26-known-hard.json")
+STALL = os.path.join(ROOT, "docs", "m2-6-stall.md")
+OVERRIDES = os.path.join(ROOT, "config", "overrides.json")
+MAX_ATTEMPTS = 30
+
+
+def load_queue():
+    return json.load(open(QUEUE, encoding="utf-8"))
+
+
+def load_state():
+    if os.path.exists(STATE):
+        return json.load(open(STATE, encoding="utf-8"))
+    return {"schema": 1, "batch_no": 0, "processed": [], "tokens_total": 0,
+            "gate_history": [], "stalled": False, "current": None,
+            "created": time.strftime("%Y-%m-%dT%H:%M:%S%z")}
+
+
+def save_state(s):
+    tmp = STATE + ".tmp"
+    json.dump(s, open(tmp, "w", newline="\n", encoding="utf-8"),
+              indent=1, ensure_ascii=False)
+    os.replace(tmp, STATE)
+
+
+def claims_doc():
+    return json.load(open(os.path.join(ROOT, "build", "claims.json"),
+                          encoding="utf-8"))["claims"]
+
+
+def load_types():
+    try:
+        return json.load(open(TYPES, encoding="utf-8"))
+    except (OSError, ValueError):
+        return {"structs": {}}
+
+
+def field_offsets(text):
+    out = set()
+    for m in re.finditer(r"0x([0-9A-Fa-f]{1,4})\(\$", text):
+        v = int(m.group(1), 16)
+        if 0 < v <= 0x1000:
+            out.add(v)
+    return out
+
+
+def _offset_of(field):
+    oh = field.get("offset_hint")
+    if oh is None:
+        return None
+    if isinstance(oh, int):
+        return oh
+    m = re.search(r"0x([0-9A-Fa-f]+)", str(oh))
+    return int(m.group(1), 16) if m else None
+
+
+def related_structs(types, body, limit=2):
+    offs = set()
+    for _a, _w, _mn, ops in body:
+        offs |= field_offsets(ops)
+    structs = types.get("structs", {}) or {}
+    if isinstance(structs, list):
+        structs = {st.get("name", "?"): st for st in structs}
+    scored = []
+    for name, st in structs.items():
+        hits = [f for f in (st.get("fields") or []) if _offset_of(f) in offs]
+        if hits:
+            scored.append((len(hits), name, st, hits))
+    scored.sort(key=lambda x: (-x[0], x[1]))
+    if scored:
+        return [(name, st, hits) for _c, name, st, hits in scored[:limit]]
+    top = sorted(structs.items(), key=lambda kv: -len(kv[1].get("fields") or []))[:limit]
+    return [(name, st, []) for name, st in top]
+
+
+def same_shape_src(entry, limit=3):
+    cands = []
+    try:
+        names = sorted(os.listdir(SRC_DIR))
+    except OSError:
+        return []
+    for n in names:
+        if not n.endswith(".c"):
+            continue
+        try:
+            addr = int(n[:-2], 16)
+        except ValueError:
+            continue
+        try:
+            data = open(os.path.join(SRC_DIR, n), encoding="utf-8",
+                        errors="replace").read()
+        except OSError:
+            continue
+        if "FUN_" not in data:
+            continue
+        cands.append((abs(len(data) - entry["size"]), addr, n, data))
+    cands.sort(key=lambda x: (x[0], x[1]))
+    return [(n, d) for _s, _a, n, d in cands[:limit]]
+
+
+def build_card(entry, body):
+    card = {
+        "addr": entry["addr"], "addr_i": entry["addr_i"],
+        "name": "FUN_%08x" % entry["addr_i"],
+        "size": entry["size"], "core": entry["core"],
+        "padding": entry["padding"], "tier": entry["tier"], "cls": entry["cls"],
+        "flags": entry.get("flags") or [], "sig": entry.get("sig", ""),
+        "g": entry.get("g") or ["0"],
+        "disassembly": ["0x%08X  %-8s %s" % (a, mn, ops) for a, _w, mn, ops in body],
+        "bytes": LM.words_hex(LM.original_bytes(entry["addr_i"], entry["core"])),
+        "abi": "leaf args $a0-$a3, return $v0, $ra, $gp=0x002779F0",
+        "structs": [], "same_shape_sources": [],
+    }
+    for name, st, hits in related_structs(load_types(), body):
+        card["structs"].append({
+            "name": name, "file": st.get("file", ""),
+            "fields": [{"name": f.get("name"), "type": f.get("type"),
+                        "offset_hint": f.get("offset_hint")} for f in hits[:8]],
+        })
+    for n, d in same_shape_src(entry):
+        card["same_shape_sources"].append({"file": n, "code": d.strip()[:2000]})
+    return card
+
+
+def ensure_override(entry, src_rel, g):
+    data = {"functions": []}
+    if os.path.exists(OVERRIDES):
+        try:
+            data = json.load(open(OVERRIDES, encoding="utf-8"))
+        except ValueError:
+            pass
+    funcs = [f for f in data.get("functions", [])
+             if int(str(f["addr"]), 16) != entry["addr_i"]]
+    funcs.append({"addr": entry["addr"], "size": entry["size"],
+                  "name": "FUN_%08x" % entry["addr_i"], "source": src_rel,
+                  "g": int(g), "status": "todo", "note": "M2.6 pipeline todo"})
+    funcs.sort(key=lambda f: int(str(f["addr"]), 16))
+    data["functions"] = funcs
+    json.dump(data, open(OVERRIDES, "w", newline="\n", encoding="utf-8"),
+              indent=2, ensure_ascii=False)
+
+
+def take_pending(state, limit):
+    q = load_queue()
+    cd = claims_doc()
+    done = set(state.get("processed", []))
+    work = []
+    for e in q["entries"]:
+        if e["addr"] in done:
+            continue
+        if cd.get(C.canon(e["addr"]), {}).get("result") == "MATCH":
+            state["processed"].append(e["addr"])
+            continue
+        work.append(e)
+        if len(work) >= limit:
+            break
+    return work
+
+
+def cmd_prepare(args):
+    state = load_state()
+    byfn = triage.parse_asm(symbols=triage.parse_symbols())
+    entries = take_pending(state, args.limit)
+    if not entries:
+        print("nothing to prepare")
+        save_state(state)
+        return 0
+    claimed = []
+    for e in entries:
+        try:
+            C.claim_one("m26-pipeline", e["addr"], lease=7200)
+            claimed.append(e)
+        except SystemExit as exc:
+            print("  skip", e["addr"], exc)
+    entries = claimed
+    if not entries:
+        save_state(state)
+        return 0
+    batch_no = state.get("batch_no", 0) + 1
+    bdir = os.path.join(ROOT, "build", "m26-batch-%d" % batch_no)
+    os.makedirs(bdir, exist_ok=True)
+    cards = []
+    for e in entries:
+        sd = os.path.join(SANDBOX, "%08x" % e["addr_i"])
+        os.makedirs(sd, exist_ok=True)
+        card = build_card(e, byfn.get(e["addr_i"], []))
+        card["sandbox"] = sd.replace("\\", "/")
+        card["candidate_path"] = "src/functions/%08x.c" % e["addr_i"]
+        card["verify_command"] = "C:/msys64/usr/bin/make.exe overrides"
+        card["max_attempts"] = MAX_ATTEMPTS
+        card["instructions"] = (
+            "Read this card. Write ordinary C to candidate_path (function "
+            "FUN_<addr>). Run verify_command and find the line for your address; "
+            "if it is not MATCH, read the diff, fix the C, repeat. Max %d attempts. "
+            "No asm/.word/volatile/goto/__attribute__/#include. Do not touch other "
+            "functions or run make check." % MAX_ATTEMPTS)
+        json.dump(card, open(os.path.join(sd, "card.json"), "w", newline="\n",
+                             encoding="utf-8"), indent=1, ensure_ascii=False)
+        with open(os.path.join(sd, "notes.md"), "w", newline="\n",
+                  encoding="utf-8") as f:
+            f.write("# sandbox %s\n\n- card: %s/card.json\n- candidate: %s\n"
+                    "- verify: %s\n" % (e["addr"], sd, card["candidate_path"],
+                                        card["verify_command"]))
+        src_abs = os.path.join(ROOT, card["candidate_path"])
+        if not os.path.exists(src_abs):
+            os.makedirs(os.path.dirname(src_abs), exist_ok=True)
+            with open(src_abs, "w", newline="\n", encoding="utf-8") as f:
+                f.write("// FUNCTION: SLPM %s placeholder (worker will replace)\n"
+                        "void FUN_%08x(void) { }\n" % (e["addr"], e["addr_i"]))
+        ensure_override(e, card["candidate_path"], (e.get("g") or ["0"])[0])
+        cards.append(card)
+    batch_card = {"schema": 1, "batch": batch_no, "rounds": args.rounds,
+                  "max_attempts": MAX_ATTEMPTS, "functions": cards}
+    json.dump(batch_card, open(os.path.join(bdir, "card.json"), "w", newline="\n",
+                               encoding="utf-8"), indent=1, ensure_ascii=False)
+    state["current"] = {"batch": batch_no, "addrs": [e["addr"] for e in entries],
+                        "started": time.time(), "card": os.path.join(bdir, "card.json")}
+    state["batch_no"] = batch_no
+    save_state(state)
+    print("prepared batch %d: %d functions" % (batch_no, len(entries)))
+    print("batch card:", os.path.join(bdir, "card.json"))
+    print("sandboxes:", ", ".join(c["sandbox"] for c in cards[:3]), "...")
+    return 0
+
+
+def cmd_verify(args):
+    state = load_state()
+    cur = state.get("current")
+    if not cur:
+        print("no current batch")
+        return 1
+    batch_no = cur["batch"]
+    index = {e["addr_i"]: e for e in load_queue()["entries"]}
+    entries = [index[int(a, 16)] for a in cur["addrs"]]
+    byfn = triage.parse_asm(symbols=triage.parse_symbols())
+    items, slot = [], {}
+    for e in entries:
+        src_abs = os.path.join(ROOT, "src", "functions", "%08x.c" % e["addr_i"])
+        if not os.path.exists(src_abs):
+            continue
+        try:
+            code = open(src_abs, encoding="utf-8", errors="replace").read()
+        except OSError:
+            continue
+        if "FUN_%08x" % e["addr_i"] not in code:
+            continue
+        if LM.sanitize_candidate(code, e["addr_i"]):
+            continue
+        key = "%x_00" % e["addr_i"]
+        items.append({"key": key, "src": code,
+                      "g": int((e.get("g") or ["0"])[0])})
+        slot[key] = e
+    objs = MK.compile_batch(items, "m26v_%d" % batch_no, verbose=False) if items else {}
+    dis = LM.disasm_objects({k: v for k, v in objs.items() if v},
+                            "m26v_%d" % batch_no)
+    hits = 0
+    rows = []
+    for e in entries:
+        key = "%x_00" % e["addr_i"]
+        obj = objs.get(key)
+        r = LM.verify(obj, e) if obj else {"ok": False, "summary": "no candidate",
+                                           "compiled_len": 0,
+                                           "want_len": e["core"] if e["core"] < e["size"] else e["size"]}
+        if r.get("ok"):
+            core_only = e["core"] < e["size"]
+            src_rel = "src/functions/%08x.c" % e["addr_i"]
+            note = "M2.6 pipeline: %s%s" % (
+                ("core %d/%d" % (e["core"], e["size"])) if core_only else ("%d bytes" % e["size"]),
+                "" if core_only else "; g=%d" % int((e.get("g") or ["0"])[0]))
+            if core_only:
+                LM.record_padded(e, src_rel, note, int((e.get("g") or ["0"])[0]))
+            else:
+                data = json.load(open(OVERRIDES, encoding="utf-8"))
+                for f in data["functions"]:
+                    if int(str(f["addr"]), 16) == e["addr_i"]:
+                        f["status"] = "matched"
+                        f["note"] = note
+                json.dump(data, open(OVERRIDES, "w", newline="\n", encoding="utf-8"),
+                          indent=2, ensure_ascii=False)
+            LM.append_ledger(e, int((e.get("g") or ["0"])[0]), MAX_ATTEMPTS, note)
+            try:
+                C.complete("m26-pipeline", e["addr"], "MATCH", MAX_ATTEMPTS,
+                           note=note, source=src_rel)
+            except SystemExit:
+                pass
+            hits += 1
+            rows.append({"addr": e["addr"], "result": "MATCH", "source": src_rel})
+            print("  %s MATCH" % e["addr"])
+        else:
+            diff = "compiled %s/%s: %s" % (r.get("compiled_len"),
+                                           r.get("want_len"), r.get("summary", ""))
+            sd = os.path.join(SANDBOX, "%08x" % e["addr_i"])
+            os.makedirs(sd, exist_ok=True)
+            got_lines = (dis.get(key, "") or "").splitlines()
+            body = byfn.get(e["addr_i"], [])
+            dl = [diff]
+            for i, (_a, _w, mn, ops) in enumerate(body[:10]):
+                dl.append("want: %-8s %s" % (mn, ops))
+                if i < len(got_lines):
+                    dl.append("got : %s" % got_lines[i].strip())
+            open(os.path.join(sd, "diff.txt"), "w", newline="\n",
+                 encoding="utf-8").write("\n".join(dl) + "\n")
+            try:
+                C.complete("m26-pipeline", e["addr"], "MISS", MAX_ATTEMPTS,
+                           note=diff[:300])
+            except SystemExit:
+                pass
+            rows.append({"addr": e["addr"], "result": "MISS", "diff": diff[:300]})
+            print("  %s MISS  %s" % (e["addr"], diff[:70]))
+    # no usable candidate for missing sources
+    missing = [e["addr"] for e in entries
+               if not os.path.exists(os.path.join(ROOT, "src", "functions",
+                                                  "%08x.c" % e["addr_i"]))]
+    tested = len(entries)
+    rate = hits / float(tested) if tested else 0.0
+    doc = {"schema": 1, "phase": "M2.6-pipeline", "batch": batch_no,
+           "generated": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+           "functions": tested, "hits": hits, "miss": tested - hits,
+           "hit_rate": round(rate, 4), "missing_source": len(missing),
+           "elapsed_sec": round(time.time() - cur.get("started", time.time()), 1),
+           "max_attempts": MAX_ATTEMPTS, "rows": rows}
+    json.dump(doc, open(os.path.join(ROOT, "build", "m26-batch-%d.json" % batch_no),
+                        "w", newline="\n", encoding="utf-8"),
+              indent=1, ensure_ascii=False)
+    state["processed"].extend(e["addr"] for e in entries)
+    state["gate_history"].append({"batch": batch_no, "hits": hits,
+                                  "tested": tested, "rate": rate, "tokens": 0})
+    state["current"] = None
+    save_state(state)
+    print("batch %d: %d/%d hits (%.1f%%), %d missing source, %.0fs"
+          % (batch_no, hits, tested, rate * 100, len(missing), doc["elapsed_sec"]))
+    try:
+        import subprocess
+        exe = "C:/msys64/usr/bin/make.exe"
+        if not os.path.exists(exe):
+            exe = "make"
+        subprocess.run([exe, "progress"], cwd=ROOT, capture_output=True, text=True,
+                       encoding="utf-8", errors="replace", timeout=180)
+    except Exception:
+        pass
+    hist = state["gate_history"][-3:]
+    if len(hist) == 3 and all(h["tested"] > 0 and h["rate"] < 0.10 for h in hist):
+        lines = ["# M2.6 命中率门禁触发", "", "连续 3 批命中率 < 10%：", ""]
+        for h in hist:
+            lines.append("- batch %s: %d/%d (%.1f%%)" % (h["batch"], h["hits"],
+                                                         h["tested"], h["rate"] * 100))
+        lines += ["", "处理建议：审查 build/sandbox/ 的证据卡与 diff；修正后删除 "
+                  "build/m26-pipeline-state.json 的 gate_history 再 resume。", ""]
+        os.makedirs(os.path.dirname(STALL), exist_ok=True)
+        open(STALL, "w", newline="\n", encoding="utf-8").write("\n".join(lines) + "\n")
+        state["stalled"] = True
+        save_state(state)
+        print("STALL: wrote docs/m2-6-stall.md")
+        return 2
+    return 0
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    p = sub.add_parser("prepare")
+    p.add_argument("--batch", type=int, default=0)
+    p.add_argument("--limit", type=int, default=20)
+    p.add_argument("--rounds", type=int, default=1)
+    p.set_defaults(func=cmd_prepare)
+    v = sub.add_parser("verify")
+    v.add_argument("--batch", type=int, default=0)
+    v.set_defaults(func=cmd_verify)
+    s = sub.add_parser("status")
+    s.set_defaults(func=lambda a: print(json.dumps(load_state(), ensure_ascii=False, indent=1)))
+    args = ap.parse_args(argv)
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

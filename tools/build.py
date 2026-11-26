@@ -224,12 +224,14 @@ def resolve_object_text(path):
             v = addr + sign16(word & 0xFFFF)
             lo = v & 0xFFFF
             hi = ((v + 0x8000) >> 16) & 0xFFFF
+            remain = []
             for hoff, hsi in pending_hi:
-                hw = int.from_bytes(text[hoff:hoff + 4], "little")
-                if hsi != si:
-                    unresolved.append("%08X HI16/%08X LO16 symbol mismatch" % (hoff, off))
-                text[hoff:hoff + 4] = ((hw & 0xFFFF0000) | hi).to_bytes(4, "little")
-            pending_hi = []
+                if hsi == si:
+                    hw = int.from_bytes(text[hoff:hoff + 4], "little")
+                    text[hoff:hoff + 4] = ((hw & 0xFFFF0000) | hi).to_bytes(4, "little")
+                else:
+                    remain.append((hoff, hsi))
+            pending_hi = remain
             text[off:off + 4] = ((word & 0xFFFF0000) | lo).to_bytes(4, "little")
             applied[6] += 1
         elif rtype == 7:  # R_MIPS_GPREL16
@@ -252,7 +254,7 @@ def compile_overrides(entries):
     todo = [e for e in entries if e.get("source")]
     if not todo:
         return {}
-    lines = ["#!/bin/bash", "set -e", "export LC_ALL=C",
+    lines = ["#!/bin/bash", "export LC_ALL=C",
              'ROOT="%s"' % WSL_ROOT, "WORK=/root/work/overrides",
              'rm -rf "$WORK" && mkdir -p "$WORK" && cd "$WORK"',
              'mkdir -p "$ROOT/build/overrides"', 'rm -f "$ROOT"/build/overrides/*.o']
@@ -263,9 +265,9 @@ def compile_overrides(entries):
         g = int(e["g"])
         obj = "%s.G%d.o" % (base, g)
         lines += [
-            'cp "$ROOT/%s" %s.c' % (src, base),
-            '/opt/ee/bin/ee-gcc -O2 -mips3 -G%d -c %s.c -o %s' % (g, base, obj),
-            'cp %s "$ROOT/build/overrides/%s"' % (obj, obj),
+            'if cp "$ROOT/%s" %s.c 2>/dev/null; then ' % (src, base),
+            '/opt/ee/bin/ee-gcc -O2 -mips3 -G%d -c %s.c -o %s 2>%s.err && cp %s "$ROOT/build/overrides/%s" || echo "FAIL %s";' % (g, base, obj, base, obj, obj, base),
+            'else echo "MISSING %s"; fi;' % base,
         ]
         objs[e["addr"]] = os.path.join(OVERRIDES_BUILD, obj)
     write_script("build/_wsl_overrides.sh", "\n".join(lines) + "\n")
