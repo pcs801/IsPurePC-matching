@@ -16,3 +16,13 @@ addr	name	size	result	flags	assembler	attempts	note
 0x001A8208	FUN_001a8208	28	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	7	five stores; order from 120-permutation search
 0x001A82A8	FUN_001a82a8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	fixed-point equality (sra+xor+sltiu)
 0x00112BF8	FUN_00112bf8	32	REJECTED	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	8	only volatile-qualified access reproduces reload (PLAN §6 bans volatile)
+0x00105FB0	FUN_00105fb0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x0010C110	FUN_0010c110	8	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x00123568	FUN_00123568	8	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x0012B2B0	FUN_0012b2b0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x0017F508	FUN_0017f508	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x0019B888	FUN_0019b888	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001B3C30	FUN_001b3c30	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B5428	FUN_001b5428	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001B56E0	FUN_001b56e0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B5C20	FUN_001b5c20	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)

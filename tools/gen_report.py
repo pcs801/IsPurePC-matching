@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """Generate an objdiff-compatible report.json for ByteMatch from local data.
 
-Sources:
-  config/symbols.csv    address,size,name  (3,967 functions)
-  config/overrides.json functions[].status == "matched"
-Output:
-  build/report.json     measures + units (pseudo-modules by 0x20000 address buckets)
+Unit granularity is configurable:
+  config/units.json          explicit list: {"units":[{"name","start","end"}]}
+  config/tu_g.json           fallback: one unit per -G8 range, -G0 gaps bucketed
+  BUCKET env / default       0x20000 bytes for the -G0 buckets
 """
 import csv, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BUCKET = 0x20000
+BUCKET = int(os.environ.get("UNIT_BUCKET", "0x20000"), 0)
+MAXSPAN = int(os.environ.get("UNIT_MAXSPAN", "0x20000"), 0)
 
 def load_symbols():
     rows = []
@@ -25,21 +25,67 @@ def load_matched():
         data = json.load(f)
     return {int(fn["addr"], 16) for fn in data.get("functions", []) if fn.get("status") == "matched"}
 
+def load_units():
+    """Return list of (name, start, end) ranges, or None for flat bucketing."""
+    p = os.path.join(ROOT, "config", "units.json")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as f:
+            data = json.load(f)
+        return [(u["name"], int(u["start"], 16), int(u["end"], 16)) for u in data["units"]]
+    t = os.path.join(ROOT, "config", "tu_g.json")
+    if os.path.exists(t):
+        with open(t, encoding="utf-8") as f:
+            data = json.load(f)
+        return [(("game/g%d/%08x" % (r["g"], int(r["start"], 16))),
+                 int(r["start"], 16), int(r["end"], 16)) for r in data.get("ranges", [])]
+    return None
+
+def expand(ranges, maxspan):
+    """Split ranges wider than maxspan so no unit is a 400 KB blob."""
+    out = []
+    for name, a, b in ranges:
+        if b - a <= maxspan:
+            out.append((name, a, b))
+        else:
+            n = (b - a + maxspan - 1) // maxspan
+            for i in range(n):
+                s = a + i * maxspan
+                out.append(("%s_%02d" % (name, i), s, min(b, s + maxspan)))
+    return out
+
+def assign(syms, ranges):
+    """Map each symbol to a unit name."""
+    out = []
+    for s in syms:
+        if ranges:
+            hit = None
+            for name, a, b in ranges:
+                if a <= s["addr"] < b:
+                    hit = name
+                    break
+            if hit is None:
+                hit = "game/g0/%08x" % (s["addr"] // BUCKET * BUCKET)
+        else:
+            hit = "text/%08x" % (s["addr"] // BUCKET * BUCKET)
+        out.append(hit)
+    return out
+
 def pct(a, b):
     return (a / b * 100.0) if b else 0.0
 
 def main():
     syms = load_symbols()
     matched = load_matched()
+    names = assign(syms, expand(load_units() or [], MAXSPAN))
+
     total_code = sum(s["size"] for s in syms)
     matched_code = sum(s["size"] for s in syms if s["addr"] in matched)
     total_functions = len(syms)
     matched_functions = sum(1 for s in syms if s["addr"] in matched)
 
     units = {}
-    for s in syms:
-        b = s["addr"] // BUCKET
-        u = units.setdefault(b, {"name": "text/%08x" % (b * BUCKET), "functions": []})
+    for s, uname in zip(syms, names):
+        u = units.setdefault(uname, {"name": uname, "functions": []})
         ok = s["addr"] in matched
         u["functions"].append({
             "name": s["name"], "size": s["size"],
@@ -48,13 +94,13 @@ def main():
         })
 
     unit_list = []
-    for b in sorted(units):
-        u = units[b]
+    for uname in sorted(units):
+        u = units[uname]
         t = sum(f["size"] for f in u["functions"])
         mc = sum(f["size"] for f in u["functions"] if f["match_percent"] == 100.0)
         mf = sum(1 for f in u["functions"] if f["match_percent"] == 100.0)
         unit_list.append({
-            "name": u["name"],
+            "name": uname,
             "measures": {
                 "total_code": t, "matched_code": mc, "matched_code_percent": pct(mc, t),
                 "total_functions": len(u["functions"]), "matched_functions": mf,
@@ -85,8 +131,11 @@ def main():
     with open(dest, "w", encoding="utf-8") as f:
         json.dump({"measures": measures, "units": unit_list}, f, indent=2)
     print("wrote", dest)
-    for k, v in measures.items():
-        print("  %-26s %s" % (k, v))
+    print("units:", len(unit_list))
+    for u in unit_list:
+        print("  %-24s %6d funcs %8d bytes %6.2f%%" % (
+            u["name"], u["measures"]["total_functions"],
+            u["measures"]["total_code"], u["measures"]["matched_code_percent"]))
 
 if __name__ == "__main__":
     main()

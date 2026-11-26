@@ -10,6 +10,42 @@
   },
   "functions": [
     {
+      "addr": "0x00105FB0",
+      "size": 8,
+      "name": "FUN_00105fb0",
+      "source": "src/functions/00105fb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x0010C110",
+      "size": 8,
+      "name": "FUN_0010c110",
+      "source": "src/functions/0010c110.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00123568",
+      "size": 8,
+      "name": "FUN_00123568",
+      "source": "src/functions/00123568.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x0012B2B0",
+      "size": 8,
+      "name": "FUN_0012b2b0",
+      "source": "src/functions/0012b2b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
       "addr": "0x00155B68",
       "size": 12,
       "name": "FUN_00155b68",
@@ -28,6 +64,15 @@
       "note": "two zero stores at 0x168/0x16c, scheduler reverses them"
     },
     {
+      "addr": "0x0017F508",
+      "size": 8,
+      "name": "FUN_0017f508",
+      "source": "src/functions/0017f508.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x0019B590",
       "size": 28,
       "name": "FUN_0019b590",
@@ -35,6 +80,15 @@
       "g": 0,
       "status": "matched",
       "note": "two fields doubled through registers"
+    },
+    {
+      "addr": "0x0019B888",
+      "size": 8,
+      "name": "FUN_0019b888",
+      "source": "src/functions/0019b888.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
       "addr": "0x001A8208",
@@ -53,6 +107,42 @@
       "g": 0,
       "status": "matched",
       "note": "fixed-point equality test"
+    },
+    {
+      "addr": "0x001B3C30",
+      "size": 8,
+      "name": "FUN_001b3c30",
+      "source": "src/functions/001b3c30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B5428",
+      "size": 8,
+      "name": "FUN_001b5428",
+      "source": "src/functions/001b5428.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B56E0",
+      "size": 8,
+      "name": "FUN_001b56e0",
+      "source": "src/functions/001b56e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B5C20",
+      "size": 8,
+      "name": "FUN_001b5c20",
+      "source": "src/functions/001b5c20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     }
   ]
 }
