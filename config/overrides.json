@@ -1266,8 +1266,8 @@
       "name": "FUN_001113b8",
       "source": "src/functions/001113b8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 TU-batch 11: 24 bytes"
     },
     {
       "addr": "0x00111760",

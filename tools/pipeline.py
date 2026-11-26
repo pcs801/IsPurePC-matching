@@ -27,7 +27,7 @@ import match_kit as MK      # noqa: E402
 import triage               # noqa: E402
 import llm_match as LM      # noqa: E402
 
-QUEUE = os.path.join(ROOT, "build", "m26-queue.json")
+QUEUE = os.path.join(ROOT, "build", "queue.json")
 STATE = os.path.join(ROOT, "build", "m26-pipeline-state.json")
 TYPES = os.path.join(ROOT, "config", "types.json")
 SRC_DIR = os.path.join(ROOT, "src", "functions")

@@ -29,7 +29,7 @@ import llm_match as LM      # noqa: E402
 import pipeline as P        # noqa: E402
 
 TU_FILE = os.path.join(ROOT, "config", "tu_inferred.json")
-QUEUE = os.path.join(ROOT, "build", "m26-queue.json")
+QUEUE = os.path.join(ROOT, "build", "queue.json")
 WORK = os.path.join(ROOT, "build", "m26-tu")
 OVERRIDES = os.path.join(ROOT, "config", "overrides.json")
 MAX_ATTEMPTS = 60
