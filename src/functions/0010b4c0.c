@@ -14,7 +14,7 @@ void FUN_0010b4c0(char *p)
     T7 l1;
     T12 l2;
     int *q;
-    int i;
+    unsigned int i;
     char *s;
 
     *(int *)(p + 0x7E90) = -1;
@@ -28,8 +28,9 @@ void FUN_0010b4c0(char *p)
     s = (char *)FUN_001fd160(p + 0x100, D_002589C0);
     if (s != 0) {
         s += 15;
+        i = 0;
         q = l1.a;
-        for (i = 0; i < 7; i++) {
+        for (; i < 7; i++) {
             if (FUN_001fcde8(s, *q++, 3) == 0) {
                 *(int *)(p + 0x7EA8) = i;
                 break;

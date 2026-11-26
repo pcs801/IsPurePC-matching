@@ -1,7 +1,6 @@
 // FUNCTION: SLPM 0x00109568  size 376
 extern char D_C56680[];
 extern int D_00270C34;
-
 extern void FUN_001dc850(int a, int b);
 extern void FUN_001dcd50(void *buf, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
 extern void FUN_001dd010(void *buf, void *dst);
@@ -26,12 +25,10 @@ void FUN_00109568(void)
         FUN_001dd010(buf, cur);
         if (prev) {
             for (j = 0; j < 0x70; j++) {
-                int n = 0x280;
-                signed char *p = prev + j * 0xA00 + 3;
-                do {
-                    *p = -128;
-                    p += 4;
-                } while (--n >= 0);
+                int n;
+                int k;
+                for (k = 0; k < 0x280; k++)
+                    ((signed char *)prev)[j * 0xA00 + k * 4 + 3] = -128;
             }
         }
         prev = cur;
@@ -40,11 +37,11 @@ void FUN_00109568(void)
         off += 7;
     }
     for (j = 0; j < 0x70; j++) {
-        int n = 0x280;
-        signed char *p = prev + j * 0xA00 + 3;
-        do {
+        int n;
+        signed char *p = prev + 3 + j * 0xA00;
+        for (n = 0x280; n-- > 0; ) {
             *p = -128;
             p += 4;
-        } while (--n >= 0);
+        }
     }
 }
