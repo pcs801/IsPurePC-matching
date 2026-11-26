@@ -37,6 +37,37 @@
 3. token 预算耗尽
 4. 用户叫停
 
+
+
+---
+
+## 修订（2026-11-26 23:45）：写 C 交给 agent，脚本只做调度与判定
+
+原方案用脚本调 API 生成 C，证据卡缺类型、无法自省、思考受限。改为：
+
+### 分工
+
+| 层 | 谁做 | 内容 |
+|---|---|---|
+| 调度 | 脚本 | 队列、认领、沙箱、编译、match_kit 判定、记账、进度 |
+| 写 C | **agent（subagent / AgentTeams 成员）** | 读证据卡、翻旧项目、写 C、看 diff、自己改、循环到 MATCH 或 60 次止损 |
+
+### 证据卡（每次派给 agent）
+
+1. 目标函数完整反汇编 + 原始字节
+2. `config/types.json`（161 个结构体、716 个字段，来自旧项目 `IsPurePC/include/ispure/`）
+3. 同形态已匹配函数的源码（从 `src/functions/` 取 3 个）
+4. 上轮 diff 的具体指令（寄存器/指令名，不是 diff_words 数字）
+5. ABI 与允许的 `-G`
+
+### 已完成的准备
+
+- `tools/export_types.py` → `config/types.json`（161 structs / 716 fields）
+
+### 队列不变
+
+3,743 个，先易后难，批 80，三个保险不变。
+
 ## 产出
 
 - `tools/worker_match.py`：一函数一沙箱，证据卡 → LLM → 编译 → 匹配 → 重试

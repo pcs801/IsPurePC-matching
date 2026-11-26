@@ -448,3 +448,33 @@ addr	name	size	result	flags	assembler	attempts	note
 0x001CD210	FUN_001cd210	64	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 64 bytes; g=0
 0x00165EC0	FUN_00165ec0	104	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 104 bytes; g=8
 0x00165F28	FUN_00165f28	104	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 104 bytes; g=8
+0x001B2920	FUN_001b2920	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 16 bytes; g=0
+0x001C0E30	FUN_001c0e30	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 16 bytes; g=0
+0x001AD7B0	FUN_001ad7b0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 24 bytes; g=0
+0x0017ACA0	FUN_0017aca0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 24 bytes; g=0
+0x001016E0	FUN_001016e0	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 32 bytes; g=0
+0x00105818	FUN_00105818	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 32 bytes; g=0
+0x001E3998	FUN_001e3998	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 32 bytes; g=0
+0x00123968	FUN_00123968	40	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 40 bytes; g=8
+0x001CD058	FUN_001cd058	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 40 bytes; g=0
+0x00160758	FUN_00160758	24	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: core 20/24
+0x001CB6E8	FUN_001cb6e8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: core 20/24
+0x001CB700	FUN_001cb700	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: core 20/24
+0x001C3890	FUN_001c3890	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: core 28/32
+0x001E4090	FUN_001e4090	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: core 36/40
+0x00105878	FUN_00105878	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: core 44/48
+0x0019C270	FUN_0019c270	64	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: core 60/64
+0x001CC638	FUN_001cc638	64	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: core 60/64
+0x001AF9E8	FUN_001af9e8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 24 bytes; g=0
+0x001AFA00	FUN_001afa00	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 24 bytes; g=0
+0x001B5CA8	FUN_001b5ca8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 24 bytes; g=0
+0x001C58D0	FUN_001c58d0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 24 bytes; g=0
+0x001BE248	FUN_001be248	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 32 bytes; g=0
+0x001C4ED8	FUN_001c4ed8	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 32 bytes; g=0
+0x0020EAF0	FUN_0020eaf0	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 32 bytes; g=0
+0x0011D550	FUN_0011d550	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 40 bytes; g=0
+0x001CE060	FUN_001ce060	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 40 bytes; g=0
+0x001D11B8	FUN_001d11b8	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 40 bytes; g=0
+0x001CA4C8	FUN_001ca4c8	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.6 worker: 48 bytes; g=0
+0x001125C8	FUN_001125c8	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 56 bytes; g=0
+0x001738E0	FUN_001738e0	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.6 worker: 56 bytes; g=0

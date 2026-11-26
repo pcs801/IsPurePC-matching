@@ -1,0 +1,5822 @@
+{
+ "source": "E:/ONE PIECE/S/IsPurePC/include/ispure",
+ "structs": {
+  "AfsLzssResult": {
+   "file": "afs_lzss.hpp",
+   "fields": [
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "input_consumed",
+     "array": null,
+     "offset_hint": null,
+     "comment": "byte offset within the member where decoding stopped"
+    },
+    {
+     "type": "bool",
+     "name": "clean",
+     "array": null,
+     "offset_hint": null,
+     "comment": "true when the output reached expected_size exactly"
+    },
+    {
+     "type": "std::string",
+     "name": "error",
+     "array": null,
+     "offset_hint": null,
+     "comment": "empty on success"
+    }
+   ]
+  },
+  "AdxHeader": {
+   "file": "audio_chain.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "valid",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "header_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "encoding",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "block_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "bit_depth",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "channels",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "sample_rate",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "sample_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "AdxStreamRecord": {
+   "file": "audio_chain.hpp",
+   "fields": [
+    {
+     "type": "std::array<std::uint8_t, kRecordBytes>",
+     "name": "bytes_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "MissingAudioSink": {
+   "file": "audio_chain.hpp",
+   "fields": [
+    {
+     "type": "std::string",
+     "name": "service",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "AudioTrace": {
+   "file": "audio_chain.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "handle_lookup",
+     "array": null,
+     "offset_hint": "0x1AF428",
+     "comment": "R246 0x1AF428"
+    },
+    {
+     "type": "bool",
+     "name": "record_registered",
+     "array": null,
+     "offset_hint": "0x1ACF80",
+     "comment": "R246 0x1ACF80"
+    },
+    {
+     "type": "bool",
+     "name": "resource_opened",
+     "array": null,
+     "offset_hint": "0x1ADF40",
+     "comment": "R246 0x1ADF40"
+    },
+    {
+     "type": "bool",
+     "name": "started",
+     "array": null,
+     "offset_hint": "0x1B4568",
+     "comment": "R245 0x1B4568"
+    },
+    {
+     "type": "bool",
+     "name": "configured",
+     "array": null,
+     "offset_hint": "0x1B45D8",
+     "comment": "R245 0x1B45D8"
+    },
+    {
+     "type": "bool",
+     "name": "transport_run",
+     "array": null,
+     "offset_hint": "0x1BC9F0",
+     "comment": "R238 0x1BC9F0"
+    },
+    {
+     "type": "bool",
+     "name": "sink_accepted",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "decoded",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::string",
+     "name": "refusal",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "AudioRequest": {
+   "file": "audio_chain.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "track_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "decode_handle",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "second_arg",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BackgroundGridSlot": {
+   "file": "background_cells.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "x",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::int32_t",
+     "name": "xi",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BackgroundGridInput": {
+   "file": "background_cells.hpp",
+   "fields": [
+    {
+     "type": "std::vector<BackgroundGridSlot>",
+     "name": "slots",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "rows",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "origin_x",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "apply_origin",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BackgroundCell": {
+   "file": "background_cells.hpp",
+   "fields": [
+    {
+     "type": "std::array<BackgroundGridSlot,4>",
+     "name": "corners",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cell_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "visible",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BackgroundCellsResult": {
+   "file": "background_cells.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "valid_input",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<BackgroundCell>",
+     "name": "cells",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BackgroundSceneGrid": {
+   "file": "background_scene.hpp",
+   "fields": [
+    {
+     "type": "BackgroundSceneError",
+     "name": "error",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "record_offset",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "extent_at_8",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BootPackage": {
+   "file": "boot_package.hpp",
+   "fields": [
+    {
+     "type": "std::vector<pc::ImageRgba8>",
+     "name": "textures",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "OriginalParameters": {
+   "file": "c3_projection.hpp",
+   "fields": [
+    {
+     "type": "float",
+     "name": "scale_x",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "float",
+     "name": "scale_y",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "float",
+     "name": "scale_z",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "t0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "rotation_is_zero",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "ProjectedVf9": {
+   "file": "c3_projection.hpp",
+   "fields": [
+    {
+     "type": "std::array<float,4>",
+     "name": "vf9",
+     "array": null,
+     "offset_hint": null,
+     "comment": ": post-VMULq value"
+    },
+    {
+     "type": "float",
+     "name": "q",
+     "array": null,
+     "offset_hint": null,
+     "comment": ": the Q that was applied (1.0 when w == 1)"
+    }
+   ]
+  },
+  "TransformSlot": {
+   "file": "chain.hpp",
+   "fields": [
+    {
+     "type": "Vertex",
+     "name": "in",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Vertex",
+     "name": "out",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "culled",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GridCursor": {
+   "file": "chain.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "row_tile_counter",
+     "array": null,
+     "offset_hint": null,
+     "comment": "was sp+32"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "row_accumulator",
+     "array": null,
+     "offset_hint": null,
+     "comment": "was sp+36"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "column",
+     "array": null,
+     "offset_hint": null,
+     "comment": "was s4"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "within_row",
+     "array": null,
+     "offset_hint": null,
+     "comment": "was s6, +512 per tile"
+    },
+    {
+     "type": "bool",
+     "name": "wrapped",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "CullResult": {
+   "file": "chain.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "keep",
+     "array": null,
+     "offset_hint": null,
+     "comment": "v0 == 0 => keep"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "rejected_at_point",
+     "array": null,
+     "offset_hint": null,
+     "comment": "0..3, or 4 when ALL failed"
+    }
+   ]
+  },
+  "GsBlock": {
+   "file": "chain.hpp",
+   "fields": [
+    {
+     "type": "std::array<std::uint32_t, 16>",
+     "name": "words",
+     "array": null,
+     "offset_hint": null,
+     "comment": "64 bytes"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tex0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tex1_high",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "clamp",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "gif_nreg",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "ChainTrace": {
+   "file": "chain.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "stages_run",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "transform",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "grid",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "cull",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "texture",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "domain",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "pack",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "cop1_tail_modelled",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cells_kept",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cells_culled",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "ChainInput": {
+   "file": "chain.hpp",
+   "fields": [
+    {
+     "type": "Vertex",
+     "name": "quad",
+     "array": "[4]",
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "left",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "top",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tex_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "dma_source",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "grid_steps",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "IsoEntry": {
+   "file": "disc_image.hpp",
+   "fields": [
+    {
+     "type": "std::string",
+     "name": "name",
+     "array": null,
+     "offset_hint": null,
+     "comment": "as stored, e.g. \"SLPM_665.70;1\""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "lba",
+     "array": null,
+     "offset_hint": null,
+     "comment": "start sector"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "size",
+     "array": null,
+     "offset_hint": null,
+     "comment": "byte length from the directory record"
+    },
+    {
+     "type": "bool",
+     "name": "is_dir",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DiscImage": {
+   "file": "disc_image.hpp",
+   "fields": [
+    {
+     "type": "std::string",
+     "name": "path_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "root_lba_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "root_size_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<IsoEntry>",
+     "name": "root_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "AfsHeader": {
+   "file": "disc_image.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint32_t>",
+     "name": "offsets",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint32_t>",
+     "name": "sizes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "AssetSignature": {
+   "file": "disc_image.hpp",
+   "fields": [
+    {
+     "type": "AssetKind",
+     "name": "kind",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "declared_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": "u32 at +0, a length in the container's own terms"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "marker",
+     "array": null,
+     "offset_hint": null,
+     "comment": "byte at +4"
+    },
+    {
+     "type": "bool",
+     "name": "tim2_magic_at_5",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "class_field",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "header_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "ArchiveList": {
+   "file": "disc_image.hpp",
+   "fields": [
+    {
+     "type": "std::vector<std::string>",
+     "name": "names",
+     "array": null,
+     "offset_hint": null,
+     "comment": "as written in the manifest, lower case"
+    }
+   ]
+  },
+  "BootConfig": {
+   "file": "disc_image.hpp",
+   "fields": [
+    {
+     "type": "std::string",
+     "name": "boot2",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::string",
+     "name": "ver",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::string",
+     "name": "vmode",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DiscTextureLoad": {
+   "file": "disc_texture.hpp",
+   "fields": [
+    {
+     "type": "pc::ImageRgba8",
+     "name": "image",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "DiscTextureResult",
+     "name": "result",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "stored_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "decoded_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "unsigned",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::string",
+     "name": "error",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DmaChannelConfig": {
+   "file": "dma_chain.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "chain_mode",
+     "array": null,
+     "offset_hint": null,
+     "comment": "MOD  (bit2)"
+    },
+    {
+     "type": "bool",
+     "name": "tte",
+     "array": null,
+     "offset_hint": null,
+     "comment": "TTE  (bit6)"
+    },
+    {
+     "type": "bool",
+     "name": "tie",
+     "array": null,
+     "offset_hint": null,
+     "comment": "TIE  (bit7)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "chcr",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DmaChainEvent": {
+   "file": "dma_chain.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "tag_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "DmaTag",
+     "name": "tag",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "payload_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "payload_bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "next_tag_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "call_depth_after",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "tag_upper_counted",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "stopped_here",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "payload_after_tag",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DmaChainWalk": {
+   "file": "dma_chain.hpp",
+   "fields": [
+    {
+     "type": "std::vector<DmaChainEvent>",
+     "name": "events",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "DmaStopReason",
+     "name": "stop",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "total_payload_bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DmaWalkLimits": {
+   "file": "dma_chain.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "max_events",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "max_payload_bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DmaStreamSegment": {
+   "file": "dma_stream.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "dma_event_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "source_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "length",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tag_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "DmaTagId",
+     "name": "tag_id",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "payload_after_tag",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "stream_offset",
+     "array": null,
+     "offset_hint": null,
+     "comment": "offset of this run inside the whole stream"
+    }
+   ]
+  },
+  "DmaByteStream": {
+   "file": "dma_stream.hpp",
+   "fields": [
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<DmaStreamSegment>",
+     "name": "segments",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "DmaStopReason",
+     "name": "stop",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "ok",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsCommand": {
+   "file": "dma_stream.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "reg_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::string",
+     "name": "reg_name",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "gif_tag_stream_offset",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "dma_event_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GifParseResult": {
+   "file": "dma_stream.hpp",
+   "fields": [
+    {
+     "type": "std::vector<GsCommand>",
+     "name": "commands",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GifParseStop",
+     "name": "stop",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "consumed",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "packets_complete",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "chain_ended",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DmaTag": {
+   "file": "dma_tag.hpp",
+   "fields": [
+    {
+     "type": "std::uint16_t",
+     "name": "qwc",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..15"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "pce",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 26..27"
+    },
+    {
+     "type": "DmaTagId",
+     "name": "id",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 28..30"
+    },
+    {
+     "type": "bool",
+     "name": "irq",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 31"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "addr",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 32..62"
+    },
+    {
+     "type": "bool",
+     "name": "spr",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 63"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "upper",
+     "array": null,
+     "offset_hint": null,
+     "comment": "qword[1], verbatim"
+    },
+    {
+     "type": "std::array<std::uint8_t, 16>",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "RectDrawCommand": {
+   "file": "draw_commands.hpp",
+   "fields": [
+    {
+     "type": "PixelRectBits",
+     "name": "rect",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "RgbaBytes",
+     "name": "rgba",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "arg2",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "FadeAccumulator": {
+   "file": "fade_accumulator.hpp",
+   "fields": [
+    {
+     "type": "std::int16_t",
+     "name": "phase",
+     "array": null,
+     "offset_hint": "0x10",
+     "comment": "outer object +0x10"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "flag",
+     "array": null,
+     "offset_hint": "0x00",
+     "comment": "subobject +0x00"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "effect",
+     "array": null,
+     "offset_hint": "0x01",
+     "comment": "subobject +0x01"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "step",
+     "array": null,
+     "offset_hint": "0x08",
+     "comment": "+0x08, original 32-bit bit pattern"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "alpha",
+     "array": null,
+     "offset_hint": "0x0C",
+     "comment": "+0x0C, original 32-bit bit pattern"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "counter",
+     "array": null,
+     "offset_hint": "0x10",
+     "comment": "+0x10"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "callback",
+     "array": null,
+     "offset_hint": "0x1C",
+     "comment": "+0x1C, opaque token interpreted by the host"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "auxiliary",
+     "array": null,
+     "offset_hint": "0x2C",
+     "comment": "+0x2C"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "self",
+     "array": null,
+     "offset_hint": "0x60",
+     "comment": "+0x60, opaque record identity"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "mode",
+     "array": null,
+     "offset_hint": "0x02",
+     "comment": "subobject +0x02, read by original 0x17F298"
+    }
+   ]
+  },
+  "FadeOutCallbacks": {
+   "file": "fade_accumulator.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "black",
+     "array": null,
+     "offset_hint": null,
+     "comment": "original table index 1"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "white",
+     "array": null,
+     "offset_hint": null,
+     "comment": "index 4"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "alpha",
+     "array": null,
+     "offset_hint": null,
+     "comment": "index 19"
+    }
+   ]
+  },
+  "FadeOutDispatch": {
+   "file": "fade_accumulator.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "callback_pending",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "callback_token",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "receiver_identity",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "FadeCallbackRegistry": {
+   "file": "fade_callback_router.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "no_effect",
+     "array": null,
+     "offset_hint": null,
+     "comment": "original table index 0"
+    },
+    {
+     "type": "FadeOutCallbacks",
+     "name": "static_callbacks",
+     "array": null,
+     "offset_hint": null,
+     "comment": "indices 1,4,19"
+    },
+    {
+     "type": "FadeOutCallbacks",
+     "name": "out_callbacks",
+     "array": null,
+     "offset_hint": null,
+     "comment": "indices 3,6,21"
+    },
+    {
+     "type": "FadeOutCallbacks",
+     "name": "in_callbacks",
+     "array": null,
+     "offset_hint": null,
+     "comment": "indices 2,5,20"
+    }
+   ]
+  },
+  "FadeCallbackStep": {
+   "file": "fade_callback_router.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "has_draw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "static_transition",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "RectDrawCommand",
+     "name": "command",
+     "array": null,
+     "offset_hint": null,
+     "comment": "meaningful only when has_draw"
+    }
+   ]
+  },
+  "FadeInWrapperStep": {
+   "file": "fade_in_wrapper.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "has_draw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "RectDrawCommand",
+     "name": "command",
+     "array": null,
+     "offset_hint": null,
+     "comment": "meaningful only if has_draw"
+    }
+   ]
+  },
+  "FadeOutWrapperDraw": {
+   "file": "fade_out_wrapper.hpp",
+   "fields": [
+    {
+     "type": "FadeOutDispatch",
+     "name": "transition",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "RectDrawCommand",
+     "name": "command",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GdiSurface": {
+   "file": "gdi_surface.hpp",
+   "fields": [
+    {
+     "type": "GdiSurface&",
+     "name": "operator",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "HDC",
+     "name": "dc_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "HBITMAP",
+     "name": "bitmap_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "HGDIOBJ",
+     "name": "previous_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GifTag": {
+   "file": "gif_packet.hpp",
+   "fields": [
+    {
+     "type": "std::uint16_t",
+     "name": "loops",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "end",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "primitive_enabled",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "primitive",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "mode",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "register_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": "encoded zero means 16"
+    },
+    {
+     "type": "std::array<std::uint8_t, 16>",
+     "name": "registers",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsBuildOutcome": {
+   "file": "gs_class_packet.hpp",
+   "fields": [
+    {
+     "type": "GsBuildResult",
+     "name": "result",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "format_code",
+     "array": null,
+     "offset_hint": "0x001DF268",
+     "comment": "what 0x001DF268 returned"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "slots_used",
+     "array": null,
+     "offset_hint": null,
+     "comment": "r16 / 4"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "divide_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": "0 when DivideByZero"
+    },
+    {
+     "type": "bool",
+     "name": "header_written",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "MenuUv": {
+   "file": "gs_menu_uv.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "near_word",
+     "array": null,
+     "offset_hint": null,
+     "comment": "offset 64"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "far_word",
+     "array": null,
+     "offset_hint": null,
+     "comment": "offset 80"
+    }
+   ]
+  },
+  "GsConstantPacket": {
+   "file": "gs_packet_builders.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "words",
+     "array": "[3]",
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsParamPacket": {
+   "file": "gs_packet_builders.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "words",
+     "array": "[4]",
+     "offset_hint": null,
+     "comment": "offsets 0, 8, 16, 24"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "return_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsFlagPacket": {
+   "file": "gs_packet_builders.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "words",
+     "array": "[12]",
+     "offset_hint": null,
+     "comment": "offsets 0..88 in steps of 8"
+    },
+    {
+     "type": "bool",
+     "name": "written",
+     "array": "[12]",
+     "offset_hint": null,
+     "comment": "false where the builder does not store"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "return_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsFlag2Packet": {
+   "file": "gs_packet_builders.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "words",
+     "array": "[14]",
+     "offset_hint": null,
+     "comment": "offsets 0..104 in steps of 8"
+    },
+    {
+     "type": "bool",
+     "name": "written",
+     "array": "[14]",
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "return_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsFlag3Packet": {
+   "file": "gs_packet_builders.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "words",
+     "array": "[10]",
+     "offset_hint": null,
+     "comment": "offsets 0..72 in steps of 8"
+    },
+    {
+     "type": "bool",
+     "name": "written",
+     "array": "[10]",
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "return_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsConst2Packet": {
+   "file": "gs_packet_builders.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "words",
+     "array": "[22]",
+     "offset_hint": null,
+     "comment": "offsets 0..168 in steps of 8"
+    },
+    {
+     "type": "bool",
+     "name": "written",
+     "array": "[22]",
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "return_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsConst3Packet": {
+   "file": "gs_packet_builders.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "words",
+     "array": "[38]",
+     "offset_hint": null,
+     "comment": "offsets 0..296 in steps of 8"
+    },
+    {
+     "type": "bool",
+     "name": "written",
+     "array": "[38]",
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "return_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsClassFormat": {
+   "file": "gs_packet_builders.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "format_code",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "used_helper",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsState": {
+   "file": "gs_raster.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "prim_type",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..2"
+    },
+    {
+     "type": "bool",
+     "name": "prim_textured",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 4"
+    },
+    {
+     "type": "bool",
+     "name": "prim_abe",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 6 (alpha blending)"
+    },
+    {
+     "type": "bool",
+     "name": "scissor_set",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::int32_t",
+     "name": "scissor_x0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::int32_t",
+     "name": "scissor_y0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::int32_t",
+     "name": "scissor_x1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::int32_t",
+     "name": "scissor_y1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "rgba",
+     "array": null,
+     "offset_hint": null,
+     "comment": "RGBAQ: r,g,b,a as 4 bytes"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "u",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::int32_t",
+     "name": "x",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "z",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "struct",
+     "name": "V",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<V>",
+     "name": "pending",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsPrim",
+     "name": "prim",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsRgbaq",
+     "name": "rgbaq",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsXyzf",
+     "name": "xyz",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsTex0",
+     "name": "tex0_1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsScissor",
+     "name": "scissor_1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsAlpha",
+     "name": "alpha_1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsTest",
+     "name": "test_1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsFrame",
+     "name": "frame_1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsZbuf",
+     "name": "zbuf_1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsXyoffset",
+     "name": "xyoffset_1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "written_mask",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GsTexA",
+     "name": "texa",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "written",
+     "array": "[128]",
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "FrameBuffer": {
+   "file": "gs_raster.hpp",
+   "fields": [
+    {
+     "type": "std::vector<std::uint32_t>",
+     "name": "px_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint32_t>",
+     "name": "depth_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsRasterResult": {
+   "file": "gs_raster.hpp",
+   "fields": [
+    {
+     "type": "GsUnsupported",
+     "name": "unsupported",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "triangles",
+     "array": null,
+     "offset_hint": null,
+     "comment": "PRIM=3 primitives completed"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "sprites",
+     "array": null,
+     "offset_hint": null,
+     "comment": "PRIM=6 primitives completed"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "pixels_written",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "commands_seen",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "Tex0": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "tbp0",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..13"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tbw",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 14..19"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 20..25"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tw",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 26..29"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "th",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 30..33"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tcc",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 34"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tfx",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 35..36"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cbp",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 37..50"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cpsm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 51..54"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "csm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 55"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "csa",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 56..60"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cld",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 61..63"
+    }
+   ]
+  },
+  "Tex1": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "lcm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..1"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "mxl",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 2..3"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "mmag",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 4"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "mmin",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 5..7"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "mtba",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 9"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "l",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 10..12"
+    },
+    {
+     "type": "std::int32_t",
+     "name": "k",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 32..43, signed 12-bit fixed 4.8"
+    }
+   ]
+  },
+  "Clamp": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "wms",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..1"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "wmt",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 2..3"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "minu",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 4..13"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "maxu",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 14..23"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "minv",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 24..33"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "maxv",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 34..43"
+    }
+   ]
+  },
+  "XyOffset": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::int32_t",
+     "name": "ofx",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..15, 12.4 signed"
+    },
+    {
+     "type": "std::int32_t",
+     "name": "ofy",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 16..31, 12.4 signed"
+    }
+   ]
+  },
+  "Scissor": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "scax0",
+     "array": null,
+     "offset_hint": null,
+     "comment": "11 bits each"
+    }
+   ]
+  },
+  "Frame": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "fbp",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..8"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "fbw",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 9..14"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 15..20"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "fbmask",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 32..63"
+    }
+   ]
+  },
+  "Zbuf": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "zbp",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..8"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 24..27"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "zmsk",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 32"
+    }
+   ]
+  },
+  "TexA": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "ta0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "Alpha": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "a",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "RegisterFile": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "return",
+     "name": "false",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "return",
+     "name": "false",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "return",
+     "name": "true",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "return",
+     "name": "true",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "return",
+     "name": "false",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::array<std::uint64_t, kAddressSpace>",
+     "name": "values_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::array<std::uint32_t, kAddressSpace>",
+     "name": "written_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "writes_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "unknown_addresses_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BlockRegister": {
+   "file": "gs_register_file.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "SpriteQuad": {
+   "file": "gs_sprite_quad.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "context_byte",
+     "array": null,
+     "offset_hint": null,
+     "comment": "written at +79 and +95"
+    }
+   ]
+  },
+  "VertexUv": {
+   "file": "gs_vertex_uv.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "word0",
+     "array": null,
+     "offset_hint": null,
+     "comment": "the origin corner"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "word1",
+     "array": null,
+     "offset_hint": null,
+     "comment": "the opposite corner"
+    }
+   ]
+  },
+  "ImageRgba8": {
+   "file": "image_cache.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "width",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "height",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "pixels",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "MaskedPlaneHeader": {
+   "file": "masked_plane.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "field00",
+     "array": null,
+     "offset_hint": null,
+     "comment": "value 5 in every member examined"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "field04",
+     "array": null,
+     "offset_hint": null,
+     "comment": "value 128"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "field08",
+     "array": null,
+     "offset_hint": null,
+     "comment": "value 148"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "tile_width",
+     "array": null,
+     "offset_hint": null,
+     "comment": "256"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "tile_height",
+     "array": null,
+     "offset_hint": null,
+     "comment": "256"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "total_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": "1,442,048 -- the decoded length"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "screen_width",
+     "array": null,
+     "offset_hint": "0x88",
+     "comment": "640, unpacked from +0x88"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "screen_height",
+     "array": null,
+     "offset_hint": null,
+     "comment": "448, from the same word"
+    }
+   ]
+  },
+  "MaskedPlane": {
+   "file": "masked_plane.hpp",
+   "fields": [
+    {
+     "type": "MaskedPlaneHeader",
+     "name": "header",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "tile_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "masks",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "distinct_values",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "MenuColumnChoice": {
+   "file": "menu_column_choice.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "column",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "highlighted",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "Mode2UvOffset": {
+   "file": "menu_mode2_offset.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "offset",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "select",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "selected_branch",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "Viewport": {
+   "file": "pc_host.hpp",
+   "fields": [
+    {
+     "type": "int",
+     "name": "left",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "top",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "width",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "height",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "logical_width",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "logical_height",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "Pointer": {
+   "file": "pc_host.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "inside",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "x",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "y",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "InputTransition": {
+   "file": "pc_host.hpp",
+   "fields": [
+    {
+     "type": "Key",
+     "name": "key",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "down",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Pointer",
+     "name": "pointer",
+     "array": null,
+     "offset_hint": null,
+     "comment": "mouse event position, mapped when the event arrived"
+    }
+   ]
+  },
+  "InputFrame": {
+   "file": "pc_host.hpp",
+   "fields": [
+    {
+     "type": "std::array<Button, key_count>",
+     "name": "buttons",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Pointer",
+     "name": "pointer",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::array<InputTransition, transition_capacity>",
+     "name": "transitions",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "unsigned",
+     "name": "transition_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "overflow",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "cancelled",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "InputBuffer": {
+   "file": "pc_host.hpp",
+   "fields": [
+    {
+     "type": "std::array<Button, key_count>",
+     "name": "buttons_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::array<InputTransition, transition_capacity>",
+     "name": "transitions_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "unsigned",
+     "name": "transition_count_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "overflow_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "cancelled_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "pointer_x_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "pointer_y_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "FixedClock": {
+   "file": "pc_host.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "rate_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "last_ns_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "fraction_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "pending_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "initialized_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "PrimaryFade": {
+   "file": "primary_fade.hpp",
+   "fields": [
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "identity",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "FadeRecordBytes",
+     "name": "bytes_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "FadeCallbackRegistry",
+     "name": "registry_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "InitTableWords": {
+   "file": "r156_service_17F048.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "for_subtype3",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "for_subtype6",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "for_other",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "StepResult": {
+   "file": "r156_service_17F048.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "return_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": "0 for stage 0, 1 after init, 0 when inert"
+    },
+    {
+     "type": "bool",
+     "name": "called_fn_ptr",
+     "array": null,
+     "offset_hint": null,
+     "comment": "true only on the state==1 path"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "state_after",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "ProbeResult": {
+   "file": "r158_services.hpp",
+   "fields": [
+    {
+     "type": "ProbeStatus",
+     "name": "status",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "value",
+     "array": null,
+     "offset_hint": null,
+     "comment": "the returned v1"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "bit_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": "which bit was cleared, for evidence"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "byte_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "table_byte",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "mask",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GlobalSetter": {
+   "file": "r158_services.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "slot",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "stored_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "written",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "CloseResult": {
+   "file": "r159_services.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "acted",
+     "array": null,
+     "offset_hint": null,
+     "comment": "true when state != 0"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "state_before",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "handle",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "object_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "called_1b7da8",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "called_1b6fa0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BootResult": {
+   "file": "r159_services.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "flag_was_set",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "returned",
+     "array": null,
+     "offset_hint": null,
+     "comment": "v0 of the third call"
+    },
+    {
+     "type": "bool",
+     "name": "stored",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "store_a_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "store_b_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "flag_cleared",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "call_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "Setter2Result": {
+   "file": "r160_setters.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "object_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "wrote_f0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "wrote_f2",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "ok",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "ProjectionOut": {
+   "file": "r161_projection.hpp",
+   "fields": [
+    {
+     "type": "Vec4",
+     "name": "at_offset_0",
+     "array": null,
+     "offset_hint": null,
+     "comment": "sqc2 vf7, 0(s0)"
+    },
+    {
+     "type": "Vec4",
+     "name": "at_offset_16",
+     "array": null,
+     "offset_hint": null,
+     "comment": "sqc2 vf6, 16(s0)"
+    },
+    {
+     "type": "Vec4",
+     "name": "at_offset_32",
+     "array": null,
+     "offset_hint": null,
+     "comment": "sqc2 vf5, 32(s0)"
+    },
+    {
+     "type": "Vec4",
+     "name": "at_offset_48",
+     "array": null,
+     "offset_hint": null,
+     "comment": "sqc2 vf4, 48(s0)"
+    }
+   ]
+  },
+  "ProjectionVectors": {
+   "file": "r161_projection.hpp",
+   "fields": [
+    {
+     "type": "Vec4",
+     "name": "vf4",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Vec4",
+     "name": "vf5",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Vec4",
+     "name": "vf6",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Vec4",
+     "name": "vf7",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "VuResults": {
+   "file": "r162_vu.hpp",
+   "fields": [
+    {
+     "type": "Vec4",
+     "name": "vf4",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Vec4",
+     "name": "vf5",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Vec4",
+     "name": "vf6",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Vec4",
+     "name": "vf7",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "MatrixBlock": {
+   "file": "r163_projection_wire.hpp",
+   "fields": [
+    {
+     "type": "std::array<std::uint8_t, 64>",
+     "name": "bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "VuResults",
+     "name": "vectors",
+     "array": null,
+     "offset_hint": null,
+     "comment": "the same data in vector form"
+    }
+   ]
+  },
+  "DiagonalProbe": {
+   "file": "r163_projection_wire.hpp",
+   "fields": [
+    {
+     "type": "float",
+     "name": "at_out_0",
+     "array": null,
+     "offset_hint": "0x17B504",
+     "comment": "vf7.x  (0x17B504 reads out+0)"
+    },
+    {
+     "type": "float",
+     "name": "at_out_20",
+     "array": null,
+     "offset_hint": "0x17B508",
+     "comment": "vf6.y  (0x17B508 reads out+20)"
+    },
+    {
+     "type": "float",
+     "name": "at_out_40",
+     "array": null,
+     "offset_hint": "0x17B510",
+     "comment": "vf5.z  (0x17B510 reads out+40)"
+    }
+   ]
+  },
+  "ProjectionWire": {
+   "file": "r163_projection_wire.hpp",
+   "fields": [
+    {
+     "type": "MatrixBlock",
+     "name": "matrix",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "DiagonalProbe",
+     "name": "diagonals",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "LinkResult": {
+   "file": "r165_link_branch.hpp",
+   "fields": [
+    {
+     "type": "Domain",
+     "name": "domain",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "stored_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": "the v0 written by `sw v0,4(a0)`"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "link",
+     "array": null,
+     "offset_hint": null,
+     "comment": "the word the taken arm would build"
+    },
+    {
+     "type": "bool",
+     "name": "store_always_happens",
+     "array": null,
+     "offset_hint": null,
+     "comment": "always true"
+    }
+   ]
+  },
+  "CacheWrite": {
+   "file": "r166_gp28200.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "slot",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "subject",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "unconditional",
+     "array": null,
+     "offset_hint": null,
+     "comment": "true: it is a branch delay slot"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "slot",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "subject",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "unconditional",
+     "array": null,
+     "offset_hint": null,
+     "comment": "true: it is a branch delay slot"
+    },
+    {
+     "type": "bool",
+     "name": "only_when_state_small",
+     "array": null,
+     "offset_hint": null,
+     "comment": "beq guards entry, not the slot write itself"
+    }
+   ]
+  },
+  "ConsumerRead": {
+   "file": "r167_gp28212.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "slot_value",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "dereferenced_field",
+     "array": null,
+     "offset_hint": null,
+     "comment": "subject + 344"
+    }
+   ]
+  },
+  "LaneMerge": {
+   "file": "r168_gs_pack.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "cleared",
+     "array": null,
+     "offset_hint": "0xFFFFC000",
+     "comment": "value & 0xFFFFC000"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "field14",
+     "array": null,
+     "offset_hint": "0x3FFF",
+     "comment": "(field << 4) & 0x3FFF"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "merged",
+     "array": null,
+     "offset_hint": null,
+     "comment": "cleared | field14"
+    }
+   ]
+  },
+  "RegisterFix": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "const char*",
+     "name": "r169_claimed",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "const char*",
+     "name": "authoritative",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "retracted",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsPrim": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "type",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..2"
+    },
+    {
+     "type": "bool",
+     "name": "iip",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 3"
+    },
+    {
+     "type": "bool",
+     "name": "textured",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 4 (TME)"
+    },
+    {
+     "type": "bool",
+     "name": "fge",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 5"
+    },
+    {
+     "type": "bool",
+     "name": "abe",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 6"
+    },
+    {
+     "type": "bool",
+     "name": "aa1",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 7"
+    },
+    {
+     "type": "bool",
+     "name": "fst",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 8"
+    },
+    {
+     "type": "bool",
+     "name": "ctxt",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 9"
+    },
+    {
+     "type": "bool",
+     "name": "fix",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 10"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "type",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsXyzf": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "x",
+     "array": null,
+     "offset_hint": null,
+     "comment": "16-bit unsigned 16.4 fixed point"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "z",
+     "array": null,
+     "offset_hint": null,
+     "comment": "24-bit"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "f",
+     "array": null,
+     "offset_hint": null,
+     "comment": "8-bit fog coefficient (XYZF only)"
+    }
+   ]
+  },
+  "GsTex0": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "tbp0",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..13"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tbw",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 14..19"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 20..25"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tw",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 26..29"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "th",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 30..33"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tcc",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 34"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tfx",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 35..36 (2 bits)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cbp",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 37..50"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cpsm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 51..54"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "csm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 55"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "csa",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 56..60"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "cld",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 61..63"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "tbp0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsScissor": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "scax0",
+     "array": null,
+     "offset_hint": null,
+     "comment": "11-bit each"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsAlpha": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "a",
+     "array": null,
+     "offset_hint": null,
+     "comment": "2-bit blend factors"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "fix",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 32..39"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsTest": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "ate",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 0"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "atst",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 1..3"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "aref",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 4..11"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "afail",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 12..13"
+    },
+    {
+     "type": "bool",
+     "name": "date",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 14"
+    },
+    {
+     "type": "bool",
+     "name": "datm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 15"
+    },
+    {
+     "type": "bool",
+     "name": "zte",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 16"
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "ztst",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 17..18"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "ate",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsFrame": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "fbp",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..8 (9)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "fbw",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 16..21 (6)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 24..29 (6)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "fbmsk",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 32..63"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsZbuf": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "zbp",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 0..8 (9)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bits 24..29 (6)"
+    },
+    {
+     "type": "bool",
+     "name": "zmsk",
+     "array": null,
+     "offset_hint": null,
+     "comment": "bit 32"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsXyoffset": {
+   "file": "r169_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "ofx",
+     "array": null,
+     "offset_hint": null,
+     "comment": "low 32 bits"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "ofy",
+     "array": null,
+     "offset_hint": null,
+     "comment": "high 32 bits"
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsClamp": {
+   "file": "r171_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsTex1": {
+   "file": "r171_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsPrMode": {
+   "file": "r171_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "prim",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "GsTrxPos": {
+   "file": "r171_gs_state.hpp",
+   "fields": [
+    {
+     "type": "std::uint64_t",
+     "name": "raw",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "LoopStep": {
+   "file": "r173_vertex_loop.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "inner_continue",
+     "array": null,
+     "offset_hint": "0x17CC10",
+     "comment": "true -> back to 0x17CC10"
+    },
+    {
+     "type": "bool",
+     "name": "outer_continue",
+     "array": null,
+     "offset_hint": "0x17CBE8",
+     "comment": "true -> back to 0x17CBE8"
+    },
+    {
+     "type": "bool",
+     "name": "terminated",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "FrameState": {
+   "file": "r178_frames.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "index",
+     "array": null,
+     "offset_hint": null,
+     "comment": "0-based frame number"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "frame_counter",
+     "array": null,
+     "offset_hint": "0x270C40",
+     "comment": "value at 0x270C40 when the frame starts"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "draw_type",
+     "array": null,
+     "offset_hint": null,
+     "comment": "*(context+0)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "phase_counter",
+     "array": null,
+     "offset_hint": null,
+     "comment": "*(context+8)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "context",
+     "array": null,
+     "offset_hint": null,
+     "comment": "context base (shared across frames)"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "record",
+     "array": null,
+     "offset_hint": "0x8914",
+     "comment": "context+0x8914 (shared record)"
+    },
+    {
+     "type": "const char*",
+     "name": "sequence",
+     "array": null,
+     "offset_hint": null,
+     "comment": "observed call order, e.g. \"sprite->texture->background\""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "sprite_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "texture_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "background_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "background_data",
+     "array": null,
+     "offset_hint": "0x508A00",
+     "comment": "must be context+0x508A00"
+    }
+   ]
+  },
+  "FrameClock": {
+   "file": "r178_frames.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "value_",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "DispatchEntry": {
+   "file": "r180_dispatch.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "code_ptr",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "state_ptr",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "zero",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BeqlBase": {
+   "file": "r186_cull.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "base",
+     "array": null,
+     "offset_hint": "0x17B734",
+     "comment": "value t0 holds when 0x17B734 executes"
+    },
+    {
+     "type": "bool",
+     "name": "delay_executed",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "upper_bound",
+     "array": null,
+     "offset_hint": "0x2800",
+     "comment": "base + 0x2800"
+    }
+   ]
+  },
+  "TransformInputs": {
+   "file": "r188_transform.hpp",
+   "fields": [
+    {
+     "type": "float",
+     "name": "vector",
+     "array": "[4]",
+     "offset_hint": null,
+     "comment": "vf8"
+    },
+    {
+     "type": "float",
+     "name": "q",
+     "array": null,
+     "offset_hint": null,
+     "comment": "perspective reciprocal"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "t0",
+     "array": null,
+     "offset_hint": null,
+     "comment": "VFTOI0 selector for zw"
+    }
+   ]
+  },
+  "RectUvFixed": {
+   "file": "rect_uv.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "u",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "v",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "du",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "dv",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "ResourceCropResult": {
+   "file": "resource_crop.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "advanced_cursor",
+     "array": null,
+     "offset_hint": "0x14",
+     "comment": "+0x14 after the row advance"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "stride",
+     "array": null,
+     "offset_hint": null,
+     "comment": "+2 = (uint16(width)+63)>>6"
+    }
+   ]
+  },
+  "ResourceLzssResult": {
+   "file": "resource_lzss.hpp",
+   "fields": [
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "data",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "consumed",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "reference_truncated",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "PageCheck": {
+   "file": "save_format.hpp",
+   "fields": [
+    {
+     "type": "std::size_t",
+     "name": "index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "checksum",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "stored",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "zero_data",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "SaveCheck": {
+   "file": "save_format.hpp",
+   "fields": [
+    {
+     "type": "CoreState",
+     "name": "state",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "const char*",
+     "name": "reason",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "checksum",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "stored",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "core_checked",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "pages_checked",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "pages_validated",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<PageCheck>",
+     "name": "pages",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "EntryShape": {
+   "file": "slot_stage.hpp",
+   "fields": [
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "fields",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "default_thumb",
+     "array": null,
+     "offset_hint": null,
+     "comment": "written by R233"
+    }
+   ]
+  },
+  "TableShape": {
+   "file": "slot_stage.hpp",
+   "fields": [
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "slots",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "entries",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "slot_bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": "72"
+    },
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "base",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "RegisterResult": {
+   "file": "slot_stage.hpp",
+   "fields": [
+    {
+     "type": "RegisterError",
+     "name": "error",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "slot",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "entry",
+     "array": null,
+     "offset_hint": null,
+     "comment": ": index actually filled"
+    }
+   ]
+  },
+  "CallbackTable": {
+   "file": "slot_stage.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "busy_",
+     "array": "[TableShape::slots]",
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "counter_",
+     "array": "[TableShape::slots]",
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "LadderShape": {
+   "file": "slot_stage.hpp",
+   "fields": [
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "stages",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "static constexpr std::uint32_t",
+     "name": "progress_addr",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "LadderRun": {
+   "file": "slot_stage.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "stages_ok",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "stages_refused",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "final_progress",
+     "array": null,
+     "offset_hint": null,
+     "comment": ": the original resets to 0"
+    },
+    {
+     "type": "bool",
+     "name": "saw_optional_head",
+     "array": null,
+     "offset_hint": "0x0022631C",
+     "comment": ": R235 stage-1 callback 0x0022631C"
+    },
+    {
+     "type": "bool",
+     "name": "saw_optional_tail",
+     "array": null,
+     "offset_hint": "0x00226324",
+     "comment": ": R235 reset callback 0x00226324"
+    }
+   ]
+  },
+  "SnapshotMeta": {
+   "file": "snapshot_memory.hpp",
+   "fields": [
+    {
+     "type": "std::string",
+     "name": "elf_sha256",
+     "array": null,
+     "offset_hint": null,
+     "comment": "the shipped ELF this capture belongs to"
+    },
+    {
+     "type": "std::string",
+     "name": "game_id",
+     "array": null,
+     "offset_hint": null,
+     "comment": "e.g. SLPM-66570"
+    },
+    {
+     "type": "std::string",
+     "name": "source",
+     "array": null,
+     "offset_hint": null,
+     "comment": "how the snapshot was produced"
+    },
+    {
+     "type": "std::string",
+     "name": "captured_at",
+     "array": null,
+     "offset_hint": null,
+     "comment": "ISO-8601 or empty"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "ee_pc",
+     "array": null,
+     "offset_hint": null,
+     "comment": "EE program counter at capture"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "gif_d2_chcr",
+     "array": null,
+     "offset_hint": null,
+     "comment": "0 when not captured"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "gif_d2_tadr",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "gif_d2_madr",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "gif_d2_qwc",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "dma_started",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "has_gif_regs",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::string",
+     "name": "provenance",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::string>",
+     "name": "notes",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "SnapshotRegion": {
+   "file": "snapshot_memory.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "length",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::string",
+     "name": "sha256",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "file_offset",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "PipelineReport": {
+   "file": "snapshot_memory.hpp",
+   "fields": [
+    {
+     "type": "PipelineError",
+     "name": "dma",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "PipelineError",
+     "name": "gif",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "PipelineError",
+     "name": "gs",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "DmaStopReason",
+     "name": "chain_stop",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "chain_ok",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "gif_ok",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "gs_ok",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "dma_failed",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "prefix_commands",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "chain_ok && gif_ok &&",
+     "name": "gs_ok",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "SpritePacketGlobals": {
+   "file": "sprite_packet.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "z",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "high_byte",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TextureEmission": {
+   "file": "texture_emit.hpp",
+   "fields": [
+    {
+     "type": "std::vector<std::uint32_t>",
+     "name": "packet_tokens",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "main_packets",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "palette_emitted",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "final_cursor",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "MainTextureBlock": {
+   "file": "texture_transfer.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "source_token",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "TextureTransferDescriptor",
+     "name": "descriptor",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "MainTexturePlan": {
+   "file": "texture_transfer.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "skipped",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<MainTextureBlock>",
+     "name": "blocks",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "Tim2PictureInfo": {
+   "file": "tim2.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "total_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "clut_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "image_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "header_size",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "clut_colors",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "width",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "height",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint64_t",
+     "name": "gs_tex0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "unsigned",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "unsigned",
+     "name": "bits_per_pixel",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "clut_offset",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "image_offset",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "Tim2Info": {
+   "file": "tim2.hpp",
+   "fields": [
+    {
+     "type": "std::uint8_t",
+     "name": "version",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint8_t",
+     "name": "format",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "num_pics",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "Tim2PictureInfo",
+     "name": "picture",
+     "array": null,
+     "offset_hint": null,
+     "comment": "only the first picture"
+    },
+    {
+     "type": "std::string",
+     "name": "error",
+     "array": null,
+     "offset_hint": null,
+     "comment": "populated when the result is not Ok"
+    }
+   ]
+  },
+  "Tim2Image": {
+   "file": "tim2.hpp",
+   "fields": [
+    {
+     "type": "std::uint16_t",
+     "name": "width",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "height",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "unsigned",
+     "name": "psm",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "rgba",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "BackgroundFrame": {
+   "file": "title_background.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "width",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "height",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "rgba",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleState": {
+   "file": "title_controller.hpp",
+   "fields": [
+    {
+     "type": "std::int16_t",
+     "name": "phase",
+     "array": null,
+     "offset_hint": null,
+     "comment": "task+10"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "frame_counter",
+     "array": null,
+     "offset_hint": null,
+     "comment": "context+08"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "field10",
+     "array": null,
+     "offset_hint": null,
+     "comment": "context+10"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "field14",
+     "array": null,
+     "offset_hint": null,
+     "comment": "context+14"
+    }
+   ]
+  },
+  "TitleStep": {
+   "file": "title_controller.hpp",
+   "fields": [
+    {
+     "type": "TitleBoundary",
+     "name": "boundary",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "fade_started",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "callee_token",
+     "array": null,
+     "offset_hint": null,
+     "comment": "provenance only; never cast to a native pointer"
+    },
+    {
+     "type": "std::array<std::uint32_t,3>",
+     "name": "arguments",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "menu_attempted",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "TitleMenuTransitionResult",
+     "name": "menu_result",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "AdapterEvidence": {
+   "file": "title_dma_adapter.hpp",
+   "fields": [
+    {
+     "type": "bool",
+     "name": "gs_parsed",
+     "array": null,
+     "offset_hint": null,
+     "comment": "L1: bytes -> GS commands"
+    },
+    {
+     "type": "bool",
+     "name": "gs_consumed",
+     "array": null,
+     "offset_hint": null,
+     "comment": "L2: production consumer accepted"
+    },
+    {
+     "type": "bool",
+     "name": "pc_drawn",
+     "array": null,
+     "offset_hint": null,
+     "comment": "L3: rasterizer drew"
+    },
+    {
+     "type": "bool",
+     "name": "matches_ps2",
+     "array": null,
+     "offset_hint": null,
+     "comment": "L4: pixel-equal to the original"
+    }
+   ]
+  },
+  "TitleAdapterResult": {
+   "file": "title_dma_adapter.hpp",
+   "fields": [
+    {
+     "type": "DmaByteStream",
+     "name": "stream",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "GifParseResult",
+     "name": "gif",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "PipelineReport",
+     "name": "report",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "AdapterEvidence",
+     "name": "evidence",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "head_address",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleFrameInput": {
+   "file": "title_frame.hpp",
+   "fields": [
+    {
+     "type": "std::array<std::uint8_t, 256>",
+     "name": "context",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::array<std::uint8_t, 256>",
+     "name": "record",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "frame_counter",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "const pc::ImageRgba8*",
+     "name": "background",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "const pc::ImageRgba8*",
+     "name": "sprite_texture",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "const pc::ImageRgba8*",
+     "name": "menu_texture",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "menu_count",
+     "array": null,
+     "offset_hint": null,
+     "comment": "mode0's loop bound is count+1 on data we do not have yet"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "menu_x",
+     "array": null,
+     "offset_hint": null,
+     "comment": "rect+0, from ADDIU r2,r0,300"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "menu_w",
+     "array": null,
+     "offset_hint": null,
+     "comment": "rect+16, from ADDIU r4,r0,240 -- also the atlas column width"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "menu_h",
+     "array": null,
+     "offset_hint": null,
+     "comment": "rect+20, from ADDIU r5,r0,24"
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "menu_pitch",
+     "array": null,
+     "offset_hint": null,
+     "comment": "row pitch, same instruction stream"
+    },
+    {
+     "type": "const pc::ImageRgba8*",
+     "name": "menu_atlas",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint16_t",
+     "name": "menu_y",
+     "array": null,
+     "offset_hint": null,
+     "comment": "rect+4, from ADDIU r3,r0,200"
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "menu_selected_row",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "force_menu",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::array<const pc::ImageRgba8*, 8>",
+     "name": "menu_cell_textures",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::array<const pc::ImageRgba8*, 8>",
+     "name": "menu_icon_textures",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleFrameResult": {
+   "file": "title_frame.hpp",
+   "fields": [
+    {
+     "type": "pc::ImageRgba8",
+     "name": "image",
+     "array": null,
+     "offset_hint": "0x448",
+     "comment": "640x448 RGBA8, opaque black where nothing drew"
+    },
+    {
+     "type": "std::vector<std::string>",
+     "name": "call_order",
+     "array": null,
+     "offset_hint": null,
+     "comment": "e.g. \"sprite\", \"texture\", \"background\""
+    },
+    {
+     "type": "bool",
+     "name": "sprite_reached",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "sprite_drawn",
+     "array": null,
+     "offset_hint": null,
+     "comment": "true only when sprite_texture was actually blitted"
+    },
+    {
+     "type": "unsigned",
+     "name": "sprite_debug_tint",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "sprite_debug_written",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "unsigned",
+     "name": "sprite_debug_alpha0",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "texture_reached",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "menu_reached",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "background_reached",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "menu_callee",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "draw_type",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "menu_mode",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "menu_cells_drawn",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::size_t",
+     "name": "menu_pixels_written",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "MenuIntent": {
+   "file": "title_menu_input.hpp",
+   "fields": [
+    {
+     "type": "MenuIntentKind",
+     "name": "kind",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "selection",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "TitleMenuConfirmation",
+     "name": "confirmation",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleMenuPage": {
+   "file": "title_menu_transition.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "original_entry_token",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "count",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::vector<std::uint8_t>",
+     "name": "bytes",
+     "array": null,
+     "offset_hint": null,
+     "comment": "includes the original leading byte"
+    }
+   ]
+  },
+  "TitleMenuSelection": {
+   "file": "title_menu_transition.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "handled",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleMenuConfirmation": {
+   "file": "title_menu_transition.hpp",
+   "fields": [
+    {
+     "type": "TitleMenuConfirmResult",
+     "name": "result",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "root_target",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "action",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "sub_target",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "eligibility_word",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleMenuLabelQuad": {
+   "file": "title_menu_transition.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "action",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleSpriteBindings": {
+   "file": "title_packet_draw.hpp",
+   "fields": [
+    {
+     "type": "SpriteTemplateGlobals",
+     "name": "templ",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "SpritePacketGlobals",
+     "name": "packet",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleResourceRecordPlan": {
+   "file": "title_resource_plan.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "destination_token",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "parameter1",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "parameter2",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "source_token",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "SceneTransitionState": {
+   "file": "title_services.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "requested_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "current_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "previous_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::int32_t",
+     "name": "slot",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "SceneDescriptor": {
+   "file": "title_services.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "callback",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::array<std::uint8_t,16>",
+     "name": "name",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleTaskBinding": {
+   "file": "title_services.hpp",
+   "fields": [
+    {
+     "type": "std::int16_t",
+     "name": "phase",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "context_token",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "phase_in_dispatch_range",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "TitleVolumeMathInput": {
+   "file": "title_services.hpp",
+   "fields": [
+    {
+     "type": "std::uint32_t",
+     "name": "scaled",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "required",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "float",
+     "name": "argument",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    }
+   ]
+  },
+  "HostOptions": {
+   "file": "win32_host.hpp",
+   "fields": [
+    {
+     "type": "int",
+     "name": "logical_width",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "int",
+     "name": "logical_height",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "update_rate",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::wstring",
+     "name": "image_path",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::wstring",
+     "name": "menu_atlas_path",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::wstring",
+     "name": "menu_background_path",
+     "array": null,
+     "offset_hint": "0x448",
+     "comment": "optional explicit candidate PNG, 640x448"
+    },
+    {
+     "type": "std::string",
+     "name": "disc_iso_path",
+     "array": null,
+     "offset_hint": null,
+     "comment": "path to the disc image, as narrow text"
+    },
+    {
+     "type": "std::string",
+     "name": "disc_background_archive",
+     "array": null,
+     "offset_hint": null,
+     "comment": "e.g. \"ETC.AFS\""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "disc_background_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "disc_background",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "disc_title_frame",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "disc_title_draw_type",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::string",
+     "name": "disc_sprite_archive",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "std::uint32_t",
+     "name": "disc_sprite_index",
+     "array": null,
+     "offset_hint": null,
+     "comment": ""
+    },
+    {
+     "type": "bool",
+     "name": "trace_events",
+     "array": null,
+     "offset_hint": null,
+     "comment": "finite, recognized input/state events to stdout"
+    }
+   ]
+  }
+ }
+}

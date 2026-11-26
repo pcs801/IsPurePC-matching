@@ -10,6 +10,15 @@
   },
   "functions": [
     {
+      "addr": "0x001016E0",
+      "size": 32,
+      "name": "FUN_001016e0",
+      "source": "src/functions/001016e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 32 bytes; g=0"
+    },
+    {
       "addr": "0x00102008",
       "size": 24,
       "name": "FUN_00102008",
@@ -44,6 +53,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00105818",
+      "size": 32,
+      "name": "FUN_00105818",
+      "source": "src/functions/00105818.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 32 bytes; g=0"
     },
     {
       "addr": "0x00105FB0",
@@ -172,6 +190,15 @@
       "note": "M2.5 call: 24 bytes; g=0"
     },
     {
+      "addr": "0x001125C8",
+      "size": 56,
+      "name": "FUN_001125c8",
+      "source": "src/functions/001125c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 56 bytes; g=0"
+    },
+    {
       "addr": "0x00112750",
       "size": 32,
       "name": "FUN_00112750",
@@ -206,6 +233,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.5 call: 40 bytes; g=0"
+    },
+    {
+      "addr": "0x0011D550",
+      "size": 40,
+      "name": "FUN_0011d550",
+      "source": "src/functions/0011d550.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 40 bytes; g=0"
     },
     {
       "addr": "0x0011FC28",
@@ -260,6 +296,15 @@
       "g": 8,
       "status": "matched",
       "note": "M2.3 llm: round 1 cand 2; 72 bytes; g=8"
+    },
+    {
+      "addr": "0x00123968",
+      "size": 40,
+      "name": "FUN_00123968",
+      "source": "src/functions/00123968.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 worker: 40 bytes; g=8"
     },
     {
       "addr": "0x00123990",
@@ -505,6 +550,15 @@
       "note": "M2.5 call: 48 bytes; g=8"
     },
     {
+      "addr": "0x001738E0",
+      "size": 56,
+      "name": "FUN_001738e0",
+      "source": "src/functions/001738e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 56 bytes; g=0"
+    },
+    {
       "addr": "0x00177BC8",
       "size": 8,
       "name": "FUN_00177bc8",
@@ -530,6 +584,15 @@
       "g": 0,
       "status": "matched",
       "note": "two zero stores at 0x168/0x16c, scheduler reverses them"
+    },
+    {
+      "addr": "0x0017ACA0",
+      "size": 24,
+      "name": "FUN_0017aca0",
+      "source": "src/functions/0017aca0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 24 bytes; g=0"
     },
     {
       "addr": "0x0017EFA0",
@@ -649,6 +712,15 @@
       "note": "M2.2 auto: ord0/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001AD7B0",
+      "size": 24,
+      "name": "FUN_001ad7b0",
+      "source": "src/functions/001ad7b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 24 bytes; g=0"
+    },
+    {
       "addr": "0x001AF428",
       "size": 24,
       "name": "FUN_001af428",
@@ -656,6 +728,24 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001AF9E8",
+      "size": 24,
+      "name": "FUN_001af9e8",
+      "source": "src/functions/001af9e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001AFA00",
+      "size": 24,
+      "name": "FUN_001afa00",
+      "source": "src/functions/001afa00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 24 bytes; g=0"
     },
     {
       "addr": "0x001AFA18",
@@ -764,6 +854,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B2920",
+      "size": 16,
+      "name": "FUN_001b2920",
+      "source": "src/functions/001b2920.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 16 bytes; g=0"
     },
     {
       "addr": "0x001B2930",
@@ -1108,6 +1207,15 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001B5CA8",
+      "size": 24,
+      "name": "FUN_001b5ca8",
+      "source": "src/functions/001b5ca8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 24 bytes; g=0"
+    },
+    {
       "addr": "0x001B73F8",
       "size": 24,
       "name": "FUN_001b73f8",
@@ -1360,6 +1468,15 @@
       "note": "M2.5 call: 24 bytes; g=0"
     },
     {
+      "addr": "0x001BE248",
+      "size": 32,
+      "name": "FUN_001be248",
+      "source": "src/functions/001be248.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 32 bytes; g=0"
+    },
+    {
       "addr": "0x001BE870",
       "size": 8,
       "name": "FUN_001be870",
@@ -1376,6 +1493,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.5 call: 40 bytes; g=0"
+    },
+    {
+      "addr": "0x001C0E30",
+      "size": 16,
+      "name": "FUN_001c0e30",
+      "source": "src/functions/001c0e30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 16 bytes; g=0"
     },
     {
       "addr": "0x001C0E60",
@@ -1477,6 +1603,15 @@
       "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001C4ED8",
+      "size": 32,
+      "name": "FUN_001c4ed8",
+      "source": "src/functions/001c4ed8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 32 bytes; g=0"
+    },
+    {
       "addr": "0x001C5868",
       "size": 24,
       "name": "FUN_001c5868",
@@ -1513,6 +1648,15 @@
       "note": "M2.5 call: 24 bytes; g=0"
     },
     {
+      "addr": "0x001C58D0",
+      "size": 24,
+      "name": "FUN_001c58d0",
+      "source": "src/functions/001c58d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 24 bytes; g=0"
+    },
+    {
       "addr": "0x001C7A28",
       "size": 24,
       "name": "FUN_001c7a28",
@@ -1547,6 +1691,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001CA4C8",
+      "size": 48,
+      "name": "FUN_001ca4c8",
+      "source": "src/functions/001ca4c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 48 bytes; g=0"
     },
     {
       "addr": "0x001CAE08",
@@ -1729,6 +1882,15 @@
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001CD058",
+      "size": 40,
+      "name": "FUN_001cd058",
+      "source": "src/functions/001cd058.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 40 bytes; g=0"
+    },
+    {
       "addr": "0x001CD1A8",
       "size": 8,
       "name": "FUN_001cd1a8",
@@ -1808,6 +1970,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001CE060",
+      "size": 40,
+      "name": "FUN_001ce060",
+      "source": "src/functions/001ce060.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 40 bytes; g=0"
     },
     {
       "addr": "0x001CE9B8",
@@ -1900,6 +2071,15 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001D11B8",
+      "size": 40,
+      "name": "FUN_001d11b8",
+      "source": "src/functions/001d11b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 40 bytes; g=0"
+    },
+    {
       "addr": "0x001D1268",
       "size": 32,
       "name": "FUN_001d1268",
@@ -1952,6 +2132,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.3 llm: round 1 cand 1; 64 bytes; g=0"
+    },
+    {
+      "addr": "0x001E3998",
+      "size": 32,
+      "name": "FUN_001e3998",
+      "source": "src/functions/001e3998.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 32 bytes; g=0"
     },
     {
       "addr": "0x001E3D90",
@@ -2015,6 +2204,15 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x0020EAF0",
+      "size": 32,
+      "name": "FUN_0020eaf0",
+      "source": "src/functions/0020eaf0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 worker: 32 bytes; g=0"
     }
   ]
 }
