@@ -1,0 +1,59 @@
+name: IsPurePC-Matching
+options:
+  basename: SLPM_665.70
+  target_path: baserom/SLPM_665.70
+  base_path: .
+  platform: ps2
+  compiler: EEGCC
+  asm_path: asm
+  src_path: src
+  create_asm_dependencies: False
+  ld_script_path: link.ld
+  symbol_addrs_path: config/symbol_addrs.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.txt
+  find_file_boundaries: False
+  disassemble_all: False
+  generate_asm_macros_files: False
+
+segments:
+  - [0x0, bin]
+  - name: text
+    type: code
+    start: 0x1000
+    vram: 0x00100000
+    subsegments:
+      - [0x1000, asm]
+  - name: ctors
+    type: bin
+    start: 0x11399C
+    vram: 0x0021299C
+  - name: dtors
+    type: bin
+    start: 0x1139A4
+    vram: 0x002129A4
+  - name: reginfo
+    type: bin
+    start: 0x1139AC
+    vram: 0x002129AC
+  - name: data
+    type: bin
+    start: 0x113A00
+    vram: 0x00212A00
+  - name: eh_frame
+    type: bin
+    start: 0x158D08
+    vram: 0x00257D08
+  - name: rodata
+    type: bin
+    start: 0x158D80
+    vram: 0x00257D80
+  - name: lit4
+    type: bin
+    start: 0x170A00
+    vram: 0x0026FA00
+  - name: sdata
+    type: bin
+    start: 0x170B80
+    vram: 0x0026FB80
+  - [0x171AB8]

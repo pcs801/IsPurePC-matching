@@ -27,4 +27,4 @@ docs/      计划与交接
 
 ## 状态
 
-M0 spike 已通过（2026-11-26）：11/11 函数与 baserom 字节一致，\`-O2 -mips3\`，\`-G\` 按 TU 混合（7 个无关 / 1 个 -G0 / 3 个 -G8）。当前进入 M1 骨架。见 \`docs/spike-report.md\`。
+M0 spike 已通过（2026-11-26）：11/11 函数与 baserom 字节一致；M1 进行中（-G 普查完成、.text 整段重建重定位外 0 差异），\`-O2 -mips3\`，\`-G\` 按 TU 混合（7 个无关 / 1 个 -G0 / 3 个 -G8）。当前进入 M1 骨架。见 \`docs/spike-report.md\`。

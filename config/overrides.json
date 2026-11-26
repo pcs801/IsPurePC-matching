@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "note": "Per-function C overrides. status=matched: compiled+relocated bytes MUST equal the baserom and are spliced into the rebuilt .text; status=todo: compiled for diagnostics only, never spliced.",
+  "defaults": {
+    "flags": [
+      "-O2",
+      "-mips3"
+    ],
+    "g": 0
+  },
+  "functions": [
+    {
+      "addr": "0x00155B68",
+      "size": 12,
+      "name": "FUN_00155b68",
+      "source": "src/functions/00155b68.c",
+      "g": 0,
+      "status": "matched",
+      "note": "two int stores, second fills the delay slot"
+    },
+    {
+      "addr": "0x00177C28",
+      "size": 12,
+      "name": "FUN_00177c28",
+      "source": "src/functions/00177c28.c",
+      "g": 0,
+      "status": "matched",
+      "note": "two zero stores at 0x168/0x16c, scheduler reverses them"
+    },
+    {
+      "addr": "0x0019B590",
+      "size": 28,
+      "name": "FUN_0019b590",
+      "source": "src/functions/0019b590.c",
+      "g": 0,
+      "status": "matched",
+      "note": "two fields doubled through registers"
+    },
+    {
+      "addr": "0x001A8208",
+      "size": 28,
+      "name": "FUN_001a8208",
+      "source": "src/functions/001a8208.c",
+      "g": 0,
+      "status": "matched",
+      "note": "a<<12 stored twice; store order found by statement-order search"
+    },
+    {
+      "addr": "0x001A82A8",
+      "size": 24,
+      "name": "FUN_001a82a8",
+      "source": "src/functions/001a82a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "fixed-point equality test"
+    }
+  ]
+}

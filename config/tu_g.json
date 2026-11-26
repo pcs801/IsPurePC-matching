@@ -1,0 +1,42 @@
+{
+ "note": "needs_G8 address ranges (gap<=0x2000 merged); everything else -G0",
+ "default_g": 0,
+ "ranges": [
+  {
+   "start": "0x00100458",
+   "end": "0x00102A70",
+   "count": 5,
+   "g": 8
+  },
+  {
+   "start": "0x00104DA8",
+   "end": "0x0016EAAC",
+   "count": 641,
+   "g": 8
+  },
+  {
+   "start": "0x00173C10",
+   "end": "0x00179DCC",
+   "count": 12,
+   "g": 8
+  },
+  {
+   "start": "0x0017DE08",
+   "end": "0x0018FB68",
+   "count": 56,
+   "g": 8
+  },
+  {
+   "start": "0x00197680",
+   "end": "0x00199D50",
+   "count": 10,
+   "g": 8
+  },
+  {
+   "start": "0x001A78F8",
+   "end": "0x001A914C",
+   "count": 3,
+   "g": 8
+  }
+ ]
+}

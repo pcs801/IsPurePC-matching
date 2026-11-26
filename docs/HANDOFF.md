@@ -2,89 +2,90 @@
 
 ## 当前进度
 
-- 阶段：**M1 骨架（M0 spike 已通过，11/11）**
-- 上一次更新：2026-11-26 13:40
-- 下一阶段：**建骨架** — `configure.py` + splat + symbols + ld；`make check` 重建 .text 字节一致
-- spike 报告：`docs/spike-report.md`
+- 阶段：**M2.1 完成**（per-function override）
+- 上一次更新：2026-11-26 13:48
+- 验收：`make check` 一条命令 → **SHA-256 = `e0d0b77b555fd876c6fdd933b486292da45e77677b44bc04eec67836de481147` = 原版**（其中 5 个函数 / 104 字节已改由 C 提供）
+- 下一步：**M2.2 triage 队列**（`tools/triage.py` + `build/queue.json` + 认领）→ match_kit → ledger 自动化
 
 ---
 
 ## 你的任务（一句话）
 
-按 `docs/spike-report.md` §7 遗留项启动 M1 骨架；先做两件无争议的事：① 用 753 个叶函数做 **-G 分布普查**；② 把 `config/symbols.csv` 接进 splat，产出带符号的 target，让 objdiff 可用。
+M1 已收口，M2.1 已完成：`build.py` 支持 per-function override，5 个 local 函数已走通「写 C → 编译 → 重定位 → 逐字节比对 → 覆盖 .text」，`make check` 仍 SHA 一致。下一步是 M2.2 triage 队列。
 
 ---
 
 ## 1. 先读
 
-1. `docs/spike-report.md` — spike 结果、3 个源码形态陷阱、环境坑
-2. `docs/PLAN.md` — 目标、选型、里程碑
-3. `docs/STATE.json` — 当前阶段与 gate
-4. 本文件 — 执行顺序
+1. `docs/build.md` — **一条命令构建与验收**（本轮新增）
+2. `docs/m1-image.md` — reloc resolver 规则、段拼接、双验证、诚实边界
+3. `docs/splat-setup.md` — splat 的 4 个坑
+4. `docs/g-distribution.md` — per-TU `-G` 普查
+5. `docs/STATE.json` — gate 全绿
 
-## 2. 环境（已就绪，勿重装）
+## 2. 构建（M1 已固化）
+
+```bash
+python tools/build.py check     # splat -> asm -> resolve -> overrides -> image -> sha256
+python tools/build.py check --fast   # 跳过 splat
+python tools/build.py ld        # 额外：GNU ld 独立验证 .text
+python tools/build.py configure # 重生成 per-TU -G 配置
+python tools/build.py overrides # 只编译+校验 config/overrides.json（约 5 秒）
+```
+
+**必须看到**：`RESULT: MATCH`。耗时约 2–3 分钟。
+
+## 3. 环境（已就绪）
 
 ```
-WSL2 Ubuntu  E:\wsl\Ubuntu   (wsl -d Ubuntu -u root -- bash ...)
-i386 libc    libc6:i386 已装
-工具链       /opt/ee/bin/ee-gcc (2.96-ee-001003-1), /opt/ee/ee/bin/as (2.10-ee)
-             /opt/ee29/ee/bin/as (2.9-ee-991111, A/B 用)
+WSL2 Ubuntu  E:\wsl\Ubuntu
+/opt/ee/bin/ee-gcc 2.96-ee-001003-1     /opt/ee/ee/bin/as 2.10-ee
+/opt/ee-ld/bin/mips-ps2-decompals-ld (GNU ld 2.40)   /usr/local/bin/ee-ld
+Windows Python 3.10: splat 0.50.1 + spimdisasm 1.42.4
+objdiff: toolchain/dl/objdiff-cli.exe
 ```
 
-**硬约束：**
+硬约束：汇编在 WSL 的 `/root/work`；`/mnt/e` 会让 2.96 cc1/ld 崩；`/tmp` 重启即清空。
 
-- 源文件必须放 WSL 内部（`/tmp` 或 `~/work`）编译；在 `/mnt/e` 上 cc1 会因 drvfs inode 溢出崩溃。
-- `ee-gcc` 硬编码 as 路径 `/opt/ee/ee/bin/as`，不读 PATH。
-- C 盘很紧（WSL 已装 E 盘）；别往 C 盘写大文件。
+## 4. 事实速查
 
-## 3. spike 已验证的事实（直接拿去用）
-
-| 事实 | 数据 |
+| 项 | 值 |
 |---|---|
-| 编译器 | ee-gcc 2.96-ee-001003-1 |
-| flags | `-O2 -mips3 -c` |
-| `-G` | **按 TU 混合**：11 个样本里 7 个无关、1 个需 -G0、3 个需 -G8 |
-| 汇编器 | 2.10 与 2.9 在本批一致；默认 2.10，大样本再 A/B |
-| 判定 | `tools/match_spike.py`（重定位感知字节比对） |
-| 数据 | `config/symbols.csv` 3,967 行；`baserom/SLPM_665.70` md5 `225d132fc85b7617ab7c49933a9d6e11` |
+| 编译器 | ee-gcc 2.96-ee-001003-1，`-O2 -mips3` |
+| per-TU -G | 6 个 needs_G8 区间（覆盖 557KB），默认 -G0；见 `config/tu_g.json` |
+| 函数分布 | needs_G8 727 / ambiguous 1,714 / local 1,526（候选 761 里 76/181/504） |
+| gp | 0x002779F0 |
+| .text 重建 | 0 差异（resolver 与 GNU ld 双证） |
+| 整镜像 | SHA 一致 |
+| 符号 | `config/symbol_addrs.txt` 3,966 个 |
+| C 覆盖 | 5 个 local 函数 / 104 字节 / `config/overrides.json` |
 
-## 4. M1 任务清单
+## 5. 匹配循环（M2 起点）
 
-1. **-G 分布普查**：对 753 个叶函数逐个编译 `-G0`/`-G8`，统计需要哪个；产出 `build/g-distribution.json`。这决定 `configure.py` 的默认值。
-2. **splat 接入**：用 `config/symbol_addrs.txt` 拆 `.text`；产出带符号的 target object，使 `objdiff-cli diff` 可用（当前报 `Symbol address out of section bounds`）。
-3. **configure.py**：per-TU `-G` 覆盖 + `-O2 -mips3` + WSL 内构建目录。
-4. **make check**：整段 `.text` 重建后与 baserom 逐字节一致（先做仅含未匹配原字节的骨架）。
-5. 浮点样本：验证 `div.s` 前 `nop;nop` 能否由 2.96+as 自动生成（本 spike 未覆盖 COP1）。
+1. 从 `asm/1000.s` 或 `disasm_text.txt` 取函数
+2. 查 `config/build_config.json` 的 `g_map` 决定 `-G0`/`-G8`
+3. 写 C（`// FUNCTION: SLPM <addr>`，函数名 `FUN_<addr>` 对齐 splat）
+4. 在 `config/overrides.json` 登记 `{addr,size,source,g,status:"todo"}`，`make overrides` 编译+逐字节比对（重定位感知）
+5. 不中先查：**常量vs符号地址 / 返回类型 / store 顺序 / 是否有 reload（volatile 类）**
+6. 命中后把 status 改成 `matched`，`make check` 确认 SHA 仍一致，记 `progress/ledger.tsv`
 
-## 5. 数据准备（从旧项目取，不改旧项目）
+## 6. M2 清单
 
-| 文件 | 源路径 | 用途 |
-|---|---|---|
-| 函数表 | `E:\ONE PIECE\S\IsPurePC\reports\all_functions\_index.tsv` | 已转 `config/symbols.csv` |
-| 调用图 | `...\artifacts\data\analysis\functions.json` | 叶函数筛选（2,792 条调用图记录，少于 3,967） |
-| 反汇编 | `...\artifacts\data\analysis\disasm_text.txt` | 证据卡；**word 列是字节序拼接，取 opcode 需 byteswap** |
-| 段表 | `...\artifacts\data\analysis\sections.json` | ld 脚本（.text 0x00100000/off 0x1000, .lit4, .reginfo） |
-| 原版 ELF | `...\artifacts\data\samples\SLPM_665.70` | 已在 `baserom/`（gitignore） |
+1. `tools/triage.py`：按 size/叶函数/FPU/gp 给函数分难度队列
+2. 队列文件 `build/queue.json` + 认领（参考 rac4 的 `claims.py` 思路）
+3. `tools/match_kit.py`：编译 + objdiff + 结果归档一条命令
+4. `progress/ledger.tsv` 自动追加
+5. 无人值守跑通 50 个函数
 
-## 6. 匹配循环（沿用）
-
-1. 从 `disasm_text.txt` 切出 `[start, end)` 指令
-2. 写 `.c`（含 `// FUNCTION: SLPM <addr>` 标注）
-3. 编译：`ee-gcc -O2 -mips3 -c`，`-G0` 与 `-G8` 各一次
-4. `python tools/match_spike.py`（或后续 objdiff）
-5. 不中 → 先查三个陷阱：**常量vs符号地址 / 返回类型 / store 顺序**，再改假设
-6. 记录进 `progress/ledger.tsv`
-
-## 7. 判据（M1）
+## 7. 判据（M2）
 
 | 结果 | 动作 |
 |---|---|
-| `make check` 整段 .text 字节一致 | 进入 M2 自动化 |
-| 仅部分段一致 | 修 ld 脚本与 `-G` 分布，最多两周 |
-| 无法重建 | 写 `docs/m1-failed.md`，保留命令与 diff，交回决策 |
+| 无人值守跑完 50 函数 | 进 M3 批量 |
+| 匹配率 <50% | 检查 objdiff 工程配置与符号名对齐 |
 
 ## 8. 回写（必须做）
 
-1. 更新 `docs/STATE.json`（phase、next_action、updated、notes）
-2. 更新本文件顶部「当前进度」
-3. 新匹配函数进 `src/` 并记入 `progress/ledger.tsv`
+1. `docs/STATE.json`（phase、next_action、gates、notes）
+2. 本文件顶部「当前进度」
+3. 新匹配函数进 `src/` + `progress/ledger.tsv`

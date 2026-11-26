@@ -1,58 +1,71 @@
 {
-  "schema": 1,
-  "project": "IsPurePC-Matching",
-  "source": "SLPM-66570 (PS2, 2006, Regista / Takara Tomy)",
-  "phase": "M1-build",
-  "updated": "2026-11-26T13:40:00+08:00",
-  "decision": {
-    "track": "matching-decompilation-only",
-    "legacyProject": "E:/ONE PIECE/S/IsPurePC (paused, assets only)",
-    "target": "function-level >=95% byte match, behavior 100% via original bytes"
+ "schema": 1,
+ "project": "IsPurePC-Matching",
+ "source": "SLPM-66570 (PS2, 2006, Regista / Takara Tomy)",
+ "phase": "M2-automation",
+ "updated": "2026-11-26T13:48:00+08:00",
+ "decision": {
+  "track": "matching-decompilation-only",
+  "legacyProject": "E:/ONE PIECE/S/IsPurePC (paused, assets only)",
+  "target": "function-level >=95% byte match, behavior 100% via original bytes"
+ },
+ "compiler": {
+  "family": "SCE ee-gcc",
+  "version": "2.96-ee-001003-1",
+  "assembler": "ee-as 2.10-ee-001003-1",
+  "flags": {
+   "base": "-O2 -mips3",
+   "G": "per-TU via config/tu_g.json (6 ranges, default -G0)"
   },
-  "compiler": {
-    "family": "SCE ee-gcc",
-    "version": "2.96-ee-001003-1",
-    "evidence": "M0 spike 11/11 byte match; Append GCC2096 SCE3100; sd 8-byte; div.s nop;nop 97/97; no sq",
-    "assembler": "ee-as 2.10-ee-001003-1 (bundled) — 2.9-ee-991111 identical on all spike samples (A/B pending on large sample)",
-    "flags": {
-      "base": "-O2 -mips3",
-      "G": "per-TU: 7 samples G-agnostic, 1 needs -G0, 3 need -G8",
-      "optimization": "-O2 confirmed"
-    }
+  "linker": "GNU ld 2.40 (decompals) at /opt/ee-ld"
+ },
+ "scale": {
+  "functions": 3967,
+  "textBytes": 1124764,
+  "leafCandidates": 761,
+  "gNeedsG8": 727,
+  "gAmbiguous": 1714,
+  "gLocal": 1526
+ },
+ "env": {
+  "runtime": "WSL2 Ubuntu 6.18, /opt/ee (ee-gcc 2.96), /opt/ee-ld (GNU ld 2.40)",
+  "build": "python tools/build.py check  (or make check)"
+ },
+ "artifacts": {
+  "build": "tools/build.py",
+  "configure": "tools/configure.py",
+  "buildConfig": "config/build_config.json",
+  "tuG": "config/tu_g.json",
+  "rebuiltImage": "build/splat/SLPM_665.70.rebuilt",
+  "overrides": "config/overrides.json"
+ },
+ "gates": {
+  "spike": {
+   "status": "passed",
+   "result": "11/11 matched"
   },
-  "assets": {
-    "index": "E:/ONE PIECE/S/IsPurePC/reports/all_functions/_index.tsv",
-    "callgraph": "E:/ONE PIECE/S/IsPurePC/artifacts/data/analysis/functions.json",
-    "disasm": "E:/ONE PIECE/S/IsPurePC/artifacts/data/analysis/disasm_text.txt",
-    "sections": "E:/ONE PIECE/S/IsPurePC/artifacts/data/analysis/sections.json",
-    "elf": "E:/ONE PIECE/S/IsPurePC/artifacts/data/samples/SLPM_665.70"
+  "m1_text_rebuild": {
+   "status": "passed",
+   "result": "0 diff, resolver + GNU ld"
   },
-  "scale": {
-    "functions": 3967,
-    "textBytes": 1124764,
-    "instructions": 257029,
-    "sdkBytes": 188732,
-    "leafCandidates": 753
+  "m1_full_image": {
+   "status": "passed",
+   "criterion": "rebuilt sha256 == baserom sha256",
+   "result": "e0d0b77b555fd876c6fdd933b486292da45e77677b44bc04eec67836de481147",
+   "verified_by": "python tools/build.py check"
   },
-  "env": {
-    "runtime": "WSL2 Ubuntu (kernel 6.18.40.1) at E:/wsl/Ubuntu, libc6:i386",
-    "toolchainPrefix": "/opt/ee (ee-gcc 2.96 + cc1/cc1plus/cpp0 + ee-as 2.10)",
-    "workaround": "compile inside WSL fs (/tmp), not /mnt/e (drvfs inode overflow crashes cc1)"
-  },
-  "gates": {
-    "spike": {
-      "status": "passed",
-      "criterion": ">=8/10 functions byte-identical",
-      "result": "11/11 matched",
-      "report": "docs/spike-report.md",
-      "evidence": "build/spike/match_result.json, build/spike29/match_result.json"
-    }
-  },
-  "next_action": "M1-build: configure.py + splat split + symbols + ld script; make check rebuilds .text byte-identical; then wire objdiff with splat symbols",
-  "notes": [
-    "spike: -G is per-TU, must support per-TU override in configure.py",
-    "spike: constant-vs-symbol-address and void-vs-int return change codegen; check these first when a function diffs",
-    "spike: objdiff-cli 3.8.3 needs splat symbols; raw ELF gives 'Symbol address out of section bounds'",
-    "spike: ee-as 2.9 vs 2.10 identical on 11 samples + mult/div/mod; hazard nop claim not reproduced yet"
-  ]
+  "m2_1_overrides": {
+   "status": "passed",
+   "result": "5 local-class functions (104 bytes) compiled from C, byte-verified and spliced into .text; full image sha256 unchanged",
+   "verified_by": "make check"
+  }
+ },
+ "next_action": "M2.2: triage queue (tools/triage.py + build/queue.json + claims), then match_kit + ledger automation",
+ "notes": [
+  "configure.py: 6 needs_G8 ranges covering 557404 bytes; everything else -G0",
+  "build.py check end-to-end takes 2-3 min (splat ~40s, WSL asm ~60s)",
+  "honest scope: only .text is truly rebuilt; data segments are splat-split bytes pasted back",
+  "build.py overrides: matched C overrides are verified byte-exact (relocation-aware) before splicing; a mismatch fails make check",
+  "objdiff-cli still not wired (needs a symbolized target); the per-function override verifier prints word-level compiled-vs-baserom diffs instead"
+ ]
 }
