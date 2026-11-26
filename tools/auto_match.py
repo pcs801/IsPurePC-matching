@@ -69,17 +69,29 @@ def mk(op, a, b):
     """Build a binary node, folding constants and neutral elements."""
     av, bv = as_int(a), as_int(b)
     if av is not None and bv is not None:
-        try:
-            v = {"add": av + bv, "sub": av - bv, "and": av & bv,
-                 "or": av | bv, "xor": av ^ bv, "mul": av * bv,
-                 "shl": av << bv, "shr": (av & 0xFFFFFFFF) >> bv,
-                 "sar": av >> bv, "lt": int(av < bv),
-                 "ltu": int((av & 0xFFFFFFFF) < (bv & 0xFFFFFFFF)),
-                 "lti": int(av < bv),
-                 "ltiu": int((av & 0xFFFFFFFF) < (bv & 0xFFFFFFFF))}[op]
+        v = None
+        if op == "add":
+            v = av + bv
+        elif op == "sub":
+            v = av - bv
+        elif op == "and":
+            v = av & bv
+        elif op == "or":
+            v = av | bv
+        elif op == "xor":
+            v = av ^ bv
+        elif op == "mul":
+            v = av * bv
+        elif op in ("shl", "shr", "sar") and 0 <= bv <= 63:
+            v = {"shl": av << bv,
+                 "shr": (av & 0xFFFFFFFF) >> bv,
+                 "sar": av >> bv}[op]
+        elif op in ("lt", "lti"):
+            v = int(av < bv)
+        elif op in ("ltu", "ltiu"):
+            v = int((av & 0xFFFFFFFF) < (bv & 0xFFFFFFFF))
+        if v is not None:
             return const(v)
-        except KeyError:
-            pass
     if op in ("add", "or", "xor"):
         if av == 0:
             return b
@@ -905,7 +917,7 @@ def run_batch(args, batch_no, index, addrs):
                 e["addr"], e["size"], e["sig"], attempts, note[:70]))
         rows.append(row)
     return {"batch": batch_no, "tag": tag, "claimed": len(recs),
-            "free_before": free, "matched": matched, "rows": rows,
+            "free_before": len(addrs), "matched": matched, "rows": rows,
             "ts": time.strftime("%Y-%m-%dT%H:%M:%S%z")}
 
 

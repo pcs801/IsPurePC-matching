@@ -21,8 +21,9 @@ overrides:
 ld:
 	$(PY) tools/build.py ld
 
-# report.json + local dashboard + upload to ByteMatch
+# units (rules evolve with progress) + report.json + dashboard + upload
 progress:
+	$(PY) tools/gen_units.py
 	$(PY) tools/gen_report.py
 	$(PY) tools/make_dashboard.py
 	$(PY) tools/upload_report.py
