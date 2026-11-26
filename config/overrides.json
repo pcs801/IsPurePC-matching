@@ -10,6 +10,33 @@
   },
   "functions": [
     {
+      "addr": "0x00102008",
+      "size": 24,
+      "name": "FUN_00102008",
+      "source": "src/functions/00102008.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x00102078",
+      "size": 8,
+      "name": "FUN_00102078",
+      "source": "src/functions/00102078.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00105038",
+      "size": 40,
+      "name": "FUN_00105038",
+      "source": "src/functions/00105038.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
       "addr": "0x001050D0",
       "size": 40,
       "name": "FUN_001050d0",
@@ -23,6 +50,42 @@
       "size": 8,
       "name": "FUN_00105fb0",
       "source": "src/functions/00105fb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001075D0",
+      "size": 8,
+      "name": "FUN_001075d0",
+      "source": "src/functions/001075d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00107610",
+      "size": 8,
+      "name": "FUN_00107610",
+      "source": "src/functions/00107610.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00107AE0",
+      "size": 24,
+      "name": "FUN_00107ae0",
+      "source": "src/functions/00107ae0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x00107E98",
+      "size": 32,
+      "name": "FUN_00107e98",
+      "source": "src/functions/00107e98.c",
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
@@ -46,6 +109,51 @@
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001100A0",
+      "size": 40,
+      "name": "FUN_001100a0",
+      "source": "src/functions/001100a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 40 bytes; g=0"
+    },
+    {
+      "addr": "0x00110450",
+      "size": 32,
+      "name": "FUN_00110450",
+      "source": "src/functions/00110450.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x00111218",
+      "size": 32,
+      "name": "FUN_00111218",
+      "source": "src/functions/00111218.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x00111760",
+      "size": 8,
+      "name": "FUN_00111760",
+      "source": "src/functions/00111760.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00111768",
+      "size": 64,
+      "name": "FUN_00111768",
+      "source": "src/functions/00111768.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.3 llm: round 1 cand 1; 64 bytes; g=0"
+    },
+    {
       "addr": "0x00112448",
       "size": 8,
       "name": "FUN_00112448",
@@ -55,10 +163,109 @@
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001125B0",
+      "size": 24,
+      "name": "FUN_001125b0",
+      "source": "src/functions/001125b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x00112750",
+      "size": 32,
+      "name": "FUN_00112750",
+      "source": "src/functions/00112750.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x00112770",
+      "size": 24,
+      "name": "FUN_00112770",
+      "source": "src/functions/00112770.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x00112788",
+      "size": 24,
+      "name": "FUN_00112788",
+      "source": "src/functions/00112788.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x00112850",
+      "size": 40,
+      "name": "FUN_00112850",
+      "source": "src/functions/00112850.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 40 bytes; g=0"
+    },
+    {
+      "addr": "0x0011FC28",
+      "size": 8,
+      "name": "FUN_0011fc28",
+      "source": "src/functions/0011fc28.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x0011FCC8",
       "size": 16,
       "name": "FUN_0011fcc8",
       "source": "src/functions/0011fcc8.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x0011FCD8",
+      "size": 16,
+      "name": "FUN_0011fcd8",
+      "source": "src/functions/0011fcd8.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00123568",
+      "size": 8,
+      "name": "FUN_00123568",
+      "source": "src/functions/00123568.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00123778",
+      "size": 16,
+      "name": "FUN_00123778",
+      "source": "src/functions/00123778.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00123868",
+      "size": 72,
+      "name": "FUN_00123868",
+      "source": "src/functions/00123868.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.3 llm: round 1 cand 2; 72 bytes; g=8"
+    },
+    {
+      "addr": "0x00123990",
+      "size": 40,
+      "name": "FUN_00123990",
+      "source": "src/functions/00123990.c",
       "g": 8,
       "status": "matched",
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
@@ -73,6 +280,15 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x00123A50",
+      "size": 16,
+      "name": "FUN_00123a50",
+      "source": "src/functions/00123a50.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x001241F8",
       "size": 8,
       "name": "FUN_001241f8",
@@ -82,10 +298,73 @@
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x00128178",
+      "size": 8,
+      "name": "FUN_00128178",
+      "source": "src/functions/00128178.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00128180",
+      "size": 32,
+      "name": "FUN_00128180",
+      "source": "src/functions/00128180.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=8"
+    },
+    {
+      "addr": "0x00128328",
+      "size": 24,
+      "name": "FUN_00128328",
+      "source": "src/functions/00128328.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x0012B2B0",
+      "size": 8,
+      "name": "FUN_0012b2b0",
+      "source": "src/functions/0012b2b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x0012C578",
+      "size": 24,
+      "name": "FUN_0012c578",
+      "source": "src/functions/0012c578.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x0012C590",
+      "size": 24,
+      "name": "FUN_0012c590",
+      "source": "src/functions/0012c590.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
       "addr": "0x0012D310",
       "size": 24,
       "name": "FUN_0012d310",
       "source": "src/functions/0012d310.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x0012D6E8",
+      "size": 24,
+      "name": "FUN_0012d6e8",
+      "source": "src/functions/0012d6e8.c",
       "g": 8,
       "status": "matched",
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
@@ -100,6 +379,60 @@
       "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x00131A88",
+      "size": 56,
+      "name": "FUN_00131a88",
+      "source": "src/functions/00131a88.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 56 bytes; g=8"
+    },
+    {
+      "addr": "0x00146488",
+      "size": 24,
+      "name": "FUN_00146488",
+      "source": "src/functions/00146488.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x00154D20",
+      "size": 48,
+      "name": "FUN_00154d20",
+      "source": "src/functions/00154d20.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 48 bytes; g=8"
+    },
+    {
+      "addr": "0x00154DD8",
+      "size": 48,
+      "name": "FUN_00154dd8",
+      "source": "src/functions/00154dd8.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 48 bytes; g=8"
+    },
+    {
+      "addr": "0x00154E98",
+      "size": 56,
+      "name": "FUN_00154e98",
+      "source": "src/functions/00154e98.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 56 bytes; g=8"
+    },
+    {
+      "addr": "0x00155AC0",
+      "size": 48,
+      "name": "FUN_00155ac0",
+      "source": "src/functions/00155ac0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 48 bytes; g=8"
+    },
+    {
       "addr": "0x00155B68",
       "size": 12,
       "name": "FUN_00155b68",
@@ -107,6 +440,33 @@
       "g": 0,
       "status": "matched",
       "note": "two int stores, second fills the delay slot"
+    },
+    {
+      "addr": "0x0015A208",
+      "size": 40,
+      "name": "FUN_0015a208",
+      "source": "src/functions/0015a208.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 40 bytes; g=0"
+    },
+    {
+      "addr": "0x0015A230",
+      "size": 16,
+      "name": "FUN_0015a230",
+      "source": "src/functions/0015a230.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x0015A2C8",
+      "size": 48,
+      "name": "FUN_0015a2c8",
+      "source": "src/functions/0015a2c8.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 48 bytes; g=8"
     },
     {
       "addr": "0x00165CF0",
@@ -118,6 +478,51 @@
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x00165EC0",
+      "size": 104,
+      "name": "FUN_00165ec0",
+      "source": "src/functions/00165ec0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 104 bytes; g=8"
+    },
+    {
+      "addr": "0x00165F28",
+      "size": 104,
+      "name": "FUN_00165f28",
+      "source": "src/functions/00165f28.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 104 bytes; g=8"
+    },
+    {
+      "addr": "0x0016EA50",
+      "size": 48,
+      "name": "FUN_0016ea50",
+      "source": "src/functions/0016ea50.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.5 call: 48 bytes; g=8"
+    },
+    {
+      "addr": "0x00177BC8",
+      "size": 8,
+      "name": "FUN_00177bc8",
+      "source": "src/functions/00177bc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00177BD0",
+      "size": 24,
+      "name": "FUN_00177bd0",
+      "source": "src/functions/00177bd0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
       "addr": "0x00177C28",
       "size": 12,
       "name": "FUN_00177c28",
@@ -125,6 +530,33 @@
       "g": 0,
       "status": "matched",
       "note": "two zero stores at 0x168/0x16c, scheduler reverses them"
+    },
+    {
+      "addr": "0x0017EFA0",
+      "size": 40,
+      "name": "FUN_0017efa0",
+      "source": "src/functions/0017efa0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 40 bytes; g=0"
+    },
+    {
+      "addr": "0x0017F028",
+      "size": 32,
+      "name": "FUN_0017f028",
+      "source": "src/functions/0017f028.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x0017F508",
+      "size": 8,
+      "name": "FUN_0017f508",
+      "source": "src/functions/0017f508.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
       "addr": "0x0017F510",
@@ -136,6 +568,24 @@
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x0017F518",
+      "size": 8,
+      "name": "FUN_0017f518",
+      "source": "src/functions/0017f518.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 2 candidate(s)"
+    },
+    {
+      "addr": "0x0018D4A0",
+      "size": 24,
+      "name": "FUN_0018d4a0",
+      "source": "src/functions/0018d4a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
       "addr": "0x0019B590",
       "size": 28,
       "name": "FUN_0019b590",
@@ -143,6 +593,24 @@
       "g": 0,
       "status": "matched",
       "note": "two fields doubled through registers"
+    },
+    {
+      "addr": "0x0019B888",
+      "size": 8,
+      "name": "FUN_0019b888",
+      "source": "src/functions/0019b888.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001A6838",
+      "size": 16,
+      "name": "FUN_001a6838",
+      "source": "src/functions/001a6838.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
       "addr": "0x001A8208",
@@ -160,7 +628,25 @@
       "source": "src/functions/001a82a8.c",
       "g": 0,
       "status": "matched",
-      "note": "fixed-point equality test"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001A9900",
+      "size": 32,
+      "name": "FUN_001a9900",
+      "source": "src/functions/001a9900.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x001AB728",
+      "size": 16,
+      "name": "FUN_001ab728",
+      "source": "src/functions/001ab728.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/int; 1 candidate(s)"
     },
     {
       "addr": "0x001AF428",
@@ -172,6 +658,69 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001AFA18",
+      "size": 40,
+      "name": "FUN_001afa18",
+      "source": "src/functions/001afa18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 40 bytes; g=0"
+    },
+    {
+      "addr": "0x001AFA40",
+      "size": 32,
+      "name": "FUN_001afa40",
+      "source": "src/functions/001afa40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x001AFA60",
+      "size": 32,
+      "name": "FUN_001afa60",
+      "source": "src/functions/001afa60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x001AFA80",
+      "size": 32,
+      "name": "FUN_001afa80",
+      "source": "src/functions/001afa80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x001AFD98",
+      "size": 32,
+      "name": "FUN_001afd98",
+      "source": "src/functions/001afd98.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x001B0130",
+      "size": 32,
+      "name": "FUN_001b0130",
+      "source": "src/functions/001b0130.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x001B0718",
+      "size": 24,
+      "name": "FUN_001b0718",
+      "source": "src/functions/001b0718.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x001B1190",
       "size": 16,
       "name": "FUN_001b1190",
@@ -179,6 +728,33 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B2578",
+      "size": 24,
+      "name": "FUN_001b2578",
+      "source": "src/functions/001b2578.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B2590",
+      "size": 24,
+      "name": "FUN_001b2590",
+      "source": "src/functions/001b2590.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B25A8",
+      "size": 24,
+      "name": "FUN_001b25a8",
+      "source": "src/functions/001b25a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
     },
     {
       "addr": "0x001B2658",
@@ -190,6 +766,24 @@
       "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001B2930",
+      "size": 32,
+      "name": "FUN_001b2930",
+      "source": "src/functions/001b2930.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x001B2C30",
+      "size": 8,
+      "name": "FUN_001b2c30",
+      "source": "src/functions/001b2c30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
       "addr": "0x001B3C28",
       "size": 8,
       "name": "FUN_001b3c28",
@@ -197,6 +791,204 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B3C30",
+      "size": 8,
+      "name": "FUN_001b3c30",
+      "source": "src/functions/001b3c30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B3C38",
+      "size": 24,
+      "name": "FUN_001b3c38",
+      "source": "src/functions/001b3c38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3C70",
+      "size": 24,
+      "name": "FUN_001b3c70",
+      "source": "src/functions/001b3c70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3CB8",
+      "size": 48,
+      "name": "FUN_001b3cb8",
+      "source": "src/functions/001b3cb8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 48 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3CE8",
+      "size": 24,
+      "name": "FUN_001b3ce8",
+      "source": "src/functions/001b3ce8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3DB0",
+      "size": 24,
+      "name": "FUN_001b3db0",
+      "source": "src/functions/001b3db0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3DC8",
+      "size": 24,
+      "name": "FUN_001b3dc8",
+      "source": "src/functions/001b3dc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3DE0",
+      "size": 24,
+      "name": "FUN_001b3de0",
+      "source": "src/functions/001b3de0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3DF8",
+      "size": 24,
+      "name": "FUN_001b3df8",
+      "source": "src/functions/001b3df8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3E10",
+      "size": 24,
+      "name": "FUN_001b3e10",
+      "source": "src/functions/001b3e10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3E28",
+      "size": 24,
+      "name": "FUN_001b3e28",
+      "source": "src/functions/001b3e28.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3E40",
+      "size": 24,
+      "name": "FUN_001b3e40",
+      "source": "src/functions/001b3e40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3E58",
+      "size": 24,
+      "name": "FUN_001b3e58",
+      "source": "src/functions/001b3e58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3E70",
+      "size": 24,
+      "name": "FUN_001b3e70",
+      "source": "src/functions/001b3e70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3E88",
+      "size": 24,
+      "name": "FUN_001b3e88",
+      "source": "src/functions/001b3e88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3EA0",
+      "size": 24,
+      "name": "FUN_001b3ea0",
+      "source": "src/functions/001b3ea0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3EE8",
+      "size": 24,
+      "name": "FUN_001b3ee8",
+      "source": "src/functions/001b3ee8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3F00",
+      "size": 24,
+      "name": "FUN_001b3f00",
+      "source": "src/functions/001b3f00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B3F18",
+      "size": 24,
+      "name": "FUN_001b3f18",
+      "source": "src/functions/001b3f18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B4050",
+      "size": 24,
+      "name": "FUN_001b4050",
+      "source": "src/functions/001b4050.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B4068",
+      "size": 8,
+      "name": "FUN_001b4068",
+      "source": "src/functions/001b4068.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B4070",
+      "size": 24,
+      "name": "FUN_001b4070",
+      "source": "src/functions/001b4070.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
     },
     {
       "addr": "0x001B4860",
@@ -208,6 +1000,24 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001B4908",
+      "size": 24,
+      "name": "FUN_001b4908",
+      "source": "src/functions/001b4908.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.3 llm: round 2 cand 2; 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B5428",
+      "size": 8,
+      "name": "FUN_001b5428",
+      "source": "src/functions/001b5428.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x001B5500",
       "size": 24,
       "name": "FUN_001b5500",
@@ -217,6 +1027,33 @@
       "note": "M2.2 auto: ord01/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001B5550",
+      "size": 8,
+      "name": "FUN_001b5550",
+      "source": "src/functions/001b5550.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B55B0",
+      "size": 16,
+      "name": "FUN_001b55b0",
+      "source": "src/functions/001b55b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord01/natural/int/int; 3 candidate(s)"
+    },
+    {
+      "addr": "0x001B5658",
+      "size": 16,
+      "name": "FUN_001b5658",
+      "source": "src/functions/001b5658.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
       "addr": "0x001B56A0",
       "size": 8,
       "name": "FUN_001b56a0",
@@ -224,6 +1061,24 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 3 candidate(s)"
+    },
+    {
+      "addr": "0x001B56E0",
+      "size": 8,
+      "name": "FUN_001b56e0",
+      "source": "src/functions/001b56e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B5818",
+      "size": 8,
+      "name": "FUN_001b5818",
+      "source": "src/functions/001b5818.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
       "addr": "0x001B5858",
@@ -244,6 +1099,33 @@
       "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001B5C20",
+      "size": 8,
+      "name": "FUN_001b5c20",
+      "source": "src/functions/001b5c20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B73F8",
+      "size": 24,
+      "name": "FUN_001b73f8",
+      "source": "src/functions/001b73f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B7FB8",
+      "size": 24,
+      "name": "FUN_001b7fb8",
+      "source": "src/functions/001b7fb8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
       "addr": "0x001B8750",
       "size": 8,
       "name": "FUN_001b8750",
@@ -251,6 +1133,24 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B9098",
+      "size": 8,
+      "name": "FUN_001b9098",
+      "source": "src/functions/001b9098.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B90A0",
+      "size": 8,
+      "name": "FUN_001b90a0",
+      "source": "src/functions/001b90a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
     },
     {
       "addr": "0x001B90E0",
@@ -262,6 +1162,33 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001B92E0",
+      "size": 8,
+      "name": "FUN_001b92e0",
+      "source": "src/functions/001b92e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B9328",
+      "size": 8,
+      "name": "FUN_001b9328",
+      "source": "src/functions/001b9328.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B9378",
+      "size": 24,
+      "name": "FUN_001b9378",
+      "source": "src/functions/001b9378.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
       "addr": "0x001B9440",
       "size": 8,
       "name": "FUN_001b9440",
@@ -269,6 +1196,69 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B9498",
+      "size": 24,
+      "name": "FUN_001b9498",
+      "source": "src/functions/001b9498.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B9A90",
+      "size": 8,
+      "name": "FUN_001b9a90",
+      "source": "src/functions/001b9a90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001B9AD8",
+      "size": 24,
+      "name": "FUN_001b9ad8",
+      "source": "src/functions/001b9ad8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B9B30",
+      "size": 24,
+      "name": "FUN_001b9b30",
+      "source": "src/functions/001b9b30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B9B80",
+      "size": 24,
+      "name": "FUN_001b9b80",
+      "source": "src/functions/001b9b80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001B9E98",
+      "size": 24,
+      "name": "FUN_001b9e98",
+      "source": "src/functions/001b9e98.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BB198",
+      "size": 8,
+      "name": "FUN_001bb198",
+      "source": "src/functions/001bb198.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
     },
     {
       "addr": "0x001BBBC8",
@@ -289,10 +1279,145 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001BC1D0",
+      "size": 24,
+      "name": "FUN_001bc1d0",
+      "source": "src/functions/001bc1d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BC1E8",
+      "size": 24,
+      "name": "FUN_001bc1e8",
+      "source": "src/functions/001bc1e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BC200",
+      "size": 24,
+      "name": "FUN_001bc200",
+      "source": "src/functions/001bc200.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BC218",
+      "size": 24,
+      "name": "FUN_001bc218",
+      "source": "src/functions/001bc218.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BC280",
+      "size": 24,
+      "name": "FUN_001bc280",
+      "source": "src/functions/001bc280.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BC298",
+      "size": 24,
+      "name": "FUN_001bc298",
+      "source": "src/functions/001bc298.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BC2B0",
+      "size": 24,
+      "name": "FUN_001bc2b0",
+      "source": "src/functions/001bc2b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BC2C8",
+      "size": 24,
+      "name": "FUN_001bc2c8",
+      "source": "src/functions/001bc2c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BC2E0",
+      "size": 24,
+      "name": "FUN_001bc2e0",
+      "source": "src/functions/001bc2e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001BE870",
+      "size": 8,
+      "name": "FUN_001be870",
+      "source": "src/functions/001be870.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001BE8A8",
+      "size": 40,
+      "name": "FUN_001be8a8",
+      "source": "src/functions/001be8a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 40 bytes; g=0"
+    },
+    {
+      "addr": "0x001C0E60",
+      "size": 8,
+      "name": "FUN_001c0e60",
+      "source": "src/functions/001c0e60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
       "addr": "0x001C0E80",
       "size": 8,
       "name": "FUN_001c0e80",
       "source": "src/functions/001c0e80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001C0E88",
+      "size": 8,
+      "name": "FUN_001c0e88",
+      "source": "src/functions/001c0e88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001C1DF8",
+      "size": 80,
+      "name": "FUN_001c1df8",
+      "source": "src/functions/001c1df8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.3 llm: round 1 cand 1; 80 bytes; g=0"
+    },
+    {
+      "addr": "0x001C2D98",
+      "size": 24,
+      "name": "FUN_001c2d98",
+      "source": "src/functions/001c2d98.c",
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
@@ -307,6 +1432,24 @@
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001C46A0",
+      "size": 8,
+      "name": "FUN_001c46a0",
+      "source": "src/functions/001c46a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001C46A8",
+      "size": 8,
+      "name": "FUN_001c46a8",
+      "source": "src/functions/001c46a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x001C4798",
       "size": 8,
       "name": "FUN_001c4798",
@@ -316,10 +1459,73 @@
       "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001C47A0",
+      "size": 8,
+      "name": "FUN_001c47a0",
+      "source": "src/functions/001c47a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001C4E60",
+      "size": 8,
+      "name": "FUN_001c4e60",
+      "source": "src/functions/001c4e60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001C5868",
+      "size": 24,
+      "name": "FUN_001c5868",
+      "source": "src/functions/001c5868.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001C5880",
+      "size": 32,
+      "name": "FUN_001c5880",
+      "source": "src/functions/001c5880.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x001C58A0",
+      "size": 24,
+      "name": "FUN_001c58a0",
+      "source": "src/functions/001c58a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001C58B8",
+      "size": 24,
+      "name": "FUN_001c58b8",
+      "source": "src/functions/001c58b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
       "addr": "0x001C7A28",
       "size": 24,
       "name": "FUN_001c7a28",
       "source": "src/functions/001c7a28.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001C7A40",
+      "size": 24,
+      "name": "FUN_001c7a40",
+      "source": "src/functions/001c7a40.c",
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
@@ -334,6 +1540,195 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001C9278",
+      "size": 8,
+      "name": "FUN_001c9278",
+      "source": "src/functions/001c9278.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001CAE08",
+      "size": 24,
+      "name": "FUN_001cae08",
+      "source": "src/functions/001cae08.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAE20",
+      "size": 24,
+      "name": "FUN_001cae20",
+      "source": "src/functions/001cae20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAE38",
+      "size": 24,
+      "name": "FUN_001cae38",
+      "source": "src/functions/001cae38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAE50",
+      "size": 24,
+      "name": "FUN_001cae50",
+      "source": "src/functions/001cae50.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAE68",
+      "size": 24,
+      "name": "FUN_001cae68",
+      "source": "src/functions/001cae68.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAE80",
+      "size": 24,
+      "name": "FUN_001cae80",
+      "source": "src/functions/001cae80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAE98",
+      "size": 24,
+      "name": "FUN_001cae98",
+      "source": "src/functions/001cae98.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAEB0",
+      "size": 24,
+      "name": "FUN_001caeb0",
+      "source": "src/functions/001caeb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAEC8",
+      "size": 24,
+      "name": "FUN_001caec8",
+      "source": "src/functions/001caec8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAEE0",
+      "size": 24,
+      "name": "FUN_001caee0",
+      "source": "src/functions/001caee0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CAEF8",
+      "size": 24,
+      "name": "FUN_001caef8",
+      "source": "src/functions/001caef8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CB270",
+      "size": 24,
+      "name": "FUN_001cb270",
+      "source": "src/functions/001cb270.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CB878",
+      "size": 24,
+      "name": "FUN_001cb878",
+      "source": "src/functions/001cb878.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CB890",
+      "size": 24,
+      "name": "FUN_001cb890",
+      "source": "src/functions/001cb890.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CB8A8",
+      "size": 24,
+      "name": "FUN_001cb8a8",
+      "source": "src/functions/001cb8a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CB8C0",
+      "size": 24,
+      "name": "FUN_001cb8c0",
+      "source": "src/functions/001cb8c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CB8D8",
+      "size": 24,
+      "name": "FUN_001cb8d8",
+      "source": "src/functions/001cb8d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CB8F0",
+      "size": 24,
+      "name": "FUN_001cb8f0",
+      "source": "src/functions/001cb8f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CB908",
+      "size": 24,
+      "name": "FUN_001cb908",
+      "source": "src/functions/001cb908.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CBFB0",
+      "size": 8,
+      "name": "FUN_001cbfb0",
+      "source": "src/functions/001cbfb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x001CD1A8",
       "size": 8,
       "name": "FUN_001cd1a8",
@@ -343,10 +1738,73 @@
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
     },
     {
+      "addr": "0x001CD1B0",
+      "size": 8,
+      "name": "FUN_001cd1b0",
+      "source": "src/functions/001cd1b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001CD1D0",
+      "size": 64,
+      "name": "FUN_001cd1d0",
+      "source": "src/functions/001cd1d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 64 bytes; g=0"
+    },
+    {
+      "addr": "0x001CD210",
+      "size": 64,
+      "name": "FUN_001cd210",
+      "source": "src/functions/001cd210.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 64 bytes; g=0"
+    },
+    {
+      "addr": "0x001CD320",
+      "size": 16,
+      "name": "FUN_001cd320",
+      "source": "src/functions/001cd320.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)"
+    },
+    {
       "addr": "0x001CD430",
       "size": 8,
       "name": "FUN_001cd430",
       "source": "src/functions/001cd430.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001CD4B8",
+      "size": 24,
+      "name": "FUN_001cd4b8",
+      "source": "src/functions/001cd4b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.4 branch: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001CD558",
+      "size": 8,
+      "name": "FUN_001cd558",
+      "source": "src/functions/001cd558.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001CD560",
+      "size": 8,
+      "name": "FUN_001cd560",
+      "source": "src/functions/001cd560.c",
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
@@ -361,6 +1819,15 @@
       "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001CE9C0",
+      "size": 8,
+      "name": "FUN_001ce9c0",
+      "source": "src/functions/001ce9c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x001CFE98",
       "size": 16,
       "name": "FUN_001cfe98",
@@ -370,6 +1837,15 @@
       "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)"
     },
     {
+      "addr": "0x001CFF08",
+      "size": 8,
+      "name": "FUN_001cff08",
+      "source": "src/functions/001cff08.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
       "addr": "0x001D0000",
       "size": 8,
       "name": "FUN_001d0000",
@@ -377,6 +1853,60 @@
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001D0008",
+      "size": 16,
+      "name": "FUN_001d0008",
+      "source": "src/functions/001d0008.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001D0678",
+      "size": 8,
+      "name": "FUN_001d0678",
+      "source": "src/functions/001d0678.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001D1038",
+      "size": 16,
+      "name": "FUN_001d1038",
+      "source": "src/functions/001d1038.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001D1148",
+      "size": 24,
+      "name": "FUN_001d1148",
+      "source": "src/functions/001d1148.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.3 llm: round 1 cand 1; 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001D11B0",
+      "size": 8,
+      "name": "FUN_001d11b0",
+      "source": "src/functions/001d11b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001D1268",
+      "size": 32,
+      "name": "FUN_001d1268",
+      "source": "src/functions/001d1268.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.3 llm: round 1 cand 1; 32 bytes; g=0"
     },
     {
       "addr": "0x001D2030",
@@ -406,10 +1936,82 @@
       "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)"
     },
     {
+      "addr": "0x001D2BE0",
+      "size": 24,
+      "name": "FUN_001d2be0",
+      "source": "src/functions/001d2be0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001D2DC0",
+      "size": 64,
+      "name": "FUN_001d2dc0",
+      "source": "src/functions/001d2dc0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.3 llm: round 1 cand 1; 64 bytes; g=0"
+    },
+    {
+      "addr": "0x001E3D90",
+      "size": 16,
+      "name": "FUN_001e3d90",
+      "source": "src/functions/001e3d90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)"
+    },
+    {
+      "addr": "0x001E3DA0",
+      "size": 16,
+      "name": "FUN_001e3da0",
+      "source": "src/functions/001e3da0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)"
+    },
+    {
       "addr": "0x001EA658",
       "size": 16,
       "name": "FUN_001ea658",
       "source": "src/functions/001ea658.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x001FACE8",
+      "size": 24,
+      "name": "FUN_001face8",
+      "source": "src/functions/001face8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 24 bytes; g=0"
+    },
+    {
+      "addr": "0x001FC120",
+      "size": 32,
+      "name": "FUN_001fc120",
+      "source": "src/functions/001fc120.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.5 call: 32 bytes; g=0"
+    },
+    {
+      "addr": "0x00206098",
+      "size": 8,
+      "name": "FUN_00206098",
+      "source": "src/functions/00206098.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+    },
+    {
+      "addr": "0x00206150",
+      "size": 8,
+      "name": "FUN_00206150",
+      "source": "src/functions/00206150.c",
       "g": 0,
       "status": "matched",
       "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"

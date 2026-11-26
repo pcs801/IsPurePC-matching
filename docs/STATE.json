@@ -2,8 +2,8 @@
  "schema": 1,
  "project": "IsPurePC-Matching",
  "source": "SLPM-66570 (PS2, 2006, Regista / Takara Tomy)",
- "phase": "M2.2-batch",
- "updated": "2026-11-26T19:40:00+08:00",
+ "phase": "M2.5-hard-calls",
+ "updated": "2026-11-26T23:00:00+08:00",
  "decision": {
   "track": "matching-decompilation-only",
   "legacyProject": "E:/ONE PIECE/S/IsPurePC (paused, assets only)",
@@ -44,7 +44,13 @@
   "claimsLedger": "build/claims.json",
   "matchKit": "tools/match_kit.py",
   "autoMatch": "tools/auto_match.py",
-  "batchResults": "build/m2-2-results.json"
+  "llmMatch": "tools/llm_match.py",
+  "branchGen": "tools/branch_gen.py",
+  "callGen": "tools/call_gen.py",
+  "hardClasses": "tools/hard_classes.py",
+  "hardClassesJson": "build/hard-classes.json",
+  "batchResults": "build/m2-2-results.json",
+  "mediumSummary": "build/m2-3-medium-summary.json"
  },
  "gates": {
   "spike": {
@@ -71,9 +77,27 @@
    "result": "50 easy functions run unattended (5 batches, make progress after each): 40 MATCH (80%), avg 1.72 attempts (1.25 for matches); 45 matched overrides / 656 bytes from C; full image sha256 unchanged",
    "verified_by": "make check + python tools/build.py overrides",
    "report": "docs/m2-2-batch.md"
+  },
+  "m2_3_llm": {
+   "status": "passed",
+   "result": "easy 139 complete: 107 MATCH (77.0%); medium 195: LLM 44 (22.6%) + auto baseline 33 = 77 (39.5%, 7 byte-exact + 70 core-only); 118 matched overrides / 1832 bytes from C; full image sha256 unchanged",
+   "verified_by": "make check + python tools/build.py overrides",
+   "report": "docs/m2-3-llm.md"
+  },
+  "m2_4_control_flow": {
+   "status": "passed",
+   "result": "branch generator (if/else, switch/if-chain, loop) verified on 57 unmatched branch functions: 2 hits (cumulative 17/72 = 23.6%); thinking+batch=1 unusable at scale (gateway hangs on long prompts; 7 valid samples, 0 hits); hard tier 3632 functions classified into build/hard-classes.json; 119 matched overrides / 1856 bytes from C; full image sha256 unchanged",
+   "verified_by": "make check + python tools/build.py overrides",
+   "report": "docs/m2-4-control-flow.md"
+  },
+  "m2_5_hard_calls": {
+   "status": "passed",
+   "result": "call_gen (jal/j -> extern prototypes, sp frame ops ignored) matched 104/702 hard call-only functions (14.8%; c1 99/338, size<=32 86/191); likely 174 -> 0 hits; unaligned 173 -> 3 candidates / 0 hits, LLM 0/172; 223 matched overrides / 5008 bytes from C; full image sha256 unchanged",
+   "verified_by": "make check + python tools/build.py overrides",
+   "report": "docs/m2-5-hard-calls.md"
   }
  },
- "next_action": "M2.3: medium tier (padding policy first) + generator hardening (64-bit idioms, movn/movz, array indexing, statement-order search); wire match_kit to objdiff-cli; support parallel claim workers",
+ "next_action": "M3: decide padding gate (70 core-only medium not in overrides); call_gen stack-frame alignment for multi-call hard functions; next hard batches c1+b0+padding (118) and c2-3+b1 (98); classify likely/unaligned as separate rescue groups",
  "notes": [
   "configure.py: 6 needs_G8 ranges covering 557404 bytes; everything else -G0",
   "build.py check end-to-end takes 2-3 min (splat ~40s, WSL asm ~60s)",
@@ -83,6 +107,17 @@
   "M2.2 queue: 3966 functions -> easy 139 / medium 195 / hard 3632; 157 medium + 1398 hard carry trailing alignment padding that C cannot reproduce under the current size==core gate",
   "M2.2 sample: systematic 50 of 139 easy functions across 8..56B; 40 matched, 10 missed (64-bit idioms 2, address/scheduling/regalloc 4, array indexing 2, movn/movz 2)",
   "claims.py is a local rac4-inspired claim/lease ledger (build/claims.json + O_EXCL lock); 50 claims, 0 retries",
-  "match_kit.py compiles a batch of candidates in one WSL call and byte-compares relocation-aware; auto_match.py turns splat asm into ordinary C variants (no asm/.word/volatile)"
+  "match_kit.py compiles a batch of candidates in one WSL call and byte-compares relocation-aware; auto_match.py turns splat asm into ordinary C variants (no asm/.word/volatile)",
+  "M2.3 easy: 139/139 processed -> 107 MATCH (77.0%), 25 MISS, 7 UNSUPPORTED (6 no-candidate-rendered, 1 uninitialised $t0); this round 89 -> 67 MATCH",
+  "M2.3 llm_match.py: evidence card (disasm, bytes, ABI, globals, -G, previous-round byte diff + compiled disasm) -> LLM ordinary C -> relocation-aware byte compare; padding functions use a core-only gate recorded as MATCH_CORE (never spliced into overrides)",
+  "M2.3 medium: LLM fast mode (thinking off) 44/195 = 22.6% (7 byte-exact + 37 core-only); auto_match baseline on the 151 misses adds 33 (21.9%); merged 77/195 = 39.5%",
+  "M2.3 depth experiment: the opencode gateway ignores thinking budget_tokens (13,421 reasoning tokens on one function); batch>1 with thinking auto exhausts max_tokens and returns no text, so deep mode was not run on all 195",
+  "M2.3 llm_match options: --thinking off/auto, --thinking-budget, --stream on/off, --results, --addr/--dry-run; credentials from config/llm.local.json (gitignored) or ~/.claude/settings.json env",
+  "M2.4 thinking experiment: gateway ignores budget_tokens and hangs on long prompts (single request >8 min at 16K; 32K stable 33-84s but intermittent); only 7 valid samples obtained, all 0 hits; fast batch=1 also 0/4, so the remaining miss bottleneck is C expressiveness/templates, not thinking depth",
+  "M2.4 branch_gen: if/else (forward branch + delay slot), loop (backward branch), switch/if-chain (beq/bne same-register immediate chain); medium branch shape census: single-forward 23, single-backward 11, multi-likely 13, multi-mixed 9, multi-other 16",
+  "M2.4 hard_classes: 3632 functions; size peak 65-128 (864), branches 0 (1253), calls 2-3 (1099); fpu 251, syscall 361; first practical batches c1+b0 (338) and c2-3+b0 (364)",
+  "M2.5 call_gen: supports jal/j, extern prototypes sized by actual args, ignores standard sp frame ops; 702 hard call-only functions -> 104 MATCH = 14.8%; c1 99/338 (29.3%), size<=32 86/191 (45%), multi-call 2-3 only 1-2%",
+  "M2.5 failure modes: gcc 2.96 -O2 still emits a stack frame for tail calls (addiu sp,-16 / sd ra / ld ra / j), so 8-byte tail-call stubs cannot match; stack-frame layout differs for larger functions; padding callers have 0 hits",
+  "M2.5 rescue groups: likely 174 -> 0 hits (hardware polling loops, multi-return, likely scheduling); unaligned 173 -> 3 candidates / 0 hits and LLM 0/172 (ordinary C cannot force ldl/ldr/sdl/sdr)"
  ]
 }

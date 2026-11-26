@@ -2,17 +2,17 @@
 
 ## 当前进度
 
-- 阶段：**M2.2 完成**（triage 队列 + 50 函数无人值守批次）
-- 上一次更新：2026-11-26 19:40
-- 验收：`make check` → **SHA-256 = `e0d0b77b555fd876c6fdd933b486292da45e77677b44bc04eec67836de481147` = 原版**（其中 **45 个函数 / 656 字节**已改由 C 提供）
-- M2.2 批次：50 个 easy 函数 → **40 MATCH（80%）**，平均尝试 **1.72** 次（命中 1.25），详见 `docs/m2-2-batch.md`
-- 下一步：**M2.3** medium 档（先定 padding 策略）+ 生成器补 64 位/movn/movz + match_kit 接 objdiff
+- 阶段：**M2.5 完成**（hard 调用类 702 + likely/unaligned 救援）
+- 上一次更新：2026-11-26 23:00
+- 验收：`make check` → **SHA-256 = `e0d0b77b555fd876c6fdd933b486292da45e77677b44bc04eec67836de481147` = 原版**（其中 **223 个函数 / 5,008 字节**已改由 C 提供）
+- M2.5：新写 `tools/call_gen.py`（jal/j → extern 原型 + 普通调用，忽略标准栈帧），跑 hard 的 c1+b0 / c2-3+b0 共 702 个 → **104 MATCH（14.8%）**，命中集中在单调用、≤32 字节（c1 99/338，≤32B 86/191）；likely 174 个 0 命中；unaligned 173 个现有模板 0 命中、LLM 0/172
+- 下一步：**M3** — padding gate 决策（70 个 core-only medium 未进 overrides）+ hard 后续批次（c1+b0+padding 118、c2-3+b1 98）+ call_gen 栈帧对齐
 
 ---
 
 ## 你的任务（一句话）
 
-M1/M2.1 已收口，M2.2 已完成：`triage.py`（3,966 函数分档）+ `claims.py`（原子认领/租约）+ `match_kit.py`（批量编译 + 重定位感知比对）+ `auto_match.py`（汇编→C 候选）跑通 50 个 easy 函数，40 命中，`make check` 仍 SHA 一致。下一步是 M2.3 medium 档。
+M1–M2.4 已收口，M2.5 已完成：hard 调用类 702 个（c1+b0 / c2-3+b0）用新写的 `tools/call_gen.py` 跑出 104 命中（14.8%）；likely 174 与 unaligned 173 两组救援失败（0 命中），原因已写入 `docs/m2-5-hard-calls.md`。`make check` 仍 SHA 一致，223 个函数 / 5,008 字节来自 C。下一步 M3：先定 padding gate（70 个 core-only medium），再做 hard 的 c1+b0+padding / c2-3+b1。
 
 ---
 
@@ -75,9 +75,16 @@ objdiff: toolchain/dl/objdiff-cli.exe
 
 1. ✅ `tools/triage.py`：size/叶函数/分支/FPU/padding/gp → easy 139 / medium 195 / hard 3,632
 2. ✅ `build/queue.json` + `tools/claims.py`（原子认领 + 租约，本地版 rac4 思路）
-3. 🟡 `tools/match_kit.py`：批量编译 + 重定位感知逐字节比对已可用；objdiff-cli 还没接
-4. ✅ `auto_match.py` 命中时自动追加 `progress/ledger.tsv`（证据卡仍待做）
-5. ✅ 无人值守跑通 50 个 easy 函数 → 40 MATCH
+3. ✅ `tools/match_kit.py`：批量编译 + 重定位感知逐字节比对；objdiff-cli 还没接
+4. ✅ `auto_match.py` 命中时自动追加 `progress/ledger.tsv`
+5. ✅ easy 139 全部跑完：107 MATCH（77.0%），25 MISS，7 UNSUPPORTED
+6. ✅ `tools/llm_match.py`：证据卡 + LLM + 判定循环；medium 195 → 44 LLM + 33 baseline = **77（39.5%）**
+7. ✅ `tools/branch_gen.py`：if/else + switch/if-链 + 循环 + likely 模板；分支类累计 17/72
+8. ✅ `tools/hard_classes.py` → `build/hard-classes.json`：hard 3,632 个四维分类
+9. 🟡 深度 thinking 模式：网关忽略 budget_tokens，长 prompt 随机挂起；只拿到 7 个有效样本（0 命中）
+10. ✅ `tools/call_gen.py`：jal/j → extern 原型 + 普通调用（忽略标准栈帧）；hard 702 个调用类 → **104 命中（14.8%）**
+11. ❌ likely 174：branch_gen 加 likely 模板后仍 0 命中（硬件轮询/多返回点）
+12. ❌ unaligned 173：现有模板 3 个有候选、0 命中；LLM 0/172
 
 ## 7. 判据（M2）
 

@@ -56,3 +56,395 @@ addr	name	size	result	flags	assembler	attempts	note
 0x001D2030	FUN_001d2030	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
 0x001050D0	FUN_001050d0	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
 0x001BBBC8	FUN_001bbbc8	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	4	M2.2 auto: ord0123456789/natural/int/void; 4 candidate(s)
+0x00102078	FUN_00102078	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001075D0	FUN_001075d0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x00107610	FUN_00107610	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x00111760	FUN_00111760	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x0011FC28	FUN_0011fc28	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x00123568	FUN_00123568	8	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x00128178	FUN_00128178	8	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x0012B2B0	FUN_0012b2b0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x00177BC8	FUN_00177bc8	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x0017F508	FUN_0017f508	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x0017F518	FUN_0017f518	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.2 auto: ord/natural/int/int; 2 candidate(s)
+0x0019B888	FUN_0019b888	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001B2C30	FUN_001b2c30	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B3C30	FUN_001b3c30	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B4068	FUN_001b4068	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B5428	FUN_001b5428	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001B5550	FUN_001b5550	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B56E0	FUN_001b56e0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B5818	FUN_001b5818	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001B5C20	FUN_001b5c20	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B9098	FUN_001b9098	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001B90A0	FUN_001b90a0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001B92E0	FUN_001b92e0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B9328	FUN_001b9328	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001B9A90	FUN_001b9a90	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001BB198	FUN_001bb198	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001BE870	FUN_001be870	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001C0E60	FUN_001c0e60	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001C0E88	FUN_001c0e88	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001C46A0	FUN_001c46a0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001C46A8	FUN_001c46a8	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001C47A0	FUN_001c47a0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001C4E60	FUN_001c4e60	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001C9278	FUN_001c9278	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001CBFB0	FUN_001cbfb0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001CD1B0	FUN_001cd1b0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001CD558	FUN_001cd558	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001CD560	FUN_001cd560	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001CE9C0	FUN_001ce9c0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/void; 1 candidate(s)
+0x001CFF08	FUN_001cff08	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001D0678	FUN_001d0678	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001D11B0	FUN_001d11b0	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x00206098	FUN_00206098	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x00206150	FUN_00206150	8	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x0011FCD8	FUN_0011fcd8	16	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x00123778	FUN_00123778	16	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x00123A50	FUN_00123a50	16	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x0015A230	FUN_0015a230	16	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001A6838	FUN_001a6838	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001AB728	FUN_001ab728	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/int; 1 candidate(s)
+0x001B55B0	FUN_001b55b0	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.2 auto: ord01/natural/int/int; 3 candidate(s)
+0x001B5658	FUN_001b5658	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001CD320	FUN_001cd320	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	6	M2.2 auto: ord012/natural/int/void; 6 candidate(s)
+0x001D0008	FUN_001d0008	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001D1038	FUN_001d1038	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001E3D90	FUN_001e3d90	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	6	M2.2 auto: ord012/natural/int/void; 6 candidate(s)
+0x001E3DA0	FUN_001e3da0	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord01/natural/int/void; 1 candidate(s)
+0x0012D6E8	FUN_0012d6e8	24	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001A82A8	FUN_001a82a8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001B0718	FUN_001b0718	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001B73F8	FUN_001b73f8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001C2D98	FUN_001c2d98	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x001C7A40	FUN_001c7a40	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x001D2BE0	FUN_001d2be0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x00107E98	FUN_00107e98	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x00105038	FUN_00105038	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord/natural/int/int; 1 candidate(s)
+0x00123990	FUN_00123990	40	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.2 auto: ord0/natural/int/void; 1 candidate(s)
+0x00107A40	FUN_00107a40	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 12/16 bytes
+0x0010BB88	FUN_0010bb88	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 12/16 bytes
+0x00113480	FUN_00113480	16	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 12/16 bytes
+0x00123798	FUN_00123798	16	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 2 cand 2; core 12/16 bytes
+0x0019BBF0	FUN_0019bbf0	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 12/16 bytes
+0x001A9840	FUN_001a9840	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 12/16 bytes
+0x001A9850	FUN_001a9850	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 12/16 bytes
+0x001B4BC8	FUN_001b4bc8	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 12/16 bytes
+0x001B5B90	FUN_001b5b90	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 12/16 bytes
+0x001BFEC0	FUN_001bfec0	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 1 cand 2; core 12/16 bytes
+0x001CC8C0	FUN_001cc8c0	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 12/16 bytes
+0x001CC8D0	FUN_001cc8d0	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 12/16 bytes
+0x001EA648	FUN_001ea648	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 12/16 bytes
+0x001EAA90	FUN_001eaa90	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 12/16 bytes
+0x00212988	FUN_00212988	20	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 12/20 bytes
+0x00110598	FUN_00110598	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 20/24 bytes
+0x00125A58	FUN_00125a58	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 llm: round 2 cand 1; core 20/24 bytes
+0x001DF120	FUN_001df120	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 20/24 bytes
+0x00123868	FUN_00123868	72	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 1 cand 2; 72 bytes; g=8
+0x0019B590	FUN_0019b590	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 1 cand 2; core 28/32 bytes
+0x001A8208	FUN_001a8208	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 2 cand 2; core 28/32 bytes
+0x001CFEA8	FUN_001cfea8	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 1 cand 2; core 28/32 bytes
+0x001D5240	FUN_001d5240	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 28/32 bytes
+0x00107AF8	FUN_00107af8	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 36/40 bytes
+0x0017C0C0	FUN_0017c0c0	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 llm: round 1 cand 2; core 36/40 bytes
+0x001CFE48	FUN_001cfe48	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 36/40 bytes
+0x001CFE70	FUN_001cfe70	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 36/40 bytes
+0x001CA118	FUN_001ca118	152	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 148/152 bytes
+0x001CA1B0	FUN_001ca1b0	176	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 llm: round 2 cand 1; core 172/176 bytes
+0x001B4908	FUN_001b4908	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 2 cand 2; 24 bytes; g=0
+0x001D1148	FUN_001d1148	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; 24 bytes; g=0
+0x001D1268	FUN_001d1268	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; 32 bytes; g=0
+0x00111768	FUN_00111768	64	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; 64 bytes; g=0
+0x001D2DC0	FUN_001d2dc0	64	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; 64 bytes; g=0
+0x00179170	FUN_00179170	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 2 cand 1; core 20/24 bytes
+0x001B48B0	FUN_001b48b0	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 28/32 bytes
+0x001C1DF8	FUN_001c1df8	80	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; 80 bytes; g=0
+0x001CBB08	FUN_001cbb08	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 36/40 bytes
+0x001C7660	FUN_001c7660	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	5	M2.3 llm: round 2 cand 1; core 44/48 bytes
+0x001CD788	FUN_001cd788	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 1 cand 2; core 44/48 bytes
+0x00102040	FUN_00102040	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 52/56 bytes
+0x001C6680	FUN_001c6680	56	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 llm: round 1 cand 1; core 52/56 bytes
+0x001E3860	FUN_001e3860	80	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 llm: round 2 cand 1; core 76/80 bytes
+0x001EA858	FUN_001ea858	88	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	2	M2.3 llm: round 1 cand 2; core 84/88 bytes
+0x00112588	FUN_00112588	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x00112AB8	FUN_00112ab8	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 baseline: cand 3; core 12/16
+0x00123788	FUN_00123788	16	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x00155B68	FUN_00155b68	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x00177C28	FUN_00177c28	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 baseline: cand 3; core 12/16
+0x001A8250	FUN_001a8250	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x001B1180	FUN_001b1180	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x001B3D60	FUN_001b3d60	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 baseline: cand 3; core 12/16
+0x001B3D70	FUN_001b3d70	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 baseline: cand 3; core 12/16
+0x001B5BD8	FUN_001b5bd8	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x001BC938	FUN_001bc938	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x001BCB80	FUN_001bcb80	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 baseline: cand 3; core 12/16
+0x001BFEB0	FUN_001bfeb0	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 baseline: cand 3; core 12/16
+0x001CFA78	FUN_001cfa78	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x001DBCA8	FUN_001dbca8	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x001EAAA0	FUN_001eaaa0	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x00203340	FUN_00203340	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x00205E20	FUN_00205e20	16	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 12/16
+0x00111D68	FUN_00111d68	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 20/24
+0x00112AC8	FUN_00112ac8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 20/24
+0x0011FD00	FUN_0011fd00	24	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	4	M2.3 baseline: cand 4; core 20/24
+0x0012D6D0	FUN_0012d6d0	24	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 20/24
+0x001311C0	FUN_001311c0	24	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 20/24
+0x0013ED18	FUN_0013ed18	24	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 20/24
+0x0013F058	FUN_0013f058	24	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 20/24
+0x0013F2C0	FUN_0013f2c0	24	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 20/24
+0x0017F4E8	FUN_0017f4e8	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 28/32
+0x001B4808	FUN_001b4808	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 28/32
+0x00105390	FUN_00105390	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 44/48
+0x00105430	FUN_00105430	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.3 baseline: cand 1; core 44/48
+0x00111730	FUN_00111730	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	3	M2.3 baseline: cand 3; core 44/48
+0x0019B710	FUN_0019b710	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	5	M2.3 baseline: cand 5; core 44/48
+0x001B2A20	FUN_001b2a20	64	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	4	M2.3 baseline: cand 4; core 60/64
+0x001CD4B8	FUN_001cd4b8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	5	M2.4 branch: 24 bytes; g=0
+0x001CFFA0	FUN_001cffa0	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	5	M2.4 branch: core 28/32
+0x00102008	FUN_00102008	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00107AE0	FUN_00107ae0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001125B0	FUN_001125b0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00112770	FUN_00112770	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00112788	FUN_00112788	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00128328	FUN_00128328	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0012C578	FUN_0012c578	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0012C590	FUN_0012c590	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00146488	FUN_00146488	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00177BD0	FUN_00177bd0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0018D4A0	FUN_0018d4a0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B2578	FUN_001b2578	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B2590	FUN_001b2590	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B25A8	FUN_001b25a8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3C38	FUN_001b3c38	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3C70	FUN_001b3c70	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3CE8	FUN_001b3ce8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DB0	FUN_001b3db0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DC8	FUN_001b3dc8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DE0	FUN_001b3de0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DF8	FUN_001b3df8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E10	FUN_001b3e10	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E28	FUN_001b3e28	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E40	FUN_001b3e40	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E58	FUN_001b3e58	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E70	FUN_001b3e70	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E88	FUN_001b3e88	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3EA0	FUN_001b3ea0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3EE8	FUN_001b3ee8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3F00	FUN_001b3f00	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3F18	FUN_001b3f18	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B4050	FUN_001b4050	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B4070	FUN_001b4070	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B7FB8	FUN_001b7fb8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9378	FUN_001b9378	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9498	FUN_001b9498	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9AD8	FUN_001b9ad8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9B30	FUN_001b9b30	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9B80	FUN_001b9b80	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9E98	FUN_001b9e98	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC1D0	FUN_001bc1d0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC1E8	FUN_001bc1e8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC200	FUN_001bc200	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC218	FUN_001bc218	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC280	FUN_001bc280	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC298	FUN_001bc298	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2B0	FUN_001bc2b0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2C8	FUN_001bc2c8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2E0	FUN_001bc2e0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C5868	FUN_001c5868	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C58A0	FUN_001c58a0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C58B8	FUN_001c58b8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE08	FUN_001cae08	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE20	FUN_001cae20	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE38	FUN_001cae38	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE50	FUN_001cae50	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE68	FUN_001cae68	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE80	FUN_001cae80	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE98	FUN_001cae98	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEB0	FUN_001caeb0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEC8	FUN_001caec8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEE0	FUN_001caee0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEF8	FUN_001caef8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB270	FUN_001cb270	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB878	FUN_001cb878	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB890	FUN_001cb890	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8A8	FUN_001cb8a8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8C0	FUN_001cb8c0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8D8	FUN_001cb8d8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8F0	FUN_001cb8f0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB908	FUN_001cb908	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00102008	FUN_00102008	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00107AE0	FUN_00107ae0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001125B0	FUN_001125b0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00112770	FUN_00112770	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00112788	FUN_00112788	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00128328	FUN_00128328	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0012C578	FUN_0012c578	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0012C590	FUN_0012c590	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00146488	FUN_00146488	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00177BD0	FUN_00177bd0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0018D4A0	FUN_0018d4a0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B2578	FUN_001b2578	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B2590	FUN_001b2590	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B25A8	FUN_001b25a8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3C38	FUN_001b3c38	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3C70	FUN_001b3c70	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3CE8	FUN_001b3ce8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DB0	FUN_001b3db0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DC8	FUN_001b3dc8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DE0	FUN_001b3de0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DF8	FUN_001b3df8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E10	FUN_001b3e10	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E28	FUN_001b3e28	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E40	FUN_001b3e40	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E58	FUN_001b3e58	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E70	FUN_001b3e70	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E88	FUN_001b3e88	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3EA0	FUN_001b3ea0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3EE8	FUN_001b3ee8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3F00	FUN_001b3f00	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3F18	FUN_001b3f18	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B4050	FUN_001b4050	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B4070	FUN_001b4070	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B7FB8	FUN_001b7fb8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9378	FUN_001b9378	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9498	FUN_001b9498	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9AD8	FUN_001b9ad8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9B30	FUN_001b9b30	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9B80	FUN_001b9b80	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9E98	FUN_001b9e98	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC1D0	FUN_001bc1d0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC1E8	FUN_001bc1e8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC200	FUN_001bc200	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC218	FUN_001bc218	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC280	FUN_001bc280	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC298	FUN_001bc298	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2B0	FUN_001bc2b0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2C8	FUN_001bc2c8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2E0	FUN_001bc2e0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C5868	FUN_001c5868	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C58A0	FUN_001c58a0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C58B8	FUN_001c58b8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE08	FUN_001cae08	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE20	FUN_001cae20	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE38	FUN_001cae38	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE50	FUN_001cae50	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE68	FUN_001cae68	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE80	FUN_001cae80	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE98	FUN_001cae98	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEB0	FUN_001caeb0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEC8	FUN_001caec8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEE0	FUN_001caee0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEF8	FUN_001caef8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB270	FUN_001cb270	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB878	FUN_001cb878	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB890	FUN_001cb890	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8A8	FUN_001cb8a8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8C0	FUN_001cb8c0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8D8	FUN_001cb8d8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8F0	FUN_001cb8f0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB908	FUN_001cb908	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00102008	FUN_00102008	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00107AE0	FUN_00107ae0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001125B0	FUN_001125b0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00112770	FUN_00112770	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00112788	FUN_00112788	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00128328	FUN_00128328	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0012C578	FUN_0012c578	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0012C590	FUN_0012c590	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00146488	FUN_00146488	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00177BD0	FUN_00177bd0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x0018D4A0	FUN_0018d4a0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B2578	FUN_001b2578	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B2590	FUN_001b2590	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B25A8	FUN_001b25a8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3C38	FUN_001b3c38	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3C70	FUN_001b3c70	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3CE8	FUN_001b3ce8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DB0	FUN_001b3db0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DC8	FUN_001b3dc8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DE0	FUN_001b3de0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3DF8	FUN_001b3df8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E10	FUN_001b3e10	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E28	FUN_001b3e28	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E40	FUN_001b3e40	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E58	FUN_001b3e58	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E70	FUN_001b3e70	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3E88	FUN_001b3e88	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3EA0	FUN_001b3ea0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3EE8	FUN_001b3ee8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3F00	FUN_001b3f00	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B3F18	FUN_001b3f18	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B4050	FUN_001b4050	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B4070	FUN_001b4070	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B7FB8	FUN_001b7fb8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9378	FUN_001b9378	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9498	FUN_001b9498	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9AD8	FUN_001b9ad8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9B30	FUN_001b9b30	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9B80	FUN_001b9b80	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001B9E98	FUN_001b9e98	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC1D0	FUN_001bc1d0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC1E8	FUN_001bc1e8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC200	FUN_001bc200	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC218	FUN_001bc218	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC280	FUN_001bc280	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC298	FUN_001bc298	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2B0	FUN_001bc2b0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2C8	FUN_001bc2c8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001BC2E0	FUN_001bc2e0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C5868	FUN_001c5868	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C58A0	FUN_001c58a0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001C58B8	FUN_001c58b8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE08	FUN_001cae08	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE20	FUN_001cae20	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE38	FUN_001cae38	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE50	FUN_001cae50	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE68	FUN_001cae68	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE80	FUN_001cae80	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAE98	FUN_001cae98	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEB0	FUN_001caeb0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEC8	FUN_001caec8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEE0	FUN_001caee0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CAEF8	FUN_001caef8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB270	FUN_001cb270	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB878	FUN_001cb878	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB890	FUN_001cb890	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8A8	FUN_001cb8a8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8C0	FUN_001cb8c0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8D8	FUN_001cb8d8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB8F0	FUN_001cb8f0	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001CB908	FUN_001cb908	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x001FACE8	FUN_001face8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 24 bytes; g=0
+0x00110450	FUN_00110450	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x00111218	FUN_00111218	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x00112750	FUN_00112750	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x00128180	FUN_00128180	32	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=8
+0x0017F028	FUN_0017f028	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001A9900	FUN_001a9900	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001AFA40	FUN_001afa40	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001AFA60	FUN_001afa60	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001AFA80	FUN_001afa80	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001AFD98	FUN_001afd98	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001B0130	FUN_001b0130	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001B2930	FUN_001b2930	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001C5880	FUN_001c5880	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001FC120	FUN_001fc120	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 32 bytes; g=0
+0x001100A0	FUN_001100a0	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 40 bytes; g=0
+0x00112850	FUN_00112850	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 40 bytes; g=0
+0x0015A208	FUN_0015a208	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 40 bytes; g=0
+0x0017EFA0	FUN_0017efa0	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 40 bytes; g=0
+0x001AFA18	FUN_001afa18	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 40 bytes; g=0
+0x001BE8A8	FUN_001be8a8	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 40 bytes; g=0
+0x00154D20	FUN_00154d20	48	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 48 bytes; g=8
+0x00154DD8	FUN_00154dd8	48	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 48 bytes; g=8
+0x00155AC0	FUN_00155ac0	48	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 48 bytes; g=8
+0x0015A2C8	FUN_0015a2c8	48	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 48 bytes; g=8
+0x0016EA50	FUN_0016ea50	48	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 48 bytes; g=8
+0x001B3CB8	FUN_001b3cb8	48	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 48 bytes; g=0
+0x00131A88	FUN_00131a88	56	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 56 bytes; g=8
+0x00154E98	FUN_00154e98	56	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 56 bytes; g=8
+0x001CD1D0	FUN_001cd1d0	64	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 64 bytes; g=0
+0x001CD210	FUN_001cd210	64	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 64 bytes; g=0
+0x00165EC0	FUN_00165ec0	104	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 104 bytes; g=8
+0x00165F28	FUN_00165f28	104	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	1	M2.5 call: 104 bytes; g=8
