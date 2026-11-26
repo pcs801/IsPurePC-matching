@@ -11,3 +11,5 @@ toolchain/dl/*.tar.gz
 toolchain/dl/*.exe
 # local scratch
 *.log
+# local secrets (ByteMatch token etc.)
+config/*.local.json

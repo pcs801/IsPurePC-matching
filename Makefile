@@ -2,7 +2,7 @@
 # Windows 默认没有 make；等价命令：python tools/build.py <target>
 PY ?= python
 
-.PHONY: all configure check build ld overrides clean
+.PHONY: all configure check build ld overrides progress clean
 
 all: check
 
@@ -20,6 +20,12 @@ overrides:
 
 ld:
 	$(PY) tools/build.py ld
+
+# report.json + local dashboard + upload to ByteMatch
+progress:
+	$(PY) tools/gen_report.py
+	$(PY) tools/make_dashboard.py
+	$(PY) tools/upload_report.py
 
 clean:
 	$(PY) -c "import shutil,os; [shutil.rmtree(p, ignore_errors=True) for p in ('asm','assets','build/splat')]"

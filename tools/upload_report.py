@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Upload build/report.json to ByteMatch (per-project token, no GitHub Actions).
 
+Config precedence:
+  1. environment: BYTEMATCH_TOKEN / BYTEMATCH_OWNER / BYTEMATCH_REPO / BYTEMATCH_VERSION
+  2. config/upload.local.json  (gitignored)
+
 Cloudflare in front of bytematch.dev rejects urllib's default signature (HTTP 403, error 1010),
 so this shells out to curl with a browser User-Agent.
 """
@@ -8,16 +12,24 @@ import json, os, subprocess, sys
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
 
+def load_local(root):
+    p = os.path.join(root, "config", "upload.local.json")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
 def main():
-    token   = os.environ.get("BYTEMATCH_TOKEN")
-    owner   = os.environ.get("BYTEMATCH_OWNER")
-    repo    = os.environ.get("BYTEMATCH_REPO")
-    version = os.environ.get("BYTEMATCH_VERSION", "SLPM_665.70")
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    cfg = load_local(root)
+    token   = os.environ.get("BYTEMATCH_TOKEN") or cfg.get("token")
+    owner   = os.environ.get("BYTEMATCH_OWNER") or cfg.get("owner")
+    repo    = os.environ.get("BYTEMATCH_REPO") or cfg.get("repo")
+    version = os.environ.get("BYTEMATCH_VERSION") or cfg.get("version") or "SLPM_665.70"
     host    = os.environ.get("BYTEMATCH_HOST", "https://bytematch.dev").rstrip("/")
     if not (token and owner and repo):
-        print("set BYTEMATCH_TOKEN / BYTEMATCH_OWNER / BYTEMATCH_REPO", file=sys.stderr)
+        print("no token: set env or config/upload.local.json", file=sys.stderr)
         return 2
-    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     path = os.path.join(root, "build", "report.json")
     try:
         commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root).decode().strip()
