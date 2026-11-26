@@ -163,11 +163,16 @@ def ensure_override(entry, src_rel, g):
             data = json.load(open(OVERRIDES, encoding="utf-8"))
         except ValueError:
             pass
+    existing = [f for f in data.get("functions", [])
+                if int(str(f["addr"]), 16) == entry["addr_i"]]
     funcs = [f for f in data.get("functions", [])
              if int(str(f["addr"]), 16) != entry["addr_i"]]
+    keep_matched = bool(existing and existing[0].get("status") == "matched")
     funcs.append({"addr": entry["addr"], "size": entry["size"],
                   "name": "FUN_%08x" % entry["addr_i"], "source": src_rel,
-                  "g": int(g), "status": "todo", "note": "M2.6 pipeline todo"})
+                  "g": int(g),
+                  "status": "matched" if keep_matched else "todo",
+                  "note": existing[0].get("note") if keep_matched else "M2.6 pipeline todo"})
     funcs.sort(key=lambda f: int(str(f["addr"]), 16))
     data["functions"] = funcs
     json.dump(data, open(OVERRIDES, "w", newline="\n", encoding="utf-8"),

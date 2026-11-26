@@ -1,2 +1,10 @@
-// FUNCTION: SLPM 0x00105838 placeholder (TU worker will replace)
-void FUN_00105838(void) { }
+// FUNCTION: SLPM 0x00105838  size 64  core 60
+// sig: lui ; sll ; addu ; lw ; sll ; sll ; addu ; bnez ; lw ; jr ; lw ; nop
+
+extern int *D_00B25554;
+int FUN_00105838(int a, int b) {
+    int *p = (int *)D_00B25554[3 * a];
+    if (b != 0)
+        p = p + b;
+    return *p;
+}
