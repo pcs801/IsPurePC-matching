@@ -195,7 +195,10 @@ def resolve_object_text(path, addr=None):
     try:
         jd = json.load(open(os.path.join(ROOT, "build", "jtbl-map.json"),
                             encoding="utf-8"))
-        jtbl_map = {int(k, 16): int(v, 16) for k, v in jd.get("maps", {}).items()}
+        jtbl_map = {}
+        for k, v in jd.get("maps", {}).items():
+            jtbl_map[int(k, 16)] = ([int(x, 16) for x in v] if isinstance(v, list)
+                                    else [int(v, 16)])
         hi_bias = {int(k, 16): int(v) for k, v in jd.get("hi_bias", {}).items()}
     except (OSError, ValueError):
         jtbl_map = {}
@@ -224,6 +227,7 @@ def resolve_object_text(path, addr=None):
     applied = {2: 0, 4: 0, 5: 0, 6: 0, 7: 0}
     pending_hi = []  # (offset, sym_index)
     target_guided = 0
+    sec_va = {}
     for off, si, rtype in rels:
         sym = syms[si]
         addr_t = symbol_address(sym, text_idx)
@@ -247,7 +251,12 @@ def resolve_object_text(path, addr=None):
             lo_op = -1
             v = None if addr is None else addr + sign16(word & 0xFFFF)
             if v is None and section_hint and addr_arg in jtbl_map:
-                v = jtbl_map[addr_arg] + int(sym.get("value") or 0)
+                _vals = jtbl_map[addr_arg]
+                _key = (addr_arg, si)
+                if _key not in sec_va:
+                    _used = len([k for k in sec_va if k[0] == addr_arg])
+                    sec_va[_key] = _vals[_used] if _used < len(_vals) else _vals[-1]
+                v = sec_va[_key] + int(sym.get("value") or 0)
                 guided = True
                 target_guided += 1
             if v is None and section_hint:

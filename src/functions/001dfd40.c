@@ -15,18 +15,18 @@ int FUN_001dfd40(u64 *p, int variant)
     p[3] = 0xEULL;
     if (variant == 0) {
         b = 0x42ULL;
-        c = 0x49ULL;
         d = 0x3BULL;
+        c = 0x49ULL;
         a = 0x4AULL;
     } else {
         b = 0x43ULL;
-        c = 0x49ULL;
         d = 0x3BULL;
+        c = 0x49ULL;
         a = 0x4BULL;
     }
-    p[11] = a;
     p[5] = b;
-    p[7] = c;
     p[9] = d;
+    p[7] = c;
+    p[11] = a;
     return 6;
 }

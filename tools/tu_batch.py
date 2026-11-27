@@ -230,7 +230,7 @@ def cmd_verify(args):
             continue
         for gi, g in enumerate(e.get("g") or ["0"]):
             key = "%x_%d" % (e["addr_i"], gi)
-            items.append({"key": key, "src": code, "g": int(g), "cc": P._cc_for(e["addr_i"])})
+            items.append({"key": key, "src": code, "g": int(g), "cc": P._cc_for(e["addr_i"]), "flags": P._flags_for(e["addr_i"])})
             slot[key] = (e, int(g))
     objs = MK.compile_batch(items, "tub_%d" % args.batch, verbose=False) if items else {}
     dis = LM.disasm_objects({k: v for k, v in objs.items() if v}, "tub_%d" % args.batch)

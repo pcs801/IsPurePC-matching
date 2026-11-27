@@ -9,7 +9,7 @@ int FUN_0011fdd0(void)
     unsigned int *p;
     unsigned int st;
     unsigned int k;
-    unsigned int v;
+    int v;
 
     if (D_00270CB0[0x6010 / 4] != 1)
         return 0;

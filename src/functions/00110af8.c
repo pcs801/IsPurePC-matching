@@ -26,13 +26,13 @@ extern void FUN_00111de8(void *);
 
 int FUN_00110af8(char *a0, char *a1, char *a2)
 {
+    int flag = 0;
+    int *tbl = D_01B9F8F0;
+    int s3 = *(int *)(a2 + 4);
+    int s4 = s3;
     int out[12];
     int n;
     int d;
-    int flag = 0;
-    int s3 = *(int *)(a2 + 4);
-    int s4 = s3;
-    int *tbl = D_01B9F8F0;
 
     while (s3 >= 5) {
         if (FUN_00112598(a0) == 3)

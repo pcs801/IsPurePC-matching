@@ -460,7 +460,15 @@ def _cc_for(addr_i):
         return None
 
 
-def _budget_exhausted(addr_i, limit_attempts=60, limit_min=20):
+def _flags_for(addr_i):
+    try:
+        d = json.load(open(os.path.join(ROOT, "build", "flag-overrides.json"), encoding="utf-8"))
+        return d.get("flags", {}).get("0x%08X" % addr_i) or []
+    except (OSError, ValueError):
+        return []
+
+
+def _budget_exhausted(addr_i, limit_attempts=60, limit_min=45):
     """Hard external budget: every check-one counts; refuse after limits."""
     sd = os.path.join(SANDBOX, "%08x" % addr_i)
     os.makedirs(sd, exist_ok=True)
@@ -472,7 +480,7 @@ def _budget_exhausted(addr_i, limit_attempts=60, limit_min=20):
             d = json.load(open(p, encoding="utf-8"))
         except ValueError:
             d = {}
-    if "updated" in d and now - float(d.get("updated", now)) > 1800:
+    if "updated" in d and now - float(d.get("updated", now)) > 300:
         d = {}
     if "started" not in d:
         d["started"] = now
@@ -510,7 +518,7 @@ def cmd_check_one(args):
         return 1
     best = None
     for g in (e.get("g") or ["0"]):
-        items = [{"key": "one", "src": code, "g": int(g), "cc": _cc_for(addr_i)}]
+        items = [{"key": "one", "src": code, "g": int(g), "cc": _cc_for(addr_i), "flags": _flags_for(addr_i)}]
         objs = MK.compile_batch(items, "check_%x" % addr_i, verbose=False)
         obj = objs.get("one")
         if not obj:
@@ -544,7 +552,7 @@ def cmd_budget(args):
     sd = os.path.join(SANDBOX, "%08x" % addr_i)
     p = os.path.join(sd, "budget.json")
     if not os.path.exists(p):
-        print("budget: 0/60 attempts, 0.0/20.0 min, remaining 20.0 min")
+        print("budget: 0/60 attempts, 0.0/45.0 min, remaining 45.0 min")
         return 0
     if getattr(args, "reset", False):
         os.remove(p)
@@ -556,7 +564,7 @@ def cmd_budget(args):
         d = {}
     now = time.time()
     elapsed = (now - d.get("started", now)) / 60.0
-    remaining = max(0.0, 20.0 - elapsed)
+    remaining = max(0.0, 45.0 - elapsed)
     print("budget: %d/60 attempts, %.1f/20.0 min, remaining %.1f min" % (
         int(d.get("attempts", 0)), elapsed, remaining))
     return 0

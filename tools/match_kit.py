@@ -80,10 +80,11 @@ def compile_batch(items, tag, verbose=True):
         obj = "%s.G%d.o" % (key, g)
         script += [
             'cp "$D/%s.c" .' % key,
-            ('CC="%s"; if $CC -O2 -mips3 -G%d -c %s.c -o %s 2>%s.err; then '
+            ('CC="%s"; if $CC -O2 -mips3 -G%d %s -c %s.c -o %s 2>%s.err; then '
              'cp %s "$D/%s"; else echo "FAIL %s"; fi; '
              'if [ -f %s.err ]; then cp %s.err "$D/"; fi') % (
-                 it.get("cc") or "/opt/ee/bin/ee-gcc", g, key, obj, key, obj, obj, key, key, key),
+                 it.get("cc") or "/opt/ee/bin/ee-gcc", g,
+                 " ".join(it.get("flags") or []), key, obj, key, obj, obj, key, key, key),
         ]
     script += ['echo COMPILE_DONE', 'exit 0']
     sh = os.path.join(ROOT, "build", "_wsl_match_%s.sh" % tag)

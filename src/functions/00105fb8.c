@@ -17,11 +17,12 @@ void FUN_00105fb8(void)
     int i;
     int st;
     int r;
-    char *base = D_1B741B0;
+    char *base;
     char *slot;
     unsigned char *stp;
 
     for (i = 0; i < 2; i++) {
+        base = D_1B741B0;
         slot = base + i * 34;
         stp = &(&D_00270C44)[i];
         *slot = -1;
