@@ -452,9 +452,38 @@ def cmd_verify(args):
     return 0
 
 
+def _budget_exhausted(addr_i, limit_attempts=60, limit_min=20):
+    """Hard external budget: every check-one counts; refuse after limits."""
+    sd = os.path.join(SANDBOX, "%08x" % addr_i)
+    os.makedirs(sd, exist_ok=True)
+    p = os.path.join(sd, "budget.json")
+    now = time.time()
+    d = {}
+    if os.path.exists(p):
+        try:
+            d = json.load(open(p, encoding="utf-8"))
+        except ValueError:
+            d = {}
+    if "started" not in d:
+        d["started"] = now
+    d["attempts"] = int(d.get("attempts", 0)) + 1
+    d["updated"] = now
+    elapsed = (now - d["started"]) / 60.0
+    exhausted = d["attempts"] > limit_attempts or elapsed > limit_min
+    with open(p, "w", newline="\n", encoding="utf-8") as f:
+        json.dump(d, f)
+    print("[budget] attempt %d/%d, elapsed %.1f/%d min" % (
+        d["attempts"], limit_attempts, elapsed, limit_min))
+    return exhausted
+
+
 def cmd_check_one(args):
     """Fast single-function check: compile one candidate, match_kit verify (~1-2s)."""
     addr_i = int(str(args.addr), 16)
+    if _budget_exhausted(addr_i):
+        print("BUDGET EXHAUSTED: stop this function, write its best candidate + last_diff "
+              "as MISS in result.json, then move to the next function.")
+        return 2
     index = {e["addr_i"]: e for e in load_queue()["entries"]}
     e = index.get(addr_i)
     if not e:
