@@ -33,6 +33,28 @@ def _obj_path(tag, key, g):
     return os.path.join(CAND_ROOT, tag, "%s.G%d.o" % (key, int(g)))
 
 
+def _tick_compile(items, objs):
+    """Append one line per compiled object to build/compile-tick.log."""
+    try:
+        import hashlib
+        import re as _re
+        import time as _time
+        log = os.path.join(ROOT, "build", "compile-tick.log")
+        with open(log, "a", encoding="utf-8") as f:
+            for it in items:
+                m = _re.match(r"([0-9a-fA-F]+)", str(it.get("key", "")))
+                if not m:
+                    continue
+                addr = int(m.group(1), 16)
+                op = objs.get(it["key"])
+                sha = ""
+                if op and os.path.exists(op):
+                    sha = hashlib.sha1(open(op, "rb").read()).hexdigest()[:12]
+                f.write("%.0f %08x %s %s\n" % (_time.time(), addr, it["key"], sha))
+    except OSError:
+        pass
+
+
 def compile_batch(items, tag, verbose=True):
     """items: [{"key","src","g"}] -> {key: object path or None}."""
     if not items:
@@ -83,6 +105,7 @@ def compile_batch(items, tag, verbose=True):
         print("  compile: %d candidates, %d objects, %.1fs%s" % (
             len(items), len(out) - len(missing), time.time() - t0,
             ("  FAILED: " + ",".join(missing[:6])) if missing else ""))
+    _tick_compile(items, out)
     return out
 
 

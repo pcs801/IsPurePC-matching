@@ -17,7 +17,7 @@ void FUN_00115c28(int cnt, int index)
     index &= 0xFFFF;
     if (index == 0xFFFF)
         return;
-    switch (index >> 12) {
+    switch ((unsigned int)index >> 12) {
     case 0:
         b = 0;
         break;
@@ -25,8 +25,7 @@ void FUN_00115c28(int cnt, int index)
         b = 2;
         break;
     default:
-        FUN_0010bf68(D_00259680);
-        return;
+        return (void)FUN_0010bf68(D_00259680);
     }
     index &= 0xFFF;
     switch (b) {
@@ -44,6 +43,7 @@ void FUN_00115c28(int cnt, int index)
         break;
     default:
         FUN_0010bf68(D_00259650);
+        table = 0;
         return;
     }
     if (cnt > 0) {
@@ -56,6 +56,6 @@ void FUN_00115c28(int cnt, int index)
     }
     {
         unsigned char mask = 1 << (index & 7);
-        ((unsigned char *)table)[index >> 3] |= mask;
+        ((unsigned char *)table)[(unsigned int)index >> 3] |= mask;
     }
 }

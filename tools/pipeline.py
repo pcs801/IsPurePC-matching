@@ -548,6 +548,46 @@ def cmd_budget(args):
     return 0
 
 
+def cmd_progress(args):
+    """progress --addr --json: variants/best_words/insn_ratio/converged/stalled."""
+    addr_i = int(str(args.addr), 16)
+    key = "%08x" % addr_i
+    variants = set()
+    n_ticks = 0
+    p = os.path.join(ROOT, "build", "compile-tick.log")
+    if os.path.exists(p):
+        for line in open(p, encoding="utf-8", errors="replace"):
+            parts = line.split()
+            if len(parts) >= 4 and parts[1] == key:
+                n_ticks += 1
+                if parts[3]:
+                    variants.add(parts[3])
+    index = {e["addr_i"]: e for e in load_queue()["entries"]}
+    e = index.get(addr_i)
+    best = 10 ** 6
+    ratio = 0.0
+    if e:
+        src = os.path.join(ROOT, "src", "functions", key + ".c")
+        if os.path.exists(src):
+            code = open(src, encoding="utf-8", errors="replace").read()
+            if not LM.sanitize_candidate(code, addr_i):
+                objs = MK.compile_batch([{"key": "p", "src": code, "g": int((e.get("g") or ["0"])[0])}], "prog_%s" % key, verbose=False)
+                obj = objs.get("p")
+                if obj:
+                    r = LM.verify(obj, e)
+                    best = len(r.get("diffs") or [])
+                    want = r.get("want_len") or 1
+                    ratio = round((r.get("compiled_len") or 0) / float(want), 3)
+    converged = len(variants) >= 6 and best <= 15 and 0.95 <= ratio <= 1.05
+    stalled = len(variants) >= 6 and best > 15
+    abandoned = len(variants) < 6 and best > 15
+    out = {"addr": "0x%08X" % addr_i, "variants": len(variants), "ticks": n_ticks,
+           "best_words": best if best < 10 ** 6 else None, "insn_ratio": ratio,
+           "converged": converged, "stalled": stalled, "abandoned": abandoned}
+    print(json.dumps(out, ensure_ascii=False))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -562,6 +602,10 @@ def main(argv=None):
     b = sub.add_parser("budget")
     b.add_argument("--addr", required=True)
     b.set_defaults(func=cmd_budget)
+    pr = sub.add_parser("progress")
+    pr.add_argument("--addr", required=True)
+    pr.add_argument("--json", action="store_true")
+    pr.set_defaults(func=cmd_progress)
     c = sub.add_parser("check-one")
     c.add_argument("--addr", required=True)
     c.set_defaults(func=cmd_check_one)
