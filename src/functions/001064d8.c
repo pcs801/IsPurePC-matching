@@ -18,6 +18,9 @@ extern void FUN_00106268(char *a, char *b);
 void FUN_001064d8(void)
 {
     char *p;
+    char *base;
+    char *a;
+    char *b;
 
     FUN_0010bcf0();
     p = FUN_0010bd80(0x8000, (void *)0x1000);
@@ -29,9 +32,12 @@ void FUN_001064d8(void)
     D_00270A94 = (unsigned int)FUN_0010bd80(0x8100, D_456500);
     if (!D_00270A94)
         FUN_0010bf68(D_00258000);
-    D_00270A8C = (unsigned int)(char *)D_00270A80;
-    D_00270A88 = (unsigned int)((char *)D_00270A80 + 0x10000);
-    D_00270A84 = (unsigned int)((char *)D_00270A80 + 0x2000);
-    D_00270A90 = (unsigned int)((char *)D_00270A80 + 0x1000);
-    FUN_00106268((char *)D_00270A80 + 0x2000, (char *)D_00270A80 + 0x10000);
+    base = (char *)D_00270A80;
+    b = base + 0x10000;
+    a = base + 0x2000;
+    D_00270A90 = (unsigned int)(base + 0x1000);
+    D_00270A84 = (unsigned int)a;
+    D_00270A88 = (unsigned int)b;
+    D_00270A8C = (unsigned int)base;
+    FUN_00106268(a, b);
 }

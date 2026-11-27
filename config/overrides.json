@@ -2049,8 +2049,8 @@
       "name": "FUN_00115c28",
       "source": "src/functions/00115c28.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 272 bytes"
     },
     {
       "addr": "0x00115D38",
@@ -2067,8 +2067,8 @@
       "name": "FUN_00115e60",
       "source": "src/functions/00115e60.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 304 bytes"
     },
     {
       "addr": "0x00117088",
