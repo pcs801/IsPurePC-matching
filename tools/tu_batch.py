@@ -212,18 +212,26 @@ def cmd_verify(args):
             continue
         if LM.sanitize_candidate(code, e["addr_i"]):
             continue
-        key = "%x_00" % e["addr_i"]
-        items.append({"key": key, "src": code, "g": int((e.get("g") or ["0"])[0])})
-        slot[key] = e
+        for gi, g in enumerate(e.get("g") or ["0"]):
+            key = "%x_%d" % (e["addr_i"], gi)
+            items.append({"key": key, "src": code, "g": int(g)})
+            slot[key] = (e, int(g))
     objs = MK.compile_batch(items, "tub_%d" % args.batch, verbose=False) if items else {}
     dis = LM.disasm_objects({k: v for k, v in objs.items() if v}, "tub_%d" % args.batch)
     hits = 0
     rows = []
     for e in entries:
-        key = "%x_00" % e["addr_i"]
-        r = LM.verify(objs.get(key), e) if objs.get(key) else {
-            "ok": False, "summary": "no candidate", "compiled_len": 0,
-            "want_len": e["core"] if e["core"] < e["size"] else e["size"]}
+        r = {"ok": False, "summary": "no candidate", "compiled_len": 0,
+             "want_len": e["core"] if e["core"] < e["size"] else e["size"]}
+        hit_g = int((e.get("g") or ["0"])[0])
+        for gi, g in enumerate(e.get("g") or ["0"]):
+            key = "%x_%d" % (e["addr_i"], gi)
+            if objs.get(key):
+                rr = LM.verify(objs[key], e)
+                if rr.get("ok"):
+                    r = rr; hit_g = int(g); break
+                if r.get("compiled_len") == 0:
+                    r = rr
         if r.get("ok"):
             core_only = e["core"] < e["size"]
             src_rel = "src/functions/%08x.c" % e["addr_i"]

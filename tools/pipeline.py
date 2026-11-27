@@ -469,15 +469,24 @@ def cmd_check_one(args):
     if problems:
         print("MISS rejected:", ", ".join(problems))
         return 1
-    items = [{"key": "one", "src": code, "g": int((e.get("g") or ["0"])[0])}]
-    objs = MK.compile_batch(items, "check_%x" % addr_i, verbose=False)
-    obj = objs.get("one")
-    if not obj:
+    best = None
+    for g in (e.get("g") or ["0"]):
+        items = [{"key": "one", "src": code, "g": int(g)}]
+        objs = MK.compile_batch(items, "check_%x" % addr_i, verbose=False)
+        obj = objs.get("one")
+        if not obj:
+            continue
+        rr = LM.verify(obj, e)
+        if rr.get("ok"):
+            best = (rr, int(g)); break
+        if best is None:
+            best = (rr, int(g))
+    if best is None:
         print("MISS compile failed")
         return 1
-    r = LM.verify(obj, e)
+    r, used_g = best
     if r.get("ok"):
-        print("MATCH")
+        print("MATCH g=%d" % used_g)
         return 0
     _note_attempt(addr_i, code, r)
     print("MISS", r.get("summary"))
