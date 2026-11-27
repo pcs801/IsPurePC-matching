@@ -110,7 +110,7 @@ def build_tu_dir(g, addrs, index, byfn, ablate=False):
         "与 semantic 语义笔记）理解调用契约。按 functions 的地址顺序逐个匹配。每写一版用 "
             "python tools/pipeline.py check-one --addr <addr> 验证；"
             "MATCH 后把最终源码追加到本目录 matched.md，再继续下一个。"
-            "后面的函数优先参考 matched.md 里已命中的写法。每函数最多 60 次，"
+            "后面的函数优先参考 matched.md 里已命中的写法。每函数最多 60 次且最多 20 分钟（先到先停），超预算就记 MISS 转下一个，不要死磕；每完成一个函数立即追加 result.json 一条，每函数最多 60 次，"
             "禁止 volatile/goto/asm/.word/__attribute__/#include。全部做完写本目录 "
             "result.json：{\"tu\":\"...\",\"functions\":[{\"addr\",\"result\",\"attempts\",\"g\",\"last_diff\"}]}。"
         ),
@@ -122,7 +122,7 @@ def build_tu_dir(g, addrs, index, byfn, ablate=False):
         "工作目录：%s\nTU：%s\n证据卡：%s/card.json。先读它。\n"
         "按 card.functions 地址顺序逐个做：写普通 C 到 candidate_path；"
         "运行 python tools/pipeline.py check-one --addr <addr>；MATCH 后追加到 %s/matched.md；"
-        "每函数最多 60 次；禁止 volatile/goto/asm/.word/__attribute__/#include；"
+        "每函数最多 60 次且最多 20 分钟（先到先停），超预算就记 MISS 转下一个、不要死磕；每完成一个函数立即追加 %s/result.json 一条；禁止 volatile/goto/asm/.word/__attribute__/#include；"
         "全部做完写 %s/result.json。\n"
         % (len(cards), ROOT, g["name"], d, d, d))
     return d, cards
