@@ -4686,8 +4686,8 @@
       "name": "FUN_001f6718",
       "source": "src/functions/001f6718.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
     },
     {
       "addr": "0x001F7170",

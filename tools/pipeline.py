@@ -452,6 +452,14 @@ def cmd_verify(args):
     return 0
 
 
+def _cc_for(addr_i):
+    try:
+        d = json.load(open(os.path.join(ROOT, "build", "cc-overrides.json"), encoding="utf-8"))
+        return d.get("overrides", {}).get("0x%08X" % addr_i)
+    except (OSError, ValueError):
+        return None
+
+
 def _budget_exhausted(addr_i, limit_attempts=60, limit_min=20):
     """Hard external budget: every check-one counts; refuse after limits."""
     sd = os.path.join(SANDBOX, "%08x" % addr_i)
@@ -500,7 +508,7 @@ def cmd_check_one(args):
         return 1
     best = None
     for g in (e.get("g") or ["0"]):
-        items = [{"key": "one", "src": code, "g": int(g)}]
+        items = [{"key": "one", "src": code, "g": int(g), "cc": _cc_for(addr_i)}]
         objs = MK.compile_batch(items, "check_%x" % addr_i, verbose=False)
         obj = objs.get("one")
         if not obj:
