@@ -30,14 +30,14 @@ void FUN_0010a2a8(R4 *p, int a1)
     if (r.x + s.sw < 640) {
         r.w = s.sw;
     } else {
-        r.w = s.sw - ((r.x + s.sw) - 640);
+        r.w = (s.sw - (r.x + s.sw)) + 640;
         if (r.w <= 0)
             return;
     }
     if (r.y + s.sh < 448) {
         r.h = s.sh;
     } else {
-        r.h = s.sh - ((r.y + s.sh) - 448);
+        r.h = (s.sh - (r.y + s.sh)) + 448;
         if (r.h <= 0)
             return;
     }

@@ -591,3 +591,14 @@ addr	name	size	result	flags	assembler	attempts	note
 0x0010BAA8	FUN_0010baa8	112	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 11: core 108/112
 0x0010BB18	FUN_0010bb18	112	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 11: core 108/112
 0x001113B8	FUN_001113b8	24	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 11: 24 bytes
+0x00102080	FUN_00102080	80	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: 80 bytes
+0x001020D0	FUN_001020d0	96	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: core 92/96
+0x0010BF68	FUN_0010bf68	96	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: 96 bytes
+0x0010BFE0	FUN_0010bfe0	304	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: 304 bytes
+0x0010C118	FUN_0010c118	216	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: core 212/216
+0x0010A3D0	FUN_0010a3d0	160	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: 160 bytes
+0x0010A470	FUN_0010a470	224	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: core 220/224
+0x0010BC40	FUN_0010bc40	176	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: core 172/176
+0x001113D0	FUN_001113d0	56	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: 56 bytes
+0x00111408	FUN_00111408	288	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: 288 bytes
+0x00111528	FUN_00111528	304	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 12: core 300/304
