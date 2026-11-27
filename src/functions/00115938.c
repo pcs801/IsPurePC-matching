@@ -1,9 +1,9 @@
 typedef unsigned short u16;
 
-extern int *D_000AEC2C;
-extern int *D_000AEC34;
-extern int *D_000AEC3C;
-extern int *D_000AEC44;
+extern int *D_B1EC2C;
+extern int *D_B1EC34;
+extern int *D_B1EC3C;
+extern int *D_B1EC44;
 
 int FUN_00115938(int p)
 {
@@ -16,21 +16,17 @@ int FUN_00115938(int p)
     case 0x4000:
         switch ((u16)(v & 0x2000)) {
         case 0:
-            r = D_000AEC34[(u16)v & 0x1FFF];
-            break;
+            return D_B1EC34[(u16)v & 0x1FFF];
         case 0x2000:
-            r = D_000AEC44[(u16)v & 0x1FFF];
-            break;
+            return D_B1EC44[(u16)v & 0x1FFF];
         }
         break;
     case 0x8000:
         switch ((u16)(v & 0x2000)) {
         case 0:
-            r = D_000AEC2C[(u16)v & 0x1FFF];
-            break;
+            return D_B1EC2C[(u16)v & 0x1FFF];
         case 0x2000:
-            r = D_000AEC3C[(u16)v & 0x1FFF];
-            break;
+            return D_B1EC3C[(u16)v & 0x1FFF];
         }
         break;
     }

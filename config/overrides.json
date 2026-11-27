@@ -4587,8 +4587,8 @@
       "name": "FUN_001dfe18",
       "source": "src/functions/001dfe18.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
     },
     {
       "addr": "0x001DFE40",
@@ -4596,8 +4596,8 @@
       "name": "FUN_001dfe40",
       "source": "src/functions/001dfe40.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
     },
     {
       "addr": "0x001E02D8",
