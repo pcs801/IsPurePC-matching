@@ -123,7 +123,7 @@ def build_tu_dir(g, addrs, index, byfn, ablate=False):
         "按 card.functions 地址顺序逐个做：写普通 C 到 candidate_path；"
         "运行 python tools/pipeline.py check-one --addr <addr>；MATCH 后追加到 %s/matched.md；"
         "每函数最多 60 次且最多 20 分钟（先到先停），超预算就记 MISS 转下一个、不要死磕；每完成一个函数立即追加 %s/result.json 一条；禁止 volatile/goto/asm/.word/__attribute__/#include；"
-        "全部做完写 %s/result.json。\n"
+        "全部做完后确认 result.json 已含每个函数一条记录。\n"
         % (len(cards), ROOT, g["name"], d, d, d))
     return d, cards
 
@@ -165,7 +165,7 @@ def cmd_prepare(args):
                 continue
             rem = [x for x in g["addrs"]
                    if cd.get("0x%08X" % x, {}).get("result") != "MATCH"
-                   and x in index and "0x%08X" % x not in attempted]
+                   and x in index]
             if not rem:
                 continue
             take = [a] + [x for x in rem if x != a][:max(0, args.max_per_tu - 1)]
@@ -173,6 +173,8 @@ def cmd_prepare(args):
             chosen.append((g, take))
             total += len(take)
     for g in groups:
+        if any(gg is g for gg, _ in chosen):
+            continue
         rem = [a for a in g["addrs"]
                if cd.get("0x%08X" % a, {}).get("result") != "MATCH"
                and "0x%08X" % a not in attempted and a in index]
