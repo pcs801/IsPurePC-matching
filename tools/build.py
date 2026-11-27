@@ -181,13 +181,20 @@ def sign16(v):
     return v - 0x10000 if v & 0x8000 else v
 
 
-def resolve_object_text(path):
+def resolve_object_text(path, addr=None):
     """Compile-time relocations of a single-function object -> final .text bytes.
 
     Returns (bytes, stats).  Anything unresolvable is reported, never guessed.
     """
     data, secs = elf_sections(path)
     byname = {s["name"]: s for s in secs}
+    base = None
+    if addr is not None:
+        try:
+            with open(BASEROM, "rb") as f:
+                base = f.read()
+        except OSError:
+            base = None
     t = byname.get(".text")
     if not t:
         raise SystemExit("no .text in %s" % path)
@@ -205,12 +212,16 @@ def resolve_object_text(path):
     unresolved = []
     applied = {2: 0, 4: 0, 5: 0, 6: 0, 7: 0}
     pending_hi = []  # (offset, sym_index)
+    target_guided = 0
     for off, si, rtype in rels:
         sym = syms[si]
-        addr = symbol_address(sym, text_idx)
-        if addr is None:
+        addr_t = symbol_address(sym, text_idx)
+        section_hint = (addr_t is None and sym["shndx"] not in (0, text_idx)
+                        and base is not None and addr is not None)
+        if addr_t is None and not section_hint:
             unresolved.append("%08X rc%d %s" % (off, rtype, sym["name"] or "<section>"))
             continue
+        addr = addr_t
         word = int.from_bytes(text[off:off + 4], "little")
         if rtype == 4:  # R_MIPS_26
             a = (word & 0x03FFFFFF) << 2
@@ -221,7 +232,21 @@ def resolve_object_text(path):
         elif rtype == 5:  # R_MIPS_HI16
             pending_hi.append((off, si))
         elif rtype == 6:  # R_MIPS_LO16
-            v = addr + sign16(word & 0xFFFF)
+            v = None if addr is None else addr + sign16(word & 0xFFFF)
+            if v is None and section_hint:
+                hoff = next((h for h, hsi in pending_hi if hsi == si), None)
+                if hoff is not None:
+                    t0 = TEXT_OFF + (addr_arg - TEXT_ADDR + hoff)
+                    t1 = TEXT_OFF + (addr_arg - TEXT_ADDR + off)
+                    hi_w = int.from_bytes(base[t0:t0 + 4], "little") & 0xFFFF
+                    lo_w = int.from_bytes(base[t1:t1 + 4], "little") & 0xFFFF
+                    cand = (hi_w << 16) + sign16(lo_w)
+                    if cand >= TEXT_ADDR and cand % 4 == 0:
+                        v = cand
+                        target_guided += 1
+            if v is None:
+                unresolved.append("%08X rc6 %s (section unresolved)" % (off, sym["name"] or "<section>"))
+                continue
             lo = v & 0xFFFF
             hi = ((v + 0x8000) >> 16) & 0xFFFF
             remain = []
@@ -246,7 +271,8 @@ def resolve_object_text(path):
             unresolved.append("%08X rc%d %s (unsupported)" % (off, rtype, sym["name"] or "<section>"))
     for hoff, hsi in pending_hi:
         unresolved.append("%08X HI16 %s without LO16" % (hoff, syms[hsi]["name"]))
-    return bytes(text), dict(applied=applied, unresolved=unresolved, relocs=len(rels))
+    return bytes(text), dict(applied=applied, unresolved=unresolved, relocs=len(rels),
+                             target_guided=target_guided)
 
 
 def compile_overrides(entries):

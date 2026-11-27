@@ -8,15 +8,13 @@ void FUN_00105af0(void)
 {
     unsigned char *p;
     unsigned int t;
-    unsigned int x;
 
     p = D_1B73FC0;
     t = *(unsigned int *)(p + 0xEC);
     if (t + D_00270C48 <= 0xCDFE5FEu)
-        x = t + D_270C48;
+        *(unsigned int *)(p + 0xEC) = t + D_270C48;
     else
-        x = 0xCDFE5FFu;
-    *(unsigned int *)(p + 0xEC) = x;
+        *(unsigned int *)(p + 0xEC) = 0xCDFE5FFu;
 
     p = D_A94700;
     t = *(unsigned int *)(p + 0x108E8);

@@ -609,8 +609,8 @@
       "name": "FUN_00105af0",
       "source": "src/functions/00105af0.c",
       "g": 8,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 156/160"
     },
     {
       "addr": "0x00105B90",
