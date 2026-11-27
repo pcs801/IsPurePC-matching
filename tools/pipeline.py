@@ -528,6 +528,26 @@ def cmd_check_one(args):
     return 1
 
 
+def cmd_budget(args):
+    """Read-only external clock: attempts, elapsed, remaining (no counting)."""
+    addr_i = int(str(args.addr), 16)
+    sd = os.path.join(SANDBOX, "%08x" % addr_i)
+    p = os.path.join(sd, "budget.json")
+    if not os.path.exists(p):
+        print("budget: 0/60 attempts, 0.0/20.0 min, remaining 20.0 min")
+        return 0
+    try:
+        d = json.load(open(p, encoding="utf-8"))
+    except ValueError:
+        d = {}
+    now = time.time()
+    elapsed = (now - d.get("started", now)) / 60.0
+    remaining = max(0.0, 20.0 - elapsed)
+    print("budget: %d/60 attempts, %.1f/20.0 min, remaining %.1f min" % (
+        int(d.get("attempts", 0)), elapsed, remaining))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -539,6 +559,9 @@ def main(argv=None):
     v = sub.add_parser("verify")
     v.add_argument("--batch", type=int, default=0)
     v.set_defaults(func=cmd_verify)
+    b = sub.add_parser("budget")
+    b.add_argument("--addr", required=True)
+    b.set_defaults(func=cmd_budget)
     c = sub.add_parser("check-one")
     c.add_argument("--addr", required=True)
     c.set_defaults(func=cmd_check_one)
