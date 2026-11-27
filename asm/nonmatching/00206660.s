@@ -1,0 +1,3 @@
+/* asm-native: C cannot emit syscall/sync/ei/cop0/lq/sq.
+   Byte-exact by construction - this is the original assembly. */
+nonmatching FUN_00206660, 0x20glabel FUN_00206660    /* 107660 00206660 F0FFBD27 */  addiu      $sp, $sp, -0x10    /* 107664 00206664 0000BFFF */  sd         $ra, 0x0($sp)    /* 107668 00206668 D815080C */  jal        _iEnableDmac    /* 10766C 0020666C 00000000 */   nop    /* 107670 00206670 0F000000 */  sync    /* 107674 00206674 0000BFDF */  ld         $ra, 0x0($sp)    /* 107678 00206678 0800E003 */  jr         $ra    /* 10767C 0020667C 1000BD27 */   addiu     $sp, $sp, 0x10endlabel FUN_00206660

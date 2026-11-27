@@ -2,7 +2,8 @@
 baserom/
 # build outputs
 build/
-asm/
+asm/*
+!asm/nonmatching/
 objdump/
 *.o
 # downloaded toolchain archives
