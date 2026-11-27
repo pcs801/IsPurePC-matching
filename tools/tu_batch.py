@@ -235,6 +235,7 @@ def cmd_verify(args):
     objs = MK.compile_batch(items, "tub_%d" % args.batch, verbose=False) if items else {}
     dis = LM.disasm_objects({k: v for k, v in objs.items() if v}, "tub_%d" % args.batch)
     hits = 0
+    core_hits = 0
     rows = []
     for e in entries:
         r = {"ok": False, "summary": "no candidate", "compiled_len": 0,
@@ -255,6 +256,7 @@ def cmd_verify(args):
                 args.batch, ("core %d/%d" % (e["core"], e["size"])) if core_only
                 else ("%d bytes" % e["size"]))
             if core_only:
+                core_hits += 1
                 LM.record_padded(e, src_rel, note, int((e.get("g") or ["0"])[0]))
             else:
                 data = json.load(open(OVERRIDES, encoding="utf-8"))
@@ -285,7 +287,8 @@ def cmd_verify(args):
     tested = len(entries)
     rate = hits / float(tested) if tested else 0.0
     doc = {"schema": 1, "phase": "M2.6-pipeline", "batch": args.batch,
-           "mode": "tu", "functions": tested, "hits": hits, "miss": tested - hits,
+           "mode": "tu", "functions": tested, "hits": hits, "core_only_hits": core_hits,
+           "miss": tested - hits,
            "hit_rate": round(rate, 4),
            "generated": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "rows": rows}
     json.dump(doc, open(os.path.join(ROOT, "build", "m26-batch-%d.json" % args.batch),
