@@ -1,18 +1,16 @@
-// FUNCTION: SLPM 0x00117920  size 88  core 88
-// sig: addiu ; lui ; sd ; addiu ; lbu ; andi ; andi ; beqz ; addiu ; lw ; sw ; lbu
+// FUNCTION: SLPM 0x00117920  size 88 (core 88)  -G8
+extern unsigned char D_A94700[];
+extern int D_00270CAC;
+extern void FUN_00106668(int e);
 
-extern char D_A94700[];
-extern int *D_00270CAC;
-extern void FUN_00106668(int);
+void FUN_00117920(void)
+{
+    unsigned char v = D_A94700[0x46A2];
+    unsigned char g = v & 1;
 
-void FUN_00117920(void) {
-    char *p = D_A94700;
-    unsigned char v = *(unsigned char *)(p + 0x46A2);
-    unsigned char f = v & 1;
-    unsigned char g;
-    if (f) {
-        D_00270CAC[291] = 30;
-        v = *(unsigned char *)(p + 0x46A2);
+    if (g) {
+        *(int *)(D_00270CAC + 0x48C) = 30;
+        v = D_A94700[0x46A2];
     }
     g = (v >> 1) & 1;
     if (g)

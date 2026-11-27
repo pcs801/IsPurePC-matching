@@ -6,20 +6,20 @@ extern char D_B1EC00[];
 int FUN_00117288(void)
 {
     int i;
-    int total;
+    int cnt;
     int n;
 
     i = 0;
-    total = 0;
+    cnt = 0;
     FUN_00105238();
     n = *(int *)(D_B1EC00 + 0x20);
-    if (total < n) {
-        do {
-            total += FUN_00117270(i);
-            i++;
-        } while (i < n);
+    for (; cnt < n; ) {
+        cnt += FUN_00117270(i);
+        i++;
+        if (i >= n)
+            break;
     }
-    if (total < n)
+    if (cnt < n)
         return 1;
     return FUN_001174b8(3);
 }

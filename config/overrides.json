@@ -2140,7 +2140,7 @@
       "source": "src/functions/00117920.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 TU tu/00117760: 88 bytes"
+      "note": "M2.6 TU-batch 16: 88 bytes"
     },
     {
       "addr": "0x00117DC0",
@@ -2175,8 +2175,8 @@
       "name": "FUN_0011c950",
       "source": "src/functions/0011c950.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 TU-batch 16: 80 bytes"
     },
     {
       "addr": "0x0011C9A0",
@@ -2184,8 +2184,8 @@
       "name": "FUN_0011c9a0",
       "source": "src/functions/0011c9a0.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 TU-batch 16: 80 bytes"
     },
     {
       "addr": "0x0011D550",

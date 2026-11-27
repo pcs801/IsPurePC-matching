@@ -7,10 +7,10 @@ extern char D_00258ED8[];
 extern char D_00258EE8[];
 extern char D_00258F00[];
 
-extern int D_00270AC8;
+extern unsigned int D_00270AC8;
 extern int D_00270C14;
 extern int D_00270C2C;
-extern int D_00270C34;
+extern unsigned int D_00270C34;
 extern int D_00270C8C;
 
 extern int FUN_0010bf20(void *, ...);
@@ -26,22 +26,22 @@ extern int FUN_002059e0(int);
 
 int FUN_0010e070(void)
 {
-    if (FUN_001a9920() == 0) {
-        FUN_0010bf20(D_00258EB0);
-        FUN_0010bf20(D_00258CF8);
-        FUN_001076b8();
-        FUN_0010bf20(D_00258EC8);
-        FUN_00107610();
-        FUN_0010bf20(D_00258ED8);
-        FUN_001075d0();
-        FUN_0010bf20(D_00258EE8);
-        FUN_0010d268();
-        FUN_002089d0();
-        FUN_0020f730(0x100008, 0, 0, 0);
-        return 0;
+    if (FUN_001a9920() != 0) {
+        FUN_001fbd78(D_00258F00);
+        return 1;
     }
-    FUN_001fbd78(D_00258F00);
-    return 1;
+    FUN_0010bf20(D_00258EB0);
+    FUN_0010bf20(D_00258CF8);
+    FUN_001076b8();
+    FUN_0010bf20(D_00258EC8);
+    FUN_00107610();
+    FUN_0010bf20(D_00258ED8);
+    FUN_001075d0();
+    FUN_0010bf20(D_00258EE8);
+    FUN_0010d268();
+    FUN_002089d0();
+    FUN_0020f730(0x100008, 0, 0, 0);
+    return 0;
 }
 
 void FUN_0010e128(void)

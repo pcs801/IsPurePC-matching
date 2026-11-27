@@ -8,15 +8,15 @@ extern char D_00259680[];
 extern int D_00B1EC04;
 extern int FUN_0010bf68(char *);
 
-int FUN_00115c28(int cnt, unsigned short index)
+void FUN_00115c28(int cnt, int index)
 {
     char *table;
     int b;
     int *p;
-    int bit;
 
+    index &= 0xFFFF;
     if (index == 0xFFFF)
-        return 0xFFFF;
+        return;
     switch (index >> 12) {
     case 0:
         b = 0;
@@ -25,7 +25,8 @@ int FUN_00115c28(int cnt, unsigned short index)
         b = 2;
         break;
     default:
-        return FUN_0010bf68(D_00259680);
+        FUN_0010bf68(D_00259680);
+        return;
     }
     index &= 0xFFF;
     switch (b) {
@@ -42,7 +43,8 @@ int FUN_00115c28(int cnt, unsigned short index)
         table = D_A96950;
         break;
     default:
-        return FUN_0010bf68(D_00259650);
+        FUN_0010bf68(D_00259650);
+        return;
     }
     if (cnt > 0) {
         p = (int *)(b * 4 + D_00B1EC04);
@@ -52,7 +54,8 @@ int FUN_00115c28(int cnt, unsigned short index)
             cnt--;
         } while (cnt != 0);
     }
-    bit = 1 << (index & 7);
-    ((unsigned char *)table)[index >> 3] |= bit;
-    return bit;
+    {
+        unsigned char mask = 1 << (index & 7);
+        ((unsigned char *)table)[index >> 3] |= mask;
+    }
 }
