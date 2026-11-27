@@ -100,7 +100,8 @@ def build_tu_dir(g, addrs, index, byfn):
         "functions": cards,
         "matched_sources": matched[:6],
         "instructions": (
-            "按 functions 的地址顺序逐个匹配。每写一版用 "
+            "开工前先读 build/sandbox/<addr>/attempts.md 与 build/m26-miss/<addr>.md（若存在），"
+        "避开里面已试过的写法。按 functions 的地址顺序逐个匹配。每写一版用 "
             "python tools/pipeline.py check-one --addr <addr> 验证；"
             "MATCH 后把最终源码追加到本目录 matched.md，再继续下一个。"
             "后面的函数优先参考 matched.md 里已命中的写法。每函数最多 60 次，"
@@ -243,6 +244,7 @@ def cmd_verify(args):
                 C.complete("m26-tub", e["addr"], "MISS", MAX_ATTEMPTS, note=diff[:300])
             except SystemExit:
                 pass
+            P._archive_miss(e["addr_i"], diff)
             rows.append({"addr": e["addr"], "result": "MISS", "diff": diff[:300]})
             print("  %s MISS  %s" % (e["addr"], diff[:70]))
     tested = len(entries)

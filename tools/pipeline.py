@@ -14,6 +14,7 @@ Usage
   python tools/pipeline.py status
 """
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -230,7 +231,9 @@ def cmd_prepare(args):
         card["instructions"] = (
             "Read this card. Write ordinary C to candidate_path (function "
             "FUN_<addr>). Run verify_command and find the line for your address; "
-            "if it is not MATCH, read the diff, fix the C, repeat. Max %d attempts. "
+            "Before writing, read build/sandbox/<addr>/attempts.md and build/m26-miss/<addr>.md "
+            "if they exist; do not repeat tried variants. "
+            "If it is not MATCH, read the diff, fix the C, repeat. Max %d attempts. "
             "No asm/.word/volatile/goto/__attribute__/#include. Do not touch other "
             "functions or run make check." % MAX_ATTEMPTS)
         json.dump(card, open(os.path.join(sd, "card.json"), "w", newline="\n",
@@ -344,6 +347,7 @@ def cmd_verify(args):
                            note=diff[:300])
             except SystemExit:
                 pass
+            _archive_miss(e["addr_i"], diff)
             rows.append({"addr": e["addr"], "result": "MISS", "diff": diff[:300]})
             print("  %s MISS  %s" % (e["addr"], diff[:70]))
     # no usable candidate for missing sources
@@ -421,6 +425,7 @@ def cmd_check_one(args):
     if r.get("ok"):
         print("MATCH")
         return 0
+    _note_attempt(addr_i, code, r)
     print("MISS", r.get("summary"))
     if r.get("diffs"):
         first = r["diffs"][0]
@@ -449,6 +454,39 @@ def main(argv=None):
     s.set_defaults(func=lambda a: print(json.dumps(load_state(), ensure_ascii=False, indent=1)))
     args = ap.parse_args(argv)
     return args.func(args)
+
+
+def _archive_miss(addr_i, diff):
+    sd = os.path.join(SANDBOX, "%08x" % addr_i)
+    md = os.path.join(ROOT, "build", "m26-miss")
+    os.makedirs(md, exist_ok=True)
+    lines = ["# %08x MISS" % addr_i, "", "- best: src/functions/%08x.c" % addr_i,
+             "- attempts: build/sandbox/%08x/attempts/" % addr_i, "", "## last verify", "",
+             "```", diff, "```", ""]
+    ap = os.path.join(sd, "attempts.md")
+    if os.path.exists(ap):
+        rows = open(ap, encoding="utf-8", errors="replace").read().splitlines()
+        lines += ["## attempts (last 80)", ""] + rows[-80:] + [""]
+    np = os.path.join(sd, "notes.md")
+    if os.path.exists(np):
+        lines += ["## notes", "```", open(np, encoding="utf-8", errors="replace").read()[:2000], "```"]
+    with open(os.path.join(md, "%08x.md" % addr_i), "w", newline="\n", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+
+def _note_attempt(addr_i, code, r):
+    sd = os.path.join(SANDBOX, "%08x" % addr_i)
+    os.makedirs(os.path.join(sd, "attempts"), exist_ok=True)
+    h = hashlib.sha1(code.encode("utf-8", "replace")).hexdigest()[:10]
+    cp = os.path.join(sd, "attempts", h + ".c")
+    if not os.path.exists(cp):
+        with open(cp, "w", newline="\n", encoding="utf-8") as f:
+            f.write(code)
+    with open(os.path.join(sd, "attempts.md"), "a", newline="\n",
+              encoding="utf-8") as f:
+        f.write("- %s %s %s compiled %s/%s %s\n" % (
+            time.strftime("%H:%M:%S"), h, "MATCH" if r.get("ok") else "MISS",
+            r.get("compiled_len"), r.get("want_len"), r.get("summary")))
 
 
 if __name__ == "__main__":
