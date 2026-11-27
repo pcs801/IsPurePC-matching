@@ -186,6 +186,7 @@ def resolve_object_text(path, addr=None):
 
     Returns (bytes, stats).  Anything unresolvable is reported, never guessed.
     """
+    addr_arg = addr
     data, secs = elf_sections(path)
     byname = {s["name"]: s for s in secs}
     base = None
@@ -217,7 +218,7 @@ def resolve_object_text(path, addr=None):
         sym = syms[si]
         addr_t = symbol_address(sym, text_idx)
         section_hint = (addr_t is None and sym["shndx"] not in (0, text_idx)
-                        and base is not None and addr is not None)
+                        and base is not None and addr_arg is not None)
         if addr_t is None and not section_hint:
             unresolved.append("%08X rc%d %s" % (off, rtype, sym["name"] or "<section>"))
             continue
@@ -232,6 +233,7 @@ def resolve_object_text(path, addr=None):
         elif rtype == 5:  # R_MIPS_HI16
             pending_hi.append((off, si))
         elif rtype == 6:  # R_MIPS_LO16
+            guided = False
             v = None if addr is None else addr + sign16(word & 0xFFFF)
             if v is None and section_hint:
                 hoff = next((h for h, hsi in pending_hi if hsi == si), None)
@@ -240,15 +242,21 @@ def resolve_object_text(path, addr=None):
                     t1 = TEXT_OFF + (addr_arg - TEXT_ADDR + off)
                     hi_w = int.from_bytes(base[t0:t0 + 4], "little") & 0xFFFF
                     lo_w = int.from_bytes(base[t1:t1 + 4], "little") & 0xFFFF
-                    cand = (hi_w << 16) + sign16(lo_w)
-                    if cand >= TEXT_ADDR and cand % 4 == 0:
+                    cand = (hi_w << 16) + lo_w
+                    cand_s = (hi_w << 16) + sign16(lo_w)
+                    if cand % 4 == 0 and TEXT_ADDR <= cand < 0x20000000:
+                        pass
+                    else:
+                        cand = cand_s
+                    if cand % 4 == 0 and TEXT_ADDR <= cand < 0x20000000:
                         v = cand
+                        guided = True
                         target_guided += 1
             if v is None:
                 unresolved.append("%08X rc6 %s (section unresolved)" % (off, sym["name"] or "<section>"))
                 continue
             lo = v & 0xFFFF
-            hi = ((v + 0x8000) >> 16) & 0xFFFF
+            hi = (v >> 16) & 0xFFFF if guided else ((v + 0x8000) >> 16) & 0xFFFF
             remain = []
             for hoff, hsi in pending_hi:
                 if hsi == si:
@@ -285,14 +293,24 @@ def compile_overrides(entries):
              'rm -rf "$WORK" && mkdir -p "$WORK" && cd "$WORK"',
              'mkdir -p "$ROOT/build/overrides"', 'rm -f "$ROOT"/build/overrides/*.o']
     objs = {}
+    try:
+        cc_overrides = json.load(open(os.path.join(ROOT, "build", "cc-overrides.json"),
+                                      encoding="utf-8")).get("overrides", {})
+    except (OSError, ValueError):
+        cc_overrides = {}
     for e in todo:
         src = e["source"].replace("\\", "/")
         base = os.path.splitext(os.path.basename(src))[0]
         g = int(e["g"])
         obj = "%s.G%d.o" % (base, g)
+        try:
+            _cc_key = "0x%08X" % (e["addr"] if isinstance(e["addr"], int)
+                                 else int(str(e["addr"]), 16))
+        except (TypeError, ValueError):
+            _cc_key = ""
         lines += [
             'if cp "$ROOT/%s" %s.c 2>/dev/null; then ' % (src, base),
-            '/opt/ee/bin/ee-gcc -O2 -mips3 -G%d -c %s.c -o %s 2>%s.err && cp %s "$ROOT/build/overrides/%s" || echo "FAIL %s";' % (g, base, obj, base, obj, obj, base),
+            'CC="%s"; $CC -O2 -mips3 -G%d -c %s.c -o %s 2>%s.err && cp %s "$ROOT/build/overrides/%s" || echo "FAIL %s";' % (cc_overrides.get(_cc_key, "/opt/ee/bin/ee-gcc"), g, base, obj, base, obj, obj, base),
             'else echo "MISSING %s"; fi;' % base,
         ]
         objs[e["addr"]] = os.path.join(OVERRIDES_BUILD, obj)
@@ -327,7 +345,7 @@ def verify_overrides(entries, verbose=True):
             if e["status"] == "matched":
                 ok = False
             continue
-        compiled, stats = resolve_object_text(obj)
+        compiled, stats = resolve_object_text(obj, e["addr"])
         off = TEXT_OFF + (e["addr"] - TEXT_ADDR)
         orig = base[off:off + e["size"]]
         diffs, ndiff = word_diff(compiled, orig)
@@ -371,7 +389,7 @@ def step_overrides(apply=True):
     for e in matched:
         obj = os.path.join(OVERRIDES_BUILD, "%s.G%d.o" % (
             os.path.splitext(os.path.basename(e["source"]))[0], int(e["g"])))
-        compiled, _ = resolve_object_text(obj)
+        compiled, _ = resolve_object_text(obj, e["addr"])
         off = e["addr"] - TEXT_ADDR
         blob[off:off + len(compiled)] = compiled
         total += len(compiled)

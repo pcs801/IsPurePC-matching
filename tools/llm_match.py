@@ -472,7 +472,7 @@ def verify(obj, entry):
                 "want_len": want_len, "summary": "no object produced",
                 "diffs": [], "ndiff": 0, "unresolved": []}
     try:
-        text, stats = B.resolve_object_text(obj)
+        text, stats = B.resolve_object_text(obj, entry["addr_i"])
     except SystemExit as exc:
         return {"ok": False, "reason": "elf:%s" % exc, "compiled_len": 0,
                 "want_len": want_len, "summary": "ELF/resolve error: %s" % exc,

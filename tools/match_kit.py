@@ -116,7 +116,7 @@ def verify_obj(obj, addr, size):
                 "compiled_len": 0}
     try:
         data, secs = B.elf_sections(obj)
-        text, stats = B.resolve_object_text(obj)
+        text, stats = B.resolve_object_text(obj, addr)
     except SystemExit as e:
         return {"ok": False, "reason": "elf:%s" % e, "diffs": [], "unresolved": [],
                 "compiled_len": 0}
