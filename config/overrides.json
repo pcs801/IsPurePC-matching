@@ -240,8 +240,8 @@
       "name": "FUN_00102190",
       "source": "src/functions/00102190.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 TU-batch 13: 208 bytes"
     },
     {
       "addr": "0x00102260",
@@ -1302,8 +1302,8 @@
       "name": "FUN_0010be90",
       "source": "src/functions/0010be90.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 TU-batch 13: 72 bytes"
     },
     {
       "addr": "0x0010BED8",
@@ -1473,8 +1473,8 @@
       "name": "FUN_0010db80",
       "source": "src/functions/0010db80.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 TU-batch 13: 112 bytes"
     },
     {
       "addr": "0x0010DBF0",
@@ -1482,8 +1482,8 @@
       "name": "FUN_0010dbf0",
       "source": "src/functions/0010dbf0.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 TU-batch 13: 184 bytes"
     },
     {
       "addr": "0x0010DCA8",
@@ -1491,8 +1491,8 @@
       "name": "FUN_0010dca8",
       "source": "src/functions/0010dca8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 TU-batch 13: 160 bytes"
     },
     {
       "addr": "0x001100A0",
