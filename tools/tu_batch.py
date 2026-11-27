@@ -158,6 +158,20 @@ def cmd_prepare(args):
     batch_no = next_batch_no()
     chosen = []
     total = 0
+    if args.addrs:
+        for a in [int(x, 16) for x in args.addrs.split(",") if x.strip()]:
+            g = next((gg for gg in groups if a in gg["addrs"]), None)
+            if not g or any(gg is g for gg, _ in chosen):
+                continue
+            rem = [x for x in g["addrs"]
+                   if cd.get("0x%08X" % x, {}).get("result") != "MATCH"
+                   and x in index and "0x%08X" % x not in attempted]
+            if not rem:
+                continue
+            take = [a] + [x for x in rem if x != a][:max(0, args.max_per_tu - 1)]
+            take = [x for x in take if x in index]
+            chosen.append((g, take))
+            total += len(take)
     for g in groups:
         rem = [a for a in g["addrs"]
                if cd.get("0x%08X" % a, {}).get("result") != "MATCH"
@@ -295,6 +309,8 @@ def main(argv=None):
     p = sub.add_parser("prepare")
     p.add_argument("--limit", type=int, default=20)
     p.add_argument("--max-per-tu", type=int, default=3)
+    p.add_argument("--addrs", default="",
+                   help="priority addresses (comma separated), placed first")
     p.add_argument("--ablate", action="store_true",
                    help="A/B: half the TUs get no semantic context")
     p.add_argument("--retry", action="store_true",

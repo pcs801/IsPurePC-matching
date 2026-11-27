@@ -13,12 +13,17 @@
 - **[证据]** 入口 `entry` = 0x00100008，1104 B。前 30 条把 $at…$ra 全部清零（`padduw $x,$zero,$zero`），随后清 FPU 累加器/$f0-$f31 并 `ctc1 $zero,31`，末尾加载 D_00270A80 与 D_1BA2608 —— 典型 crt0：清寄存器 → 清 FPU → 准备栈/堆边界。
 - **[证据]** 紧接着 0x0010012C 是**按字节清 BSS** 的自循环（`sb $zero,0($v0)` + `j` 回跳），0x00100158 是它的 16 字节对齐版本（`sq $zero,0($v0)` + `j` 回跳）。这是第二个硬证据：两段内存清零。
 - **[证据]** 之后 0x00100178（59 条）、FUN_00100458（640 B）、FUN_001006d8（616 B）、FUN_00100940（688 B）依次排列且 **callers 全为 0**，说明它们不经 `jal` 调用，而是被 crt0/跳转表间接进入（库初始化段）。
-- **[推测]** 启动顺序：crt0（清寄存器/FPU/BSS）→ 库初始化 → `_InitTLB`/`GetMemorySize` 类调用 → 游戏 main。样本字符串里的 ADXT/CVFS 版本串（Build:Feb 22 2006）与这些初始化段相邻，支持"库先于游戏逻辑初始化"。
+- **[证据]** 启动顺序中的“游戏 main”已定位为 0x0010D788（见 §3）：crt0 在 0x001001C0 设 `gp=D_2779F0`，0x001001C8 / 0x001001E4 用 `syscall`（v1=0x3C/0x3D）取栈/堆上界，`ei` 后 `jal FUN_0010d788`。样本里的 ADXT/CVFS 版本串（Build:Feb 22 2006）与初始化段相邻，支持“库先于游戏逻辑初始化”。
 
-## 3. 主循环
-- **[证据]** 游戏侧没有直接调用 SetVSyncFlag（其唯一 caller 是 SDK 内部 0x00205EC0）；FlushCache 有 36 个 caller（0x00100008 入口、0x0010BE28、0x0019xxxx、0x001E8xxx 等），散布在 I/O 与 DMA 代码里，不是单一的循环体。
-- **[推测]** 主循环是"VSync/线程轮询 + 每帧刷新"结构：依据是 libgraph/libdma/libpkt + libpad 全链接、信号量使用密集（CreateSema 39 callers / SignalSema 61 / WaitSema 59），这种组合几乎只出现在逐帧驱动（读 pad → 提交 DMA 链 → 等 VSync）的游戏里。循环体本身的地址尚未定位，是本项工作最大的空白。
-
+## 3. 主循环（已定位）
+- **[证据]** 主线程入口 = **FUN_0010D788（0x0010D788，696 B / 174 条）**：全程序里它的 caller 只有 `entry`（0x00100008）一个——crt0 在 `ei` 开中断之后 `jal FUN_0010d788`，返回路径尾跳 0x001FAD28→0x00100248。把握度：**高**。
+- **[证据]** 帧循环体 = **0x0010D850–0x0010DA38**，函数内只有 1 个回跳 `b .L0010D850`（0x0010DA38），构成无限循环。每帧顺序：`FUN_00105fb8` / `FUN_001fbe00` / `FUN_001b1af0` 三个帧首钩子 → 十余个子系统更新（0x001dde30、0x0019ec30、0x0019b688、0x0019b710、0x0019ccc0、0x00102008、0x0019daf8、0x0017ef80）→ 三次 `FUN_00108478(r,g,b)` 设清屏色（0xFF,0xFF,0xFF → 0xFF → 0x40,0x40,0x40）→ `WaitSema(gp[-0x6D64])` 帧同步 → 自旋 → `FlushCache(0)` 并写 0x10000000 → `FUN_001de098` 失败重试 → 帧计数 `gp[-0x6DB0]++`。
+- **[证据]** 帧同步协议可由置/等/清三连推出：0x0010D9B0 `gp[-0x6DDC]=1`（向 VSync 中断声明本帧就绪）→ 0x0010D9B8 `WaitSema` 阻塞到 ISR `SignalSema` → 0x0010D9E4 `beq $v0,1` 自旋等该标志被 ISR 清 0；0x0010D9C4 / 0x0010D9F4 两处 `sltiu ...,1` 是布尔取反（toggle）。
+- **[证据]** 同骨架的服务线程（非主循环）：**0x0010BC40**（176 B，由 0x0010BB98 用栈上 ThreadParam 调 CreateThread 创建；`WaitSema` → `FUN_0020d520(0x0026FE18,0x5003)` 与 `(0x0026FE20,0x4806)` 两条命令 → `FUN_001f5de0` 轮询 → 回跳），把握度**中**（SIF/GIF 服务线程）；**0x0010EC20**（120 B，由 0x0010E910 创建；`D_825840+0x40=1` 后 `while(lw +0x4C==0)` 自旋 → `SignalSema` → 回跳），把握度**中低**（等硬件就绪）。
+- **[证据]** 另两条线程：**0x001F4420**（552 B，callers 为空＝独立线程；`WaitSema` → `ExitDeleteThread` 收尸 → `CreateThread` → `FUN_00206ae0`（全程序唯一调 `_StartThread` 处）→ `ChangeThreadPriority` → 回跳）是**线程回收器**，把握度中；**0x001113B8**（24 B：`RotateThreadReadyQueue(1)` 无限循环）是 **idle 线程**，把握度高但显然不是主循环。
+- **[证据]** CreateThread 共 16 处，可读出入口的有：0x0010BB98→0x0010BC40、0x0010E910→0x0010EC20、0x0010EBB0→0x0010E468、0x00110D30→0x001113B8 与 0x001127E0、0x001B0DA8→0x001B0730；即游戏自有线程层集中在 0x0010xxxx/0x0011xxxx/0x001B0xxx。
+- **[推测]** crt0 在 0x00100198 设 `gp=D_2779F0`，0x001001C8 / 0x001001E4 用 `syscall`（v1=0x3C/0x3D）取栈与堆上界，`ei` 后直接 `jal FUN_0010d788`——因此 FUN_0010D788 就是 C 的 `main`，它自己不返回（循环无出口，只有异常/退出路径尾跳 0x001FAD28）。
+- **已排除**：SetVSyncFlag（唯一 caller 是 SDK 内部 0x00205EC0，游戏侧不直接调）；FlushCache 的 58 个调用点（散在 I/O/DMA，非单一循环体）；0x00100458 / 0x001006d8 / 0x00100940（callers=0 的库初始化段，函数内无回跳）；0x0010012C / 0x00100158（BSS 清零循环，crt0 内部）。
 ## 4. 子系统划分（按证据强度排序）
 - **音频（CRI ADX + MIDI）**：**[证据]** 字符串 `ADXRT Ver.3100 Build:Feb 22 2006`、`MARK:adxt_obj`、`MARK:lsc_obj`、`SJ/PS2EE Ver.6.36`、`PL2ENC Ver.1.02`、`ezMidi INIT err:%d`、`Midi_Init Can't alloc heap sq_hd/bd_trans`、`loop:%d vol:%d, pan l:%d r:%d`、`ADXT_STAT_STOP/PLAYEND`；源码侧有 0x00107990（音量×128÷128×256 缩放）、0x00104E48（关 0–5 通道）、0x001061D8（6 字节通道表项开关）。
 - **文件系统/资源（CRI CVFS）**：**[证据]** `CVFS/PS2EE Ver.2.53`、`data.dat`、`icon.sys`/`icon.ico`；0x0017EFA0（按 id 查 12 字节表项初始化全局单例 D_8604D0，表基址 D_002193D0、表项 12 B×≤256）。
@@ -48,3 +53,5 @@
 - **[证据]** 程序结构 = crt0 + 静态链接的 PS2 SDK（graph/dma/pkt/pad/mc/cdvd/mpeg/ipu/net/kernl）+ CRI 中间件（ADX/CVFS/SJ/PL2）+ 游戏逻辑；音频与存档菜单字符串是该中间件栈的直接指纹。
 - **[证据]** 函数级匹配率 8.7%（345/3966），且集中在 0x001B/0x001C/0x001A/0x0010 段——即"小、纯、无外部依赖"的函数先被吃掉，与工具链的 easy/medium 分级一致。
 - **[推测]** 下一步性价比最高的是 libc 替换层（0x001FBB84/0x00117DC0）与槽/插值一族，因为它们的调用面最宽，且已有语义笔记可复用。
+
+- **[证据]** 主循环已定位（§3）：主线程 0x0010D788 + 帧循环 0x0010D850–0x0010DA38；程序不是单线程裸循环，而是“主线程逐帧循环 + 至少 6 个 CreateThread 服务线程（SIF/GIF 0x0010BC40、硬件就绪 0x0010EC20、线程回收 0x001F4420、idle 0x001113B8 等）”的多线程结构。
