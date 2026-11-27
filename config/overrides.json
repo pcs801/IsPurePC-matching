@@ -2022,8 +2022,8 @@
       "name": "FUN_00115938",
       "source": "src/functions/00115938.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 184 bytes"
     },
     {
       "addr": "0x001159F0",
