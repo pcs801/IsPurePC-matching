@@ -1829,7 +1829,7 @@
     },
     {
       "addr": "0x00111F10",
-      "size": 104,
+      "size": 100,
       "name": "FUN_00111f10",
       "source": "src/functions/00111f10.c",
       "g": 8,
@@ -2175,8 +2175,8 @@
       "name": "FUN_001174b8",
       "source": "src/functions/001174b8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 120 bytes"
     },
     {
       "addr": "0x00117760",
@@ -2230,7 +2230,7 @@
       "source": "src/functions/0011c950.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 16: 80 bytes"
+      "note": "M2.6 late-match: 80 bytes"
     },
     {
       "addr": "0x0011C9A0",
@@ -2239,11 +2239,11 @@
       "source": "src/functions/0011c9a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 16: 80 bytes"
+      "note": "M2.6 late-match: 80 bytes"
     },
     {
       "addr": "0x0011C9F0",
-      "size": 104,
+      "size": 100,
       "name": "FUN_0011c9f0",
       "source": "src/functions/0011c9f0.c",
       "g": 0,
@@ -2288,21 +2288,21 @@
     },
     {
       "addr": "0x0011F030",
-      "size": 120,
+      "size": 116,
       "name": "FUN_0011f030",
       "source": "src/functions/0011f030.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 116/120"
     },
     {
       "addr": "0x0011F0A8",
-      "size": 168,
+      "size": 164,
       "name": "FUN_0011f0a8",
       "source": "src/functions/0011f0a8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 164/168"
     },
     {
       "addr": "0x0011FC28",

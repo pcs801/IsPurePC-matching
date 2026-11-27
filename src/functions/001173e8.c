@@ -6,13 +6,11 @@ struct G {
     unsigned int count2;
 };
 
-// FUNCTION: SLPM 0x001173E8  size 208  core 204
 extern char D_B1EC00[];
 extern void FUN_001053c0(void);
 extern int FUN_00115730(int);
 extern int FUN_001173d0(int);
 extern int FUN_001174b8(int);
-
 int FUN_001173e8(void)
 {
     int kept;
@@ -25,16 +23,18 @@ int FUN_001173e8(void)
     seen = 0;
     FUN_001053c0();
     g = (struct G *)D_B1EC00;
-    p = (char *)g->entries;
-    for (i = 0; i < g->count; i++) {
-        if (FUN_00115730(*(short *)(p + 4)) != 0) {
-            seen++;
-            if (FUN_001173d0(*(unsigned short *)p) != 0)
-                kept++;
-        }
-        p += 16;
+    i = 0;
+    if (g->count != 0) {
+        p = (char *)g->entries;
+        do {
+            if (FUN_00115730(*(short *)(p + 4)) != 0) {
+                seen++;
+                if (FUN_001173d0(*(unsigned short *)p) != 0)
+                    kept++;
+            }
+            i++;
+            p += 16;
+        } while (i < g->count);
     }
-    if (kept < seen)
-        return 1;
-    return FUN_001174b8(2);
+    return (kept < seen) ? 1 : FUN_001174b8(2);
 }

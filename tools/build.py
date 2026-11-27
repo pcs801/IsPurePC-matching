@@ -190,6 +190,16 @@ def resolve_object_text(path, addr=None):
     data, secs = elf_sections(path)
     byname = {s["name"]: s for s in secs}
     base = None
+    jtbl_map = {}
+    hi_bias = {}
+    try:
+        jd = json.load(open(os.path.join(ROOT, "build", "jtbl-map.json"),
+                            encoding="utf-8"))
+        jtbl_map = {int(k, 16): int(v, 16) for k, v in jd.get("maps", {}).items()}
+        hi_bias = {int(k, 16): int(v) for k, v in jd.get("hi_bias", {}).items()}
+    except (OSError, ValueError):
+        jtbl_map = {}
+        hi_bias = {}
     if addr is not None:
         try:
             with open(BASEROM, "rb") as f:
@@ -234,7 +244,12 @@ def resolve_object_text(path, addr=None):
             pending_hi.append((off, si))
         elif rtype == 6:  # R_MIPS_LO16
             guided = False
+            lo_op = -1
             v = None if addr is None else addr + sign16(word & 0xFFFF)
+            if v is None and section_hint and addr_arg in jtbl_map:
+                v = jtbl_map[addr_arg] + int(sym.get("value") or 0)
+                guided = True
+                target_guided += 1
             if v is None and section_hint:
                 hoff = next((h for h, hsi in pending_hi if hsi == si), None)
                 if hoff is None and pending_hi:
@@ -243,7 +258,9 @@ def resolve_object_text(path, addr=None):
                     t0 = TEXT_OFF + (addr_arg - TEXT_ADDR + hoff)
                     t1 = TEXT_OFF + (addr_arg - TEXT_ADDR + off)
                     hi_w = int.from_bytes(base[t0:t0 + 4], "little") & 0xFFFF
-                    lo_w = int.from_bytes(base[t1:t1 + 4], "little") & 0xFFFF
+                    lo_instr = int.from_bytes(base[t1:t1 + 4], "little")
+                    lo_w = lo_instr & 0xFFFF
+                    lo_op = lo_instr >> 26
                     cand = (hi_w << 16) + lo_w
                     cand_s = (hi_w << 16) + sign16(lo_w)
                     if cand % 4 == 0 and TEXT_ADDR <= cand < 0x20000000:
@@ -258,7 +275,15 @@ def resolve_object_text(path, addr=None):
                 unresolved.append("%08X rc6 %s (section unresolved)" % (off, sym["name"] or "<section>"))
                 continue
             lo = v & 0xFFFF
-            hi = (v >> 16) & 0xFFFF if guided else ((v + 0x8000) >> 16) & 0xFFFF
+            if guided:
+                if addr_arg in hi_bias:
+                    hi = (((v + 0x8000) >> 16) if hi_bias[addr_arg]
+                          else (v >> 16)) & 0xFFFF
+                else:
+                    hi = (((v + 0x8000) >> 16) if lo_op in (0x08, 0x09, 0x19)
+                          else (v >> 16)) & 0xFFFF
+            else:
+                hi = ((v + 0x8000) >> 16) & 0xFFFF
             remain = []
             for hoff, hsi in pending_hi:
                 if hsi == si:
