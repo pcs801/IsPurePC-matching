@@ -1,13 +1,9 @@
-// FUNCTION: SLPM 0x00105FB8  size 544  core 540
-// 2-slot x 8-state pump (jtbl_00257FA0). ST/HIST are gp-relative scalars indexed by i;
-// slot block = D_1B741B0 + i*34 and is recomputed at each use.
-
 extern char D_1B741B0[];
 extern unsigned char D_00270C44;
 extern unsigned char D_00270C04;
+extern unsigned char D_00270C44a[];
 extern char D_0026FC28[];
 extern char D_B264B0[];
-
 extern int FUN_001e6120(int, int, int);
 extern int FUN_001e6548(int, int, int, int);
 extern int FUN_001e6680(int, int, int, int);
@@ -15,15 +11,16 @@ extern int FUN_001e6800(int, int, void *);
 extern int FUN_001e6738(int, int, void *);
 extern int FUN_001e60a8(int, int, void *);
 extern void FUN_0019bde0(void);
-
 void FUN_00105fb8(void)
 {
     int i;
     int st;
     int r;
+    char *slot;
 
     for (i = 0; i < 2; i++) {
-        *(char *)(D_1B741B0 + i * 34) = -1;
+        slot = (char *)(D_1B741B0 + i * 34);
+        *slot = -1;
         st = FUN_001e6120(i, 0, -1);
         switch (st) {
         case 0:
@@ -34,9 +31,9 @@ void FUN_00105fb8(void)
         case 2:
             if ((&D_00270C44)[i] == 0) {
                 (&D_00270C44)[i] = 3;
-                FUN_001e60a8(i, 0, (void *)(D_1B741B0 + i * 34));
+                FUN_001e60a8(i, 0, slot);
             } else if ((&D_00270C44)[i] == 3) {
-                FUN_001e60a8(i, 0, (void *)(D_1B741B0 + i * 34));
+                FUN_001e60a8(i, 0, slot);
             }
             break;
         case 6:
@@ -59,7 +56,7 @@ void FUN_00105fb8(void)
                     (&D_00270C44)[i] = 1;
                 } else {
                     FUN_001e6738(i, 0, (void *)(D_B264B0 + i * 6));
-                    FUN_001e60a8(i, 0, (void *)(D_1B741B0 + i * 34));
+                    FUN_001e60a8(i, 0, slot);
                 }
                 break;
             }

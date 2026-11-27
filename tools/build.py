@@ -237,6 +237,8 @@ def resolve_object_text(path, addr=None):
             v = None if addr is None else addr + sign16(word & 0xFFFF)
             if v is None and section_hint:
                 hoff = next((h for h, hsi in pending_hi if hsi == si), None)
+                if hoff is None and pending_hi:
+                    hoff = pending_hi[-1][0]
                 if hoff is not None:
                     t0 = TEXT_OFF + (addr_arg - TEXT_ADDR + hoff)
                     t1 = TEXT_OFF + (addr_arg - TEXT_ADDR + off)
