@@ -19,13 +19,13 @@ void FUN_0010a5e8(int a2)
     Rect r;
     B4 b;
 
-    r.x = 0;
-    r.y = 0;
+    b.d = -128;
     r.w = 640;
     r.h = 448;
-    b.a = 0;
-    b.b = 0;
     b.c = 0;
-    b.d = -128;
-    FUN_001a09a0(&r, &b, a2, 448);
+    b.b = 0;
+    b.a = 0;
+    r.x = 0;
+    r.y = 0;
+    FUN_001a09a0(&r, &b, a2, r.h);
 }
