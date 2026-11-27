@@ -1,32 +1,59 @@
-# TASK-MANIFEST (m26b9-tu-00107d88)
+# 任务产出清单
 
-任务：TU tu/00107d88 三个 PS2 MIPS 函数字节级匹配（工作区 E:/ONE PIECE/S/IsPurePC-matching）
 
-| 时间 | 文件 | 来源/用途 | 类别 | 处置 |
-|---|---|---|---|---|
-| 05:10 | build/_m26_dis.py | 自建并排反汇编对比脚本 | 临时文件 | 保留（供后续 worker 复用） |
-| 05:10 | build/_m26_orig.py | 自建 baserom 原始函数反汇编 | 临时文件 | 保留 |
-| 05:10 | tools/_m26_shape.py | 自建规范化结构差异工具 | 临时文件 | 保留 |
-| 05:10 | tools/_m26_try.py | 自建批量候选编译比对工具 | 临时文件 | 保留 |
-| 05:10 | build/_m26_spec.json | 批量试验输入（临时） | 临时文件 | 保留 |
-| 05:10 | build/candidates/try*/、check_*/ | 编译产物缓存 | 中间产物 | 保留 |
-| 05:10 | src/functions/00107f30.c | 最终源码（MATCH） | 交付物 | 保留 |
-| 05:10 | src/functions/001080a0.c | 最佳候选（MISS，34 差异） | 交付物 | 保留 |
-| 05:10 | src/functions/001081f8.c | 最佳候选（MISS，138 差异） | 交付物 | 保留 |
-| 05:10 | build/m26-tu/tu_00107d88/matched.md | 已命中源码累积 | 交付物 | 保留 |
-| 05:10 | build/m26-tu/tu_00107d88/result.json | TU 结果 | 交付物 | 保留 |
+## t193 (0x00167568 case idx6/7) — 02:56
+- `src/functions/00167568.c` — 累积写：骨架 + case idx0（并修正其尾部调用）+ case idx6/7；来源：反汇编 0x1677F8-0x1678F4；类别：交付物（源码，待统一 verify）；处置：保留
+- `build/m26-tu/tu_00167568/result.json` — TU 记录（追加 case 6/7 块条目）；类别：中间产物/记录；处置：保留
+- `build/_dis_167568.txt` — 反汇编导出（t175 期间生成）；类别：临时文件；处置：保留（后续统一 verify 还要用）
 
-## m26b10-tu-0010c230（PS2 matching：TU tu/0010c230 函数字节匹配）
-目标：把 TU tu/0010c230 的 1 个函数（0x0010C230）匹配到字节一致。
+## t198 (0x00167568 case idx1/2) — 03:03
+- `src/functions/00167568.c` — 累积写：新增 case 1/2（守卫 + 单次 append 尾部）；来源：反汇编 0x1678F8-0x1679F4；类别：交付物（源码，待统一 verify）；处置：保留
+- `build/m26-tu/tu_00167568/result.json` — TU 记录（追加 case 1/2 块条目）；类别：中间产物/记录；处置：保留
 
-| 时间 | 文件（绝对路径） | 来源/用途 | 类别 | 处置 |
-| --- | --- | --- | --- | --- |
-| 04:20 | E:\\ONE PIECE\\S\\IsPurePC-matching\\src\\functions\\0010c230.c | 本任务手写 C 候选（最终 MATCH） | 交付物 | 保留 |
-| 04:20 | E:\\ONE PIECE\\S\\IsPurePC-matching\\build\\m26-tu\\tu_0010c230\\matched.md | 命中源码归档 | 交付物 | 保留 |
-| 04:20 | E:\\ONE PIECE\\S\\IsPurePC-matching\\build\\m26-tu\\tu_0010c230\\result.json | 每函数结果汇总 | 交付物 | 保留 |
-| 04:20 | E:\\ONE PIECE\\S\\IsPurePC-matching\\build\\m26-tu\\tu_0010c230\\dump.py / iterate.py / iterate2.py / iterate3.py | 反汇编与变体批量比对脚本 | 临时文件 | 删除 |
-| 04:20 | E:\\ONE PIECE\\S\\IsPurePC-matching\\build\\candidates\\{check_10c230,tu10c230,tu10c230v,tu10c230w,tu10c230x}\\ | pipeline 编译中间产物 | 中间产物 | 保留（仓库常规构建产物，与其它 TU 并存） |
-| 04:40 | E:/ONE PIECE/S/IsPurePC-matching/build/m26-tu/tu_00104e48/showdiff.py | 自建：编译单函数并与 ROM 逐字比对 + objdump 反汇编列出（pipeline 自带 disasm 因路径 bug 恒为空） | 中间产物 | m26 tu/00104e48 字节匹配 | 保留（TU 沙箱工具） |
-| 04:40 | E:/ONE PIECE/S/IsPurePC-matching/build/m26-tu/tu_00104e48/expdump.py, exp.c | 自建：C 片段快速编译+反汇编实验（abs/尾调用形态探测） | 临时文件 | 同上 | 可删 |
-| 04:40 | E:/ONE PIECE/S/IsPurePC-matching/src/functions/001071b0.c, 00107758.c, 00107990.c | 三个候选 C 源（00107758 已 MATCH） | 交付物 | 同上 | 保留 |
-| 04:40 | E:/ONE PIECE/S/IsPurePC-matching/build/m26-tu/tu_00104e48/matched.md, result.json | 命中源码累积与逐函数结果 | 交付物 | 同上 | 保留 |
+## t200 (小函数批：4 个 16B syscall stub) — 03:12
+- `src/functions/00205690.c` / `002056a0.c` / `002056b0.c` / `002056c0.c` — 占位实现 + 说明注释（目标为 syscall stub，纯 C 不可生成）；类别：交付物（占位）；处置：保留
+- `build/m26-small/t200.json` — 本批结论记录（4/4 不可匹配 + 证据）；类别：中间产物/记录；处置：保留
+
+## t204 (小函数批 set 1：4 个) — 03:23
+- `src/functions/001b4c18.c` / `001cffe8.c` / `001d1198.c` — 命中实现（MATCH g=0）；类别：交付物；处置：保留
+- `build/m26-small/t204.json` — 本批结论（3 MATCH + 1 known-hard + 关键写法）；类别：记录；处置：保留
+- `build/_v1b4c18.json` / `build/_probe_1b4c.py` — 变体探针（临时）；类别：临时文件；处置：保留（写法可复用）
+
+## t207 (小函数批 set 4：4 个) — 03:34
+- `src/functions/001ab618.c` / `001ab638.c` / `001b47e8.c` / `001b7ef8.c` — 4 个命中实现（MATCH g=0）；类别：交付物；处置：保留
+- `build/m26-small/t207.json` — 本批结论 + **单调用包装 vs sibcall 的解法**（do-while 包装）；类别：记录；处置：保留
+- `build/_vt207.json` / `build/_probe_t207.py` — sibcall 试探脚本（临时）；类别：临时文件；处置：保留（经验已入记录）
+
+## t216 (小函数批 set 2：5 个) — 03:44
+- `src/functions/0020ce70.c` / `0020d2c0.c` / `0020dd90.c` / `0020e888.c` / `0020e8a8.c` — 5 个命中实现（MATCH g=0，全部一次通过）；类别：交付物；处置：保留
+- `build/m26-small/t216.json` — 本批结论（5/5 + do-while 规则验证 + 栈缓冲参数扩展）；类别：记录；处置：保留
+
+## t224 (小函数批 set 7：5 个) — 03:52
+- `src/functions/001b68e8.c` / `001b6910.c` / `001b6938.c` / `001b6b68.c` / `001b6bf0.c` — 5 个命中（MATCH g=0，全部一次通过）；类别：交付物；处置：保留
+- `build/m26-small/t224.json` — 5/5 记录 + 两条新模式（守卫式函数指针回调、多调用尾调用）；类别：记录；处置：保留
+
+## playbook 汇总（cracker-2，t204/t207/t216/t224 经验） — 03:56
+- `build/m26-small/PLAYBOOK-small-functions.md` — 小函数匹配 6 条规则汇总（纯包装 do-while、栈缓冲、守卫回调、多调用尾调用、早退写法、asm-only 清单）；类别：记录（团队共享）；处置：保留
+
+## t230 (小函数批 set 11：5 个) — 04:12
+- `src/functions/001f5bb0.c` — **MATCH g=0**（`return (r == -1) ? 0 : r;`，movz 语义）；类别：交付物；处置：保留
+- `src/functions/001e1d60.c` / `001e1dc0.c` / `001eab38.c` / `001eab60.c` — 近失版本（4 / 10 / 2 / 2 词差）；类别：交付物（near-miss）；处置：保留
+- `build/m26-small/t230.json` — 5 条结果 + 每条的差异根因与已试写法；类别：记录；处置：保留
+
+## t237 (小函数批 set 12：5 个) — 04:20
+- `src/functions/001cc338.c` — **MATCH g=0**（`p->fC4 = v; p->fC8 = v / 0x600;`）；类别：交付物；处置：保留
+- `src/functions/001ac710.c` — 近失（44/44、2 词差：GCC 把 -1 重写成 -625）；类别：交付物（near-miss）；处置：保留
+- `src/functions/001be878.c` / `001c1d98.c` / `001cc2d8.c` — 硬墙占位（空延时循环被删 / splat 把 6 个访问器并成 48B）；类别：交付物（占位）；处置：保留
+- `build/m26-small/t237.json` — 5 条结果与根因；类别：记录；处置：保留
+
+## playbook 追加规则 7（空变参函数） — 04:26
+- `build/m26-small/PLAYBOOK-small-functions.md` — 追加「空变参函数直接写 `void f(int a, ...) { }`」一条（t242 经验）；类别：记录（团队共享）；处置：保留
+
+## playbook 追加规则 8（非对齐 struct 拷贝） — 04:30
+- `build/m26-small/PLAYBOOK-small-functions.md` — 追加「非对齐 8 字节拷贝用 struct S8 拷贝表达，ldl/ldr/sdl/sdr 非 asm-only」（t247 经验）；类别：记录（团队共享）；处置：保留
+
+## playbook 回验更新（cache / ldl-ldr） — 04:34
+- `build/m26-small/PLAYBOOK-small-functions.md` — 规则 6 增补 `cache` 仍 asm-only；规则 8 标注 0x001D1230 MATCH 已验证；类别：记录（团队共享）；处置：保留
+
+## playbook 追加规则 9（指令分类最终版） — 04:38
+- `build/m26-small/PLAYBOOK-small-functions.md` — 新增 9 节：可写（ldl/ldr/sdl/sdr、空变参）vs 不可写（lq/sq、cache/mfc0/ei/sync/syscall），并记录 0x001E3FA8 实为 cache 的 sig 误标；类别：记录（团队共享）；处置：保留

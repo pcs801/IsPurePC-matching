@@ -23,6 +23,10 @@ def load_matched():
     p = os.path.join(ROOT, "config", "overrides.json")
     with open(p, encoding="utf-8") as f:
         data = json.load(f)
+    # asm-native (syscall/sync/ei/cop0/lq/sq) is NOT C-matching work: those
+    # functions have no src/functions/<addr>.c, so reporting them as matched makes
+    # ByteMatch show a 100% unit whose function then reads "isn't in the repository
+    # at this commit". They stay tracked in build/m26-asm-native.json only.
     return {int(fn["addr"], 16) for fn in data.get("functions", []) if fn.get("status") == "matched"}
 
 def load_units():

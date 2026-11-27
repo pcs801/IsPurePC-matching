@@ -106,7 +106,8 @@
       "source": "src/functions/001016e0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 32 bytes; g=0"
+      "note": "M2.6 worker: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00101700",
@@ -124,7 +125,8 @@
       "source": "src/functions/00101758.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 168 bytes"
+      "note": "M2.6 late-match: 168 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00101800",
@@ -142,7 +144,8 @@
       "source": "src/functions/00101960.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 10: 160 bytes"
+      "note": "M2.6 TU-batch 10: 160 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00101A00",
@@ -205,7 +208,8 @@
       "source": "src/functions/00102008.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00102078",
@@ -214,7 +218,8 @@
       "source": "src/functions/00102078.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00102080",
@@ -223,25 +228,28 @@
       "source": "src/functions/00102080.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 TU-batch 12: 80 bytes"
+      "note": "M2.6 TU-batch 12: 80 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001020D0",
-      "size": 96,
+      "size": 92,
       "name": "FUN_001020d0",
       "source": "src/functions/001020d0.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96",
+      "kind": "core"
     },
     {
       "addr": "0x00102130",
-      "size": 96,
+      "size": 92,
       "name": "FUN_00102130",
       "source": "src/functions/00102130.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96",
+      "kind": "core"
     },
     {
       "addr": "0x00102190",
@@ -250,7 +258,8 @@
       "source": "src/functions/00102190.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 13: 208 bytes"
+      "note": "M2.6 TU-batch 13: 208 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00102260",
@@ -263,12 +272,13 @@
     },
     {
       "addr": "0x00102A78",
-      "size": 144,
+      "size": 140,
       "name": "FUN_00102a78",
       "source": "src/functions/00102a78.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 140/144",
+      "kind": "core"
     },
     {
       "addr": "0x00102B08",
@@ -304,7 +314,8 @@
       "source": "src/functions/00103540.c",
       "g": 0,
       "status": "matched",
-      "note": "matched (verified from src)"
+      "note": "matched (verified from src)",
+      "kind": "full"
     },
     {
       "addr": "0x001035D8",
@@ -331,7 +342,8 @@
       "source": "src/functions/00104648.c",
       "g": 0,
       "status": "matched",
-      "note": "matched (verified from src)"
+      "note": "matched (verified from src)",
+      "kind": "full"
     },
     {
       "addr": "0x00104728",
@@ -394,7 +406,8 @@
       "source": "src/functions/00104e20.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 40 bytes"
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00104E48",
@@ -403,7 +416,8 @@
       "source": "src/functions/00104e48.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 136 bytes"
+      "note": "M2.6 late-match: 136 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00104ED0",
@@ -412,7 +426,8 @@
       "source": "src/functions/00104ed0.c",
       "g": 8,
       "status": "matched",
-      "note": "matched (verified from src) (size->core)"
+      "note": "matched (verified from src) (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x00104F10",
@@ -421,7 +436,8 @@
       "source": "src/functions/00104f10.c",
       "g": 0,
       "status": "matched",
-      "note": "matched (verified from src)"
+      "note": "matched (verified from src)",
+      "kind": "full"
     },
     {
       "addr": "0x00104F50",
@@ -430,7 +446,8 @@
       "source": "src/functions/00104f50.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 232 bytes"
+      "note": "M2.6 late-match: 232 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105038",
@@ -439,7 +456,8 @@
       "source": "src/functions/00105038.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00105060",
@@ -448,7 +466,8 @@
       "source": "src/functions/00105060.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 7: 112 bytes"
+      "note": "M2.6 TU-batch 7: 112 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001050D0",
@@ -457,7 +476,8 @@
       "source": "src/functions/001050d0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001050F8",
@@ -466,7 +486,8 @@
       "source": "src/functions/001050f8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 7: 112 bytes"
+      "note": "M2.6 TU-batch 7: 112 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105168",
@@ -475,7 +496,8 @@
       "source": "src/functions/00105168.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 7: 152 bytes"
+      "note": "M2.6 TU-batch 7: 152 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105238",
@@ -484,7 +506,8 @@
       "source": "src/functions/00105238.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 8: 144 bytes"
+      "note": "M2.6 TU-batch 8: 144 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105300",
@@ -493,7 +516,8 @@
       "source": "src/functions/00105300.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 8: 144 bytes"
+      "note": "M2.6 TU-batch 8: 144 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001053C0",
@@ -502,7 +526,8 @@
       "source": "src/functions/001053c0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 8: 112 bytes"
+      "note": "M2.6 TU-batch 8: 112 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105460",
@@ -511,7 +536,8 @@
       "source": "src/functions/00105460.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 9: 112 bytes"
+      "note": "M2.6 TU-batch 9: 112 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105508",
@@ -520,7 +546,8 @@
       "source": "src/functions/00105508.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 9: 144 bytes"
+      "note": "M2.6 TU-batch 9: 144 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001055D0",
@@ -528,8 +555,9 @@
       "name": "FUN_001055d0",
       "source": "src/functions/001055d0.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 144 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105698",
@@ -538,7 +566,8 @@
       "source": "src/functions/00105698.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 10: 144 bytes"
+      "note": "M2.6 TU-batch 10: 144 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105760",
@@ -547,7 +576,8 @@
       "source": "src/functions/00105760.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 10: 184 bytes"
+      "note": "M2.6 TU-batch 10: 184 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105818",
@@ -556,7 +586,8 @@
       "source": "src/functions/00105818.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 32 bytes; g=0"
+      "note": "M2.6 worker: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00105838",
@@ -565,7 +596,8 @@
       "source": "src/functions/00105838.c",
       "g": 0,
       "status": "matched",
-      "note": "matched (verified from src) (size->core)"
+      "note": "matched (verified from src) (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001058A8",
@@ -574,7 +606,8 @@
       "source": "src/functions/001058a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 7: 72 bytes"
+      "note": "M2.6 TU-batch 7: 72 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001058F0",
@@ -619,7 +652,8 @@
       "source": "src/functions/00105af0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: core 156/160 (size->core)"
+      "note": "M2.6 late-match: core 156/160 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x00105B90",
@@ -628,7 +662,8 @@
       "source": "src/functions/00105b90.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 144 bytes"
+      "note": "M2.6 late-match: 144 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105C20",
@@ -637,7 +672,8 @@
       "source": "src/functions/00105c20.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 8: 144 bytes"
+      "note": "M2.6 TU-batch 8: 144 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105CB0",
@@ -646,7 +682,8 @@
       "source": "src/functions/00105cb0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 7: 216 bytes"
+      "note": "M2.6 TU-batch 7: 216 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105D88",
@@ -659,12 +696,13 @@
     },
     {
       "addr": "0x00105E38",
-      "size": 288,
+      "size": 284,
       "name": "FUN_00105e38",
       "source": "src/functions/00105e38.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 284/288",
+      "kind": "core"
     },
     {
       "addr": "0x00105F58",
@@ -673,7 +711,8 @@
       "source": "src/functions/00105f58.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: 88 bytes"
+      "note": "M2.6 late-match: 88 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00105FB0",
@@ -682,7 +721,8 @@
       "source": "src/functions/00105fb0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00105FB8",
@@ -700,7 +740,8 @@
       "source": "src/functions/001061d8.c",
       "g": 0,
       "status": "matched",
-      "note": "matched (verified from src) (size->core)"
+      "note": "matched (verified from src) (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x00106268",
@@ -790,7 +831,8 @@
       "source": "src/functions/00107508.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: 168 bytes"
+      "note": "M2.6 late-match: 168 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001075B0",
@@ -799,7 +841,8 @@
       "source": "src/functions/001075b0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: 32 bytes"
+      "note": "M2.6 late-match: 32 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001075D0",
@@ -808,7 +851,8 @@
       "source": "src/functions/001075d0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00107610",
@@ -817,16 +861,18 @@
       "source": "src/functions/00107610.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00107618",
-      "size": 160,
+      "size": 156,
       "name": "FUN_00107618",
       "source": "src/functions/00107618.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 156/160",
+      "kind": "core"
     },
     {
       "addr": "0x001076B8",
@@ -835,7 +881,8 @@
       "source": "src/functions/001076b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 9: 112 bytes"
+      "note": "M2.6 TU-batch 9: 112 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00107728",
@@ -844,16 +891,18 @@
       "source": "src/functions/00107728.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 48 bytes; g=8"
+      "note": "M2.6 pipeline: 48 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00107758",
-      "size": 168,
+      "size": 164,
       "name": "FUN_00107758",
       "source": "src/functions/00107758.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 164/168",
+      "kind": "core"
     },
     {
       "addr": "0x00107800",
@@ -862,7 +911,8 @@
       "source": "src/functions/00107800.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 108/112 (size->core)"
+      "note": "M2.6 late-match: core 108/112 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x00107870",
@@ -871,16 +921,18 @@
       "source": "src/functions/00107870.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 156/160 (size->core)"
+      "note": "M2.6 late-match: core 156/160 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x00107910",
-      "size": 128,
+      "size": 124,
       "name": "FUN_00107910",
       "source": "src/functions/00107910.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 124/128",
+      "kind": "core"
     },
     {
       "addr": "0x00107990",
@@ -889,7 +941,8 @@
       "source": "src/functions/00107990.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 172/176 (size->core)"
+      "note": "M2.6 late-match: core 172/176 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x00107A40",
@@ -898,7 +951,8 @@
       "source": "src/functions/00107a40.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 12/16"
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x00107A50",
@@ -907,7 +961,8 @@
       "source": "src/functions/00107a50.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 10: 72 bytes"
+      "note": "M2.6 TU-batch 10: 72 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00107A98",
@@ -916,7 +971,8 @@
       "source": "src/functions/00107a98.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 10: 72 bytes"
+      "note": "M2.6 TU-batch 10: 72 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00107AE0",
@@ -925,16 +981,18 @@
       "source": "src/functions/00107ae0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00107AF8",
-      "size": 40,
+      "size": 36,
       "name": "FUN_00107af8",
       "source": "src/functions/00107af8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
     },
     {
       "addr": "0x00107B20",
@@ -943,7 +1001,8 @@
       "source": "src/functions/00107b20.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 10: 112 bytes"
+      "note": "M2.6 TU-batch 10: 112 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00107B90",
@@ -970,7 +1029,8 @@
       "source": "src/functions/00107d10.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 120 bytes"
+      "note": "M2.6 late-match: 120 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00107D88",
@@ -988,7 +1048,8 @@
       "source": "src/functions/00107db8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 17: 224 bytes"
+      "note": "M2.6 TU-batch 17: 224 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00107E98",
@@ -997,7 +1058,8 @@
       "source": "src/functions/00107e98.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00107EB8",
@@ -1006,7 +1068,8 @@
       "source": "src/functions/00107eb8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: core 28/32 (size->core)"
+      "note": "M2.6 pipeline: core 28/32 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x00107ED8",
@@ -1024,7 +1087,8 @@
       "source": "src/functions/00107f30.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: core 364/368 (size->core)"
+      "note": "M2.6 late-match: core 364/368 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001080A0",
@@ -1051,7 +1115,8 @@
       "source": "src/functions/00108468.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00108478",
@@ -1109,21 +1174,23 @@
     },
     {
       "addr": "0x001091F0",
-      "size": 240,
+      "size": 236,
       "name": "FUN_001091f0",
       "source": "src/functions/001091f0.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 236/240",
+      "kind": "core"
     },
     {
       "addr": "0x001092E0",
-      "size": 240,
+      "size": 236,
       "name": "FUN_001092e0",
       "source": "src/functions/001092e0.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 236/240",
+      "kind": "core"
     },
     {
       "addr": "0x001093D0",
@@ -1204,25 +1271,28 @@
       "source": "src/functions/0010a3d0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 12: 160 bytes"
+      "note": "M2.6 TU-batch 12: 160 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010A470",
-      "size": 224,
+      "size": 220,
       "name": "FUN_0010a470",
       "source": "src/functions/0010a470.c",
       "g": 8,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 220/224",
+      "kind": "core"
     },
     {
       "addr": "0x0010A550",
-      "size": 152,
+      "size": 148,
       "name": "FUN_0010a550",
       "source": "src/functions/0010a550.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 148/152",
+      "kind": "core"
     },
     {
       "addr": "0x0010A5E8",
@@ -1244,12 +1314,13 @@
     },
     {
       "addr": "0x0010A818",
-      "size": 520,
+      "size": 516,
       "name": "FUN_0010a818",
       "source": "src/functions/0010a818.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 516/520",
+      "kind": "core"
     },
     {
       "addr": "0x0010AA20",
@@ -1276,16 +1347,18 @@
       "source": "src/functions/0010b290.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 556/560"
+      "note": "M2.6 late-match: core 556/560",
+      "kind": "core"
     },
     {
       "addr": "0x0010B4C0",
-      "size": 488,
+      "size": 484,
       "name": "FUN_0010b4c0",
       "source": "src/functions/0010b4c0.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 484/488",
+      "kind": "core"
     },
     {
       "addr": "0x0010B6A8",
@@ -1307,30 +1380,33 @@
     },
     {
       "addr": "0x0010B9F8",
-      "size": 176,
+      "size": 172,
       "name": "FUN_0010b9f8",
       "source": "src/functions/0010b9f8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 172/176",
+      "kind": "core"
     },
     {
       "addr": "0x0010BAA8",
-      "size": 112,
+      "size": 108,
       "name": "FUN_0010baa8",
       "source": "src/functions/0010baa8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 108/112",
+      "kind": "core"
     },
     {
       "addr": "0x0010BB18",
-      "size": 112,
+      "size": 108,
       "name": "FUN_0010bb18",
       "source": "src/functions/0010bb18.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 108/112",
+      "kind": "core"
     },
     {
       "addr": "0x0010BB88",
@@ -1339,7 +1415,8 @@
       "source": "src/functions/0010bb88.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 12/16"
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x0010BB98",
@@ -1352,12 +1429,13 @@
     },
     {
       "addr": "0x0010BC40",
-      "size": 176,
+      "size": 172,
       "name": "FUN_0010bc40",
       "source": "src/functions/0010bc40.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 172/176",
+      "kind": "core"
     },
     {
       "addr": "0x0010BCF0",
@@ -1370,21 +1448,23 @@
     },
     {
       "addr": "0x0010BD80",
-      "size": 168,
+      "size": 164,
       "name": "FUN_0010bd80",
       "source": "src/functions/0010bd80.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 164/168",
+      "kind": "core"
     },
     {
       "addr": "0x0010BE28",
-      "size": 104,
+      "size": 100,
       "name": "FUN_0010be28",
       "source": "src/functions/0010be28.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104",
+      "kind": "core"
     },
     {
       "addr": "0x0010BE90",
@@ -1393,7 +1473,8 @@
       "source": "src/functions/0010be90.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 13: 72 bytes"
+      "note": "M2.6 TU-batch 13: 72 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010BED8",
@@ -1401,8 +1482,9 @@
       "name": "FUN_0010bed8",
       "source": "src/functions/0010bed8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010BF20",
@@ -1410,8 +1492,9 @@
       "name": "FUN_0010bf20",
       "source": "src/functions/0010bf20.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010BF68",
@@ -1420,7 +1503,8 @@
       "source": "src/functions/0010bf68.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 12: 96 bytes"
+      "note": "M2.6 TU-batch 12: 96 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010BFC8",
@@ -1429,7 +1513,8 @@
       "source": "src/functions/0010bfc8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=0"
+      "note": "M2.6 pipeline: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0010BFE0",
@@ -1438,7 +1523,8 @@
       "source": "src/functions/0010bfe0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 TU-batch 12: 304 bytes"
+      "note": "M2.6 TU-batch 12: 304 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010C110",
@@ -1447,16 +1533,18 @@
       "source": "src/functions/0010c110.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0010C118",
-      "size": 216,
+      "size": 212,
       "name": "FUN_0010c118",
       "source": "src/functions/0010c118.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 212/216",
+      "kind": "core"
     },
     {
       "addr": "0x0010C218",
@@ -1465,7 +1553,8 @@
       "source": "src/functions/0010c218.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=8"
+      "note": "M2.6 pipeline: 24 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x0010C230",
@@ -1474,7 +1563,8 @@
       "source": "src/functions/0010c230.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 14: 240 bytes"
+      "note": "M2.6 TU-batch 14: 240 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010C320",
@@ -1523,12 +1613,13 @@
     },
     {
       "addr": "0x0010D268",
-      "size": 188,
+      "size": 184,
       "name": "FUN_0010d268",
       "source": "src/functions/0010d268.c",
       "g": 8,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 184/188",
+      "kind": "core"
     },
     {
       "addr": "0x0010D324",
@@ -1573,7 +1664,8 @@
       "source": "src/functions/0010db80.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 13: 112 bytes"
+      "note": "M2.6 TU-batch 13: 112 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010DBF0",
@@ -1582,7 +1674,8 @@
       "source": "src/functions/0010dbf0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 13: 184 bytes"
+      "note": "M2.6 TU-batch 13: 184 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010DCA8",
@@ -1591,7 +1684,8 @@
       "source": "src/functions/0010dca8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 TU-batch 13: 160 bytes (size->core)"
+      "note": "M2.6 TU-batch 13: 160 bytes (size->core)",
+      "kind": "full"
     },
     {
       "addr": "0x0010DD48",
@@ -1609,7 +1703,8 @@
       "source": "src/functions/0010dec0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 TU-batch 14: 120 bytes"
+      "note": "M2.6 TU-batch 14: 120 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0010DF70",
@@ -1622,12 +1717,13 @@
     },
     {
       "addr": "0x0010E008",
-      "size": 104,
+      "size": 100,
       "name": "FUN_0010e008",
       "source": "src/functions/0010e008.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104",
+      "kind": "core"
     },
     {
       "addr": "0x0010E070",
@@ -1663,7 +1759,8 @@
       "source": "src/functions/0010ed40.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 16 bytes"
+      "note": "M2.6 late-match: 16 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001100A0",
@@ -1672,7 +1769,8 @@
       "source": "src/functions/001100a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 40 bytes; g=0"
+      "note": "M2.5 call: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00110450",
@@ -1681,16 +1779,18 @@
       "source": "src/functions/00110450.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00110598",
-      "size": 24,
+      "size": 20,
       "name": "FUN_00110598",
       "source": "src/functions/00110598.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
     },
     {
       "addr": "0x00110AF8",
@@ -1735,7 +1835,8 @@
       "source": "src/functions/00111218.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00111238",
@@ -1744,16 +1845,18 @@
       "source": "src/functions/00111238.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 15: 24 bytes"
+      "note": "M2.6 TU-batch 15: 24 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00111270",
-      "size": 328,
+      "size": 324,
       "name": "FUN_00111270",
       "source": "src/functions/00111270.c",
       "g": 8,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 324/328",
+      "kind": "core"
     },
     {
       "addr": "0x001113B8",
@@ -1762,7 +1865,8 @@
       "source": "src/functions/001113b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 11: 24 bytes"
+      "note": "M2.6 TU-batch 11: 24 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001113D0",
@@ -1771,7 +1875,8 @@
       "source": "src/functions/001113d0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 TU-batch 12: 56 bytes"
+      "note": "M2.6 TU-batch 12: 56 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00111408",
@@ -1780,16 +1885,18 @@
       "source": "src/functions/00111408.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 12: 288 bytes"
+      "note": "M2.6 TU-batch 12: 288 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00111528",
-      "size": 304,
+      "size": 300,
       "name": "FUN_00111528",
       "source": "src/functions/00111528.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 300/304",
+      "kind": "core"
     },
     {
       "addr": "0x00111658",
@@ -1807,7 +1914,8 @@
       "source": "src/functions/00111760.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00111768",
@@ -1816,34 +1924,38 @@
       "source": "src/functions/00111768.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.3 llm: round 1 cand 1; 64 bytes; g=0"
+      "note": "M2.3 llm: round 1 cand 1; 64 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001117A8",
-      "size": 104,
+      "size": 100,
       "name": "FUN_001117a8",
       "source": "src/functions/001117a8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104",
+      "kind": "core"
     },
     {
       "addr": "0x00111810",
-      "size": 96,
+      "size": 92,
       "name": "FUN_00111810",
       "source": "src/functions/00111810.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96",
+      "kind": "core"
     },
     {
       "addr": "0x001118A0",
-      "size": 288,
+      "size": 284,
       "name": "FUN_001118a0",
       "source": "src/functions/001118a0.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 284/288",
+      "kind": "core"
     },
     {
       "addr": "0x001119C0",
@@ -1865,12 +1977,13 @@
     },
     {
       "addr": "0x00111C80",
-      "size": 64,
+      "size": 60,
       "name": "FUN_00111c80",
       "source": "src/functions/00111c80.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64",
+      "kind": "core"
     },
     {
       "addr": "0x00111CC0",
@@ -1883,12 +1996,13 @@
     },
     {
       "addr": "0x00111D68",
-      "size": 24,
+      "size": 20,
       "name": "FUN_00111d68",
       "source": "src/functions/00111d68.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
     },
     {
       "addr": "0x00111D80",
@@ -1901,12 +2015,13 @@
     },
     {
       "addr": "0x00111DE8",
-      "size": 168,
+      "size": 164,
       "name": "FUN_00111de8",
       "source": "src/functions/00111de8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 164/168",
+      "kind": "core"
     },
     {
       "addr": "0x00111E90",
@@ -1915,7 +2030,8 @@
       "source": "src/functions/00111e90.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 18: 128 bytes"
+      "note": "M2.6 TU-batch 18: 128 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00111F10",
@@ -1924,7 +2040,8 @@
       "source": "src/functions/00111f10.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: core 100/104"
+      "note": "M2.6 late-match: core 100/104",
+      "kind": "core"
     },
     {
       "addr": "0x00111F78",
@@ -1951,7 +2068,8 @@
       "source": "src/functions/00112448.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00112450",
@@ -1960,16 +2078,18 @@
       "source": "src/functions/00112450.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 14: 256 bytes"
+      "note": "M2.6 TU-batch 14: 256 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00112550",
-      "size": 56,
+      "size": 52,
       "name": "FUN_00112550",
       "source": "src/functions/00112550.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56",
+      "kind": "core"
     },
     {
       "addr": "0x00112588",
@@ -1978,7 +2098,8 @@
       "source": "src/functions/00112588.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 12/16"
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x00112598",
@@ -1987,7 +2108,8 @@
       "source": "src/functions/00112598.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 20/24 (size->core)"
+      "note": "M2.6 pipeline: core 20/24 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001125B0",
@@ -1996,7 +2118,8 @@
       "source": "src/functions/001125b0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001125C8",
@@ -2005,16 +2128,18 @@
       "source": "src/functions/001125c8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 56 bytes; g=0"
+      "note": "M2.6 worker: 56 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00112700",
-      "size": 80,
+      "size": 76,
       "name": "FUN_00112700",
       "source": "src/functions/00112700.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80",
+      "kind": "core"
     },
     {
       "addr": "0x00112750",
@@ -2023,7 +2148,8 @@
       "source": "src/functions/00112750.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00112770",
@@ -2032,7 +2158,8 @@
       "source": "src/functions/00112770.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00112788",
@@ -2041,7 +2168,8 @@
       "source": "src/functions/00112788.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00112850",
@@ -2050,7 +2178,8 @@
       "source": "src/functions/00112850.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 40 bytes; g=0"
+      "note": "M2.5 call: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00112A70",
@@ -2068,7 +2197,8 @@
       "source": "src/functions/00112b88.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 20/24 (size->core)"
+      "note": "M2.6 pipeline: core 20/24 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001134C8",
@@ -2081,12 +2211,13 @@
     },
     {
       "addr": "0x001137C8",
-      "size": 88,
+      "size": 84,
       "name": "FUN_001137c8",
       "source": "src/functions/001137c8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88",
+      "kind": "core"
     },
     {
       "addr": "0x00114550",
@@ -2158,7 +2289,8 @@
       "source": "src/functions/00115938.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 17: 184 bytes"
+      "note": "M2.6 TU-batch 17: 184 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001159F0",
@@ -2185,7 +2317,8 @@
       "source": "src/functions/00115c28.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 272 bytes"
+      "note": "M2.6 late-match: 272 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00115D38",
@@ -2203,7 +2336,8 @@
       "source": "src/functions/00115e60.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 304 bytes"
+      "note": "M2.6 late-match: 304 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00115F90",
@@ -2257,7 +2391,8 @@
       "source": "src/functions/00117168.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 44/48 (size->core)"
+      "note": "M2.6 late-match: core 44/48 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x00117198",
@@ -2266,7 +2401,8 @@
       "source": "src/functions/00117198.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 44/48 (size->core)"
+      "note": "M2.6 late-match: core 44/48 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001171E0",
@@ -2311,7 +2447,8 @@
       "source": "src/functions/001174b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 18: 120 bytes"
+      "note": "M2.6 TU-batch 18: 120 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00117530",
@@ -2338,7 +2475,8 @@
       "source": "src/functions/00117760.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=8"
+      "note": "M2.6 pipeline: 40 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00117920",
@@ -2347,7 +2485,8 @@
       "source": "src/functions/00117920.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 TU-batch 16: 88 bytes"
+      "note": "M2.6 TU-batch 16: 88 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00117DC0",
@@ -2356,7 +2495,8 @@
       "source": "src/functions/00117dc0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 14: 88 bytes"
+      "note": "M2.6 TU-batch 14: 88 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x00118020",
@@ -2365,7 +2505,8 @@
       "source": "src/functions/00118020.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 28/32 (size->core)"
+      "note": "M2.6 pipeline: core 28/32 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x0011ABF8",
@@ -2383,7 +2524,8 @@
       "source": "src/functions/0011c950.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 80 bytes"
+      "note": "M2.6 late-match: 80 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0011C9A0",
@@ -2392,7 +2534,8 @@
       "source": "src/functions/0011c9a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 80 bytes"
+      "note": "M2.6 late-match: 80 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0011C9F0",
@@ -2401,7 +2544,8 @@
       "source": "src/functions/0011c9f0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 100/104"
+      "note": "M2.6 late-match: core 100/104",
+      "kind": "core"
     },
     {
       "addr": "0x0011CA58",
@@ -2437,7 +2581,8 @@
       "source": "src/functions/0011d550.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 40 bytes; g=0"
+      "note": "M2.6 worker: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0011E398",
@@ -2464,7 +2609,8 @@
       "source": "src/functions/0011f030.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 116/120"
+      "note": "M2.6 late-match: core 116/120",
+      "kind": "core"
     },
     {
       "addr": "0x0011F0A8",
@@ -2473,7 +2619,8 @@
       "source": "src/functions/0011f0a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 164/168"
+      "note": "M2.6 late-match: core 164/168",
+      "kind": "core"
     },
     {
       "addr": "0x0011FC28",
@@ -2482,7 +2629,8 @@
       "source": "src/functions/0011fc28.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0011FCC8",
@@ -2491,7 +2639,8 @@
       "source": "src/functions/0011fcc8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0011FCD8",
@@ -2500,7 +2649,8 @@
       "source": "src/functions/0011fcd8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0011FCE8",
@@ -2509,7 +2659,8 @@
       "source": "src/functions/0011fce8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=8"
+      "note": "M2.6 pipeline: 24 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x0011FDD0",
@@ -2536,7 +2687,8 @@
       "source": "src/functions/00123568.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00123778",
@@ -2545,7 +2697,8 @@
       "source": "src/functions/00123778.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00123788",
@@ -2554,7 +2707,8 @@
       "source": "src/functions/00123788.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: core 12/16"
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x00123868",
@@ -2563,7 +2717,8 @@
       "source": "src/functions/00123868.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.3 llm: round 1 cand 2; 72 bytes; g=8"
+      "note": "M2.3 llm: round 1 cand 2; 72 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00123940",
@@ -2572,7 +2727,8 @@
       "source": "src/functions/00123940.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=8"
+      "note": "M2.6 pipeline: 40 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00123968",
@@ -2581,7 +2737,8 @@
       "source": "src/functions/00123968.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 worker: 40 bytes; g=8"
+      "note": "M2.6 worker: 40 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00123990",
@@ -2590,7 +2747,8 @@
       "source": "src/functions/00123990.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00123A40",
@@ -2599,7 +2757,8 @@
       "source": "src/functions/00123a40.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00123A50",
@@ -2608,7 +2767,8 @@
       "source": "src/functions/00123a50.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00123A60",
@@ -2617,7 +2777,8 @@
       "source": "src/functions/00123a60.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: core 20/24 (size->core)"
+      "note": "M2.6 pipeline: core 20/24 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001241D0",
@@ -2626,7 +2787,8 @@
       "source": "src/functions/001241d0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=8"
+      "note": "M2.6 pipeline: 40 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x001241F8",
@@ -2635,7 +2797,8 @@
       "source": "src/functions/001241f8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00128178",
@@ -2644,7 +2807,8 @@
       "source": "src/functions/00128178.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00128180",
@@ -2653,7 +2817,8 @@
       "source": "src/functions/00128180.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=8"
+      "note": "M2.5 call: 32 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00128328",
@@ -2662,7 +2827,8 @@
       "source": "src/functions/00128328.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0012B1C8",
@@ -2671,7 +2837,8 @@
       "source": "src/functions/0012b1c8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 56 bytes; g=8"
+      "note": "M2.6 pipeline: 56 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x0012B2B0",
@@ -2680,7 +2847,8 @@
       "source": "src/functions/0012b2b0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0012B628",
@@ -2698,7 +2866,8 @@
       "source": "src/functions/0012b758.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: core 36/40 (size->core)"
+      "note": "M2.6 pipeline: core 36/40 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x0012B780",
@@ -2707,7 +2876,8 @@
       "source": "src/functions/0012b780.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: core 36/40 (size->core)"
+      "note": "M2.6 pipeline: core 36/40 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x0012C578",
@@ -2716,7 +2886,8 @@
       "source": "src/functions/0012c578.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0012C590",
@@ -2725,7 +2896,8 @@
       "source": "src/functions/0012c590.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0012D310",
@@ -2734,7 +2906,8 @@
       "source": "src/functions/0012d310.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0012D328",
@@ -2743,7 +2916,8 @@
       "source": "src/functions/0012d328.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: core 36/40 (size->core)"
+      "note": "M2.6 pipeline: core 36/40 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x0012D350",
@@ -2752,7 +2926,8 @@
       "source": "src/functions/0012d350.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=8"
+      "note": "M2.6 pipeline: 40 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x0012D478",
@@ -2761,7 +2936,8 @@
       "source": "src/functions/0012d478.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=8"
+      "note": "M2.6 pipeline: 40 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x0012D6E8",
@@ -2770,7 +2946,8 @@
       "source": "src/functions/0012d6e8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0012D700",
@@ -2779,7 +2956,8 @@
       "source": "src/functions/0012d700.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: core 36/40 (size->core)"
+      "note": "M2.6 pipeline: core 36/40 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x0012DB00",
@@ -2788,7 +2966,8 @@
       "source": "src/functions/0012db00.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 48 bytes; g=8"
+      "note": "M2.6 pipeline: 48 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x0012FC50",
@@ -2797,7 +2976,8 @@
       "source": "src/functions/0012fc50.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001317F0",
@@ -2815,7 +2995,8 @@
       "source": "src/functions/00131a88.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 56 bytes; g=8"
+      "note": "M2.5 call: 56 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00146488",
@@ -2824,7 +3005,8 @@
       "source": "src/functions/00146488.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001464A0",
@@ -2851,7 +3033,8 @@
       "source": "src/functions/00154d20.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 48 bytes; g=8"
+      "note": "M2.5 call: 48 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00154DD8",
@@ -2860,7 +3043,8 @@
       "source": "src/functions/00154dd8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 48 bytes; g=8"
+      "note": "M2.5 call: 48 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00154E98",
@@ -2869,7 +3053,8 @@
       "source": "src/functions/00154e98.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 56 bytes; g=8"
+      "note": "M2.5 call: 56 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00155AC0",
@@ -2878,7 +3063,8 @@
       "source": "src/functions/00155ac0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 48 bytes; g=8"
+      "note": "M2.5 call: 48 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00155B68",
@@ -2887,7 +3073,8 @@
       "source": "src/functions/00155b68.c",
       "g": 0,
       "status": "matched",
-      "note": "two int stores, second fills the delay slot"
+      "note": "two int stores, second fills the delay slot",
+      "kind": "core"
     },
     {
       "addr": "0x0015A208",
@@ -2896,7 +3083,8 @@
       "source": "src/functions/0015a208.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 40 bytes; g=0"
+      "note": "M2.5 call: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0015A230",
@@ -2905,7 +3093,8 @@
       "source": "src/functions/0015a230.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0015A2C8",
@@ -2914,7 +3103,8 @@
       "source": "src/functions/0015a2c8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 48 bytes; g=8"
+      "note": "M2.5 call: 48 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00160A58",
@@ -2923,7 +3113,8 @@
       "source": "src/functions/00160a58.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=8"
+      "note": "M2.6 pipeline: 24 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00165CF0",
@@ -2932,7 +3123,8 @@
       "source": "src/functions/00165cf0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00165EC0",
@@ -2941,7 +3133,8 @@
       "source": "src/functions/00165ec0.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 104 bytes; g=8"
+      "note": "M2.5 call: 104 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x00165F28",
@@ -2950,7 +3143,8 @@
       "source": "src/functions/00165f28.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 104 bytes; g=8"
+      "note": "M2.5 call: 104 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x0016E760",
@@ -2959,7 +3153,8 @@
       "source": "src/functions/0016e760.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: core 84/88"
+      "note": "M2.6 late-match: core 84/88",
+      "kind": "core"
     },
     {
       "addr": "0x0016E7B8",
@@ -2968,7 +3163,8 @@
       "source": "src/functions/0016e7b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 76/80"
+      "note": "M2.6 late-match: core 76/80",
+      "kind": "core"
     },
     {
       "addr": "0x0016E808",
@@ -2977,7 +3173,8 @@
       "source": "src/functions/0016e808.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: 280 bytes"
+      "note": "M2.6 late-match: 280 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x0016EA50",
@@ -2986,7 +3183,8 @@
       "source": "src/functions/0016ea50.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.5 call: 48 bytes; g=8"
+      "note": "M2.5 call: 48 bytes; g=8",
+      "kind": "full"
     },
     {
       "addr": "0x001738E0",
@@ -2995,7 +3193,8 @@
       "source": "src/functions/001738e0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 56 bytes; g=0"
+      "note": "M2.6 worker: 56 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00173918",
@@ -3004,7 +3203,8 @@
       "source": "src/functions/00173918.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 56 bytes; g=0"
+      "note": "M2.6 worker: 56 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00173AB0",
@@ -3013,7 +3213,8 @@
       "source": "src/functions/00173ab0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 56 bytes; g=0"
+      "note": "M2.6 worker: 56 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00177BC8",
@@ -3022,7 +3223,8 @@
       "source": "src/functions/00177bc8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00177BD0",
@@ -3031,7 +3233,8 @@
       "source": "src/functions/00177bd0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00177C28",
@@ -3040,16 +3243,18 @@
       "source": "src/functions/00177c28.c",
       "g": 0,
       "status": "matched",
-      "note": "two zero stores at 0x168/0x16c, scheduler reverses them"
+      "note": "two zero stores at 0x168/0x16c, scheduler reverses them",
+      "kind": "core"
     },
     {
       "addr": "0x00179DB8",
-      "size": 24,
+      "size": 20,
       "name": "FUN_00179db8",
       "source": "src/functions/00179db8.c",
       "g": 8,
       "status": "matched",
-      "note": "M2.6 late-match: core 20/24"
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
     },
     {
       "addr": "0x0017ACA0",
@@ -3058,7 +3263,8 @@
       "source": "src/functions/0017aca0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 24 bytes; g=0"
+      "note": "M2.6 worker: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0017E708",
@@ -3076,7 +3282,8 @@
       "source": "src/functions/0017efa0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 40 bytes; g=0"
+      "note": "M2.5 call: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0017F028",
@@ -3085,7 +3292,8 @@
       "source": "src/functions/0017f028.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0017F508",
@@ -3094,7 +3302,8 @@
       "source": "src/functions/0017f508.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0017F510",
@@ -3103,7 +3312,8 @@
       "source": "src/functions/0017f510.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0017F518",
@@ -3112,7 +3322,8 @@
       "source": "src/functions/0017f518.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 2 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 2 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001828F0",
@@ -3130,7 +3341,8 @@
       "source": "src/functions/0018d4a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0019A528",
@@ -3148,7 +3360,8 @@
       "source": "src/functions/0019b590.c",
       "g": 0,
       "status": "matched",
-      "note": "two fields doubled through registers"
+      "note": "two fields doubled through registers",
+      "kind": "core"
     },
     {
       "addr": "0x0019B6D8",
@@ -3157,7 +3370,8 @@
       "source": "src/functions/0019b6d8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 56 bytes; g=0"
+      "note": "M2.6 pipeline: 56 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0019B888",
@@ -3166,7 +3380,8 @@
       "source": "src/functions/0019b888.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x0019BBF0",
@@ -3175,7 +3390,8 @@
       "source": "src/functions/0019bbf0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 12/16"
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x0019BDC0",
@@ -3184,7 +3400,8 @@
       "source": "src/functions/0019bdc0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 32 bytes; g=0"
+      "note": "M2.6 pipeline: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0019C8F0",
@@ -3193,7 +3410,8 @@
       "source": "src/functions/0019c8f0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 56 bytes; g=0"
+      "note": "M2.6 worker: 56 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x0019D8B8",
@@ -3202,7 +3420,8 @@
       "source": "src/functions/0019d8b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 28/32 (size->core)"
+      "note": "M2.6 pipeline: core 28/32 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001A6838",
@@ -3211,7 +3430,8 @@
       "source": "src/functions/001a6838.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001A78F8",
@@ -3229,7 +3449,8 @@
       "source": "src/functions/001a8208.c",
       "g": 0,
       "status": "matched",
-      "note": "a<<12 stored twice; store order found by statement-order search"
+      "note": "a<<12 stored twice; store order found by statement-order search",
+      "kind": "core"
     },
     {
       "addr": "0x001A8228",
@@ -3238,7 +3459,8 @@
       "source": "src/functions/001a8228.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 36/40 (size->core)"
+      "note": "M2.6 pipeline: core 36/40 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001A8250",
@@ -3247,7 +3469,8 @@
       "source": "src/functions/001a8250.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 12/16"
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x001A82A8",
@@ -3256,7 +3479,8 @@
       "source": "src/functions/001a82a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001A9588",
@@ -3269,12 +3493,13 @@
     },
     {
       "addr": "0x001A9840",
-      "size": 16,
+      "size": 12,
       "name": "FUN_001a9840",
       "source": "src/functions/001a9840.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 12/16"
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x001A9900",
@@ -3283,7 +3508,8 @@
       "source": "src/functions/001a9900.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AB728",
@@ -3292,7 +3518,8 @@
       "source": "src/functions/001ab728.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001AD7B0",
@@ -3301,7 +3528,8 @@
       "source": "src/functions/001ad7b0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 24 bytes; g=0"
+      "note": "M2.6 worker: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AF428",
@@ -3310,7 +3538,8 @@
       "source": "src/functions/001af428.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001AF478",
@@ -3319,7 +3548,8 @@
       "source": "src/functions/001af478.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=0"
+      "note": "M2.6 pipeline: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AF7A8",
@@ -3328,7 +3558,8 @@
       "source": "src/functions/001af7a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=0"
+      "note": "M2.6 pipeline: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AF9E8",
@@ -3337,7 +3568,8 @@
       "source": "src/functions/001af9e8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 24 bytes; g=0"
+      "note": "M2.6 worker: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AFA00",
@@ -3346,7 +3578,8 @@
       "source": "src/functions/001afa00.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 24 bytes; g=0"
+      "note": "M2.6 worker: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AFA18",
@@ -3355,7 +3588,8 @@
       "source": "src/functions/001afa18.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 40 bytes; g=0"
+      "note": "M2.5 call: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AFA40",
@@ -3364,7 +3598,8 @@
       "source": "src/functions/001afa40.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AFA60",
@@ -3373,7 +3608,8 @@
       "source": "src/functions/001afa60.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AFA80",
@@ -3382,7 +3618,8 @@
       "source": "src/functions/001afa80.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001AFD98",
@@ -3391,7 +3628,8 @@
       "source": "src/functions/001afd98.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B0130",
@@ -3400,7 +3638,8 @@
       "source": "src/functions/001b0130.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B0470",
@@ -3409,7 +3648,8 @@
       "source": "src/functions/001b0470.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 36/40"
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
     },
     {
       "addr": "0x001B0718",
@@ -3418,16 +3658,18 @@
       "source": "src/functions/001b0718.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B1180",
-      "size": 16,
+      "size": 12,
       "name": "FUN_001b1180",
       "source": "src/functions/001b1180.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x001B1190",
@@ -3436,7 +3678,8 @@
       "source": "src/functions/001b1190.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B2240",
@@ -3445,7 +3688,8 @@
       "source": "src/functions/001b2240.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 36/40 (size->core)"
+      "note": "M2.6 pipeline: core 36/40 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001B2578",
@@ -3454,7 +3698,8 @@
       "source": "src/functions/001b2578.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B2590",
@@ -3463,7 +3708,8 @@
       "source": "src/functions/001b2590.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B25A8",
@@ -3472,7 +3718,8 @@
       "source": "src/functions/001b25a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B2658",
@@ -3481,7 +3728,8 @@
       "source": "src/functions/001b2658.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B2920",
@@ -3490,7 +3738,8 @@
       "source": "src/functions/001b2920.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 16 bytes; g=0"
+      "note": "M2.6 worker: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B2930",
@@ -3499,7 +3748,8 @@
       "source": "src/functions/001b2930.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B2C30",
@@ -3508,7 +3758,8 @@
       "source": "src/functions/001b2c30.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B3C28",
@@ -3517,7 +3768,8 @@
       "source": "src/functions/001b3c28.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B3C30",
@@ -3526,7 +3778,8 @@
       "source": "src/functions/001b3c30.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B3C38",
@@ -3535,7 +3788,8 @@
       "source": "src/functions/001b3c38.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3C50",
@@ -3544,7 +3798,8 @@
       "source": "src/functions/001b3c50.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 32 bytes; g=0"
+      "note": "M2.6 pipeline: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3C70",
@@ -3553,7 +3808,8 @@
       "source": "src/functions/001b3c70.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3C88",
@@ -3571,7 +3827,8 @@
       "source": "src/functions/001b3cb8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 48 bytes; g=0"
+      "note": "M2.5 call: 48 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3CE8",
@@ -3580,16 +3837,18 @@
       "source": "src/functions/001b3ce8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3D60",
-      "size": 16,
+      "size": 12,
       "name": "FUN_001b3d60",
       "source": "src/functions/001b3d60.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x001B3D80",
@@ -3598,7 +3857,8 @@
       "source": "src/functions/001b3d80.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 16 bytes; g=0"
+      "note": "M2.6 pipeline: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3D90",
@@ -3607,7 +3867,8 @@
       "source": "src/functions/001b3d90.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 16 bytes; g=0"
+      "note": "M2.6 pipeline: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3DA0",
@@ -3616,7 +3877,8 @@
       "source": "src/functions/001b3da0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 16 bytes; g=0"
+      "note": "M2.6 pipeline: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3DB0",
@@ -3625,7 +3887,8 @@
       "source": "src/functions/001b3db0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3DC8",
@@ -3634,7 +3897,8 @@
       "source": "src/functions/001b3dc8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3DE0",
@@ -3643,7 +3907,8 @@
       "source": "src/functions/001b3de0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3DF8",
@@ -3652,7 +3917,8 @@
       "source": "src/functions/001b3df8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3E10",
@@ -3661,7 +3927,8 @@
       "source": "src/functions/001b3e10.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3E28",
@@ -3670,7 +3937,8 @@
       "source": "src/functions/001b3e28.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3E40",
@@ -3679,7 +3947,8 @@
       "source": "src/functions/001b3e40.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3E58",
@@ -3688,7 +3957,8 @@
       "source": "src/functions/001b3e58.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3E70",
@@ -3697,7 +3967,8 @@
       "source": "src/functions/001b3e70.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3E88",
@@ -3706,7 +3977,8 @@
       "source": "src/functions/001b3e88.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3EA0",
@@ -3715,7 +3987,8 @@
       "source": "src/functions/001b3ea0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3EE8",
@@ -3724,7 +3997,8 @@
       "source": "src/functions/001b3ee8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3F00",
@@ -3733,7 +4007,8 @@
       "source": "src/functions/001b3f00.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3F18",
@@ -3742,7 +4017,8 @@
       "source": "src/functions/001b3f18.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B3F30",
@@ -3760,7 +4036,8 @@
       "source": "src/functions/001b4050.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B4068",
@@ -3769,7 +4046,8 @@
       "source": "src/functions/001b4068.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B4070",
@@ -3778,7 +4056,8 @@
       "source": "src/functions/001b4070.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B4450",
@@ -3796,7 +4075,8 @@
       "source": "src/functions/001b4860.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B4908",
@@ -3805,16 +4085,18 @@
       "source": "src/functions/001b4908.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.3 llm: round 2 cand 2; 24 bytes; g=0"
+      "note": "M2.3 llm: round 2 cand 2; 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B4BC8",
-      "size": 16,
+      "size": 12,
       "name": "FUN_001b4bc8",
       "source": "src/functions/001b4bc8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x001B5428",
@@ -3823,7 +4105,8 @@
       "source": "src/functions/001b5428.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B5500",
@@ -3832,7 +4115,8 @@
       "source": "src/functions/001b5500.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord01/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord01/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B5550",
@@ -3841,7 +4125,8 @@
       "source": "src/functions/001b5550.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B55B0",
@@ -3850,7 +4135,8 @@
       "source": "src/functions/001b55b0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord01/natural/int/int; 3 candidate(s)"
+      "note": "M2.2 auto: ord01/natural/int/int; 3 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B5608",
@@ -3859,7 +4145,8 @@
       "source": "src/functions/001b5608.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=0"
+      "note": "M2.6 pipeline: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B5658",
@@ -3868,7 +4155,8 @@
       "source": "src/functions/001b5658.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B56A0",
@@ -3877,7 +4165,8 @@
       "source": "src/functions/001b56a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 3 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 3 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B56E0",
@@ -3886,7 +4175,8 @@
       "source": "src/functions/001b56e0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B5818",
@@ -3895,7 +4185,8 @@
       "source": "src/functions/001b5818.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B5858",
@@ -3904,7 +4195,8 @@
       "source": "src/functions/001b5858.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B5AA8",
@@ -3913,16 +4205,18 @@
       "source": "src/functions/001b5aa8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B5B90",
-      "size": 16,
+      "size": 12,
       "name": "FUN_001b5b90",
       "source": "src/functions/001b5b90.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x001B5C20",
@@ -3931,7 +4225,8 @@
       "source": "src/functions/001b5c20.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B5CA8",
@@ -3940,7 +4235,8 @@
       "source": "src/functions/001b5ca8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 24 bytes; g=0"
+      "note": "M2.6 worker: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B73F8",
@@ -3949,7 +4245,8 @@
       "source": "src/functions/001b73f8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B7FB8",
@@ -3958,7 +4255,8 @@
       "source": "src/functions/001b7fb8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B80C8",
@@ -3967,7 +4265,8 @@
       "source": "src/functions/001b80c8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 16 bytes; g=0"
+      "note": "M2.6 pipeline: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B8108",
@@ -3976,7 +4275,8 @@
       "source": "src/functions/001b8108.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 20/24 (size->core)"
+      "note": "M2.6 pipeline: core 20/24 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001B8750",
@@ -3985,7 +4285,8 @@
       "source": "src/functions/001b8750.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B9098",
@@ -3994,7 +4295,8 @@
       "source": "src/functions/001b9098.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B90A0",
@@ -4003,7 +4305,8 @@
       "source": "src/functions/001b90a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B90E0",
@@ -4012,7 +4315,8 @@
       "source": "src/functions/001b90e0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B92E0",
@@ -4021,7 +4325,8 @@
       "source": "src/functions/001b92e0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B9328",
@@ -4030,7 +4335,8 @@
       "source": "src/functions/001b9328.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B9378",
@@ -4039,7 +4345,8 @@
       "source": "src/functions/001b9378.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B9440",
@@ -4048,7 +4355,8 @@
       "source": "src/functions/001b9440.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B9498",
@@ -4057,7 +4365,8 @@
       "source": "src/functions/001b9498.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B9A90",
@@ -4066,7 +4375,8 @@
       "source": "src/functions/001b9a90.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001B9AD8",
@@ -4075,7 +4385,8 @@
       "source": "src/functions/001b9ad8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B9B30",
@@ -4084,7 +4395,8 @@
       "source": "src/functions/001b9b30.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B9B80",
@@ -4093,7 +4405,8 @@
       "source": "src/functions/001b9b80.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001B9E98",
@@ -4102,7 +4415,8 @@
       "source": "src/functions/001b9e98.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BB198",
@@ -4111,7 +4425,8 @@
       "source": "src/functions/001bb198.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001BB560",
@@ -4120,7 +4435,8 @@
       "source": "src/functions/001bb560.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 152 bytes"
+      "note": "M2.6 late-match: 152 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001BBBC8",
@@ -4129,7 +4445,8 @@
       "source": "src/functions/001bbbc8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0123456789/natural/int/void; 4 candidate(s)"
+      "note": "M2.2 auto: ord0123456789/natural/int/void; 4 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001BBDC0",
@@ -4138,7 +4455,8 @@
       "source": "src/functions/001bbdc0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 48 bytes; g=0"
+      "note": "M2.6 pipeline: 48 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC158",
@@ -4147,7 +4465,8 @@
       "source": "src/functions/001bc158.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001BC160",
@@ -4156,7 +4475,8 @@
       "source": "src/functions/001bc160.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=0"
+      "note": "M2.6 pipeline: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC1D0",
@@ -4165,7 +4485,8 @@
       "source": "src/functions/001bc1d0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC1E8",
@@ -4174,7 +4495,8 @@
       "source": "src/functions/001bc1e8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC200",
@@ -4183,7 +4505,8 @@
       "source": "src/functions/001bc200.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC218",
@@ -4192,7 +4515,8 @@
       "source": "src/functions/001bc218.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC280",
@@ -4201,7 +4525,8 @@
       "source": "src/functions/001bc280.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC298",
@@ -4210,7 +4535,8 @@
       "source": "src/functions/001bc298.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC2B0",
@@ -4219,7 +4545,8 @@
       "source": "src/functions/001bc2b0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC2C8",
@@ -4228,7 +4555,8 @@
       "source": "src/functions/001bc2c8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC2E0",
@@ -4237,7 +4565,8 @@
       "source": "src/functions/001bc2e0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BC2F8",
@@ -4250,12 +4579,13 @@
     },
     {
       "addr": "0x001BC938",
-      "size": 16,
+      "size": 12,
       "name": "FUN_001bc938",
       "source": "src/functions/001bc938.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
     },
     {
       "addr": "0x001BE248",
@@ -4264,7 +4594,8 @@
       "source": "src/functions/001be248.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 32 bytes; g=0"
+      "note": "M2.6 worker: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BE870",
@@ -4273,7 +4604,8 @@
       "source": "src/functions/001be870.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001BE8A8",
@@ -4282,7 +4614,8 @@
       "source": "src/functions/001be8a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 40 bytes; g=0"
+      "note": "M2.5 call: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001BE9C0",
@@ -4309,7 +4642,8 @@
       "source": "src/functions/001c0e30.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 16 bytes; g=0"
+      "note": "M2.6 worker: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C0E40",
@@ -4318,7 +4652,8 @@
       "source": "src/functions/001c0e40.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 32 bytes; g=0"
+      "note": "M2.6 pipeline: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C0E60",
@@ -4327,7 +4662,8 @@
       "source": "src/functions/001c0e60.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C0E80",
@@ -4336,7 +4672,8 @@
       "source": "src/functions/001c0e80.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C0E88",
@@ -4345,7 +4682,8 @@
       "source": "src/functions/001c0e88.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C1BF0",
@@ -4354,7 +4692,8 @@
       "source": "src/functions/001c1bf0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 32 bytes; g=0"
+      "note": "M2.6 pipeline: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C1DF8",
@@ -4363,7 +4702,18 @@
       "source": "src/functions/001c1df8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.3 llm: round 1 cand 1; 80 bytes; g=0"
+      "note": "M2.3 llm: round 1 cand 1; 80 bytes; g=0",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001C1F10",
+      "size": 196,
+      "name": "FUN_001c1f10",
+      "source": "src/functions/001c1f10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 196/200",
+      "kind": "core"
     },
     {
       "addr": "0x001C29D8",
@@ -4372,7 +4722,8 @@
       "source": "src/functions/001c29d8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 28/32 (size->core)"
+      "note": "M2.6 pipeline: core 28/32 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001C29F8",
@@ -4381,7 +4732,8 @@
       "source": "src/functions/001c29f8.c",
       "g": 0,
       "status": "matched",
-      "note": "matched (verified from src) (size->core)"
+      "note": "matched (verified from src) (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001C2A78",
@@ -4390,7 +4742,8 @@
       "source": "src/functions/001c2a78.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 16 bytes; g=0"
+      "note": "M2.6 pipeline: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C2A88",
@@ -4399,7 +4752,8 @@
       "source": "src/functions/001c2a88.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 16 bytes; g=0"
+      "note": "M2.6 pipeline: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C2A98",
@@ -4408,7 +4762,8 @@
       "source": "src/functions/001c2a98.c",
       "g": 0,
       "status": "matched",
-      "note": "matched (verified from src) (size->core)"
+      "note": "matched (verified from src) (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001C2D98",
@@ -4417,7 +4772,8 @@
       "source": "src/functions/001c2d98.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C3B10",
@@ -4426,7 +4782,8 @@
       "source": "src/functions/001c3b10.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C46A0",
@@ -4435,7 +4792,8 @@
       "source": "src/functions/001c46a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C46A8",
@@ -4444,7 +4802,8 @@
       "source": "src/functions/001c46a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C4798",
@@ -4453,7 +4812,8 @@
       "source": "src/functions/001c4798.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C47A0",
@@ -4462,7 +4822,8 @@
       "source": "src/functions/001c47a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C4E60",
@@ -4471,7 +4832,8 @@
       "source": "src/functions/001c4e60.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C4ED8",
@@ -4480,7 +4842,8 @@
       "source": "src/functions/001c4ed8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 32 bytes; g=0"
+      "note": "M2.6 worker: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C5868",
@@ -4489,7 +4852,8 @@
       "source": "src/functions/001c5868.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C5880",
@@ -4498,7 +4862,8 @@
       "source": "src/functions/001c5880.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C58A0",
@@ -4507,7 +4872,8 @@
       "source": "src/functions/001c58a0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C58B8",
@@ -4516,7 +4882,8 @@
       "source": "src/functions/001c58b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C58D0",
@@ -4525,7 +4892,8 @@
       "source": "src/functions/001c58d0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 24 bytes; g=0"
+      "note": "M2.6 worker: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001C7A28",
@@ -4534,7 +4902,8 @@
       "source": "src/functions/001c7a28.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C7A40",
@@ -4543,7 +4912,8 @@
       "source": "src/functions/001c7a40.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C9270",
@@ -4552,7 +4922,8 @@
       "source": "src/functions/001c9270.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C9278",
@@ -4561,7 +4932,8 @@
       "source": "src/functions/001c9278.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001C9280",
@@ -4570,7 +4942,8 @@
       "source": "src/functions/001c9280.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 56 bytes; g=0"
+      "note": "M2.6 pipeline: 56 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CA4C8",
@@ -4579,7 +4952,8 @@
       "source": "src/functions/001ca4c8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 48 bytes; g=0"
+      "note": "M2.6 worker: 48 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAE08",
@@ -4588,7 +4962,8 @@
       "source": "src/functions/001cae08.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAE20",
@@ -4597,7 +4972,8 @@
       "source": "src/functions/001cae20.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAE38",
@@ -4606,7 +4982,8 @@
       "source": "src/functions/001cae38.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAE50",
@@ -4615,7 +4992,8 @@
       "source": "src/functions/001cae50.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAE68",
@@ -4624,7 +5002,8 @@
       "source": "src/functions/001cae68.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAE80",
@@ -4633,7 +5012,8 @@
       "source": "src/functions/001cae80.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAE98",
@@ -4642,7 +5022,8 @@
       "source": "src/functions/001cae98.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAEB0",
@@ -4651,7 +5032,8 @@
       "source": "src/functions/001caeb0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAEC8",
@@ -4660,7 +5042,8 @@
       "source": "src/functions/001caec8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAEE0",
@@ -4669,7 +5052,8 @@
       "source": "src/functions/001caee0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CAEF8",
@@ -4678,7 +5062,8 @@
       "source": "src/functions/001caef8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CB270",
@@ -4687,7 +5072,8 @@
       "source": "src/functions/001cb270.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CB878",
@@ -4696,7 +5082,8 @@
       "source": "src/functions/001cb878.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CB890",
@@ -4705,7 +5092,8 @@
       "source": "src/functions/001cb890.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CB8A8",
@@ -4714,7 +5102,8 @@
       "source": "src/functions/001cb8a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CB8C0",
@@ -4723,7 +5112,8 @@
       "source": "src/functions/001cb8c0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CB8D8",
@@ -4732,7 +5122,8 @@
       "source": "src/functions/001cb8d8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CB8F0",
@@ -4741,7 +5132,8 @@
       "source": "src/functions/001cb8f0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CB908",
@@ -4750,7 +5142,8 @@
       "source": "src/functions/001cb908.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CBFB0",
@@ -4759,7 +5152,8 @@
       "source": "src/functions/001cbfb0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CD058",
@@ -4768,7 +5162,8 @@
       "source": "src/functions/001cd058.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 40 bytes; g=0"
+      "note": "M2.6 worker: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CD080",
@@ -4777,7 +5172,8 @@
       "source": "src/functions/001cd080.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 16 bytes; g=0"
+      "note": "M2.6 pipeline: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CD158",
@@ -4786,7 +5182,8 @@
       "source": "src/functions/001cd158.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=0"
+      "note": "M2.6 pipeline: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CD1A8",
@@ -4795,7 +5192,8 @@
       "source": "src/functions/001cd1a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CD1B0",
@@ -4804,7 +5202,8 @@
       "source": "src/functions/001cd1b0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CD1B8",
@@ -4813,7 +5212,8 @@
       "source": "src/functions/001cd1b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=0"
+      "note": "M2.6 pipeline: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CD1D0",
@@ -4822,7 +5222,8 @@
       "source": "src/functions/001cd1d0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 64 bytes; g=0"
+      "note": "M2.5 call: 64 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CD210",
@@ -4831,7 +5232,8 @@
       "source": "src/functions/001cd210.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 64 bytes; g=0"
+      "note": "M2.5 call: 64 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CD320",
@@ -4840,7 +5242,8 @@
       "source": "src/functions/001cd320.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)"
+      "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CD430",
@@ -4849,7 +5252,8 @@
       "source": "src/functions/001cd430.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CD4B8",
@@ -4858,7 +5262,8 @@
       "source": "src/functions/001cd4b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.4 branch: 24 bytes; g=0"
+      "note": "M2.4 branch: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CD558",
@@ -4867,7 +5272,8 @@
       "source": "src/functions/001cd558.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CD560",
@@ -4876,7 +5282,8 @@
       "source": "src/functions/001cd560.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CD568",
@@ -4885,7 +5292,8 @@
       "source": "src/functions/001cd568.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 24 bytes; g=0"
+      "note": "M2.6 pipeline: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CE060",
@@ -4894,7 +5302,8 @@
       "source": "src/functions/001ce060.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 40 bytes; g=0"
+      "note": "M2.6 worker: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001CE9B8",
@@ -4903,7 +5312,8 @@
       "source": "src/functions/001ce9b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CE9C0",
@@ -4912,7 +5322,8 @@
       "source": "src/functions/001ce9c0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CFE98",
@@ -4921,7 +5332,8 @@
       "source": "src/functions/001cfe98.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)"
+      "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001CFF08",
@@ -4930,7 +5342,8 @@
       "source": "src/functions/001cff08.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D0000",
@@ -4939,7 +5352,8 @@
       "source": "src/functions/001d0000.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D0008",
@@ -4948,7 +5362,8 @@
       "source": "src/functions/001d0008.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D0678",
@@ -4957,7 +5372,8 @@
       "source": "src/functions/001d0678.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D1038",
@@ -4966,7 +5382,8 @@
       "source": "src/functions/001d1038.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D1148",
@@ -4975,7 +5392,8 @@
       "source": "src/functions/001d1148.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.3 llm: round 1 cand 1; 24 bytes; g=0"
+      "note": "M2.3 llm: round 1 cand 1; 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001D11B0",
@@ -4984,7 +5402,8 @@
       "source": "src/functions/001d11b0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D11B8",
@@ -4993,7 +5412,8 @@
       "source": "src/functions/001d11b8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 40 bytes; g=0"
+      "note": "M2.6 worker: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001D1268",
@@ -5002,7 +5422,8 @@
       "source": "src/functions/001d1268.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.3 llm: round 1 cand 1; 32 bytes; g=0"
+      "note": "M2.3 llm: round 1 cand 1; 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001D2030",
@@ -5011,7 +5432,8 @@
       "source": "src/functions/001d2030.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D2768",
@@ -5020,7 +5442,8 @@
       "source": "src/functions/001d2768.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D29C8",
@@ -5029,7 +5452,8 @@
       "source": "src/functions/001d29c8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D2AF8",
@@ -5038,7 +5462,8 @@
       "source": "src/functions/001d2af8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 20/24 (size->core)"
+      "note": "M2.6 pipeline: core 20/24 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001D2BE0",
@@ -5047,7 +5472,8 @@
       "source": "src/functions/001d2be0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord0/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001D2DC0",
@@ -5056,7 +5482,8 @@
       "source": "src/functions/001d2dc0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.3 llm: round 1 cand 1; 64 bytes; g=0"
+      "note": "M2.3 llm: round 1 cand 1; 64 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001D5110",
@@ -5065,7 +5492,8 @@
       "source": "src/functions/001d5110.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 48 bytes; g=0"
+      "note": "M2.6 pipeline: 48 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001D5140",
@@ -5074,7 +5502,8 @@
       "source": "src/functions/001d5140.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 64 bytes; g=0"
+      "note": "M2.6 pipeline: 64 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001D58A8",
@@ -5083,7 +5512,8 @@
       "source": "src/functions/001d58a8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 48 bytes; g=0"
+      "note": "M2.6 pipeline: 48 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001DBB18",
@@ -5128,7 +5558,8 @@
       "source": "src/functions/001df228.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 18: 64 bytes"
+      "note": "M2.6 TU-batch 18: 64 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001DFD40",
@@ -5146,7 +5577,8 @@
       "source": "src/functions/001dfe18.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 36/40 (size->core)"
+      "note": "M2.6 late-match: core 36/40 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001DFE40",
@@ -5155,7 +5587,8 @@
       "source": "src/functions/001dfe40.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 36/40 (size->core)"
+      "note": "M2.6 late-match: core 36/40 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001E0258",
@@ -5164,7 +5597,8 @@
       "source": "src/functions/001e0258.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 124/128"
+      "note": "M2.6 late-match: core 124/128",
+      "kind": "core"
     },
     {
       "addr": "0x001E02D8",
@@ -5173,7 +5607,8 @@
       "source": "src/functions/001e02d8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=0"
+      "note": "M2.6 pipeline: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001E1988",
@@ -5182,7 +5617,8 @@
       "source": "src/functions/001e1988.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 88 bytes"
+      "note": "M2.6 late-match: 88 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001E3998",
@@ -5191,7 +5627,8 @@
       "source": "src/functions/001e3998.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 32 bytes; g=0"
+      "note": "M2.6 worker: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001E3D90",
@@ -5200,7 +5637,8 @@
       "source": "src/functions/001e3d90.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)"
+      "note": "M2.2 auto: ord012/natural/int/void; 6 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001E3DA0",
@@ -5209,7 +5647,8 @@
       "source": "src/functions/001e3da0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)"
+      "note": "M2.2 auto: ord01/natural/int/void; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001E3F90",
@@ -5218,7 +5657,8 @@
       "source": "src/functions/001e3f90.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 20/24 (size->core)"
+      "note": "M2.6 pipeline: core 20/24 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001E4068",
@@ -5227,7 +5667,8 @@
       "source": "src/functions/001e4068.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 40 bytes; g=0"
+      "note": "M2.6 pipeline: 40 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001EA658",
@@ -5236,7 +5677,8 @@
       "source": "src/functions/001ea658.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x001EA668",
@@ -5245,7 +5687,8 @@
       "source": "src/functions/001ea668.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 56 bytes; g=0"
+      "note": "M2.6 pipeline: 56 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001EA720",
@@ -5263,7 +5706,8 @@
       "source": "src/functions/001eaa78.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: core 20/24 (size->core)"
+      "note": "M2.6 pipeline: core 20/24 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001EECF8",
@@ -5281,7 +5725,8 @@
       "source": "src/functions/001f6718.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 28/32 (size->core)"
+      "note": "M2.6 late-match: core 28/32 (size->core)",
+      "kind": "core"
     },
     {
       "addr": "0x001F7170",
@@ -5303,12 +5748,13 @@
     },
     {
       "addr": "0x001F9188",
-      "size": 72,
+      "size": 68,
       "name": "FUN_001f9188",
       "source": "src/functions/001f9188.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72",
+      "kind": "core"
     },
     {
       "addr": "0x001F91D0",
@@ -5317,7 +5763,8 @@
       "source": "src/functions/001f91d0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 TU-batch 14: 88 bytes"
+      "note": "M2.6 TU-batch 14: 88 bytes",
+      "kind": "full"
     },
     {
       "addr": "0x001FACE8",
@@ -5326,7 +5773,8 @@
       "source": "src/functions/001face8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 24 bytes; g=0"
+      "note": "M2.5 call: 24 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x001FBB84",
@@ -5344,7 +5792,8 @@
       "source": "src/functions/001fc120.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.5 call: 32 bytes; g=0"
+      "note": "M2.5 call: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00203604",
@@ -5452,7 +5901,8 @@
       "source": "src/functions/00206088.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 16 bytes; g=0"
+      "note": "M2.6 pipeline: 16 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00206098",
@@ -5461,7 +5911,8 @@
       "source": "src/functions/00206098.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00206150",
@@ -5470,7 +5921,8 @@
       "source": "src/functions/00206150.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)"
+      "note": "M2.2 auto: ord/natural/int/int; 1 candidate(s)",
+      "kind": "full"
     },
     {
       "addr": "0x00206158",
@@ -5479,7 +5931,8 @@
       "source": "src/functions/00206158.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 pipeline: 32 bytes; g=0"
+      "note": "M2.6 pipeline: 32 bytes; g=0",
+      "kind": "full"
     },
     {
       "addr": "0x00209120",
@@ -5497,16 +5950,1326 @@
       "source": "src/functions/0020eaf0.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 worker: 32 bytes; g=0"
+      "note": "M2.6 worker: 32 bytes; g=0",
+      "kind": "full"
     },
     {
-      "addr": "0x001C1F10",
-      "size": 196,
-      "name": "FUN_001c1f10",
-      "source": "src/functions/001c1f10.c",
+      "addr": "0x0012B470",
+      "size": 32,
+      "name": "FUN_0012b470",
+      "source": "src/functions/0012b470.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: core 196/200"
+      "note": "M2.6 late-match: 32 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001B4C18",
+      "size": 24,
+      "name": "FUN_001b4c18",
+      "source": "src/functions/001b4c18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 24 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001CFFE8",
+      "size": 24,
+      "name": "FUN_001cffe8",
+      "source": "src/functions/001cffe8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 24 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001D1198",
+      "size": 24,
+      "name": "FUN_001d1198",
+      "source": "src/functions/001d1198.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 24 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001D1248",
+      "size": 32,
+      "name": "FUN_001d1248",
+      "source": "src/functions/001d1248.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 32 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001AB618",
+      "size": 28,
+      "name": "FUN_001ab618",
+      "source": "src/functions/001ab618.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AB638",
+      "size": 28,
+      "name": "FUN_001ab638",
+      "source": "src/functions/001ab638.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B47E8",
+      "size": 28,
+      "name": "FUN_001b47e8",
+      "source": "src/functions/001b47e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B7EF8",
+      "size": 28,
+      "name": "FUN_001b7ef8",
+      "source": "src/functions/001b7ef8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00102040",
+      "size": 52,
+      "name": "FUN_00102040",
+      "source": "src/functions/00102040.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00105390",
+      "size": 44,
+      "name": "FUN_00105390",
+      "source": "src/functions/00105390.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00105430",
+      "size": 44,
+      "name": "FUN_00105430",
+      "source": "src/functions/00105430.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00105878",
+      "size": 44,
+      "name": "FUN_00105878",
+      "source": "src/functions/00105878.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0010F138",
+      "size": 36,
+      "name": "FUN_0010f138",
+      "source": "src/functions/0010f138.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00111730",
+      "size": 44,
+      "name": "FUN_00111730",
+      "source": "src/functions/00111730.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00112AB8",
+      "size": 12,
+      "name": "FUN_00112ab8",
+      "source": "src/functions/00112ab8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00112AC8",
+      "size": 20,
+      "name": "FUN_00112ac8",
+      "source": "src/functions/00112ac8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00113480",
+      "size": 12,
+      "name": "FUN_00113480",
+      "source": "src/functions/00113480.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0011FD00",
+      "size": 20,
+      "name": "FUN_0011fd00",
+      "source": "src/functions/0011fd00.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00123798",
+      "size": 12,
+      "name": "FUN_00123798",
+      "source": "src/functions/00123798.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00125A58",
+      "size": 20,
+      "name": "FUN_00125a58",
+      "source": "src/functions/00125a58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0012D6D0",
+      "size": 20,
+      "name": "FUN_0012d6d0",
+      "source": "src/functions/0012d6d0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001311C0",
+      "size": 20,
+      "name": "FUN_001311c0",
+      "source": "src/functions/001311c0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0013ED18",
+      "size": 20,
+      "name": "FUN_0013ed18",
+      "source": "src/functions/0013ed18.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0013F058",
+      "size": 20,
+      "name": "FUN_0013f058",
+      "source": "src/functions/0013f058.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0013F2C0",
+      "size": 20,
+      "name": "FUN_0013f2c0",
+      "source": "src/functions/0013f2c0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00160758",
+      "size": 20,
+      "name": "FUN_00160758",
+      "source": "src/functions/00160758.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00179170",
+      "size": 20,
+      "name": "FUN_00179170",
+      "source": "src/functions/00179170.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0017C0C0",
+      "size": 36,
+      "name": "FUN_0017c0c0",
+      "source": "src/functions/0017c0c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0017F4E8",
+      "size": 28,
+      "name": "FUN_0017f4e8",
+      "source": "src/functions/0017f4e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0019B710",
+      "size": 44,
+      "name": "FUN_0019b710",
+      "source": "src/functions/0019b710.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0019C270",
+      "size": 60,
+      "name": "FUN_0019c270",
+      "source": "src/functions/0019c270.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001A9850",
+      "size": 12,
+      "name": "FUN_001a9850",
+      "source": "src/functions/001a9850.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B2A20",
+      "size": 60,
+      "name": "FUN_001b2a20",
+      "source": "src/functions/001b2a20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B3D70",
+      "size": 12,
+      "name": "FUN_001b3d70",
+      "source": "src/functions/001b3d70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B4808",
+      "size": 28,
+      "name": "FUN_001b4808",
+      "source": "src/functions/001b4808.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B48B0",
+      "size": 28,
+      "name": "FUN_001b48b0",
+      "source": "src/functions/001b48b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B5BD8",
+      "size": 12,
+      "name": "FUN_001b5bd8",
+      "source": "src/functions/001b5bd8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001BCB80",
+      "size": 12,
+      "name": "FUN_001bcb80",
+      "source": "src/functions/001bcb80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001BFEB0",
+      "size": 12,
+      "name": "FUN_001bfeb0",
+      "source": "src/functions/001bfeb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001BFEC0",
+      "size": 12,
+      "name": "FUN_001bfec0",
+      "source": "src/functions/001bfec0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001C6680",
+      "size": 52,
+      "name": "FUN_001c6680",
+      "source": "src/functions/001c6680.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001C7660",
+      "size": 44,
+      "name": "FUN_001c7660",
+      "source": "src/functions/001c7660.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CA118",
+      "size": 148,
+      "name": "FUN_001ca118",
+      "source": "src/functions/001ca118.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 148/152",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CA1B0",
+      "size": 172,
+      "name": "FUN_001ca1b0",
+      "source": "src/functions/001ca1b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 172/176",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CB6E8",
+      "size": 20,
+      "name": "FUN_001cb6e8",
+      "source": "src/functions/001cb6e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CB700",
+      "size": 20,
+      "name": "FUN_001cb700",
+      "source": "src/functions/001cb700.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CBB08",
+      "size": 36,
+      "name": "FUN_001cbb08",
+      "source": "src/functions/001cbb08.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CC638",
+      "size": 60,
+      "name": "FUN_001cc638",
+      "source": "src/functions/001cc638.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CC8C0",
+      "size": 12,
+      "name": "FUN_001cc8c0",
+      "source": "src/functions/001cc8c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CC8D0",
+      "size": 12,
+      "name": "FUN_001cc8d0",
+      "source": "src/functions/001cc8d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CD788",
+      "size": 44,
+      "name": "FUN_001cd788",
+      "source": "src/functions/001cd788.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CFA78",
+      "size": 12,
+      "name": "FUN_001cfa78",
+      "source": "src/functions/001cfa78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CFE48",
+      "size": 36,
+      "name": "FUN_001cfe48",
+      "source": "src/functions/001cfe48.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CFE70",
+      "size": 36,
+      "name": "FUN_001cfe70",
+      "source": "src/functions/001cfe70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CFEA8",
+      "size": 28,
+      "name": "FUN_001cfea8",
+      "source": "src/functions/001cfea8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CFFA0",
+      "size": 28,
+      "name": "FUN_001cffa0",
+      "source": "src/functions/001cffa0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001D5240",
+      "size": 28,
+      "name": "FUN_001d5240",
+      "source": "src/functions/001d5240.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001DBCA8",
+      "size": 12,
+      "name": "FUN_001dbca8",
+      "source": "src/functions/001dbca8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001DF120",
+      "size": 20,
+      "name": "FUN_001df120",
+      "source": "src/functions/001df120.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001E3860",
+      "size": 76,
+      "name": "FUN_001e3860",
+      "source": "src/functions/001e3860.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001E4090",
+      "size": 36,
+      "name": "FUN_001e4090",
+      "source": "src/functions/001e4090.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001E6680",
+      "size": 180,
+      "name": "FUN_001e6680",
+      "source": "src/functions/001e6680.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 180/184",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001EA648",
+      "size": 12,
+      "name": "FUN_001ea648",
+      "source": "src/functions/001ea648.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001EA858",
+      "size": 84,
+      "name": "FUN_001ea858",
+      "source": "src/functions/001ea858.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001EAA90",
+      "size": 12,
+      "name": "FUN_001eaa90",
+      "source": "src/functions/001eaa90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001EAAA0",
+      "size": 12,
+      "name": "FUN_001eaaa0",
+      "source": "src/functions/001eaaa0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00203340",
+      "size": 12,
+      "name": "FUN_00203340",
+      "source": "src/functions/00203340.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00205E20",
+      "size": 12,
+      "name": "FUN_00205e20",
+      "source": "src/functions/00205e20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/16",
+      "kind": "core"
+    },
+    {
+      "addr": "0x00212988",
+      "size": 12,
+      "name": "FUN_00212988",
+      "source": "src/functions/00212988.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 12/20",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B7F60",
+      "size": 28,
+      "name": "FUN_001b7f60",
+      "source": "src/functions/001b7f60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001DF4F8",
+      "size": 28,
+      "name": "FUN_001df4f8",
+      "source": "src/functions/001df4f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AB078",
+      "size": 28,
+      "name": "FUN_001ab078",
+      "source": "src/functions/001ab078.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AB098",
+      "size": 28,
+      "name": "FUN_001ab098",
+      "source": "src/functions/001ab098.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001DF518",
+      "size": 28,
+      "name": "FUN_001df518",
+      "source": "src/functions/001df518.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001F4C20",
+      "size": 28,
+      "name": "FUN_001f4c20",
+      "source": "src/functions/001f4c20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020BF10",
+      "size": 28,
+      "name": "FUN_0020bf10",
+      "source": "src/functions/0020bf10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020C0E8",
+      "size": 28,
+      "name": "FUN_0020c0e8",
+      "source": "src/functions/0020c0e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020C4B8",
+      "size": 28,
+      "name": "FUN_0020c4b8",
+      "source": "src/functions/0020c4b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020CE70",
+      "size": 28,
+      "name": "FUN_0020ce70",
+      "source": "src/functions/0020ce70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020D2C0",
+      "size": 28,
+      "name": "FUN_0020d2c0",
+      "source": "src/functions/0020d2c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020DD90",
+      "size": 28,
+      "name": "FUN_0020dd90",
+      "source": "src/functions/0020dd90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020E8A8",
+      "size": 28,
+      "name": "FUN_0020e8a8",
+      "source": "src/functions/0020e8a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020E888",
+      "size": 28,
+      "name": "FUN_0020e888",
+      "source": "src/functions/0020e888.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0020EB10",
+      "size": 28,
+      "name": "FUN_0020eb10",
+      "source": "src/functions/0020eb10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001128A8",
+      "size": 36,
+      "name": "FUN_001128a8",
+      "source": "src/functions/001128a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001128D0",
+      "size": 36,
+      "name": "FUN_001128d0",
+      "source": "src/functions/001128d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AB198",
+      "size": 36,
+      "name": "FUN_001ab198",
+      "source": "src/functions/001ab198.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AC438",
+      "size": 36,
+      "name": "FUN_001ac438",
+      "source": "src/functions/001ac438.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AD270",
+      "size": 36,
+      "name": "FUN_001ad270",
+      "source": "src/functions/001ad270.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AE220",
+      "size": 36,
+      "name": "FUN_001ae220",
+      "source": "src/functions/001ae220.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AEA80",
+      "size": 36,
+      "name": "FUN_001aea80",
+      "source": "src/functions/001aea80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B68E8",
+      "size": 40,
+      "name": "FUN_001b68e8",
+      "source": "src/functions/001b68e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001B6910",
+      "size": 40,
+      "name": "FUN_001b6910",
+      "source": "src/functions/001b6910.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001B6938",
+      "size": 40,
+      "name": "FUN_001b6938",
+      "source": "src/functions/001b6938.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001B6B68",
+      "size": 36,
+      "name": "FUN_001b6b68",
+      "source": "src/functions/001b6b68.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B6BF0",
+      "size": 36,
+      "name": "FUN_001b6bf0",
+      "source": "src/functions/001b6bf0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AF828",
+      "size": 36,
+      "name": "FUN_001af828",
+      "source": "src/functions/001af828.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001AF938",
+      "size": 36,
+      "name": "FUN_001af938",
+      "source": "src/functions/001af938.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B1988",
+      "size": 36,
+      "name": "FUN_001b1988",
+      "source": "src/functions/001b1988.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B5340",
+      "size": 36,
+      "name": "FUN_001b5340",
+      "source": "src/functions/001b5340.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B53E8",
+      "size": 36,
+      "name": "FUN_001b53e8",
+      "source": "src/functions/001b53e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B8810",
+      "size": 36,
+      "name": "FUN_001b8810",
+      "source": "src/functions/001b8810.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001B8958",
+      "size": 36,
+      "name": "FUN_001b8958",
+      "source": "src/functions/001b8958.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001BB940",
+      "size": 40,
+      "name": "FUN_001bb940",
+      "source": "src/functions/001bb940.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001C1BC8",
+      "size": 36,
+      "name": "FUN_001c1bc8",
+      "source": "src/functions/001c1bc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001BDC48",
+      "size": 40,
+      "name": "FUN_001bdc48",
+      "source": "src/functions/001bdc48.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001C2108",
+      "size": 36,
+      "name": "FUN_001c2108",
+      "source": "src/functions/001c2108.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001C3720",
+      "size": 36,
+      "name": "FUN_001c3720",
+      "source": "src/functions/001c3720.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001C3FD8",
+      "size": 36,
+      "name": "FUN_001c3fd8",
+      "source": "src/functions/001c3fd8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001C46E0",
+      "size": 40,
+      "name": "FUN_001c46e0",
+      "source": "src/functions/001c46e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001C5728",
+      "size": 40,
+      "name": "FUN_001c5728",
+      "source": "src/functions/001c5728.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x00117738",
+      "size": 40,
+      "name": "FUN_00117738",
+      "source": "src/functions/00117738.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x0015A2A0",
+      "size": 40,
+      "name": "FUN_0015a2a0",
+      "source": "src/functions/0015a2a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x0017F520",
+      "size": 36,
+      "name": "FUN_0017f520",
+      "source": "src/functions/0017f520.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x0017F6E8",
+      "size": 40,
+      "name": "FUN_0017f6e8",
+      "source": "src/functions/0017f6e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001820F8",
+      "size": 36,
+      "name": "FUN_001820f8",
+      "source": "src/functions/001820f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001C3890",
+      "size": 28,
+      "name": "FUN_001c3890",
+      "source": "src/functions/001c3890.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001F5BB0",
+      "size": 36,
+      "name": "FUN_001f5bb0",
+      "source": "src/functions/001f5bb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40",
+      "kind": "core"
+    },
+    {
+      "addr": "0x001CC338",
+      "size": 32,
+      "name": "FUN_001cc338",
+      "source": "src/functions/001cc338.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 32 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001862E0",
+      "size": 72,
+      "name": "FUN_001862e0",
+      "source": "src/functions/001862e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes",
+      "kind": "full"
+    },
+    {
+      "addr": "0x001A8260",
+      "size": 72,
+      "name": "FUN_001a8260",
+      "source": "src/functions/001a8260.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001D1288",
+      "size": 72,
+      "name": "FUN_001d1288",
+      "source": "src/functions/001d1288.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x0019B688",
+      "size": 80,
+      "name": "FUN_0019b688",
+      "source": "src/functions/0019b688.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0019BC78",
+      "size": 76,
+      "name": "FUN_0019bc78",
+      "source": "src/functions/0019bc78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0019BCC8",
+      "size": 80,
+      "name": "FUN_0019bcc8",
+      "source": "src/functions/0019bcc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001BC178",
+      "size": 88,
+      "name": "FUN_001bc178",
+      "source": "src/functions/001bc178.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001D1230",
+      "size": 20,
+      "name": "FUN_001d1230",
+      "source": "src/functions/001d1230.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B40A8",
+      "size": 52,
+      "name": "FUN_001b40a8",
+      "source": "src/functions/001b40a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001CFFC0",
+      "size": 36,
+      "name": "FUN_001cffc0",
+      "source": "src/functions/001cffc0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x001B4088",
+      "size": 32,
+      "name": "FUN_001b4088",
+      "source": "src/functions/001b4088.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 32 bytes"
+    },
+    {
+      "addr": "0x001A9C70",
+      "size": 132,
+      "name": "FUN_001a9c70",
+      "source": "src/functions/001a9c70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 132/136"
+    },
+    {
+      "addr": "0x001CC468",
+      "size": 136,
+      "name": "FUN_001cc468",
+      "source": "src/functions/001cc468.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 136 bytes"
     }
   ]
 }

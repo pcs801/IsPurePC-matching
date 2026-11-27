@@ -334,6 +334,11 @@ def compile_overrides(entries):
                                       encoding="utf-8")).get("overrides", {})
     except (OSError, ValueError):
         cc_overrides = {}
+    try:
+        flag_overrides = json.load(open(os.path.join(ROOT, "build", "flag-overrides.json"),
+                                        encoding="utf-8")).get("flags", {})
+    except (OSError, ValueError):
+        flag_overrides = {}
     for e in todo:
         src = e["source"].replace("\\", "/")
         base = os.path.splitext(os.path.basename(src))[0]
@@ -346,7 +351,7 @@ def compile_overrides(entries):
             _cc_key = ""
         lines += [
             'if cp "$ROOT/%s" %s.c 2>/dev/null; then ' % (src, base),
-            'CC="%s"; $CC -O2 -mips3 -G%d -c %s.c -o %s 2>%s.err && cp %s "$ROOT/build/overrides/%s" || echo "FAIL %s";' % (cc_overrides.get(_cc_key, "/opt/ee/bin/ee-gcc"), g, base, obj, base, obj, obj, base),
+            'CC="%s"; $CC -O2 -mips3 -G%d %s -c %s.c -o %s 2>%s.err && cp %s "$ROOT/build/overrides/%s" || echo "FAIL %s";' % (cc_overrides.get(_cc_key, "/opt/ee/bin/ee-gcc"), g, " ".join(flag_overrides.get(_cc_key) or []), base, obj, base, obj, obj, base),
             'else echo "MISSING %s"; fi;' % base,
         ]
         objs[e["addr"]] = os.path.join(OVERRIDES_BUILD, obj)
