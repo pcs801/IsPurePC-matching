@@ -133,6 +133,43 @@ def same_shape_src(entry, limit=3):
     return [(n, d) for _s, _a, n, d in cands[:limit]]
 
 
+_SEM = None
+
+
+def _sem_index():
+    global _SEM
+    if _SEM is None:
+        try:
+            _SEM = json.load(open(os.path.join(ROOT, "build", "m26-semantic.json"),
+                                  encoding="utf-8"))["functions"]
+        except (OSError, ValueError):
+            _SEM = {}
+    return _SEM
+
+
+def _sem_note(addr_i):
+    p = os.path.join(ROOT, "build", "m26-semantics", "%08x.md" % addr_i)
+    if not os.path.exists(p):
+        return ""
+    return open(p, encoding="utf-8", errors="replace").read()[:1200]
+
+
+def _fn_summary(hexaddr, idx):
+    rec = idx.get(hexaddr)
+    if not rec:
+        return None
+    out = {"addr": rec.get("addr"), "name": rec.get("name"), "size": rec.get("size"),
+           "matched": bool(rec.get("matched")), "features": rec.get("features", [])}
+    src = rec.get("source") or ""
+    if src and os.path.exists(os.path.join(ROOT, src)):
+        out["source_head"] = open(os.path.join(ROOT, src), encoding="utf-8",
+                                  errors="replace").read()[:1200]
+    note = _sem_note(int(hexaddr, 16))
+    if note:
+        out["semantic"] = note
+    return out
+
+
 def build_card(entry, body):
     card = {
         "addr": entry["addr"], "addr_i": entry["addr_i"],
@@ -154,6 +191,23 @@ def build_card(entry, body):
         })
     for n, d in same_shape_src(entry):
         card["same_shape_sources"].append({"file": n, "code": d.strip()[:2000]})
+    idx = _sem_index()
+    rec = idx.get("%08x" % entry["addr_i"], {})
+    card["callees"] = [x for x in (_fn_summary(c, idx) for c in rec.get("callees", [])) if x][:8]
+    card["callers"] = [x for x in (_fn_summary(c, idx) for c in rec.get("callers", [])) if x][:8]
+    mine = set(rec.get("features", []))
+    rel = []
+    for k, v in idx.items():
+        if k == "%08x" % entry["addr_i"] or not v.get("matched"):
+            continue
+        score = len(mine & set(v.get("features", [])))
+        if score:
+            rel.append((score, k))
+    rel.sort(reverse=True)
+    card["related_matched"] = [x for x in (_fn_summary(k, idx) for _s, k in rel[:3]) if x]
+    note = _sem_note(entry["addr_i"])
+    if note:
+        card["semantic"] = note
     return card
 
 

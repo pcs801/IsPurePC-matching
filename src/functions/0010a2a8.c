@@ -2,7 +2,10 @@ extern int D_1BA0D50[];
 extern void FUN_0019ed10(void *p, int a);
 
 typedef struct {
-    int v[4];
+    int sx;
+    int sy;
+    int sw;
+    int sh;
 } R4;
 
 typedef struct {
@@ -10,40 +13,33 @@ typedef struct {
     int y;
     int w;
     int h;
-    R4 src;
-} Clip;
+} Rect;
 
-void FUN_0010a2a8(R4 *src, int a1)
+void FUN_0010a2a8(R4 *p, int a1)
 {
-    Clip c;
+    Rect r;
+    R4 s;
 
-    c.src = *src;
-
-    c.src.v[0] = c.src.v[0] + ((D_1BA0D50[4] - 0x6C00) >> 4);
-    c.x = c.src.v[0];
-    if (c.x < 0)
-        c.x = 0;
-
-    c.src.v[1] = c.src.v[1] + ((D_1BA0D50[5] - 0x7200) >> 4);
-    c.y = c.src.v[1];
-    if (c.y < 0)
-        c.y = 0;
-
-    if (c.x + c.src.v[2] < 640) {
-        c.w = c.src.v[2];
+    s = *p;
+    s.sx = s.sx + ((D_1BA0D50[4] - 0x6C00) >> 4);
+    if ((r.x = s.sx) < 0)
+        r.x = 0;
+    s.sy = s.sy + ((D_1BA0D50[5] - 0x7200) >> 4);
+    if ((r.y = s.sy) < 0)
+        r.y = 0;
+    if (r.x + s.sw < 640) {
+        r.w = s.sw;
     } else {
-        c.w = c.src.v[2] - ((c.x + c.src.v[2]) - 640);
-        if (c.w <= 0)
+        r.w = s.sw - ((r.x + s.sw) - 640);
+        if (r.w <= 0)
             return;
     }
-
-    if (c.y + c.src.v[3] < 448) {
-        c.h = c.src.v[3];
+    if (r.y + s.sh < 448) {
+        r.h = s.sh;
     } else {
-        c.h = c.src.v[3] - ((c.y + c.src.v[3]) - 448);
-        if (c.h <= 0)
+        r.h = s.sh - ((r.y + s.sh) - 448);
+        if (r.h <= 0)
             return;
     }
-
-    FUN_0019ed10(&c, (unsigned short)a1);
+    FUN_0019ed10(&r, (unsigned short)a1);
 }

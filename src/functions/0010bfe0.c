@@ -1,4 +1,4 @@
-// FUNCTION: SLPM 0x0010BFE0  size 304  core 304
+// FUNCTION: SLPM 0x0010BFE0  size 304  core 304 (includes 0x0010C108 empty tail)
 
 typedef struct Rec {
     int ptr;
@@ -17,7 +17,7 @@ extern char D_0026FE28[];
 extern char D_0026FE30[];
 extern char D_00258A28[];
 extern char D_00258A40[];
-extern unsigned char D_1B741FF;
+extern unsigned char D_1B741FF[];
 extern int D_00270AC0;
 
 extern int FUN_001fbd78(void *, ...);
@@ -35,17 +35,15 @@ extern void FUN_0010df70(void);
 void FUN_0010bfe0(int idx, int val)
 {
     char buf[0x100];
-    Rec *p;
     int n;
 
-    p = &D_B25A30[idx];
     FUN_001fbd78(D_0026FE28, idx);
-    if (D_1B741FF == 1) {
-        FUN_001fe618(p->ptr);
-        FUN_001fc2a8(buf, D_00258A28, p->ptr);
+    if (D_1B741FF[0] == 1) {
+        FUN_001fe618(D_B25A30[idx].ptr);
+        FUN_001fc2a8(buf, D_00258A28, D_B25A30[idx].ptr);
     } else {
-        FUN_001fcb10(p->ptr);
-        FUN_001fc2a8(buf, D_00258A40, p->ptr);
+        FUN_001fcb10(D_B25A30[idx].ptr);
+        FUN_001fc2a8(buf, D_00258A40, D_B25A30[idx].ptr);
     }
     n = FUN_00105b90(D_B25A30[idx].bE);
     FUN_001fbd78(D_0026FE30, buf);
@@ -55,3 +53,5 @@ void FUN_0010bfe0(int idx, int val)
     FUN_001dd6a0(FUN_0010df70);
     FUN_00107508();
 }
+
+void FUN_0010c108(void) {}

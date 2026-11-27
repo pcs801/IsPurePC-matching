@@ -30,22 +30,20 @@ typedef struct {
 void FUN_0010bb98(void)
 {
     FRAME f;
-    int n = 1;
-    int tid;
-    int th;
+    int sem;
+    int h;
 
-    f.sema_init = n;
+    f.sema_init = 1;
     f.sema_max = 0;
     f.sema_attr = 0;
-    FUN_002059a0(&f.sema_size);
-    tid = FUN_00205890();
-    FUN_00205830(tid, 2);
+    sem = FUN_002059a0(&f.sema_size);
+    FUN_00205830(FUN_00205890(), 2);
+    f.stack_size = 0x2000;
     f.func = (int)FUN_0010bc40;
     f.stack = (int)D_479100;
-    f.stack_size = 0x2000;
     f.gp = (int)D_2779F0;
-    f.priority = n;
-    th = FUN_002057a0(&f);
-    FUN_00206ae0(th, tid);
-    FUN_001f47d0((void *)FUN_0010bcd8, tid);
+    f.priority = 1;
+    h = FUN_002057a0(&f);
+    FUN_00206ae0(h, sem);
+    FUN_001f47d0((void *)FUN_0010bcd8, sem);
 }
