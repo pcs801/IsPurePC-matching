@@ -8,14 +8,13 @@ extern char D_00259680[];
 extern int D_00B1EC04;
 extern int FUN_0010bf68(char *);
 
-int FUN_00115c28(int cnt, int index)
+int FUN_00115c28(int cnt, unsigned short index)
 {
     char *table;
     int b;
     int *p;
     int bit;
 
-    index &= 0xFFFF;
     if (index == 0xFFFF)
         return 0xFFFF;
     switch (index >> 12) {

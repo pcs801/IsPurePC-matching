@@ -2085,8 +2085,8 @@
       "name": "FUN_00117168",
       "source": "src/functions/00117168.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
     },
     {
       "addr": "0x00117198",
@@ -2094,8 +2094,8 @@
       "name": "FUN_00117198",
       "source": "src/functions/00117198.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
     },
     {
       "addr": "0x001171E0",
