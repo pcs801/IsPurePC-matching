@@ -61,7 +61,7 @@ def next_batch_no():
     return mx + 1
 
 
-def build_tu_dir(g, addrs, index, byfn):
+def build_tu_dir(g, addrs, index, byfn, ablate=False):
     d = os.path.join(WORK, slug(g["name"]))
     os.makedirs(d, exist_ok=True)
     cards = []
@@ -70,6 +70,11 @@ def build_tu_dir(g, addrs, index, byfn):
         card = P.build_card(e, byfn.get(a, []))
         card["sandbox"] = os.path.join(ROOT, "build", "sandbox", "%08x" % a).replace("\\", "/")
         card["candidate_path"] = "src/functions/%08x.c" % a
+        if ablate:
+            card.pop("callees", None)
+            card.pop("callers", None)
+            card.pop("related_matched", None)
+            card.pop("semantic", None)
         cards.append(card)
         P.ensure_override(e, card["candidate_path"], (e.get("g") or ["0"])[0])
         src_abs = os.path.join(ROOT, card["candidate_path"])
@@ -171,13 +176,18 @@ def cmd_prepare(args):
     bdir = os.path.join(ROOT, "build", "m26-tu-batch-%d" % batch_no)
     os.makedirs(bdir, exist_ok=True)
     metas = []
-    for g, take in chosen:
-        d, cards = build_tu_dir(g, take, index, byfn)
+    ablate_set = set()
+    for i, (g, take) in enumerate(chosen):
+        abl = bool(args.ablate and i % 2 == 0)
+        if abl:
+            ablate_set.add(g["name"])
+        d, cards = build_tu_dir(g, take, index, byfn, ablate=abl)
         metas.append({"tu": g["name"], "dir": d.replace("\\", "/"),
                       "addrs": [index[a]["addr"] for a in take],
-                      "functions": len(take)})
+                      "functions": len(take), "ablate": abl})
         print("TU", g["name"], "functions", len(take))
     meta = {"schema": 1, "batch": batch_no, "total": total, "tus": metas,
+            "ablate_tus": sorted(ablate_set),
             "created": time.strftime("%Y-%m-%dT%H:%M:%S%z")}
     json.dump(meta, open(os.path.join(bdir, "meta.json"), "w", newline="\n",
                          encoding="utf-8"), indent=1, ensure_ascii=False)
@@ -277,6 +287,8 @@ def main(argv=None):
     p = sub.add_parser("prepare")
     p.add_argument("--limit", type=int, default=20)
     p.add_argument("--max-per-tu", type=int, default=3)
+    p.add_argument("--ablate", action="store_true",
+                   help="A/B: half the TUs get no semantic context")
     p.add_argument("--retry", action="store_true",
                    help="re-include already attempted (MISS) functions")
     p.set_defaults(func=cmd_prepare)
