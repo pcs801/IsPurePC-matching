@@ -952,7 +952,7 @@
       "source": "src/functions/00107db8.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 224 bytes"
+      "note": "M2.6 TU-batch 17: 224 bytes"
     },
     {
       "addr": "0x00107E98",
@@ -2023,7 +2023,7 @@
       "source": "src/functions/00115938.c",
       "g": 0,
       "status": "matched",
-      "note": "M2.6 late-match: 184 bytes"
+      "note": "M2.6 TU-batch 17: 184 bytes"
     },
     {
       "addr": "0x001159F0",

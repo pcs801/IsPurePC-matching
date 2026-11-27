@@ -648,3 +648,9 @@ addr	name	size	result	flags	assembler	attempts	note
 0x00104F50	FUN_00104f50	232	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 late-match: 232 bytes
 0x00105B90	FUN_00105b90	144	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 late-match: 144 bytes
 0x001E6680	FUN_001e6680	184	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 late-match: core 180/184
+0x001F6718	FUN_001f6718	32	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 17: core 28/32
+0x00105AF0	FUN_00105af0	160	MATCH	-O2 -mips3 -G8	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 17: core 156/160
+0x00115938	FUN_00115938	184	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 17: 184 bytes
+0x001DFE18	FUN_001dfe18	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 17: core 36/40
+0x001DFE40	FUN_001dfe40	40	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 17: core 36/40
+0x00107DB8	FUN_00107db8	224	MATCH	-O2 -mips3 -G0	ee-gcc 2.96-ee-001003-1	60	M2.6 TU-batch 17: 224 bytes
