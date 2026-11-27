@@ -1,2 +1,19 @@
-// FUNCTION: SLPM 0x001F9188 placeholder (TU worker will replace)
-void FUN_001f9188(void) { }
+unsigned char *FUN_001f9188(unsigned char *p, int *out)
+{
+    unsigned char c;
+    int val;
+    int shift;
+
+    c = *p++;
+    shift = 0;
+    val = c & 0x7F;
+    if (c & 0x80) {
+        do {
+            c = *p++;
+            shift += 7;
+            val |= (c & 0x7F) << shift;
+        } while (c & 0x80);
+    }
+    *out = val;
+    return p;
+}

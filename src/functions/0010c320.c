@@ -13,7 +13,7 @@ extern void FUN_001dd740(void *p, int a, int b, int c, int d, int e);
 extern void FUN_001dc7b8(int a);
 extern void FUN_001dc850(int a, int b);
 extern void FUN_001ddc08(void *p, int a);
-extern void FlushCache(int a);
+extern void FUN_00205c20(int a);
 
 typedef unsigned long long u64;
 
@@ -62,7 +62,7 @@ void FUN_0010c320(void)
     G(0x260) = (G(0x260) & ~0x1FFULL) | 0x118;
     G(0x2F0) = 0x3F80000080000000ULL;
     G(0x180) = 0x3F80000080000000ULL;
-    FlushCache(0);
+    FUN_00205c20(0);
     FUN_001dc7b8(0);
     FUN_001ddc08(D_B25E80, 0);
     FUN_001dc850(0, 0);
