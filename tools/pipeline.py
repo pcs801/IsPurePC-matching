@@ -472,6 +472,8 @@ def _budget_exhausted(addr_i, limit_attempts=60, limit_min=20):
             d = json.load(open(p, encoding="utf-8"))
         except ValueError:
             d = {}
+    if "updated" in d and now - float(d.get("updated", now)) > 1800:
+        d = {}
     if "started" not in d:
         d["started"] = now
     d["attempts"] = int(d.get("attempts", 0)) + 1
@@ -544,6 +546,10 @@ def cmd_budget(args):
     if not os.path.exists(p):
         print("budget: 0/60 attempts, 0.0/20.0 min, remaining 20.0 min")
         return 0
+    if getattr(args, "reset", False):
+        os.remove(p)
+        print("budget reset")
+        return 0
     try:
         d = json.load(open(p, encoding="utf-8"))
     except ValueError:
@@ -609,6 +615,7 @@ def main(argv=None):
     v.set_defaults(func=cmd_verify)
     b = sub.add_parser("budget")
     b.add_argument("--addr", required=True)
+    b.add_argument("--reset", action="store_true")
     b.set_defaults(func=cmd_budget)
     pr = sub.add_parser("progress")
     pr.add_argument("--addr", required=True)
