@@ -1567,6 +1567,33 @@
       "note": "M2.6 TU-batch 14: 120 bytes"
     },
     {
+      "addr": "0x0010DF70",
+      "size": 152,
+      "name": "FUN_0010df70",
+      "source": "src/functions/0010df70.c",
+      "g": 8,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x0010E008",
+      "size": 104,
+      "name": "FUN_0010e008",
+      "source": "src/functions/0010e008.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x0010E070",
+      "size": 288,
+      "name": "FUN_0010e070",
+      "source": "src/functions/0010e070.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
       "addr": "0x001100A0",
       "size": 40,
       "name": "FUN_001100a0",
@@ -1765,6 +1792,33 @@
       "note": "M2.6 pipeline todo"
     },
     {
+      "addr": "0x00111CC0",
+      "size": 168,
+      "name": "FUN_00111cc0",
+      "source": "src/functions/00111cc0.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x00111D80",
+      "size": 104,
+      "name": "FUN_00111d80",
+      "source": "src/functions/00111d80.c",
+      "g": 8,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x00111DE8",
+      "size": 168,
+      "name": "FUN_00111de8",
+      "source": "src/functions/00111de8.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
       "addr": "0x00112448",
       "size": 8,
       "name": "FUN_00112448",
@@ -1882,6 +1936,33 @@
       "note": "M2.6 pipeline: core 20/24"
     },
     {
+      "addr": "0x001134C8",
+      "size": 768,
+      "name": "FUN_001134c8",
+      "source": "src/functions/001134c8.c",
+      "g": 8,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x001137C8",
+      "size": 88,
+      "name": "FUN_001137c8",
+      "source": "src/functions/001137c8.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x00114550",
+      "size": 160,
+      "name": "FUN_00114550",
+      "source": "src/functions/00114550.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
       "addr": "0x00114A48",
       "size": 296,
       "name": "FUN_00114a48",
@@ -1963,6 +2044,33 @@
       "note": "M2.6 pipeline todo"
     },
     {
+      "addr": "0x00115C28",
+      "size": 272,
+      "name": "FUN_00115c28",
+      "source": "src/functions/00115c28.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x00115D38",
+      "size": 296,
+      "name": "FUN_00115d38",
+      "source": "src/functions/00115d38.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x00115E60",
+      "size": 304,
+      "name": "FUN_00115e60",
+      "source": "src/functions/00115e60.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
       "addr": "0x00117088",
       "size": 224,
       "name": "FUN_00117088",
@@ -1976,6 +2084,42 @@
       "size": 48,
       "name": "FUN_00117168",
       "source": "src/functions/00117168.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x00117198",
+      "size": 48,
+      "name": "FUN_00117198",
+      "source": "src/functions/00117198.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x001171E0",
+      "size": 144,
+      "name": "FUN_001171e0",
+      "source": "src/functions/001171e0.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x00117288",
+      "size": 144,
+      "name": "FUN_00117288",
+      "source": "src/functions/00117288.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x00117318",
+      "size": 184,
+      "name": "FUN_00117318",
+      "source": "src/functions/00117318.c",
       "g": 0,
       "status": "todo",
       "note": "M2.6 pipeline todo"
@@ -2022,6 +2166,24 @@
       "name": "FUN_0011abf8",
       "source": "src/functions/0011abf8.c",
       "g": 8,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x0011C950",
+      "size": 80,
+      "name": "FUN_0011c950",
+      "source": "src/functions/0011c950.c",
+      "g": 0,
+      "status": "todo",
+      "note": "M2.6 pipeline todo"
+    },
+    {
+      "addr": "0x0011C9A0",
+      "size": 80,
+      "name": "FUN_0011c9a0",
+      "source": "src/functions/0011c9a0.c",
+      "g": 0,
       "status": "todo",
       "note": "M2.6 pipeline todo"
     },

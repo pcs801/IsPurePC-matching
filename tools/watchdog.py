@@ -11,7 +11,7 @@ import os
 import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STUCK = int(os.environ.get("STUCK_MIN", "25"))
+STUCK = int(os.environ.get("STUCK_MIN", "15"))
 
 
 def newest_mtime(d):

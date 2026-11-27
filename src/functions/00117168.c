@@ -1,13 +1,14 @@
 // FUNCTION: SLPM 0x00117168  size 48 (core 44)
-// MISS by one word: the negation of the comparison. Target emits
-//   slt v0,v0,a0 ; sltiu v0,v0,1
-// ee-gcc emits slt + xori v0,v0,1 instead (same semantics, different encoding).
-// Tried: >=, !(a<b), (a<b)==0, (a<b)==0u, (unsigned)(a<b) < 1u, ternary ?0:1,
-// boolean temp - every form folds to xori.
+// note: the negation must be written as an early return (see 0x00117198 above):
+//   if (FUN_001159f0(0) < D_B1EC08) return 0;  return 1;
+// gives "slt v0,v0,a0 ; sltiu v0,v0,1" exactly; "return a >= b" / "!(a < b)" fold
+// to xori and miss by one word.
 extern int D_B1EC08;
 extern int FUN_001159f0(int i);
 
 int FUN_00117168(void)
 {
-    return FUN_001159f0(0) >= D_B1EC08;
+    if (FUN_001159f0(0) < D_B1EC08)
+        return 0;
+    return 1;
 }
