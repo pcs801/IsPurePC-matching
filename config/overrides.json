@@ -92,12 +92,12 @@
     },
     {
       "addr": "0x001016B8",
-      "size": 40,
+      "size": 36,
       "name": "FUN_001016b8",
       "source": "src/functions/001016b8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
     },
     {
       "addr": "0x001016E0",
@@ -1034,12 +1034,12 @@
     },
     {
       "addr": "0x00107D88",
-      "size": 48,
+      "size": 44,
       "name": "FUN_00107d88",
       "source": "src/functions/00107d88.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
     },
     {
       "addr": "0x00107DB8",
@@ -2461,12 +2461,12 @@
     },
     {
       "addr": "0x00117668",
-      "size": 48,
+      "size": 44,
       "name": "FUN_00117668",
       "source": "src/functions/00117668.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
     },
     {
       "addr": "0x00117760",
@@ -3817,8 +3817,8 @@
       "name": "FUN_001b3c88",
       "source": "src/functions/001b3c88.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
     },
     {
       "addr": "0x001B3CB8",
@@ -4065,8 +4065,8 @@
       "name": "FUN_001b4450",
       "source": "src/functions/001b4450.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
     },
     {
       "addr": "0x001B4860",
@@ -4570,12 +4570,12 @@
     },
     {
       "addr": "0x001BC2F8",
-      "size": 48,
+      "size": 44,
       "name": "FUN_001bc2f8",
       "source": "src/functions/001bc2f8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
     },
     {
       "addr": "0x001BC938",
@@ -5715,8 +5715,8 @@
       "name": "FUN_001eecf8",
       "source": "src/functions/001eecf8.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: 16 bytes"
     },
     {
       "addr": "0x001F6718",
@@ -5936,12 +5936,13 @@
     },
     {
       "addr": "0x00209120",
-      "size": 32,
+      "size": 28,
       "name": "FUN_00209120",
       "source": "src/functions/00209120.c",
       "g": 0,
-      "status": "todo",
-      "note": "M2.6 pipeline todo"
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32",
+      "kind": "core"
     },
     {
       "addr": "0x0020EAF0",
@@ -6041,16 +6042,6 @@
       "g": 0,
       "status": "matched",
       "note": "M2.6 late-match: core 28/32",
-      "kind": "core"
-    },
-    {
-      "addr": "0x00102040",
-      "size": 52,
-      "name": "FUN_00102040",
-      "source": "src/functions/00102040.c",
-      "g": 0,
-      "status": "matched",
-      "note": "M2.6 late-match: core 52/56",
       "kind": "core"
     },
     {
@@ -7270,6 +7261,5523 @@
       "g": 0,
       "status": "matched",
       "note": "M2.6 late-match: 136 bytes"
+    },
+    {
+      "addr": "0x0011D9E8",
+      "size": 44,
+      "name": "FUN_0011d9e8",
+      "source": "src/functions/0011d9e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001465A0",
+      "size": 44,
+      "name": "FUN_001465a0",
+      "source": "src/functions/001465a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001AE128",
+      "size": 44,
+      "name": "FUN_001ae128",
+      "source": "src/functions/001ae128.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001CF5F0",
+      "size": 36,
+      "name": "FUN_001cf5f0",
+      "source": "src/functions/001cf5f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x00112878",
+      "size": 44,
+      "name": "FUN_00112878",
+      "source": "src/functions/00112878.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x00123750",
+      "size": 36,
+      "name": "FUN_00123750",
+      "source": "src/functions/00123750.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x00119498",
+      "size": 44,
+      "name": "FUN_00119498",
+      "source": "src/functions/00119498.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x0011ABC8",
+      "size": 44,
+      "name": "FUN_0011abc8",
+      "source": "src/functions/0011abc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x00130FB0",
+      "size": 44,
+      "name": "FUN_00130fb0",
+      "source": "src/functions/00130fb0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001AFC10",
+      "size": 28,
+      "name": "FUN_001afc10",
+      "source": "src/functions/001afc10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x001AF190",
+      "size": 44,
+      "name": "FUN_001af190",
+      "source": "src/functions/001af190.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B2110",
+      "size": 48,
+      "name": "FUN_001b2110",
+      "source": "src/functions/001b2110.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B2CF8",
+      "size": 44,
+      "name": "FUN_001b2cf8",
+      "source": "src/functions/001b2cf8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B44E0",
+      "size": 44,
+      "name": "FUN_001b44e0",
+      "source": "src/functions/001b44e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001AFFA0",
+      "size": 44,
+      "name": "FUN_001affa0",
+      "source": "src/functions/001affa0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B2140",
+      "size": 48,
+      "name": "FUN_001b2140",
+      "source": "src/functions/001b2140.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B2790",
+      "size": 44,
+      "name": "FUN_001b2790",
+      "source": "src/functions/001b2790.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B2D28",
+      "size": 44,
+      "name": "FUN_001b2d28",
+      "source": "src/functions/001b2d28.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B46F8",
+      "size": 44,
+      "name": "FUN_001b46f8",
+      "source": "src/functions/001b46f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B03D8",
+      "size": 44,
+      "name": "FUN_001b03d8",
+      "source": "src/functions/001b03d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B2268",
+      "size": 48,
+      "name": "FUN_001b2268",
+      "source": "src/functions/001b2268.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B2CC8",
+      "size": 44,
+      "name": "FUN_001b2cc8",
+      "source": "src/functions/001b2cc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B3EB8",
+      "size": 44,
+      "name": "FUN_001b3eb8",
+      "source": "src/functions/001b3eb8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B4768",
+      "size": 44,
+      "name": "FUN_001b4768",
+      "source": "src/functions/001b4768.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B4A60",
+      "size": 44,
+      "name": "FUN_001b4a60",
+      "source": "src/functions/001b4a60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B4AF8",
+      "size": 44,
+      "name": "FUN_001b4af8",
+      "source": "src/functions/001b4af8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B5478",
+      "size": 44,
+      "name": "FUN_001b5478",
+      "source": "src/functions/001b5478.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B5978",
+      "size": 44,
+      "name": "FUN_001b5978",
+      "source": "src/functions/001b5978.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B6330",
+      "size": 44,
+      "name": "FUN_001b6330",
+      "source": "src/functions/001b6330.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B6960",
+      "size": 44,
+      "name": "FUN_001b6960",
+      "source": "src/functions/001b6960.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B6ED0",
+      "size": 44,
+      "name": "FUN_001b6ed0",
+      "source": "src/functions/001b6ed0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B6FA0",
+      "size": 44,
+      "name": "FUN_001b6fa0",
+      "source": "src/functions/001b6fa0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B70C8",
+      "size": 48,
+      "name": "FUN_001b70c8",
+      "source": "src/functions/001b70c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B70F8",
+      "size": 44,
+      "name": "FUN_001b70f8",
+      "source": "src/functions/001b70f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B7D78",
+      "size": 48,
+      "name": "FUN_001b7d78",
+      "source": "src/functions/001b7d78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B7E90",
+      "size": 48,
+      "name": "FUN_001b7e90",
+      "source": "src/functions/001b7e90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B89D0",
+      "size": 48,
+      "name": "FUN_001b89d0",
+      "source": "src/functions/001b89d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B80D8",
+      "size": 44,
+      "name": "FUN_001b80d8",
+      "source": "src/functions/001b80d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B82A8",
+      "size": 44,
+      "name": "FUN_001b82a8",
+      "source": "src/functions/001b82a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B8A00",
+      "size": 44,
+      "name": "FUN_001b8a00",
+      "source": "src/functions/001b8a00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B8AA8",
+      "size": 48,
+      "name": "FUN_001b8aa8",
+      "source": "src/functions/001b8aa8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B8C80",
+      "size": 48,
+      "name": "FUN_001b8c80",
+      "source": "src/functions/001b8c80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B8CF0",
+      "size": 48,
+      "name": "FUN_001b8cf0",
+      "source": "src/functions/001b8cf0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B8D58",
+      "size": 48,
+      "name": "FUN_001b8d58",
+      "source": "src/functions/001b8d58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B8F30",
+      "size": 48,
+      "name": "FUN_001b8f30",
+      "source": "src/functions/001b8f30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B8F60",
+      "size": 44,
+      "name": "FUN_001b8f60",
+      "source": "src/functions/001b8f60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B90E8",
+      "size": 44,
+      "name": "FUN_001b90e8",
+      "source": "src/functions/001b90e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001B95E0",
+      "size": 48,
+      "name": "FUN_001b95e0",
+      "source": "src/functions/001b95e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B99E0",
+      "size": 48,
+      "name": "FUN_001b99e0",
+      "source": "src/functions/001b99e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001AECD0",
+      "size": 48,
+      "name": "FUN_001aecd0",
+      "source": "src/functions/001aecd0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001B9A10",
+      "size": 44,
+      "name": "FUN_001b9a10",
+      "source": "src/functions/001b9a10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001BB5F8",
+      "size": 44,
+      "name": "FUN_001bb5f8",
+      "source": "src/functions/001bb5f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001BBE38",
+      "size": 44,
+      "name": "FUN_001bbe38",
+      "source": "src/functions/001bbe38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001BC328",
+      "size": 44,
+      "name": "FUN_001bc328",
+      "source": "src/functions/001bc328.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C0340",
+      "size": 48,
+      "name": "FUN_001c0340",
+      "source": "src/functions/001c0340.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001C1DC8",
+      "size": 48,
+      "name": "FUN_001c1dc8",
+      "source": "src/functions/001c1dc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001C3748",
+      "size": 48,
+      "name": "FUN_001c3748",
+      "source": "src/functions/001c3748.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001C3A50",
+      "size": 44,
+      "name": "FUN_001c3a50",
+      "source": "src/functions/001c3a50.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C3D98",
+      "size": 44,
+      "name": "FUN_001c3d98",
+      "source": "src/functions/001c3d98.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C3E08",
+      "size": 44,
+      "name": "FUN_001c3e08",
+      "source": "src/functions/001c3e08.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C3EA0",
+      "size": 44,
+      "name": "FUN_001c3ea0",
+      "source": "src/functions/001c3ea0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C4098",
+      "size": 48,
+      "name": "FUN_001c4098",
+      "source": "src/functions/001c4098.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001C4100",
+      "size": 48,
+      "name": "FUN_001c4100",
+      "source": "src/functions/001c4100.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001C4670",
+      "size": 48,
+      "name": "FUN_001c4670",
+      "source": "src/functions/001c4670.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001C6FD0",
+      "size": 44,
+      "name": "FUN_001c6fd0",
+      "source": "src/functions/001c6fd0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C70B8",
+      "size": 44,
+      "name": "FUN_001c70b8",
+      "source": "src/functions/001c70b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C7528",
+      "size": 44,
+      "name": "FUN_001c7528",
+      "source": "src/functions/001c7528.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C7B58",
+      "size": 44,
+      "name": "FUN_001c7b58",
+      "source": "src/functions/001c7b58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C7BD8",
+      "size": 44,
+      "name": "FUN_001c7bd8",
+      "source": "src/functions/001c7bd8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C7D68",
+      "size": 44,
+      "name": "FUN_001c7d68",
+      "source": "src/functions/001c7d68.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C7F60",
+      "size": 44,
+      "name": "FUN_001c7f60",
+      "source": "src/functions/001c7f60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C8570",
+      "size": 44,
+      "name": "FUN_001c8570",
+      "source": "src/functions/001c8570.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C85F0",
+      "size": 44,
+      "name": "FUN_001c85f0",
+      "source": "src/functions/001c85f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C8940",
+      "size": 44,
+      "name": "FUN_001c8940",
+      "source": "src/functions/001c8940.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C8A10",
+      "size": 44,
+      "name": "FUN_001c8a10",
+      "source": "src/functions/001c8a10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C9320",
+      "size": 44,
+      "name": "FUN_001c9320",
+      "source": "src/functions/001c9320.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C93A0",
+      "size": 44,
+      "name": "FUN_001c93a0",
+      "source": "src/functions/001c93a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x00143B78",
+      "size": 300,
+      "name": "FUN_00143b78",
+      "source": "src/functions/00143b78.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 300/304"
+    },
+    {
+      "addr": "0x001CA568",
+      "size": 48,
+      "name": "FUN_001ca568",
+      "source": "src/functions/001ca568.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001CC358",
+      "size": 48,
+      "name": "FUN_001cc358",
+      "source": "src/functions/001cc358.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001C9560",
+      "size": 44,
+      "name": "FUN_001c9560",
+      "source": "src/functions/001c9560.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001CBB78",
+      "size": 48,
+      "name": "FUN_001cbb78",
+      "source": "src/functions/001cbb78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001CC388",
+      "size": 44,
+      "name": "FUN_001cc388",
+      "source": "src/functions/001cc388.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001C9758",
+      "size": 44,
+      "name": "FUN_001c9758",
+      "source": "src/functions/001c9758.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001CC308",
+      "size": 48,
+      "name": "FUN_001cc308",
+      "source": "src/functions/001cc308.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001CC4F0",
+      "size": 48,
+      "name": "FUN_001cc4f0",
+      "source": "src/functions/001cc4f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001D0268",
+      "size": 44,
+      "name": "FUN_001d0268",
+      "source": "src/functions/001d0268.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001D2B10",
+      "size": 48,
+      "name": "FUN_001d2b10",
+      "source": "src/functions/001d2b10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001D2B40",
+      "size": 44,
+      "name": "FUN_001d2b40",
+      "source": "src/functions/001d2b40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001D2BB0",
+      "size": 44,
+      "name": "FUN_001d2bb0",
+      "source": "src/functions/001d2bb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001D2D40",
+      "size": 44,
+      "name": "FUN_001d2d40",
+      "source": "src/functions/001d2d40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001D2D90",
+      "size": 44,
+      "name": "FUN_001d2d90",
+      "source": "src/functions/001d2d90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001F9900",
+      "size": 48,
+      "name": "FUN_001f9900",
+      "source": "src/functions/001f9900.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001F9998",
+      "size": 48,
+      "name": "FUN_001f9998",
+      "source": "src/functions/001f9998.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001F9060",
+      "size": 44,
+      "name": "FUN_001f9060",
+      "source": "src/functions/001f9060.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001FA890",
+      "size": 44,
+      "name": "FUN_001fa890",
+      "source": "src/functions/001fa890.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001CC248",
+      "size": 40,
+      "name": "FUN_001cc248",
+      "source": "src/functions/001cc248.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x001CC588",
+      "size": 36,
+      "name": "FUN_001cc588",
+      "source": "src/functions/001cc588.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x001CD180",
+      "size": 40,
+      "name": "FUN_001cd180",
+      "source": "src/functions/001cd180.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x001D29A0",
+      "size": 40,
+      "name": "FUN_001d29a0",
+      "source": "src/functions/001d29a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x001D3D08",
+      "size": 40,
+      "name": "FUN_001d3d08",
+      "source": "src/functions/001d3d08.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x00206178",
+      "size": 40,
+      "name": "FUN_00206178",
+      "source": "src/functions/00206178.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x00204720",
+      "size": 52,
+      "name": "FUN_00204720",
+      "source": "src/functions/00204720.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001CA2C0",
+      "size": 52,
+      "name": "FUN_001ca2c0",
+      "source": "src/functions/001ca2c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001AD318",
+      "size": 56,
+      "name": "FUN_001ad318",
+      "source": "src/functions/001ad318.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AD778",
+      "size": 56,
+      "name": "FUN_001ad778",
+      "source": "src/functions/001ad778.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AED00",
+      "size": 56,
+      "name": "FUN_001aed00",
+      "source": "src/functions/001aed00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AEDB8",
+      "size": 56,
+      "name": "FUN_001aedb8",
+      "source": "src/functions/001aedb8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AEFD0",
+      "size": 56,
+      "name": "FUN_001aefd0",
+      "source": "src/functions/001aefd0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AF038",
+      "size": 56,
+      "name": "FUN_001af038",
+      "source": "src/functions/001af038.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001ADBC0",
+      "size": 56,
+      "name": "FUN_001adbc0",
+      "source": "src/functions/001adbc0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AE790",
+      "size": 56,
+      "name": "FUN_001ae790",
+      "source": "src/functions/001ae790.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AE8B8",
+      "size": 56,
+      "name": "FUN_001ae8b8",
+      "source": "src/functions/001ae8b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AEC98",
+      "size": 56,
+      "name": "FUN_001aec98",
+      "source": "src/functions/001aec98.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AF3F0",
+      "size": 56,
+      "name": "FUN_001af3f0",
+      "source": "src/functions/001af3f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B0368",
+      "size": 56,
+      "name": "FUN_001b0368",
+      "source": "src/functions/001b0368.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B2678",
+      "size": 56,
+      "name": "FUN_001b2678",
+      "source": "src/functions/001b2678.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B4828",
+      "size": 56,
+      "name": "FUN_001b4828",
+      "source": "src/functions/001b4828.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B48D0",
+      "size": 56,
+      "name": "FUN_001b48d0",
+      "source": "src/functions/001b48d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B4958",
+      "size": 56,
+      "name": "FUN_001b4958",
+      "source": "src/functions/001b4958.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B5518",
+      "size": 56,
+      "name": "FUN_001b5518",
+      "source": "src/functions/001b5518.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B5668",
+      "size": 56,
+      "name": "FUN_001b5668",
+      "source": "src/functions/001b5668.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B56A8",
+      "size": 56,
+      "name": "FUN_001b56a8",
+      "source": "src/functions/001b56a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B56E8",
+      "size": 56,
+      "name": "FUN_001b56e8",
+      "source": "src/functions/001b56e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B5738",
+      "size": 56,
+      "name": "FUN_001b5738",
+      "source": "src/functions/001b5738.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B5788",
+      "size": 56,
+      "name": "FUN_001b5788",
+      "source": "src/functions/001b5788.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B5620",
+      "size": 56,
+      "name": "FUN_001b5620",
+      "source": "src/functions/001b5620.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B4920",
+      "size": 56,
+      "name": "FUN_001b4920",
+      "source": "src/functions/001b4920.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7A00",
+      "size": 56,
+      "name": "FUN_001b7a00",
+      "source": "src/functions/001b7a00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7D40",
+      "size": 56,
+      "name": "FUN_001b7d40",
+      "source": "src/functions/001b7d40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7E58",
+      "size": 56,
+      "name": "FUN_001b7e58",
+      "source": "src/functions/001b7e58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7EC0",
+      "size": 56,
+      "name": "FUN_001b7ec0",
+      "source": "src/functions/001b7ec0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7F80",
+      "size": 56,
+      "name": "FUN_001b7f80",
+      "source": "src/functions/001b7f80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B92A8",
+      "size": 56,
+      "name": "FUN_001b92a8",
+      "source": "src/functions/001b92a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B9408",
+      "size": 56,
+      "name": "FUN_001b9408",
+      "source": "src/functions/001b9408.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B94B0",
+      "size": 56,
+      "name": "FUN_001b94b0",
+      "source": "src/functions/001b94b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B9520",
+      "size": 56,
+      "name": "FUN_001b9520",
+      "source": "src/functions/001b9520.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B93D0",
+      "size": 52,
+      "name": "FUN_001b93d0",
+      "source": "src/functions/001b93d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001B9A58",
+      "size": 56,
+      "name": "FUN_001b9a58",
+      "source": "src/functions/001b9a58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B9B48",
+      "size": 56,
+      "name": "FUN_001b9b48",
+      "source": "src/functions/001b9b48.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C3910",
+      "size": 56,
+      "name": "FUN_001c3910",
+      "source": "src/functions/001c3910.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C4060",
+      "size": 56,
+      "name": "FUN_001c4060",
+      "source": "src/functions/001c4060.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7FD0",
+      "size": 56,
+      "name": "FUN_001b7fd0",
+      "source": "src/functions/001b7fd0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B90A8",
+      "size": 56,
+      "name": "FUN_001b90a8",
+      "source": "src/functions/001b90a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C40C8",
+      "size": 56,
+      "name": "FUN_001c40c8",
+      "source": "src/functions/001c40c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C4550",
+      "size": 56,
+      "name": "FUN_001c4550",
+      "source": "src/functions/001c4550.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001E2390",
+      "size": 56,
+      "name": "FUN_001e2390",
+      "source": "src/functions/001e2390.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001ADBF8",
+      "size": 56,
+      "name": "FUN_001adbf8",
+      "source": "src/functions/001adbf8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AC048",
+      "size": 52,
+      "name": "FUN_001ac048",
+      "source": "src/functions/001ac048.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001AC0C0",
+      "size": 52,
+      "name": "FUN_001ac0c0",
+      "source": "src/functions/001ac0c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001B03A0",
+      "size": 56,
+      "name": "FUN_001b03a0",
+      "source": "src/functions/001b03a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B94E8",
+      "size": 56,
+      "name": "FUN_001b94e8",
+      "source": "src/functions/001b94e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B9558",
+      "size": 56,
+      "name": "FUN_001b9558",
+      "source": "src/functions/001b9558.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C09F0",
+      "size": 56,
+      "name": "FUN_001c09f0",
+      "source": "src/functions/001c09f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C2670",
+      "size": 56,
+      "name": "FUN_001c2670",
+      "source": "src/functions/001c2670.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C5188",
+      "size": 56,
+      "name": "FUN_001c5188",
+      "source": "src/functions/001c5188.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C53D0",
+      "size": 56,
+      "name": "FUN_001c53d0",
+      "source": "src/functions/001c53d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C5488",
+      "size": 56,
+      "name": "FUN_001c5488",
+      "source": "src/functions/001c5488.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001CB3B0",
+      "size": 60,
+      "name": "FUN_001cb3b0",
+      "source": "src/functions/001cb3b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001D2AB8",
+      "size": 60,
+      "name": "FUN_001d2ab8",
+      "source": "src/functions/001d2ab8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001CD518",
+      "size": 64,
+      "name": "FUN_001cd518",
+      "source": "src/functions/001cd518.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0011D7D0",
+      "size": 64,
+      "name": "FUN_0011d7d0",
+      "source": "src/functions/0011d7d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0011D9A8",
+      "size": 64,
+      "name": "FUN_0011d9a8",
+      "source": "src/functions/0011d9a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0011EF40",
+      "size": 64,
+      "name": "FUN_0011ef40",
+      "source": "src/functions/0011ef40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x00131830",
+      "size": 64,
+      "name": "FUN_00131830",
+      "source": "src/functions/00131830.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0013EDA8",
+      "size": 64,
+      "name": "FUN_0013eda8",
+      "source": "src/functions/0013eda8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0014CA40",
+      "size": 64,
+      "name": "FUN_0014ca40",
+      "source": "src/functions/0014ca40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001B2C88",
+      "size": 64,
+      "name": "FUN_001b2c88",
+      "source": "src/functions/001b2c88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001B5AB8",
+      "size": 60,
+      "name": "FUN_001b5ab8",
+      "source": "src/functions/001b5ab8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B7C78",
+      "size": 60,
+      "name": "FUN_001b7c78",
+      "source": "src/functions/001b7c78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B7DA8",
+      "size": 60,
+      "name": "FUN_001b7da8",
+      "source": "src/functions/001b7da8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B92E8",
+      "size": 60,
+      "name": "FUN_001b92e8",
+      "source": "src/functions/001b92e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B9390",
+      "size": 60,
+      "name": "FUN_001b9390",
+      "source": "src/functions/001b9390.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B99A0",
+      "size": 60,
+      "name": "FUN_001b99a0",
+      "source": "src/functions/001b99a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B9A98",
+      "size": 60,
+      "name": "FUN_001b9a98",
+      "source": "src/functions/001b9a98.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B9AF0",
+      "size": 60,
+      "name": "FUN_001b9af0",
+      "source": "src/functions/001b9af0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B9E58",
+      "size": 60,
+      "name": "FUN_001b9e58",
+      "source": "src/functions/001b9e58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001BA198",
+      "size": 60,
+      "name": "FUN_001ba198",
+      "source": "src/functions/001ba198.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001C1720",
+      "size": 60,
+      "name": "FUN_001c1720",
+      "source": "src/functions/001c1720.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001C3AD0",
+      "size": 60,
+      "name": "FUN_001c3ad0",
+      "source": "src/functions/001c3ad0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001C3F58",
+      "size": 60,
+      "name": "FUN_001c3f58",
+      "source": "src/functions/001c3f58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001C44A8",
+      "size": 60,
+      "name": "FUN_001c44a8",
+      "source": "src/functions/001c44a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001C4630",
+      "size": 60,
+      "name": "FUN_001c4630",
+      "source": "src/functions/001c4630.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x00117E18",
+      "size": 60,
+      "name": "FUN_00117e18",
+      "source": "src/functions/00117e18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001AD230",
+      "size": 64,
+      "name": "FUN_001ad230",
+      "source": "src/functions/001ad230.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001AE750",
+      "size": 60,
+      "name": "FUN_001ae750",
+      "source": "src/functions/001ae750.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B4990",
+      "size": 64,
+      "name": "FUN_001b4990",
+      "source": "src/functions/001b4990.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0012D2D0",
+      "size": 60,
+      "name": "FUN_0012d2d0",
+      "source": "src/functions/0012d2d0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001C92D8",
+      "size": 68,
+      "name": "FUN_001c92d8",
+      "source": "src/functions/001c92d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001C9860",
+      "size": 72,
+      "name": "FUN_001c9860",
+      "source": "src/functions/001c9860.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001C9F28",
+      "size": 72,
+      "name": "FUN_001c9f28",
+      "source": "src/functions/001c9f28.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B83F8",
+      "size": 56,
+      "name": "FUN_001b83f8",
+      "source": "src/functions/001b83f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B8668",
+      "size": 56,
+      "name": "FUN_001b8668",
+      "source": "src/functions/001b8668.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B8758",
+      "size": 56,
+      "name": "FUN_001b8758",
+      "source": "src/functions/001b8758.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B8A70",
+      "size": 56,
+      "name": "FUN_001b8a70",
+      "source": "src/functions/001b8a70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B8C48",
+      "size": 56,
+      "name": "FUN_001b8c48",
+      "source": "src/functions/001b8c48.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B8D20",
+      "size": 56,
+      "name": "FUN_001b8d20",
+      "source": "src/functions/001b8d20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B8EF8",
+      "size": 56,
+      "name": "FUN_001b8ef8",
+      "source": "src/functions/001b8ef8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C7E20",
+      "size": 56,
+      "name": "FUN_001c7e20",
+      "source": "src/functions/001c7e20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x00110AB0",
+      "size": 68,
+      "name": "FUN_00110ab0",
+      "source": "src/functions/00110ab0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00112260",
+      "size": 68,
+      "name": "FUN_00112260",
+      "source": "src/functions/00112260.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001ADAD0",
+      "size": 72,
+      "name": "FUN_001adad0",
+      "source": "src/functions/001adad0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001ADEF8",
+      "size": 72,
+      "name": "FUN_001adef8",
+      "source": "src/functions/001adef8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001ADFE0",
+      "size": 72,
+      "name": "FUN_001adfe0",
+      "source": "src/functions/001adfe0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x0011B3E0",
+      "size": 72,
+      "name": "FUN_0011b3e0",
+      "source": "src/functions/0011b3e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x00186328",
+      "size": 72,
+      "name": "FUN_00186328",
+      "source": "src/functions/00186328.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001AEF38",
+      "size": 72,
+      "name": "FUN_001aef38",
+      "source": "src/functions/001aef38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001AF490",
+      "size": 72,
+      "name": "FUN_001af490",
+      "source": "src/functions/001af490.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B4868",
+      "size": 72,
+      "name": "FUN_001b4868",
+      "source": "src/functions/001b4868.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B4A18",
+      "size": 68,
+      "name": "FUN_001b4a18",
+      "source": "src/functions/001b4a18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001B5430",
+      "size": 72,
+      "name": "FUN_001b5430",
+      "source": "src/functions/001b5430.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B55C0",
+      "size": 72,
+      "name": "FUN_001b55c0",
+      "source": "src/functions/001b55c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B58A0",
+      "size": 72,
+      "name": "FUN_001b58a0",
+      "source": "src/functions/001b58a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B58E8",
+      "size": 72,
+      "name": "FUN_001b58e8",
+      "source": "src/functions/001b58e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B49D0",
+      "size": 72,
+      "name": "FUN_001b49d0",
+      "source": "src/functions/001b49d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001BBDF0",
+      "size": 68,
+      "name": "FUN_001bbdf0",
+      "source": "src/functions/001bbdf0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001C3B18",
+      "size": 72,
+      "name": "FUN_001c3b18",
+      "source": "src/functions/001c3b18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001C4130",
+      "size": 72,
+      "name": "FUN_001c4130",
+      "source": "src/functions/001c4130.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001C4208",
+      "size": 72,
+      "name": "FUN_001c4208",
+      "source": "src/functions/001c4208.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001C42E8",
+      "size": 72,
+      "name": "FUN_001c42e8",
+      "source": "src/functions/001c42e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x0011D0E8",
+      "size": 76,
+      "name": "FUN_0011d0e8",
+      "source": "src/functions/0011d0e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011D138",
+      "size": 80,
+      "name": "FUN_0011d138",
+      "source": "src/functions/0011d138.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0011D2F8",
+      "size": 76,
+      "name": "FUN_0011d2f8",
+      "source": "src/functions/0011d2f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001AF740",
+      "size": 80,
+      "name": "FUN_001af740",
+      "source": "src/functions/001af740.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001AFE88",
+      "size": 76,
+      "name": "FUN_001afe88",
+      "source": "src/functions/001afe88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011AA88",
+      "size": 76,
+      "name": "FUN_0011aa88",
+      "source": "src/functions/0011aa88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011AAD8",
+      "size": 76,
+      "name": "FUN_0011aad8",
+      "source": "src/functions/0011aad8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011B2C8",
+      "size": 76,
+      "name": "FUN_0011b2c8",
+      "source": "src/functions/0011b2c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011C6E0",
+      "size": 76,
+      "name": "FUN_0011c6e0",
+      "source": "src/functions/0011c6e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011C730",
+      "size": 80,
+      "name": "FUN_0011c730",
+      "source": "src/functions/0011c730.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001B7278",
+      "size": 76,
+      "name": "FUN_001b7278",
+      "source": "src/functions/001b7278.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B7410",
+      "size": 76,
+      "name": "FUN_001b7410",
+      "source": "src/functions/001b7410.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B7A88",
+      "size": 76,
+      "name": "FUN_001b7a88",
+      "source": "src/functions/001b7a88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B9048",
+      "size": 76,
+      "name": "FUN_001b9048",
+      "source": "src/functions/001b9048.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B9448",
+      "size": 76,
+      "name": "FUN_001b9448",
+      "source": "src/functions/001b9448.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011C780",
+      "size": 80,
+      "name": "FUN_0011c780",
+      "source": "src/functions/0011c780.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0011C7D0",
+      "size": 80,
+      "name": "FUN_0011c7d0",
+      "source": "src/functions/0011c7d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0011C900",
+      "size": 80,
+      "name": "FUN_0011c900",
+      "source": "src/functions/0011c900.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0011CBC8",
+      "size": 76,
+      "name": "FUN_0011cbc8",
+      "source": "src/functions/0011cbc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011CF30",
+      "size": 76,
+      "name": "FUN_0011cf30",
+      "source": "src/functions/0011cf30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011A720",
+      "size": 80,
+      "name": "FUN_0011a720",
+      "source": "src/functions/0011a720.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0011A770",
+      "size": 80,
+      "name": "FUN_0011a770",
+      "source": "src/functions/0011a770.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0011A868",
+      "size": 76,
+      "name": "FUN_0011a868",
+      "source": "src/functions/0011a868.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x0011A8B8",
+      "size": 80,
+      "name": "FUN_0011a8b8",
+      "source": "src/functions/0011a8b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0011AA38",
+      "size": 76,
+      "name": "FUN_0011aa38",
+      "source": "src/functions/0011aa38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001AD9C8",
+      "size": 72,
+      "name": "FUN_001ad9c8",
+      "source": "src/functions/001ad9c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001C96A8",
+      "size": 76,
+      "name": "FUN_001c96a8",
+      "source": "src/functions/001c96a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C9B10",
+      "size": 76,
+      "name": "FUN_001c9b10",
+      "source": "src/functions/001c9b10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C9C88",
+      "size": 76,
+      "name": "FUN_001c9c88",
+      "source": "src/functions/001c9c88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001D11E0",
+      "size": 80,
+      "name": "FUN_001d11e0",
+      "source": "src/functions/001d11e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001C8270",
+      "size": 76,
+      "name": "FUN_001c8270",
+      "source": "src/functions/001c8270.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C8D10",
+      "size": 76,
+      "name": "FUN_001c8d10",
+      "source": "src/functions/001c8d10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C8EE0",
+      "size": 76,
+      "name": "FUN_001c8ee0",
+      "source": "src/functions/001c8ee0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001AE3A8",
+      "size": 88,
+      "name": "FUN_001ae3a8",
+      "source": "src/functions/001ae3a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001AE490",
+      "size": 88,
+      "name": "FUN_001ae490",
+      "source": "src/functions/001ae490.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001AE6F8",
+      "size": 88,
+      "name": "FUN_001ae6f8",
+      "source": "src/functions/001ae6f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001ADC30",
+      "size": 88,
+      "name": "FUN_001adc30",
+      "source": "src/functions/001adc30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001F9AA8",
+      "size": 64,
+      "name": "FUN_001f9aa8",
+      "source": "src/functions/001f9aa8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001B8120",
+      "size": 60,
+      "name": "FUN_001b8120",
+      "source": "src/functions/001b8120.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B8358",
+      "size": 60,
+      "name": "FUN_001b8358",
+      "source": "src/functions/001b8358.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B8710",
+      "size": 60,
+      "name": "FUN_001b8710",
+      "source": "src/functions/001b8710.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B8AD8",
+      "size": 60,
+      "name": "FUN_001b8ad8",
+      "source": "src/functions/001b8ad8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B8CB0",
+      "size": 60,
+      "name": "FUN_001b8cb0",
+      "source": "src/functions/001b8cb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B8D88",
+      "size": 60,
+      "name": "FUN_001b8d88",
+      "source": "src/functions/001b8d88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001128F8",
+      "size": 68,
+      "name": "FUN_001128f8",
+      "source": "src/functions/001128f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x0011D578",
+      "size": 68,
+      "name": "FUN_0011d578",
+      "source": "src/functions/0011d578.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x0011D5C0",
+      "size": 68,
+      "name": "FUN_0011d5c0",
+      "source": "src/functions/0011d5c0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x0011D608",
+      "size": 68,
+      "name": "FUN_0011d608",
+      "source": "src/functions/0011d608.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001B26B0",
+      "size": 44,
+      "name": "FUN_001b26b0",
+      "source": "src/functions/001b26b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001CC2D8",
+      "size": 48,
+      "name": "FUN_001cc2d8",
+      "source": "src/functions/001cc2d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001C1D00",
+      "size": 44,
+      "name": "FUN_001c1d00",
+      "source": "src/functions/001c1d00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001CACC0",
+      "size": 88,
+      "name": "FUN_001cacc0",
+      "source": "src/functions/001cacc0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x0011CEF0",
+      "size": 64,
+      "name": "FUN_0011cef0",
+      "source": "src/functions/0011cef0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0011D2B8",
+      "size": 64,
+      "name": "FUN_0011d2b8",
+      "source": "src/functions/0011d2b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001B8980",
+      "size": 80,
+      "name": "FUN_001b8980",
+      "source": "src/functions/001b8980.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001B8F90",
+      "size": 80,
+      "name": "FUN_001b8f90",
+      "source": "src/functions/001b8f90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001B8FF8",
+      "size": 76,
+      "name": "FUN_001b8ff8",
+      "source": "src/functions/001b8ff8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C7EB0",
+      "size": 76,
+      "name": "FUN_001c7eb0",
+      "source": "src/functions/001c7eb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001185B0",
+      "size": 84,
+      "name": "FUN_001185b0",
+      "source": "src/functions/001185b0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88"
+    },
+    {
+      "addr": "0x0011D4F8",
+      "size": 88,
+      "name": "FUN_0011d4f8",
+      "source": "src/functions/0011d4f8.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x00161A60",
+      "size": 84,
+      "name": "FUN_00161a60",
+      "source": "src/functions/00161a60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88"
+    },
+    {
+      "addr": "0x0018B7C0",
+      "size": 88,
+      "name": "FUN_0018b7c0",
+      "source": "src/functions/0018b7c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x0010A398",
+      "size": 56,
+      "name": "FUN_0010a398",
+      "source": "src/functions/0010a398.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x0011D6E0",
+      "size": 56,
+      "name": "FUN_0011d6e0",
+      "source": "src/functions/0011d6e0.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x0011D850",
+      "size": 52,
+      "name": "FUN_0011d850",
+      "source": "src/functions/0011d850.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x00161918",
+      "size": 52,
+      "name": "FUN_00161918",
+      "source": "src/functions/00161918.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x00161950",
+      "size": 52,
+      "name": "FUN_00161950",
+      "source": "src/functions/00161950.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x00161988",
+      "size": 52,
+      "name": "FUN_00161988",
+      "source": "src/functions/00161988.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x00173A78",
+      "size": 56,
+      "name": "FUN_00173a78",
+      "source": "src/functions/00173a78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C9618",
+      "size": 56,
+      "name": "FUN_001c9618",
+      "source": "src/functions/001c9618.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001CA000",
+      "size": 56,
+      "name": "FUN_001ca000",
+      "source": "src/functions/001ca000.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001AFDB8",
+      "size": 92,
+      "name": "FUN_001afdb8",
+      "source": "src/functions/001afdb8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x001B0150",
+      "size": 92,
+      "name": "FUN_001b0150",
+      "source": "src/functions/001b0150.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x001B9160",
+      "size": 96,
+      "name": "FUN_001b9160",
+      "source": "src/functions/001b9160.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 96 bytes"
+    },
+    {
+      "addr": "0x001B9CE0",
+      "size": 92,
+      "name": "FUN_001b9ce0",
+      "source": "src/functions/001b9ce0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x001C8040",
+      "size": 92,
+      "name": "FUN_001c8040",
+      "source": "src/functions/001c8040.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x001C8898",
+      "size": 92,
+      "name": "FUN_001c8898",
+      "source": "src/functions/001c8898.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x001AC788",
+      "size": 104,
+      "name": "FUN_001ac788",
+      "source": "src/functions/001ac788.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 104 bytes"
+    },
+    {
+      "addr": "0x001AC8F8",
+      "size": 104,
+      "name": "FUN_001ac8f8",
+      "source": "src/functions/001ac8f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 104 bytes"
+    },
+    {
+      "addr": "0x001ACA90",
+      "size": 104,
+      "name": "FUN_001aca90",
+      "source": "src/functions/001aca90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 104 bytes"
+    },
+    {
+      "addr": "0x001ACB20",
+      "size": 104,
+      "name": "FUN_001acb20",
+      "source": "src/functions/001acb20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 104 bytes"
+    },
+    {
+      "addr": "0x001B8160",
+      "size": 56,
+      "name": "FUN_001b8160",
+      "source": "src/functions/001b8160.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001C7080",
+      "size": 52,
+      "name": "FUN_001c7080",
+      "source": "src/functions/001c7080.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001C7178",
+      "size": 52,
+      "name": "FUN_001c7178",
+      "source": "src/functions/001c7178.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001C7AD8",
+      "size": 52,
+      "name": "FUN_001c7ad8",
+      "source": "src/functions/001c7ad8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001F8758",
+      "size": 56,
+      "name": "FUN_001f8758",
+      "source": "src/functions/001f8758.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x00125A18",
+      "size": 60,
+      "name": "FUN_00125a18",
+      "source": "src/functions/00125a18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001176F8",
+      "size": 60,
+      "name": "FUN_001176f8",
+      "source": "src/functions/001176f8.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B2468",
+      "size": 60,
+      "name": "FUN_001b2468",
+      "source": "src/functions/001b2468.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x0017EFE8",
+      "size": 64,
+      "name": "FUN_0017efe8",
+      "source": "src/functions/0017efe8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001AF7E8",
+      "size": 60,
+      "name": "FUN_001af7e8",
+      "source": "src/functions/001af7e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x0017EEC8",
+      "size": 68,
+      "name": "FUN_0017eec8",
+      "source": "src/functions/0017eec8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001801F8",
+      "size": 68,
+      "name": "FUN_001801f8",
+      "source": "src/functions/001801f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00180580",
+      "size": 68,
+      "name": "FUN_00180580",
+      "source": "src/functions/00180580.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00180C60",
+      "size": 68,
+      "name": "FUN_00180c60",
+      "source": "src/functions/00180c60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00180CA8",
+      "size": 68,
+      "name": "FUN_00180ca8",
+      "source": "src/functions/00180ca8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00180CF0",
+      "size": 68,
+      "name": "FUN_00180cf0",
+      "source": "src/functions/00180cf0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00180D38",
+      "size": 68,
+      "name": "FUN_00180d38",
+      "source": "src/functions/00180d38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00180D80",
+      "size": 68,
+      "name": "FUN_00180d80",
+      "source": "src/functions/00180d80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00181580",
+      "size": 68,
+      "name": "FUN_00181580",
+      "source": "src/functions/00181580.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00181608",
+      "size": 68,
+      "name": "FUN_00181608",
+      "source": "src/functions/00181608.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00181690",
+      "size": 68,
+      "name": "FUN_00181690",
+      "source": "src/functions/00181690.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00181718",
+      "size": 68,
+      "name": "FUN_00181718",
+      "source": "src/functions/00181718.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00180DC8",
+      "size": 68,
+      "name": "FUN_00180dc8",
+      "source": "src/functions/00180dc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001820B0",
+      "size": 68,
+      "name": "FUN_001820b0",
+      "source": "src/functions/001820b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00182160",
+      "size": 68,
+      "name": "FUN_00182160",
+      "source": "src/functions/00182160.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00182730",
+      "size": 68,
+      "name": "FUN_00182730",
+      "source": "src/functions/00182730.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00182778",
+      "size": 68,
+      "name": "FUN_00182778",
+      "source": "src/functions/00182778.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00183A10",
+      "size": 68,
+      "name": "FUN_00183a10",
+      "source": "src/functions/00183a10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00183A98",
+      "size": 68,
+      "name": "FUN_00183a98",
+      "source": "src/functions/00183a98.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00183B20",
+      "size": 68,
+      "name": "FUN_00183b20",
+      "source": "src/functions/00183b20.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x00185800",
+      "size": 68,
+      "name": "FUN_00185800",
+      "source": "src/functions/00185800.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001574B0",
+      "size": 80,
+      "name": "FUN_001574b0",
+      "source": "src/functions/001574b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x00161D20",
+      "size": 80,
+      "name": "FUN_00161d20",
+      "source": "src/functions/00161d20.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x00171A58",
+      "size": 80,
+      "name": "FUN_00171a58",
+      "source": "src/functions/00171a58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x00171D48",
+      "size": 80,
+      "name": "FUN_00171d48",
+      "source": "src/functions/00171d48.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001AF5F0",
+      "size": 52,
+      "name": "FUN_001af5f0",
+      "source": "src/functions/001af5f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001B7128",
+      "size": 56,
+      "name": "FUN_001b7128",
+      "source": "src/functions/001b7128.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001BF690",
+      "size": 52,
+      "name": "FUN_001bf690",
+      "source": "src/functions/001bf690.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001BF6C8",
+      "size": 52,
+      "name": "FUN_001bf6c8",
+      "source": "src/functions/001bf6c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001C45F8",
+      "size": 52,
+      "name": "FUN_001c45f8",
+      "source": "src/functions/001c45f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001B0498",
+      "size": 76,
+      "name": "FUN_001b0498",
+      "source": "src/functions/001b0498.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001AEF80",
+      "size": 76,
+      "name": "FUN_001aef80",
+      "source": "src/functions/001aef80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B7818",
+      "size": 76,
+      "name": "FUN_001b7818",
+      "source": "src/functions/001b7818.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B78A0",
+      "size": 76,
+      "name": "FUN_001b78a0",
+      "source": "src/functions/001b78a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B7928",
+      "size": 76,
+      "name": "FUN_001b7928",
+      "source": "src/functions/001b7928.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B79B0",
+      "size": 76,
+      "name": "FUN_001b79b0",
+      "source": "src/functions/001b79b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001BF468",
+      "size": 76,
+      "name": "FUN_001bf468",
+      "source": "src/functions/001bf468.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C0CF8",
+      "size": 76,
+      "name": "FUN_001c0cf8",
+      "source": "src/functions/001c0cf8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C2970",
+      "size": 76,
+      "name": "FUN_001c2970",
+      "source": "src/functions/001c2970.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C3A80",
+      "size": 80,
+      "name": "FUN_001c3a80",
+      "source": "src/functions/001c3a80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001C7B88",
+      "size": 76,
+      "name": "FUN_001c7b88",
+      "source": "src/functions/001c7b88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C85A0",
+      "size": 76,
+      "name": "FUN_001c85a0",
+      "source": "src/functions/001c85a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C9350",
+      "size": 76,
+      "name": "FUN_001c9350",
+      "source": "src/functions/001c9350.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001D23B0",
+      "size": 80,
+      "name": "FUN_001d23b0",
+      "source": "src/functions/001d23b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001AEE80",
+      "size": 84,
+      "name": "FUN_001aee80",
+      "source": "src/functions/001aee80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88"
+    },
+    {
+      "addr": "0x001B4510",
+      "size": 88,
+      "name": "FUN_001b4510",
+      "source": "src/functions/001b4510.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001AB4B0",
+      "size": 64,
+      "name": "FUN_001ab4b0",
+      "source": "src/functions/001ab4b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001AC148",
+      "size": 60,
+      "name": "FUN_001ac148",
+      "source": "src/functions/001ac148.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001E0F18",
+      "size": 56,
+      "name": "FUN_001e0f18",
+      "source": "src/functions/001e0f18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001E1D88",
+      "size": 52,
+      "name": "FUN_001e1d88",
+      "source": "src/functions/001e1d88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001E38B0",
+      "size": 80,
+      "name": "FUN_001e38b0",
+      "source": "src/functions/001e38b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001E7530",
+      "size": 52,
+      "name": "FUN_001e7530",
+      "source": "src/functions/001e7530.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001EAB60",
+      "size": 36,
+      "name": "FUN_001eab60",
+      "source": "src/functions/001eab60.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x001F6858",
+      "size": 36,
+      "name": "FUN_001f6858",
+      "source": "src/functions/001f6858.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x001F6E78",
+      "size": 64,
+      "name": "FUN_001f6e78",
+      "source": "src/functions/001f6e78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001F6F78",
+      "size": 60,
+      "name": "FUN_001f6f78",
+      "source": "src/functions/001f6f78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001F7140",
+      "size": 44,
+      "name": "FUN_001f7140",
+      "source": "src/functions/001f7140.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 44/48"
+    },
+    {
+      "addr": "0x001F73C0",
+      "size": 48,
+      "name": "FUN_001f73c0",
+      "source": "src/functions/001f73c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x00206060",
+      "size": 40,
+      "name": "FUN_00206060",
+      "source": "src/functions/00206060.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x002061A0",
+      "size": 40,
+      "name": "FUN_002061a0",
+      "source": "src/functions/002061a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x002061C8",
+      "size": 40,
+      "name": "FUN_002061c8",
+      "source": "src/functions/002061c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x002072B0",
+      "size": 52,
+      "name": "FUN_002072b0",
+      "source": "src/functions/002072b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x002082C0",
+      "size": 40,
+      "name": "FUN_002082c0",
+      "source": "src/functions/002082c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x002082E8",
+      "size": 40,
+      "name": "FUN_002082e8",
+      "source": "src/functions/002082e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x00209050",
+      "size": 36,
+      "name": "FUN_00209050",
+      "source": "src/functions/00209050.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x00209280",
+      "size": 64,
+      "name": "FUN_00209280",
+      "source": "src/functions/00209280.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0020AA10",
+      "size": 52,
+      "name": "FUN_0020aa10",
+      "source": "src/functions/0020aa10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x0020EFD0",
+      "size": 80,
+      "name": "FUN_0020efd0",
+      "source": "src/functions/0020efd0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0020F2A0",
+      "size": 52,
+      "name": "FUN_0020f2a0",
+      "source": "src/functions/0020f2a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x0020F7E8",
+      "size": 40,
+      "name": "FUN_0020f7e8",
+      "source": "src/functions/0020f7e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x0020F810",
+      "size": 76,
+      "name": "FUN_0020f810",
+      "source": "src/functions/0020f810.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x00211408",
+      "size": 36,
+      "name": "FUN_00211408",
+      "source": "src/functions/00211408.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x00211430",
+      "size": 48,
+      "name": "FUN_00211430",
+      "source": "src/functions/00211430.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x00211460",
+      "size": 36,
+      "name": "FUN_00211460",
+      "source": "src/functions/00211460.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x002114B8",
+      "size": 36,
+      "name": "FUN_002114b8",
+      "source": "src/functions/002114b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x00211580",
+      "size": 36,
+      "name": "FUN_00211580",
+      "source": "src/functions/00211580.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x002115A8",
+      "size": 36,
+      "name": "FUN_002115a8",
+      "source": "src/functions/002115a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x002115D0",
+      "size": 36,
+      "name": "FUN_002115d0",
+      "source": "src/functions/002115d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x001AD968",
+      "size": 92,
+      "name": "FUN_001ad968",
+      "source": "src/functions/001ad968.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x001CA7B0",
+      "size": 60,
+      "name": "FUN_001ca7b0",
+      "source": "src/functions/001ca7b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001D0B78",
+      "size": 60,
+      "name": "FUN_001d0b78",
+      "source": "src/functions/001d0b78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001D08B0",
+      "size": 60,
+      "name": "FUN_001d08b0",
+      "source": "src/functions/001d08b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001CBB30",
+      "size": 68,
+      "name": "FUN_001cbb30",
+      "source": "src/functions/001cbb30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001CBBA8",
+      "size": 60,
+      "name": "FUN_001cbba8",
+      "source": "src/functions/001cbba8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001CFEC8",
+      "size": 64,
+      "name": "FUN_001cfec8",
+      "source": "src/functions/001cfec8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001AF070",
+      "size": 48,
+      "name": "FUN_001af070",
+      "source": "src/functions/001af070.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001F6F38",
+      "size": 64,
+      "name": "FUN_001f6f38",
+      "source": "src/functions/001f6f38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x00206C80",
+      "size": 36,
+      "name": "FUN_00206c80",
+      "source": "src/functions/00206c80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 36/40"
+    },
+    {
+      "addr": "0x001F6640",
+      "size": 48,
+      "name": "FUN_001f6640",
+      "source": "src/functions/001f6640.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 48 bytes"
+    },
+    {
+      "addr": "0x001E26E8",
+      "size": 52,
+      "name": "FUN_001e26e8",
+      "source": "src/functions/001e26e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001CD580",
+      "size": 76,
+      "name": "FUN_001cd580",
+      "source": "src/functions/001cd580.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B4798",
+      "size": 76,
+      "name": "FUN_001b4798",
+      "source": "src/functions/001b4798.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001BC230",
+      "size": 80,
+      "name": "FUN_001bc230",
+      "source": "src/functions/001bc230.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001C8AC0",
+      "size": 76,
+      "name": "FUN_001c8ac0",
+      "source": "src/functions/001c8ac0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C4588",
+      "size": 112,
+      "name": "FUN_001c4588",
+      "source": "src/functions/001c4588.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 112 bytes"
+    },
+    {
+      "addr": "0x001AC740",
+      "size": 72,
+      "name": "FUN_001ac740",
+      "source": "src/functions/001ac740.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B25C0",
+      "size": 100,
+      "name": "FUN_001b25c0",
+      "source": "src/functions/001b25c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104"
+    },
+    {
+      "addr": "0x001BCEF0",
+      "size": 100,
+      "name": "FUN_001bcef0",
+      "source": "src/functions/001bcef0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104"
+    },
+    {
+      "addr": "0x001BD078",
+      "size": 100,
+      "name": "FUN_001bd078",
+      "source": "src/functions/001bd078.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104"
+    },
+    {
+      "addr": "0x001BD4B0",
+      "size": 100,
+      "name": "FUN_001bd4b0",
+      "source": "src/functions/001bd4b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104"
+    },
+    {
+      "addr": "0x001BD570",
+      "size": 100,
+      "name": "FUN_001bd570",
+      "source": "src/functions/001bd570.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104"
+    },
+    {
+      "addr": "0x001BDC70",
+      "size": 100,
+      "name": "FUN_001bdc70",
+      "source": "src/functions/001bdc70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104"
+    },
+    {
+      "addr": "0x001BDCD8",
+      "size": 100,
+      "name": "FUN_001bdcd8",
+      "source": "src/functions/001bdcd8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 100/104"
+    },
+    {
+      "addr": "0x001BCE88",
+      "size": 104,
+      "name": "FUN_001bce88",
+      "source": "src/functions/001bce88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 104 bytes"
+    },
+    {
+      "addr": "0x001AF540",
+      "size": 108,
+      "name": "FUN_001af540",
+      "source": "src/functions/001af540.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 108/112"
+    },
+    {
+      "addr": "0x001AF6D0",
+      "size": 112,
+      "name": "FUN_001af6d0",
+      "source": "src/functions/001af6d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 112 bytes"
+    },
+    {
+      "addr": "0x001C88F8",
+      "size": 68,
+      "name": "FUN_001c88f8",
+      "source": "src/functions/001c88f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001C6E90",
+      "size": 72,
+      "name": "FUN_001c6e90",
+      "source": "src/functions/001c6e90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x002113C0",
+      "size": 68,
+      "name": "FUN_002113c0",
+      "source": "src/functions/002113c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001145F0",
+      "size": 64,
+      "name": "FUN_001145f0",
+      "source": "src/functions/001145f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x0011D268",
+      "size": 80,
+      "name": "FUN_0011d268",
+      "source": "src/functions/0011d268.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0011D650",
+      "size": 68,
+      "name": "FUN_0011d650",
+      "source": "src/functions/0011d650.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x0011D698",
+      "size": 68,
+      "name": "FUN_0011d698",
+      "source": "src/functions/0011d698.c",
+      "g": 8,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001619C0",
+      "size": 80,
+      "name": "FUN_001619c0",
+      "source": "src/functions/001619c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x0018BF10",
+      "size": 96,
+      "name": "FUN_0018bf10",
+      "source": "src/functions/0018bf10.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 96 bytes"
+    },
+    {
+      "addr": "0x00199AD8",
+      "size": 96,
+      "name": "FUN_00199ad8",
+      "source": "src/functions/00199ad8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 96 bytes"
+    },
+    {
+      "addr": "0x001AEB08",
+      "size": 88,
+      "name": "FUN_001aeb08",
+      "source": "src/functions/001aeb08.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001AF660",
+      "size": 52,
+      "name": "FUN_001af660",
+      "source": "src/functions/001af660.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001B2518",
+      "size": 96,
+      "name": "FUN_001b2518",
+      "source": "src/functions/001b2518.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 96 bytes"
+    },
+    {
+      "addr": "0x001B4B78",
+      "size": 76,
+      "name": "FUN_001b4b78",
+      "source": "src/functions/001b4b78.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B4BD8",
+      "size": 60,
+      "name": "FUN_001b4bd8",
+      "source": "src/functions/001b4bd8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B54A8",
+      "size": 88,
+      "name": "FUN_001b54a8",
+      "source": "src/functions/001b54a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001B5558",
+      "size": 88,
+      "name": "FUN_001b5558",
+      "source": "src/functions/001b5558.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001B57D8",
+      "size": 60,
+      "name": "FUN_001b57d8",
+      "source": "src/functions/001b57d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B5820",
+      "size": 56,
+      "name": "FUN_001b5820",
+      "source": "src/functions/001b5820.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B5860",
+      "size": 60,
+      "name": "FUN_001b5860",
+      "source": "src/functions/001b5860.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B5930",
+      "size": 72,
+      "name": "FUN_001b5930",
+      "source": "src/functions/001b5930.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B59A8",
+      "size": 60,
+      "name": "FUN_001b59a8",
+      "source": "src/functions/001b59a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B5A68",
+      "size": 60,
+      "name": "FUN_001b5a68",
+      "source": "src/functions/001b5a68.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B5B58",
+      "size": 56,
+      "name": "FUN_001b5b58",
+      "source": "src/functions/001b5b58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B5BA0",
+      "size": 56,
+      "name": "FUN_001b5ba0",
+      "source": "src/functions/001b5ba0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B5BE8",
+      "size": 56,
+      "name": "FUN_001b5be8",
+      "source": "src/functions/001b5be8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B64C8",
+      "size": 88,
+      "name": "FUN_001b64c8",
+      "source": "src/functions/001b64c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001B6848",
+      "size": 72,
+      "name": "FUN_001b6848",
+      "source": "src/functions/001b6848.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B7090",
+      "size": 56,
+      "name": "FUN_001b7090",
+      "source": "src/functions/001b7090.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7160",
+      "size": 76,
+      "name": "FUN_001b7160",
+      "source": "src/functions/001b7160.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B7758",
+      "size": 56,
+      "name": "FUN_001b7758",
+      "source": "src/functions/001b7758.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B77E0",
+      "size": 56,
+      "name": "FUN_001b77e0",
+      "source": "src/functions/001b77e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7868",
+      "size": 56,
+      "name": "FUN_001b7868",
+      "source": "src/functions/001b7868.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B78F0",
+      "size": 56,
+      "name": "FUN_001b78f0",
+      "source": "src/functions/001b78f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7978",
+      "size": 56,
+      "name": "FUN_001b7978",
+      "source": "src/functions/001b7978.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 56 bytes"
+    },
+    {
+      "addr": "0x001B7BF0",
+      "size": 72,
+      "name": "FUN_001b7bf0",
+      "source": "src/functions/001b7bf0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B7C38",
+      "size": 60,
+      "name": "FUN_001b7c38",
+      "source": "src/functions/001b7c38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B7F18",
+      "size": 72,
+      "name": "FUN_001b7f18",
+      "source": "src/functions/001b7f18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B8490",
+      "size": 72,
+      "name": "FUN_001b8490",
+      "source": "src/functions/001b8490.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B9330",
+      "size": 72,
+      "name": "FUN_001b9330",
+      "source": "src/functions/001b9330.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B9590",
+      "size": 76,
+      "name": "FUN_001b9590",
+      "source": "src/functions/001b9590.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B96E8",
+      "size": 88,
+      "name": "FUN_001b96e8",
+      "source": "src/functions/001b96e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001B9B98",
+      "size": 76,
+      "name": "FUN_001b9b98",
+      "source": "src/functions/001b9b98.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B9EB0",
+      "size": 76,
+      "name": "FUN_001b9eb0",
+      "source": "src/functions/001b9eb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B9FD8",
+      "size": 76,
+      "name": "FUN_001b9fd8",
+      "source": "src/functions/001b9fd8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C0CB8",
+      "size": 64,
+      "name": "FUN_001c0cb8",
+      "source": "src/functions/001c0cb8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001C2930",
+      "size": 64,
+      "name": "FUN_001c2930",
+      "source": "src/functions/001c2930.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001C43C8",
+      "size": 72,
+      "name": "FUN_001c43c8",
+      "source": "src/functions/001c43c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001C7C58",
+      "size": 72,
+      "name": "FUN_001c7c58",
+      "source": "src/functions/001c7c58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001C8180",
+      "size": 76,
+      "name": "FUN_001c8180",
+      "source": "src/functions/001c8180.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C8528",
+      "size": 68,
+      "name": "FUN_001c8528",
+      "source": "src/functions/001c8528.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001C8798",
+      "size": 72,
+      "name": "FUN_001c8798",
+      "source": "src/functions/001c8798.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001C93D0",
+      "size": 76,
+      "name": "FUN_001c93d0",
+      "source": "src/functions/001c93d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C9420",
+      "size": 88,
+      "name": "FUN_001c9420",
+      "source": "src/functions/001c9420.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001CA260",
+      "size": 92,
+      "name": "FUN_001ca260",
+      "source": "src/functions/001ca260.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x001CA420",
+      "size": 80,
+      "name": "FUN_001ca420",
+      "source": "src/functions/001ca420.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001CAB50",
+      "size": 120,
+      "name": "FUN_001cab50",
+      "source": "src/functions/001cab50.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 120 bytes"
+    },
+    {
+      "addr": "0x001CBBE8",
+      "size": 76,
+      "name": "FUN_001cbbe8",
+      "source": "src/functions/001cbbe8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001CCB00",
+      "size": 68,
+      "name": "FUN_001ccb00",
+      "source": "src/functions/001ccb00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001CD4D0",
+      "size": 68,
+      "name": "FUN_001cd4d0",
+      "source": "src/functions/001cd4d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001CFBB0",
+      "size": 88,
+      "name": "FUN_001cfbb0",
+      "source": "src/functions/001cfbb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001D2E00",
+      "size": 96,
+      "name": "FUN_001d2e00",
+      "source": "src/functions/001d2e00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 96 bytes"
+    },
+    {
+      "addr": "0x001D2FD0",
+      "size": 92,
+      "name": "FUN_001d2fd0",
+      "source": "src/functions/001d2fd0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x001F8EB8",
+      "size": 76,
+      "name": "FUN_001f8eb8",
+      "source": "src/functions/001f8eb8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001FB078",
+      "size": 72,
+      "name": "FUN_001fb078",
+      "source": "src/functions/001fb078.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x0020F3E8",
+      "size": 84,
+      "name": "FUN_0020f3e8",
+      "source": "src/functions/0020f3e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88"
+    },
+    {
+      "addr": "0x0020F7A0",
+      "size": 72,
+      "name": "FUN_0020f7a0",
+      "source": "src/functions/0020f7a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x002104E0",
+      "size": 76,
+      "name": "FUN_002104e0",
+      "source": "src/functions/002104e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x00210580",
+      "size": 92,
+      "name": "FUN_00210580",
+      "source": "src/functions/00210580.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 92/96"
+    },
+    {
+      "addr": "0x00210690",
+      "size": 76,
+      "name": "FUN_00210690",
+      "source": "src/functions/00210690.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x002107C0",
+      "size": 76,
+      "name": "FUN_002107c0",
+      "source": "src/functions/002107c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x00210928",
+      "size": 76,
+      "name": "FUN_00210928",
+      "source": "src/functions/00210928.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x002109E8",
+      "size": 76,
+      "name": "FUN_002109e8",
+      "source": "src/functions/002109e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x00112600",
+      "size": 20,
+      "name": "FUN_00112600",
+      "source": "src/functions/00112600.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001171C8",
+      "size": 20,
+      "name": "FUN_001171c8",
+      "source": "src/functions/001171c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x00117270",
+      "size": 20,
+      "name": "FUN_00117270",
+      "source": "src/functions/00117270.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001173D0",
+      "size": 20,
+      "name": "FUN_001173d0",
+      "source": "src/functions/001173d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x00117620",
+      "size": 20,
+      "name": "FUN_00117620",
+      "source": "src/functions/00117620.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x00117638",
+      "size": 20,
+      "name": "FUN_00117638",
+      "source": "src/functions/00117638.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x00117650",
+      "size": 20,
+      "name": "FUN_00117650",
+      "source": "src/functions/00117650.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x00142BD0",
+      "size": 20,
+      "name": "FUN_00142bd0",
+      "source": "src/functions/00142bd0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x00154E80",
+      "size": 20,
+      "name": "FUN_00154e80",
+      "source": "src/functions/00154e80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x0018FB68",
+      "size": 20,
+      "name": "FUN_0018fb68",
+      "source": "src/functions/0018fb68.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001AF790",
+      "size": 20,
+      "name": "FUN_001af790",
+      "source": "src/functions/001af790.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001AF7D0",
+      "size": 20,
+      "name": "FUN_001af7d0",
+      "source": "src/functions/001af7d0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B0CC8",
+      "size": 20,
+      "name": "FUN_001b0cc8",
+      "source": "src/functions/001b0cc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x00179158",
+      "size": 24,
+      "name": "FUN_00179158",
+      "source": "src/functions/00179158.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 24 bytes"
+    },
+    {
+      "addr": "0x001CB488",
+      "size": 24,
+      "name": "FUN_001cb488",
+      "source": "src/functions/001cb488.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 24 bytes"
+    },
+    {
+      "addr": "0x001D56C0",
+      "size": 128,
+      "name": "FUN_001d56c0",
+      "source": "src/functions/001d56c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 128 bytes"
+    },
+    {
+      "addr": "0x001BBB80",
+      "size": 68,
+      "name": "FUN_001bbb80",
+      "source": "src/functions/001bbb80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001CA6A8",
+      "size": 80,
+      "name": "FUN_001ca6a8",
+      "source": "src/functions/001ca6a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001CBC38",
+      "size": 76,
+      "name": "FUN_001cbc38",
+      "source": "src/functions/001cbc38.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001CFD00",
+      "size": 76,
+      "name": "FUN_001cfd00",
+      "source": "src/functions/001cfd00.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B8A30",
+      "size": 60,
+      "name": "FUN_001b8a30",
+      "source": "src/functions/001b8a30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B2628",
+      "size": 20,
+      "name": "FUN_001b2628",
+      "source": "src/functions/001b2628.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2640",
+      "size": 20,
+      "name": "FUN_001b2640",
+      "source": "src/functions/001b2640.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2660",
+      "size": 20,
+      "name": "FUN_001b2660",
+      "source": "src/functions/001b2660.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B26E0",
+      "size": 20,
+      "name": "FUN_001b26e0",
+      "source": "src/functions/001b26e0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B26F8",
+      "size": 20,
+      "name": "FUN_001b26f8",
+      "source": "src/functions/001b26f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2710",
+      "size": 20,
+      "name": "FUN_001b2710",
+      "source": "src/functions/001b2710.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2728",
+      "size": 20,
+      "name": "FUN_001b2728",
+      "source": "src/functions/001b2728.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2740",
+      "size": 20,
+      "name": "FUN_001b2740",
+      "source": "src/functions/001b2740.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B27C0",
+      "size": 20,
+      "name": "FUN_001b27c0",
+      "source": "src/functions/001b27c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B27D8",
+      "size": 20,
+      "name": "FUN_001b27d8",
+      "source": "src/functions/001b27d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B27F0",
+      "size": 20,
+      "name": "FUN_001b27f0",
+      "source": "src/functions/001b27f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2808",
+      "size": 20,
+      "name": "FUN_001b2808",
+      "source": "src/functions/001b2808.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2820",
+      "size": 20,
+      "name": "FUN_001b2820",
+      "source": "src/functions/001b2820.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001ACDA0",
+      "size": 60,
+      "name": "FUN_001acda0",
+      "source": "src/functions/001acda0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001ACF40",
+      "size": 64,
+      "name": "FUN_001acf40",
+      "source": "src/functions/001acf40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 64 bytes"
+    },
+    {
+      "addr": "0x001AF5B0",
+      "size": 60,
+      "name": "FUN_001af5b0",
+      "source": "src/functions/001af5b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001AFD58",
+      "size": 60,
+      "name": "FUN_001afd58",
+      "source": "src/functions/001afd58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001B00F0",
+      "size": 60,
+      "name": "FUN_001b00f0",
+      "source": "src/functions/001b00f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 60/64"
+    },
+    {
+      "addr": "0x001C5080",
+      "size": 68,
+      "name": "FUN_001c5080",
+      "source": "src/functions/001c5080.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 68/72"
+    },
+    {
+      "addr": "0x001CC600",
+      "size": 52,
+      "name": "FUN_001cc600",
+      "source": "src/functions/001cc600.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001D0878",
+      "size": 52,
+      "name": "FUN_001d0878",
+      "source": "src/functions/001d0878.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 52/56"
+    },
+    {
+      "addr": "0x001861D8",
+      "size": 80,
+      "name": "FUN_001861d8",
+      "source": "src/functions/001861d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001DFDC8",
+      "size": 80,
+      "name": "FUN_001dfdc8",
+      "source": "src/functions/001dfdc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001FBF30",
+      "size": 128,
+      "name": "FUN_001fbf30",
+      "source": "src/functions/001fbf30.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 128 bytes"
+    },
+    {
+      "addr": "0x001A9F88",
+      "size": 84,
+      "name": "FUN_001a9f88",
+      "source": "src/functions/001a9f88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88"
+    },
+    {
+      "addr": "0x001A9FE0",
+      "size": 84,
+      "name": "FUN_001a9fe0",
+      "source": "src/functions/001a9fe0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88"
+    },
+    {
+      "addr": "0x001E0180",
+      "size": 88,
+      "name": "FUN_001e0180",
+      "source": "src/functions/001e0180.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 88 bytes"
+    },
+    {
+      "addr": "0x001EEE70",
+      "size": 84,
+      "name": "FUN_001eee70",
+      "source": "src/functions/001eee70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88"
+    },
+    {
+      "addr": "0x0017EF80",
+      "size": 28,
+      "name": "FUN_0017ef80",
+      "source": "src/functions/0017ef80.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x0017EFC8",
+      "size": 28,
+      "name": "FUN_0017efc8",
+      "source": "src/functions/0017efc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x001AC988",
+      "size": 136,
+      "name": "FUN_001ac988",
+      "source": "src/functions/001ac988.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 136 bytes"
+    },
+    {
+      "addr": "0x001ACC40",
+      "size": 136,
+      "name": "FUN_001acc40",
+      "source": "src/functions/001acc40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 136 bytes"
+    },
+    {
+      "addr": "0x001ACCC8",
+      "size": 76,
+      "name": "FUN_001accc8",
+      "source": "src/functions/001accc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001ACD18",
+      "size": 136,
+      "name": "FUN_001acd18",
+      "source": "src/functions/001acd18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 136 bytes"
+    },
+    {
+      "addr": "0x001ACDE0",
+      "size": 136,
+      "name": "FUN_001acde0",
+      "source": "src/functions/001acde0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 136 bytes"
+    },
+    {
+      "addr": "0x001ACE68",
+      "size": 80,
+      "name": "FUN_001ace68",
+      "source": "src/functions/001ace68.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001ACEB8",
+      "size": 136,
+      "name": "FUN_001aceb8",
+      "source": "src/functions/001aceb8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 136 bytes"
+    },
+    {
+      "addr": "0x001AE4E8",
+      "size": 112,
+      "name": "FUN_001ae4e8",
+      "source": "src/functions/001ae4e8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 112 bytes"
+    },
+    {
+      "addr": "0x001B11A0",
+      "size": 20,
+      "name": "FUN_001b11a0",
+      "source": "src/functions/001b11a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B1970",
+      "size": 20,
+      "name": "FUN_001b1970",
+      "source": "src/functions/001b1970.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B1AD8",
+      "size": 20,
+      "name": "FUN_001b1ad8",
+      "source": "src/functions/001b1ad8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2410",
+      "size": 84,
+      "name": "FUN_001b2410",
+      "source": "src/functions/001b2410.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 84/88"
+    },
+    {
+      "addr": "0x001B2838",
+      "size": 140,
+      "name": "FUN_001b2838",
+      "source": "src/functions/001b2838.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 140/144"
+    },
+    {
+      "addr": "0x001B28C8",
+      "size": 40,
+      "name": "FUN_001b28c8",
+      "source": "src/functions/001b28c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 40 bytes"
+    },
+    {
+      "addr": "0x001B28F0",
+      "size": 20,
+      "name": "FUN_001b28f0",
+      "source": "src/functions/001b28f0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2908",
+      "size": 20,
+      "name": "FUN_001b2908",
+      "source": "src/functions/001b2908.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2950",
+      "size": 20,
+      "name": "FUN_001b2950",
+      "source": "src/functions/001b2950.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B2968",
+      "size": 20,
+      "name": "FUN_001b2968",
+      "source": "src/functions/001b2968.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B4130",
+      "size": 76,
+      "name": "FUN_001b4130",
+      "source": "src/functions/001b4130.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001B5410",
+      "size": 20,
+      "name": "FUN_001b5410",
+      "source": "src/functions/001b5410.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B5720",
+      "size": 20,
+      "name": "FUN_001b5720",
+      "source": "src/functions/001b5720.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B5770",
+      "size": 20,
+      "name": "FUN_001b5770",
+      "source": "src/functions/001b5770.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B57C0",
+      "size": 20,
+      "name": "FUN_001b57c0",
+      "source": "src/functions/001b57c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B5C28",
+      "size": 20,
+      "name": "FUN_001b5c28",
+      "source": "src/functions/001b5c28.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B5C40",
+      "size": 20,
+      "name": "FUN_001b5c40",
+      "source": "src/functions/001b5c40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B5C58",
+      "size": 20,
+      "name": "FUN_001b5c58",
+      "source": "src/functions/001b5c58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B5C70",
+      "size": 20,
+      "name": "FUN_001b5c70",
+      "source": "src/functions/001b5c70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B6060",
+      "size": 144,
+      "name": "FUN_001b6060",
+      "source": "src/functions/001b6060.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 144 bytes"
+    },
+    {
+      "addr": "0x001B6258",
+      "size": 128,
+      "name": "FUN_001b6258",
+      "source": "src/functions/001b6258.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 128 bytes"
+    },
+    {
+      "addr": "0x001B6360",
+      "size": 80,
+      "name": "FUN_001b6360",
+      "source": "src/functions/001b6360.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001B6C18",
+      "size": 20,
+      "name": "FUN_001b6c18",
+      "source": "src/functions/001b6c18.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B8FE0",
+      "size": 20,
+      "name": "FUN_001b8fe0",
+      "source": "src/functions/001b8fe0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001B9118",
+      "size": 72,
+      "name": "FUN_001b9118",
+      "source": "src/functions/001b9118.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 72 bytes"
+    },
+    {
+      "addr": "0x001B9A40",
+      "size": 20,
+      "name": "FUN_001b9a40",
+      "source": "src/functions/001b9a40.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001BEB58",
+      "size": 28,
+      "name": "FUN_001beb58",
+      "source": "src/functions/001beb58.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x001BF5D8",
+      "size": 76,
+      "name": "FUN_001bf5d8",
+      "source": "src/functions/001bf5d8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001BFB90",
+      "size": 104,
+      "name": "FUN_001bfb90",
+      "source": "src/functions/001bfb90.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 104 bytes"
+    },
+    {
+      "addr": "0x001C0E68",
+      "size": 20,
+      "name": "FUN_001c0e68",
+      "source": "src/functions/001c0e68.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001C1CE8",
+      "size": 20,
+      "name": "FUN_001c1ce8",
+      "source": "src/functions/001c1ce8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001C29C0",
+      "size": 20,
+      "name": "FUN_001c29c0",
+      "source": "src/functions/001c29c0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001C3578",
+      "size": 76,
+      "name": "FUN_001c3578",
+      "source": "src/functions/001c3578.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C46B0",
+      "size": 20,
+      "name": "FUN_001c46b0",
+      "source": "src/functions/001c46b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001C46C8",
+      "size": 20,
+      "name": "FUN_001c46c8",
+      "source": "src/functions/001c46c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001C4CB0",
+      "size": 20,
+      "name": "FUN_001c4cb0",
+      "source": "src/functions/001c4cb0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001C4D28",
+      "size": 20,
+      "name": "FUN_001c4d28",
+      "source": "src/functions/001c4d28.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001C4F50",
+      "size": 28,
+      "name": "FUN_001c4f50",
+      "source": "src/functions/001c4f50.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x001C57F8",
+      "size": 112,
+      "name": "FUN_001c57f8",
+      "source": "src/functions/001c57f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 112 bytes"
+    },
+    {
+      "addr": "0x001C6630",
+      "size": 80,
+      "name": "FUN_001c6630",
+      "source": "src/functions/001c6630.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 80 bytes"
+    },
+    {
+      "addr": "0x001C7AC0",
+      "size": 20,
+      "name": "FUN_001c7ac0",
+      "source": "src/functions/001c7ac0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001C8620",
+      "size": 76,
+      "name": "FUN_001c8620",
+      "source": "src/functions/001c8620.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x001C96F8",
+      "size": 96,
+      "name": "FUN_001c96f8",
+      "source": "src/functions/001c96f8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 96 bytes"
+    },
+    {
+      "addr": "0x001CA9A0",
+      "size": 20,
+      "name": "FUN_001ca9a0",
+      "source": "src/functions/001ca9a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001CD828",
+      "size": 32,
+      "name": "FUN_001cd828",
+      "source": "src/functions/001cd828.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: 32 bytes"
+    },
+    {
+      "addr": "0x001CE988",
+      "size": 20,
+      "name": "FUN_001ce988",
+      "source": "src/functions/001ce988.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001CE9A0",
+      "size": 20,
+      "name": "FUN_001ce9a0",
+      "source": "src/functions/001ce9a0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001CF8B8",
+      "size": 28,
+      "name": "FUN_001cf8b8",
+      "source": "src/functions/001cf8b8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x001D1180",
+      "size": 20,
+      "name": "FUN_001d1180",
+      "source": "src/functions/001d1180.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001D1460",
+      "size": 28,
+      "name": "FUN_001d1460",
+      "source": "src/functions/001d1460.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x001D20A8",
+      "size": 28,
+      "name": "FUN_001d20a8",
+      "source": "src/functions/001d20a8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x001D2A88",
+      "size": 20,
+      "name": "FUN_001d2a88",
+      "source": "src/functions/001d2a88.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001D2AA0",
+      "size": 20,
+      "name": "FUN_001d2aa0",
+      "source": "src/functions/001d2aa0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001D2D70",
+      "size": 28,
+      "name": "FUN_001d2d70",
+      "source": "src/functions/001d2d70.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x001D3398",
+      "size": 20,
+      "name": "FUN_001d3398",
+      "source": "src/functions/001d3398.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001D8380",
+      "size": 20,
+      "name": "FUN_001d8380",
+      "source": "src/functions/001d8380.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001D8398",
+      "size": 20,
+      "name": "FUN_001d8398",
+      "source": "src/functions/001d8398.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001D83B0",
+      "size": 20,
+      "name": "FUN_001d83b0",
+      "source": "src/functions/001d83b0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001D83C8",
+      "size": 20,
+      "name": "FUN_001d83c8",
+      "source": "src/functions/001d83c8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001FADD8",
+      "size": 20,
+      "name": "FUN_001fadd8",
+      "source": "src/functions/001fadd8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 20/24"
+    },
+    {
+      "addr": "0x001FBCC8",
+      "size": 76,
+      "name": "FUN_001fbcc8",
+      "source": "src/functions/001fbcc8.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 76/80"
+    },
+    {
+      "addr": "0x00201040",
+      "size": 28,
+      "name": "FUN_00201040",
+      "source": "src/functions/00201040.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x00203378",
+      "size": 28,
+      "name": "FUN_00203378",
+      "source": "src/functions/00203378.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
+    },
+    {
+      "addr": "0x00204AB0",
+      "size": 28,
+      "name": "FUN_00204ab0",
+      "source": "src/functions/00204ab0.c",
+      "g": 0,
+      "status": "matched",
+      "note": "M2.6 late-match: core 28/32"
     }
   ]
 }

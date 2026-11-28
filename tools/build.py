@@ -162,10 +162,17 @@ def elf_symbols(data, secs):
     return out
 
 
-def symbol_address(sym, text_idx):
-    """Absolute VRAM address of a symbol, or None when it cannot be known."""
+def symbol_address(sym, text_idx, base=None):
+    """Absolute VRAM address of a symbol, or None when it cannot be known.
+
+    base defaults to the whole-image .text base (TEXT_ADDR).  Pass the TU base
+    (target function VA minus its own st_value) when resolving a per-function
+    object: symbols defined later in the same object carry their offset inside
+    that object, so TEXT_ADDR would send them to 0x100000 (see t577).
+    """
+    base = TEXT_ADDR if base is None else base
     if sym["shndx"] != 0:
-        return TEXT_ADDR + sym["value"] if sym["shndx"] == text_idx else None
+        return base + sym["value"] if sym["shndx"] == text_idx else None
     name = sym["name"]
     for pref in ("FUN_", "func_", "D_", "jtbl_", "L_"):
         if name.startswith(pref):
@@ -215,6 +222,18 @@ def resolve_object_text(path, addr=None):
     text = bytearray(data[t["off"]:t["off"] + t["size"]])
     text_idx = t["idx"]
     syms = elf_symbols(data, secs)
+    # Base address of this object's .text inside the real image.  Objects are
+    # linked with sh_addr=0, so derive it from the target function itself:
+    #   tu_base = addr_of_target - st_value_of_target
+    # Without this, R_MIPS_26 against a function defined *later in the same .c*
+    # resolved to TEXT_ADDR+offset (0x100000+...) instead of the real VA (t577).
+    tu_base = TEXT_ADDR
+    if addr_arg is not None:
+        want = ("FUN_%08x" % addr_arg, "func_%08x" % addr_arg)
+        for _s in syms:
+            if _s["shndx"] == text_idx and _s["name"] in want:
+                tu_base = addr_arg - _s["value"]
+                break
     rels = []
     for s in secs:
         if s["type"] == 9 and s["info"] == text_idx:  # SHT_REL against .text
@@ -230,7 +249,7 @@ def resolve_object_text(path, addr=None):
     sec_va = {}
     for off, si, rtype in rels:
         sym = syms[si]
-        addr_t = symbol_address(sym, text_idx)
+        addr_t = symbol_address(sym, text_idx, tu_base)
         section_hint = (addr_t is None and sym["shndx"] not in (0, text_idx)
                         and base is not None and addr_arg is not None)
         if addr_t is None and not section_hint:

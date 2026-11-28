@@ -1,2 +1,13 @@
-// FUNCTION: SLPM 0x001B4450 placeholder (TU worker will replace)
-void FUN_001b4450(void) { }
+extern int FUN_001b5c70(int a0, int a1);
+extern int FUN_001b4498(int a0, int a1);
+extern int FUN_001b5c88(void);
+
+int FUN_001b4450(int a0, int a1)
+{
+    int r;
+
+    FUN_001b5c70(a0, a1);
+    r = FUN_001b4498(a0, a1);
+    FUN_001b5c88();
+    return r;
+}

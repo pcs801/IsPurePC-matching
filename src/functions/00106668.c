@@ -16,7 +16,7 @@ void FUN_00106668(short sel)
 
     FUN_00107728(sel);
     p = D_270E80;
-    p[sel + 2] = 1;
+    *(p + sel + 2) = 1;
     blk = (int *)(p + (*(int *)(p + 0x18) * 0x4180 + 0x80));
     if (blk[0] + 6 < D_00270C3C) {
         FUN_001b6fa0(blk[1]);
